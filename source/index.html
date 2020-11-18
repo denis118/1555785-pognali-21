@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
   <body class="page__body">
     <header class="general-header">
       <a class="logo general-header__logo link">Погнали?</a>
       <nav class="site-navigation general-header__site-navigation invisible">
-        <ul class="site-navigation__list">
+        <ul class="site-navigation__list list">
           <li class="site-navigation__item"><a class="site-navigation__link link" href="#!">О сервисе</a></li>
           <li class="site-navigation__item"><a class="site-navigation__link link" href="./form.html">Направления</a></li>
           <li class="site-navigation__item"><a class="site-navigation__link link" href="./catalog.html">Попутчики</a></li>
@@ -32,7 +33,7 @@
           <p class="quote__content">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="quote__cite">Мурат Эльтазин<br>главный редактор газеты<br>«гаджетлайф»</cite>
         </blockquote>
-        <ol class="intro__list">
+        <ol class="intro__list list">
           <li class="intro__item">Выберите направление</li>
           <li class="intro__item">Изучите идеи путешественников</li>
           <li class="intro__item">Находите тех, кто похож на вас</li>
@@ -50,7 +51,7 @@
       <section class="directions">
         <h2 class="directions__heading heading-level-2">Направления</h2>
         <p class="main-text directions__main-text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-        <ul class="directions__list">
+        <ul class="directions__list list">
           <li class="directions__item">
             <h3 class="directions__country heading-level-3">Таиланд</h3>
             <p class="directions__tagline">Джунгли зовут!</p>
@@ -79,7 +80,7 @@
         <h2 class="fellow-travelers__heading heading-level-2">Попутчики</h2>
         <p class="main-text fellow-travelers__main-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
         <p class="additional-text fellow-travelers__additional-text">Теперь можно легко найти единомышленников!</p>
-        <ul class="fellow-travelers__list">
+        <ul class="fellow-travelers__list list">
           <li class="fellow-travelers__item">
             <div class="companion">
               <h3 class="companion__name heading-level-3"><a href="#!">Таня Фирсова</a></h3>
@@ -99,23 +100,23 @@
                 </div>
               </div>
 
-              <ul class="wished-countries companion__wished-countries">
+              <ul class="wished-countries companion__wished-countries list">
                 <li class="wished-countries__item">
-                  <a class="wished-countries__link" href="#!">
+                  <a class="wished-countries__link link" href="#!">
                     <svg class="wished-countries__flag image" role="img" aria-label="Шри-Ланка" width="" height="">
                       <title class="wished-countries__title">Шри-Ланка</title>
                     </svg>
                   </a>
                 </li>
                 <li class="wished-countries__item">
-                  <a class="wished-countries__link" href="#!">
+                  <a class="wished-countries__link link" href="#!">
                     <svg class="wished-countries__flag image" role="img" aria-label="Таиланд" width="" height="">
                       <title class="wished-countries__title">Таиланд</title>
                     </svg>
                   </a>
                 </li>
                 <li class="wished-countries__item">
-                  <a class="wished-countries__link" href="#!">
+                  <a class="wished-countries__link link" href="#!">
                     <svg class="wished-countries__flag image" role="img" aria-label="Сейшелы" width="" height="">
                       <title class="wished-countries__title">Сейшелы</title>
                     </svg>
@@ -123,7 +124,7 @@
                 </li>
               </ul>
 
-              <ul class="hashtags companion__hashtags">
+              <ul class="hashtags companion__hashtags list">
                 <li class="hashtags__item">
                   <a class="hashtags__link link" href="#!">
                     <span class="visually-hidden">Хэштег ЗОЖ</span>
@@ -162,8 +163,8 @@
                 </li>
               </ul>
 
-              <ul class="transport-kind companion__transport-kind">
-                <li class="transport-kind__aircraft chosen">
+              <ul class="transport-kind companion__transport-kind list">
+                <li class="transport-kind__aircraft transport-kind--chosen">
                   <a class="transport-kind__link link" href="#!">
                     <svg class="transport-kind__aircraft-icon" role="img" aria-label="Иконка самолёта" width="" height="">
                       <title class="transport-kind__title">Авиаперелёт</title>
@@ -214,16 +215,16 @@
                 </div>
               </div>
 
-              <ul class="wished-countries companion__wished-countries">
+              <ul class="wished-countries companion__wished-countries list">
                 <li class="wished-countries__item">
-                  <a class="wished-countries__link" href="#!">
+                  <a class="wished-countries__link link" href="#!">
                     <svg class="wished-countries__flag image" role="img" aria-label="Бельгия" width="" height="">
                       <title class="wished-countries__title">Бельгия</title>
                     </svg>
                   </a>
                 </li>
                 <li class="wished-countries__item">
-                  <a class="wished-countries__link" href="#!">
+                  <a class="wished-countries__link link" href="#!">
                     <svg class="wished-countries__flag image" role="img" aria-label="Чехия" width="" height="">
                       <title class="wished-countries__title">Чехия</title>
                     </svg>
@@ -231,7 +232,7 @@
                 </li>
               </ul>
 
-              <ul class="hashtags companion__hashtags">
+              <ul class="hashtags companion__hashtags list">
                 <li class="hashtags__item">
                   <a class="hashtags__link link" href="#!">
                     <span class="visually-hidden">Хэштег бургер</span>
@@ -264,15 +265,15 @@
                 </li>
               </ul>
 
-              <ul class="transport-kind companion__transport-kind">
-                <li class="transport-kind__aircraft chosen">
+              <ul class="transport-kind companion__transport-kind list">
+                <li class="transport-kind__aircraft transport-kind--chosen">
                   <a class="transport-kind__link link" href="#!">
                     <svg class="transport-kind__aircraft-icon" role="img" aria-label="Иконка самолёта" width="" height="">
                       <title class="transport-kind__title">Авиаперелёт</title>
                     </svg>
                   </a>
                 </li>
-                <li class="transport-kind__bus chosen">
+                <li class="transport-kind__bus transport-kind--chosen">
                   <a class="transport-kind__link link" href="#!">
                     <svg class="transport-kind__bus-icon" role="img" aria-label="Иконка автобуса" width="" height="">
                       <title class="transport-kind__title">Автотранспорт</title>
@@ -286,7 +287,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="transport-kind__feet chosen">
+                <li class="transport-kind__feet transport-kind--chosen">
                   <a class="transport-kind__link link" href="#!">
                     <svg class="transport-kind__runer-icon" role="img" aria-label="Иконка бегущего человека" width="" height="">
                       <title class="transport-kind__title">Пешком</title>
@@ -303,7 +304,7 @@
 
       <section class="profile">
         <h2 class="profile__heading heading-level-2">Добавьте свой профиль!</h2>
-        <dl class="profile__benefits">
+        <dl class="profile__benefits list">
           <dt class="profile__term">Базовое размещение</dt>
           <dd class="profile__definition">Бесплатно</dd>
           <dt class="profile__term">Вывод на первых позициях</dt>
@@ -320,8 +321,8 @@
         <p class="main-text if-interested__main-text">Уже зарегистрированы? Тогда скорее <a class="user-authorization if-interested__user-authorization link" href="#!">авторизуйтесь</a>.</p>
         <form class="if-interested__form" action="#" method="GET">
           <label class="visually-hidden" for="email">Электронная почта</label>
-          <input class="if-interested__email" type="email" name="email" id="email">
-          <button class="if-interested__form-submit" type="submit"></button>
+          <input class="if-interested__form-email" type="email" name="email" id="email">
+          <button class="if-interested__form-submit button" type="submit"><span class="visually-hidden">Кнопка отправки адреса электронной почты</span></button>
         </form>
         <p class="main-text if-interested__main-text">Остались вопросы? Мы с радостью на них ответим!</p>
         <a class="telephone if-interested__telephone link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span>8 800 555-86-28</a>
@@ -330,7 +331,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Расположение офиса</h2>
-        <div class="centr">
+        <div class="map__centr">
           <address class="map__address">ул. Большая Конюшенная, 19/8</address>
           <a class="more map__more link button" href="">Проложить маршрут</a>
         </div>
@@ -341,7 +342,7 @@
     <footer class="general-footer">
       <a class="logo general-footer__logo link">Погнали?</a>
       <div class="socials general-footer__socials">
-        <ul class="socials__list">
+        <ul class="socials__list list">
           <li class="socials__item">
             <a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span></a>
           </li>
@@ -362,7 +363,7 @@
 
   <div class="modal-site-navigation">
     <nav class="site-navigation modal-site-navigation__site-navigation">
-      <ul class="site-navigation__list">
+      <ul class="site-navigation__list list">
         <li class="site-navigation__item"><a class="site-navigation__link" href="#!">О сервисе</a></li>
         <li class="site-navigation__item"><a class="site-navigation__link" href="./form.html">Направления</a></li>
         <li class="site-navigation__item"><a class="site-navigation__link" href="./catalog.html">Попутчики</a></li>
@@ -383,6 +384,23 @@
           <a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в Инстаграм</span></a>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <div class="modal-busines-tariffs">
+    <div class="busines-tariffs modal-busines-tariffs__busines-tariffs">
+      <h4 class="busines-tariffs__heading">Бизнес-тарифы</h4>
+      <dl class="busines-tariffs__list list">
+        <dt class="busines-tariffs__item">Реклама у блоггера</dt>
+        <dd class="busines-tariffs__cost">300 000 руб./пост</dd>
+        <dt class="busines-tariffs__item">Накрутка подписчиков</dt>
+        <dd class="busines-tariffs__cost">от 1 руб./шт.</dd>
+        <dt class="busines-tariffs__item">Лайки от ботов</dt>
+        <dd class="busines-tariffs__cost">от 20 коп./лайк</dd>
+        <dt class="busines-tariffs__item">Ваш продакт-плейсмент</dt>
+        <dd class="busines-tariffs__cost">Индивидуально</dd>
+      </dl>
+      <a class="busines-tariffs__close link button" href="#!">Закрыть окно</a>
     </div>
   </div>
 </html>
