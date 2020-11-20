@@ -1,0 +1,7 @@
+@import "../../1-variables/variables";
+
+.map {
+  background-color: $basic-yellow;
+}
+
+@import "./__address/map__address.scss";

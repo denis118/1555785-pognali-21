@@ -1,0 +1,9 @@
+@import "../../1-variables/variables";
+
+.profile {
+  background-color: $gray-2;
+}
+
+@import "./__term/profile__term.scss";
+@import "./__definition/profile__definition.scss";
+@import "./__busines-tariff/profile__busines-tariff.scss";

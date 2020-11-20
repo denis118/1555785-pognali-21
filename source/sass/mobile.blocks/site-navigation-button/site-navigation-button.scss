@@ -1,0 +1,12 @@
+@import "../../1-variables/variables";
+
+.site-navigation-button {
+  display: block;
+  width: 25px;
+  height: 11px;
+  background-color: $basic-blue;
+  background-image: $site-nav-button-bg-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,10 @@
+@import "../../1-variables/variables";
+
+.if-interested {
+  background-color: $blue-1;
+}
+
+@import "./__user-authorization/if-interested__user-authorization.scss";
+@import "./_wider/if-interested__main-text--wider.scss";
+@import "./__telephone/if-interested__telephone.scss";
+@import "./__email/if-interested__email.scss"

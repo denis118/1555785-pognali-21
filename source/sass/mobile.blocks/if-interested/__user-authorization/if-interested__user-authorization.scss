@@ -1,0 +1,13 @@
+@import "../../../1-variables/variables";
+
+.if-interested__user-authorization {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 22px;
+  color: $basic-yellow;
+
+  text-transform: lowercase;
+  text-decoration: underline;
+}

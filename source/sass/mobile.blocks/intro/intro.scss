@@ -1,0 +1,11 @@
+@import "../../1-variables/variables";
+
+.intro {
+  background-color: $blue-2;
+}
+
+@import "./__slogan/intro__slogan.scss";
+@import "./__item/intro__item.scss";
+@import "./__box-upper/intro__box-upper.scss";
+@import "./__box-lower/intro__box-lower.scss";
+@import "./__center/_upper/intro__center--upper.scss";

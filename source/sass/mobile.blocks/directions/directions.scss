@@ -1,0 +1,8 @@
+
+.directions {
+  background-color: $gray-1;
+}
+
+@import "./__main-text/directions__main-text.scss";
+@import "./__tagline/directions__tagline.scss";
+@import "./__applicants-amount/directions__applicants-amount.scss";

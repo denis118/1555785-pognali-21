@@ -1,0 +1,8 @@
+@import "../../1-variables/variables";
+
+.general-footer {
+  background-color: $basic-white;
+}
+
+@import "./__logo/general-footer__logo.scss";
+@import "./__created-by/general-footer__created-by.scss";
