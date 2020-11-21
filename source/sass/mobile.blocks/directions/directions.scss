@@ -1,8 +1,13 @@
+@import "../../1-variables/variables";
+@import "../../4-mixins/mixins";
 
 .directions {
   background-color: $gray-1;
+
+  @include overlap(-1, $directions-ini-padding-top, $border-radius);
 }
 
+// building elements
 @import "./__main-text/directions__main-text.scss";
 @import "./__tagline/directions__tagline.scss";
 @import "./__applicants-amount/directions__applicants-amount.scss";

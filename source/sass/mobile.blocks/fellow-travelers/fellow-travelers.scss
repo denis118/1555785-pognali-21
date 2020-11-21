@@ -1,4 +1,5 @@
 @import "../../1-variables/variables";
+@import "../../4-mixins/mixins";
 
 .fellow-travelers {
   background-color: $blue-1;
@@ -6,4 +7,6 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 10% 6%, 80% 1%, 0 1%;
   background-size: auto, auto, auto;
+
+  @include overlap(-2, $fellow-travelers-ini-padding-top, $border-radius);
 }
