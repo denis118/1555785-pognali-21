@@ -1,5 +1,13 @@
 @import "../../1-variables/variables";
 
 .modal-site-navigation {
+  display: none;
+  width: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
   background-color: $basic-white;
 }

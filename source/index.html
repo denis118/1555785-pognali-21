@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Погнали</title>
 </head>
@@ -11,7 +12,7 @@
   <header class="general-header">
     <div class="center general-header__center">
       <a class="logo general-header__logo link">
-        <svg class="logo__svg" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="logo__svg" role="img" aria-label="Логотип сайта" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
             <rect width="96" height="15" fill="url(#pattern0)"/>
           </mask>
@@ -26,6 +27,7 @@
           </defs>
         </svg>
       </a>
+
       <nav class="site-navigation general-header__site-navigation invisible">
         <ul class="site-navigation__list list">
           <li class="site-navigation__item"><a class="site-navigation__link link" href="#!">О сервисе</a></li>
@@ -33,7 +35,53 @@
           <li class="site-navigation__item"><a class="site-navigation__link link" href="./catalog.html">Попутчики</a></li>
         </ul>
       </nav>
-      <a class="site-navigation-button general-header__site-navigation-button link button" href="#!"><span class="visually-hidden">Кнопка открытия окна навигации</span></a>
+
+      <input class="general-header__aux-checkbox invisible" type="checkbox" name="site-nav-toggle" id="site-nav-toggle" checked>
+      <label class="site-navigation-button general-header__site-navigation-button button" for="site-nav-toggle">
+        <span class="visually-hidden">Кнопка открытия окна навигации</span>
+        <svg class="site-navigation-button__burger" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="25" height="3" rx="1.5" fill="white"/>
+          <rect y="8" width="25" height="3" rx="1.5" fill="white"/>
+        </svg>
+        <svg class="site-navigation-button__cross" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
+          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
+        </svg>
+      </label>
+      <!-- <a class="site-navigation-button general-header__site-navigation-button link button" href="#!">
+        <span class="visually-hidden">Кнопка открытия окна навигации</span>
+        <svg class="site-navigation-button__burger" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="25" height="3" rx="1.5" fill="white"/>
+          <rect y="8" width="25" height="3" rx="1.5" fill="white"/>
+        </svg>
+        <svg class="site-navigation-button__cross" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
+          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
+        </svg>
+      </a> -->
+
+      <div class="modal-site-navigation invisible">
+        <div class="center modal-site-navigation__center">
+          <nav class="site-navigation modal-site-navigation__site-navigation">
+            <ul class="site-navigation__list list">
+              <li class="site-navigation__item"><a class="site-navigation__link link" href="#!">О сервисе</a></li>
+              <li class="site-navigation__item"><a class="site-navigation__link link" href="./form.html">Направления</a></li>
+              <li class="site-navigation__item"><a class="site-navigation__link link" href="./catalog.html">Попутчики</a></li>
+            </ul>
+          </nav>
+          <a class="user-authorization modal-site-navigation__user-authorization link button" href="#!">Авторизация</a>
+          <a class="telephone modal-site-navigation__telephone link button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span></a>
+          <a class="email modal-site-navigation__email link button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span></a>
+          <div class="socials modal-site-navigation__socials">
+            <ul class="socials__list list">
+              <li class="socials__item"><a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span></a></li>
+              <li class="socials__item"><a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в ВКонтакте</span></a></li>
+              <li class="socials__item"><a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в Инстаграм</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="wrapper general-header__wrapper">
         <a class="telephone general-header__telephone link button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span></a>
         <a class="email general-header__email link button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span></a>
@@ -412,7 +460,7 @@
   </footer>
 </body>
 
-<div class="modal-site-navigation invisible">
+<!-- <div class="modal-site-navigation invisible">
   <div class="center modal-site-navigation__center">
     <nav class="site-navigation modal-site-navigation__site-navigation">
       <ul class="site-navigation__list list">
@@ -432,7 +480,7 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="modal-busines-tariffs invisible">
   <div class="busines-tariffs modal-busines-tariffs__busines-tariffs center">

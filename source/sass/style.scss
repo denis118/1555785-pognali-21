@@ -1,4 +1,4 @@
-// Начните писать стили здесь
+// pre-formating
 @import "./2-design-tokens/fonts";
 @import "./3-meta-blocks/link/link.scss";
 @import "./3-meta-blocks/list/list.scss";
@@ -7,6 +7,8 @@
 @import "./3-meta-blocks/heading-level-2/heading-level-2.scss";
 @import "./3-meta-blocks/heading-level-3/heading-level-3.scss";
 @import "./3-meta-blocks/center/center.scss";
+
+// main styles
 @import "./mobile.blocks/main-text/main-text.scss";
 @import "./mobile.blocks/additional-text/additional-text.scss";
 @import "./mobile.blocks/more/more.scss";

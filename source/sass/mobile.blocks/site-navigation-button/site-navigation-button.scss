@@ -2,11 +2,12 @@
 
 .site-navigation-button {
   display: block;
-  width: 25px;
-  height: 11px;
-  background-color: $basic-blue;
-  background-image: $site-nav-button-bg-image;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  cursor: pointer;
+
+  &__cross {
+    display: none;
+  }
 }
+
+@import "./__burger/site-navigation-button__burger.scss";
+@import "./__cross/site-navigation-button__cross.scss";

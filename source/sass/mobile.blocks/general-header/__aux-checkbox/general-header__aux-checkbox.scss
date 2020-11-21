@@ -1,0 +1,15 @@
+@import "../../../1-variables/variables";
+
+.general-header__aux-checkbox {
+  &:checked ~ .site-navigation-button .site-navigation-button__burger {
+    display: none;
+  }
+
+  &:checked ~ .site-navigation-button .site-navigation-button__cross {
+    display: block;
+  }
+
+  &:checked ~ .modal-site-navigation {
+    display: block;
+  }
+}
