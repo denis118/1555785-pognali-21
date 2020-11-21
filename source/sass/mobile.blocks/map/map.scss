@@ -1,7 +1,10 @@
 @import "../../1-variables/variables";
 
 .map {
-  background-color: $basic-yellow;
+  position: relative;
+  z-index: -5;
 }
 
 @import "./__address/map__address.scss";
+@import "./__center/map__center.scss";
+@import "./__wrapper/map__wrapper.scss";

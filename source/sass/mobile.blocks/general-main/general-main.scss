@@ -1,0 +1,29 @@
+@import "../../1-variables/variables";
+
+//mixin overlap
+@mixin overlap($i, $padding-top-initial, $border-radius) {
+  position: relative;
+  z-index: $i;
+  padding-top: $padding-top-initial + $border-radius;
+  margin-top: - ($border-radius);
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.general-main {
+  .directions {
+    @include overlap(-1, $directions-ini-padding-top, $border-radius);
+  }
+
+  .fellow-travelers {
+    @include overlap(-2, $fellow-travelers-ini-padding-top, $border-radius);
+  }
+
+  .profile {
+    @include overlap(-3, $profile-ini-padding-top, $border-radius);
+  }
+
+  .if-interested {
+    @include overlap(-4, $if-interested-ini-padding-top, $border-radius);
+  }
+}
