@@ -1,9 +1,6 @@
 @import "../../1-variables/variables";
 
 .general-header {
-  position: relative;
   background-color: $basic-blue;
   padding-top: 28px;
 }
-
-@import "./__aux-checkbox/general-header__aux-checkbox.scss";

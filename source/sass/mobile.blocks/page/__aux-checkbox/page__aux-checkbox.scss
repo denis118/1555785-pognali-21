@@ -1,6 +1,6 @@
 @import "../../../1-variables/variables";
 
-.general-header__aux-checkbox {
+.page__aux-checkbox {
   &:checked ~ .modal-site-navigation {
     display: block;
   }
