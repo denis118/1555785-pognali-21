@@ -1,0 +1,22 @@
+@import "../../1-variables/variables";
+
+.telephone {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  color: $blue-1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $blue-4;
+    background-image: $telephone-icon-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+}

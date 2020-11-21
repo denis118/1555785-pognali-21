@@ -1,0 +1,11 @@
+@import "../../../1-variables/variables";
+
+.site-navigation__link {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 35px;
+  color: $blue-1;
+  text-transform: uppercase;
+}

@@ -1,6 +1,8 @@
 @import "../../1-variables/variables";
 
 .general-header {
-  background-color: $basic-blue;
+  background-color: $basic-white;
   padding-top: 28px;
 }
+
+@import "./__user-authorization/general-header__user-authorization.scss";

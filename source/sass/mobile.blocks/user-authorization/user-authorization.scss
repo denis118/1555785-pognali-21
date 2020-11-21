@@ -1,11 +1,19 @@
 @import "../../1-variables/variables";
 
 .user-authorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 50px;
+  background-color: $basic-yellow;
+  border-radius: 25px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
   line-height: 20px;
-  color: $basic-white;
+  color: $basic-blue;
   text-transform: uppercase;
 }
