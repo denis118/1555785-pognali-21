@@ -4,10 +4,16 @@
   display: none;
   width: 100%;
 
-  position: absolute;
-  top: 100%;
+  padding-top: 28px;
+
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 
+  color: $blue-1;
   background-color: $basic-white;
 }
+
+@import "./__user-authorization/modal-site-navigation__user-authorization.scss";

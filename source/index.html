@@ -38,40 +38,60 @@
 
       <input class="general-header__aux-checkbox invisible" type="checkbox" name="site-nav-toggle" id="site-nav-toggle" checked>
       <label class="site-navigation-button general-header__site-navigation-button button" for="site-nav-toggle">
-        <span class="visually-hidden">Кнопка открытия окна навигации</span>
+        <span class="visually-hidden">Кнопка включения и закрытия окна навигации</span>
         <svg class="site-navigation-button__burger" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="25" height="3" rx="1.5" fill="white"/>
           <rect y="8" width="25" height="3" rx="1.5" fill="white"/>
         </svg>
-        <svg class="site-navigation-button__cross" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="site-navigation-button__cross invisible" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
           <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
         </svg>
       </label>
-      <!-- <a class="site-navigation-button general-header__site-navigation-button link button" href="#!">
-        <span class="visually-hidden">Кнопка открытия окна навигации</span>
-        <svg class="site-navigation-button__burger" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="25" height="3" rx="1.5" fill="white"/>
-          <rect y="8" width="25" height="3" rx="1.5" fill="white"/>
-        </svg>
-        <svg class="site-navigation-button__cross" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
-          <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
-        </svg>
-      </a> -->
 
       <div class="modal-site-navigation invisible">
         <div class="center modal-site-navigation__center">
+          <a class="logo modal-site-navigation__logo link">
+            <svg class="logo__svg" role="img" aria-label="Логотип сайта" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
+                <rect width="96" height="15" fill="url(#pattern0)"/>
+              </mask>
+              <g mask="url(#mask0)">
+                <rect class="logo__rect logo__rect--blue" width="96" height="15" fill="white"/>
+              </g>
+              <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0" transform="scale(0.00787402 0.05)"/>
+                </pattern>
+                <image id="image0" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
+              </defs>
+            </svg>
+          </a>
+
+          <label class="site-navigation-button modal-site-navigation__site-navigation-button button" for="site-nav-toggle">
+            <span class="visually-hidden">Кнопка включения и закрытия окна навигации</span>
+            <svg class="site-navigation-button__burger invisible" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="25" height="3" rx="1.5" fill="white"/>
+              <rect y="8" width="25" height="3" rx="1.5" fill="white"/>
+            </svg>
+            <svg class="site-navigation-button__cross" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
+              <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
+            </svg>
+          </label>
+
           <nav class="site-navigation modal-site-navigation__site-navigation">
             <ul class="site-navigation__list list">
-              <li class="site-navigation__item"><a class="site-navigation__link link" href="#!">О сервисе</a></li>
-              <li class="site-navigation__item"><a class="site-navigation__link link" href="./form.html">Направления</a></li>
-              <li class="site-navigation__item"><a class="site-navigation__link link" href="./catalog.html">Попутчики</a></li>
+              <li class="site-navigation__item"><a class="site-navigation__link site-navigation__link--blue link" href="#!">О сервисе</a></li>
+              <li class="site-navigation__item"><a class="site-navigation__link site-navigation__link--blue link" href="./form.html">Направления</a></li>
+              <li class="site-navigation__item"><a class="site-navigation__link site-navigation__link--blue link" href="./catalog.html">Попутчики</a></li>
             </ul>
           </nav>
-          <a class="user-authorization modal-site-navigation__user-authorization link button" href="#!">Авторизация</a>
-          <a class="telephone modal-site-navigation__telephone link button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span></a>
-          <a class="email modal-site-navigation__email link button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span></a>
+          <div class="contacts-wrapper modal-site-navigation__contacts-wrapper">
+            <a class="telephone modal-site-navigation__telephone link button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span></a>
+            <a class="email modal-site-navigation__email link button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span></a>
+            <a class="user-authorization modal-site-navigation__user-authorization link button" href="#!">Авторизация</a>
+          </div>
           <div class="socials modal-site-navigation__socials">
             <ul class="socials__list list">
               <li class="socials__item"><a class="socials__link link" href="#!"><span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span></a></li>
@@ -82,7 +102,7 @@
         </div>
       </div>
 
-      <div class="wrapper general-header__wrapper">
+      <div class="contacts-wrapper general-header__contacts-wrapper">
         <a class="telephone general-header__telephone link button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span></a>
         <a class="email general-header__email link button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span></a>
         <a class="user-authorization general-header__user-authorization link button" href="#!">Авторизация</a>

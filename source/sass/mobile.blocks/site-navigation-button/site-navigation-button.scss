@@ -3,10 +3,6 @@
 .site-navigation-button {
   display: block;
   cursor: pointer;
-
-  &__cross {
-    display: none;
-  }
 }
 
 @import "./__burger/site-navigation-button__burger.scss";
