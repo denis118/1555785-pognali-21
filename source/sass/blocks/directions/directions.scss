@@ -1,23 +1,43 @@
 
-// .directions {
+.directions {
+  background-color: $lcg-2;
 
-//   &__heading {}
+  @include overlap--bottom(-1, 71px, $bottom-radii);
 
-//   &__main-text {}
+  // &__heading {}
 
-//   &__list {}
+  &__main-text {
+    color: $dcg-9;
+  }
 
-//   &__item {}
+  // &__list {}
 
-//   &__country {}
+  // &__item {}
 
-//   &__tagline {}
+  // &__country {}
 
-//   &__applicants-amount {}
+  &__tagline {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-9;
+  }
 
-//   &__country-view {}
+  &__applicants-amount {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+    color: $dcg-6;
+    opacity: 0.3;
+  }
 
-//   &__country-flag {}
+  // &__country-view {}
 
-//   &__more {}
-// }
+  // &__country-flag {}
+
+  // &__more {}
+}

@@ -1,23 +1,34 @@
 
 .button {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 270px;
   height: 40px;
   color: $dcg-2;
   background-color: $mcg-1;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   cursor: pointer;
 
-  // &--autorisation {}
-
-  // &--telephone {}
-
-  // &--email {}
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
   // &--triangular-pointer::after {}
 
-  // &--more {}
+  &--more {
+    width: 100%;
+    height: 62px;
+    justify-content: space-between;
+    padding-left: 23px;
+
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-1;
+
+    border-radius: 10px;
+  }
 
   // &--quadratic {}
 
@@ -32,4 +43,8 @@
   // &--counter-directional-pointers::before {}
 
   // &--counter-directional-pointers::after {}
+
+  &--invisible {
+    display: none;
+  }
 }

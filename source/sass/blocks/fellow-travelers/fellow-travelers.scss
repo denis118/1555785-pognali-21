@@ -1,15 +1,22 @@
 
-// .fellow-travelers {
+.fellow-travelers {
+  background-color: $dcg-4;
+  background-image: $fellow-travelers-bg-image-1, $fellow-travelers-bg-image-2, $fellow-travelers-bg-image-3;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 10% 6%, 80% 1%, 0 1%;
+  background-size: auto, auto, auto;
 
-//   &__heading {}
+  @include overlap--bottom(-2, 68px, $bottom-radii);
 
-//   &__main-text {}
+  // &__heading {}
 
-//   &__additional-text {}
+  // &__main-text {}
 
-//   &__list {}
+  // &__additional-text {}
 
-//   &__item {}
+  // &__list {}
 
-//   &__companion {}
-// }
+  // &__item {}
+
+  // &__companion {}
+}

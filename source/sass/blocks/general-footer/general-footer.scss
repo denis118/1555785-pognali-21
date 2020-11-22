@@ -1,15 +1,25 @@
 
-// .general-footer {
+.general-footer {
+  background-color: $lcg-1;
+  border-top-left-radius: $bottom-radii;
+  border-top-right-radius: $bottom-radii;
 
-//   &__logo {}
+  // &__logo {}
 
-//   &__socials {}
+  // &__socials {}
 
-//   &__creators {}
+  // &__creators {}
 
-//   &__created-by {}
+  &__created-by {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px;
+    color: $dcg-9;
+  }
 
-//   &__link {}
+  // &__link {}
 
-//   &__svg {}
-// }
+  // &__svg {}
+}

@@ -1,9 +1,18 @@
 
-// .hashtags {
+.hashtags {
 
-//   &__item {}
+  // &__item {}
 
-//   &__link {}
+  // &__link {}
 
-//   &__text {}
-// }
+  &__text {
+    margin: 0;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-9;
+  }
+}

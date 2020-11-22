@@ -12,13 +12,13 @@
   <header class="general-header">
     <div class="container">
 
-      <a class="general-header__logo link">
-        <svg class="general-header__logo-svg" role="img" aria-label="Логотип сайта" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <a class="logo general-header__logo link">
+        <svg class="logo__svg" role="img" aria-label="Логотип сайта" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
             <rect width="96" height="15" fill="url(#pattern0)"/>
           </mask>
           <g mask="url(#mask0)">
-            <rect class="general-header__logo-rect general-header__logo-rect--blue" width="96" height="15" fill="white"/>
+            <rect class="logo__rect logo__rect--refilled" width="96" height="15" fill="white"/>
           </g>
           <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -49,9 +49,9 @@
         </ul>
       </nav>
       <div class="contacts-group general-header__contacts-group">
-        <a class="contacts-group__telephone link button button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__phone-span">8 800 555-86-28</span></a>
-        <a class="contacts-group__email link button button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__email-span">mail@htmlacademy.ru</span></a>
-        <a class="contacts-group__user-authorization link button button--authorization" href="#!">Авторизация</a>
+        <a class="contacts-group__telephone link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span">8 800 555-86-28</span></a>
+        <a class="contacts-group__email link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span">mail@htmlacademy.ru</span></a>
+        <a class="contacts-group__user-authorization link" href="#!">Авторизация</a>
       </div>
       <div class="socials general-header__socials">
         <ul class="socials__list list">
@@ -90,13 +90,11 @@
     </section>
 
     <section class="about-service">
-      <div class="about-service__box">
-        <div class="container">
-          <h2 class="about-service__heading heading-level-2">О сервисе</h2>
-          <p class="main-text about-service__main-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p class="additional-text about-service__additional-text">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a class="button button--more about-service__more link invisible" href="#!">Подробнее</a>
-        </div>
+      <div class="container">
+        <h2 class="about-service__heading heading-level-2">О сервисе</h2>
+        <p class="main-text about-service__main-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="additional-text about-service__additional-text">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <a class="button button--more button--invisible about-service__more link" href="#!">Подробнее</a>
       </div>
     </section>
 
@@ -410,7 +408,7 @@
       <div class="container">
         <h2 class="if-interested__heading heading-level-2">Заинтересовались?</h2>
         <p class="main-text if-interested__main-text">Зарегистрируйтесь, это быстро и бесплатно!</p>
-        <p class="main-text if-interested__main-text">Уже зарегистрированы? Тогда скорее <a class="user-authorization if-interested__user-authorization link" href="#!">авторизуйтесь</a>.</p>
+        <p class="main-text if-interested__main-text">Уже зарегистрированы? Тогда скорее <a class="if-interested__user-authorization link" href="#!">авторизуйтесь</a>.</p>
         <form class="if-interested__form" action="#" method="GET">
           <label class="visually-hidden" for="email">Электронная почта</label>
           <input class="if-interested__form-email" type="email" name="email" id="email">
@@ -418,9 +416,9 @@
         </form>
         <p class="main-text main-text--wider if-interested__main-text">Остались вопросы? Мы с радостью на них ответим!</p>
         <div class="contacts-group if-interested__contacts-group">
-          <a class="contacts-group__telephone link button button" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__phone-span">8 800 555-86-28</span></a>
-          <a class="contacts-group__email link button button" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__email-span">mail@htmlacademy.ru</span></a>
-          <a class="contacts-group__user-authorization link button button--authorization invisible" href="#!">Авторизация</a>
+          <a class="contacts-group__telephone link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--inverse">8 800 555-86-28</span></a>
+          <a class="contacts-group__email link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span></a>
+          <a class="contacts-group__user-authorization contacts-group__user-authorization--invisible link" href="#!">Авторизация</a>
         </div>
       </div>
     </section>
@@ -445,7 +443,7 @@
             <rect width="96" height="15" fill="url(#pattern0)"/>
           </mask>
           <g mask="url(#mask0)">
-            <rect class="logo__rect" width="96" height="15" fill="white"/>
+            <rect class="logo__rect logo__rect--refilled" width="96" height="15" fill="white"/>
           </g>
           <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

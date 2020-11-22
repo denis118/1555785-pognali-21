@@ -1,23 +1,23 @@
 
-// .about-service {
+.about-service {
+  padding-top: 33px;
 
-//   &__box {
+  background-color: $dcg-4;
+  background-image: $about-service-bg-image-1, $about-service-bg-image-2;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 70% 0, top left;
+  background-size: auto, auto;
 
-//   }
+  border-bottom-left-radius: $bottom-radii;
+  border-bottom-right-radius: $bottom-radii;
 
-//   &__heading {
+  // &__box {}
 
-//   }
+  // &__heading {}
 
-//   &__main-text {
+  // &__main-text {}
 
-//   }
+  // &__additional-text {}
 
-//   &__additional-text {
-
-//   }
-
-//   &__more {
-
-//   }
-// }
+  // &__more {}
+}

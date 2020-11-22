@@ -1,19 +1,22 @@
 
-// .companion {
+.companion {
+  &__name {
+    color: $dcg-1;
+  }
 
-//   &__name {}
+  // &__head-link {}
 
-//   &__head-link {}
+  &__link {
+    color: $dcg-1;
+  }
 
-//   &__link {}
+  // &__photo {}
 
-//   &__photo {}
+  // &__level {}
 
-//   &__level {}
+  // &__wished-countries {}
 
-//   &__wished-countries {}
+  // &__hashtags {}
 
-//   &__hashtags {}
-
-//   &__transport {}
-// }
+  // &__transport {}
+}

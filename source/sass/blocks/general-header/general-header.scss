@@ -1,59 +1,33 @@
 
-// .general-header {
+.general-header {
+  background-color: $lcg-1;
+  padding-top: 28px;
 
-//   &__logo {
+  // &__logo {}
 
-//   }
+  // &__site-navigation-button {}
 
-//   &__logo-svg {
+  // &__burger-svg {}
 
-//   }
+  // &__cross-svg {}
 
-//   &__logo-rect {
+  // &__site-navigation {}
 
-//   }
+  // &__nav-list {}
 
-//   &__logo-rect--blue {
+  // &__nav-item {}
 
-//   }
+  &__nav-link {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 35px;
+    color: $dcg-4;
+    text-transform: uppercase;
+  }
 
-//   &__site-navigation-button {
+  // &__contacts-group {}
 
-//   }
-
-//   &__burger-svg {
-
-//   }
-
-//   &__cross-svg {
-
-//   }
-
-//   &__site-navigation {
-
-//   }
-
-//   &__nav-list {
-
-//   }
-
-//   &__nav-item {
-
-//   }
-
-//   &__nav-link {
-
-//   }
-
-//   &__nav-link--blue {
-
-//   }
-
-//   &__contacts-group {
-
-//   }
-
-//   &__socials {
-
-//   }
-// }
+  // &__socials {}
+}

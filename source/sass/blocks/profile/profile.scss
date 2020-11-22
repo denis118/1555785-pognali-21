@@ -1,13 +1,37 @@
 
-// .profile {
+.profile {
+  background-color: $lcg-3;
 
-//   &__heading {}
+  @include overlap--bottom(-3, 53px, $bottom-radii);
 
-//   &__benefits {}
+  // &__heading {}
 
-//   &__term {}
+  // &__benefits {}
 
-//   &__definition {}
+  &__term {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 16px;
+    color: $dcg-9;
+  }
 
-//   &__busines-tariff {}
-// }
+  &__definition {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 16px;
+    color: $dcg-9;
+  }
+
+  &__busines-tariff {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 16px;
+    color: $dcg-7;
+  }
+}

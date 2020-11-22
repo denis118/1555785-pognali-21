@@ -1,15 +1,35 @@
 
-// .if-interested {
+.if-interested {
+  background-color: $dcg-4;
 
-//   &__heading {}
+  @include overlap--bottom(-4, 72px, $bottom-radii);
 
-//   &__main-text {}
+  // &__heading {}
 
-//   &__form {}
+  // &__main-text {}
 
-//   &__form-email {}
+  &__user-authorization {
+    display: inline;
+    width: auto;
+    height: auto;
+    background-color: inherit;
 
-//   &__form-submit {}
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 22px;
+    color: $mcg-1;
 
-//   &__contacts-group {}
-// }
+    text-transform: lowercase;
+    text-decoration: underline;
+  }
+
+  // &__form {}
+
+  // &__form-email {}
+
+  // &__form-submit {}
+
+  // &__contacts-group {}
+}
