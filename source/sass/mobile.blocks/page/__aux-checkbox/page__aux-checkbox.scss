@@ -1,7 +1,0 @@
-@import "../../../1-variables/variables";
-
-.page__aux-checkbox {
-  &:checked ~ .modal-site-navigation {
-    display: block;
-  }
-}

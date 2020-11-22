@@ -1,0 +1,35 @@
+
+.button {
+  display: grid;
+  place-items: center;
+  width: 270px;
+  height: 40px;
+  color: $dcg-2;
+  background-color: $mcg-1;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  // &--autorisation {}
+
+  // &--telephone {}
+
+  // &--email {}
+
+  // &--triangular-pointer::after {}
+
+  // &--more {}
+
+  // &--quadratic {}
+
+  // &--route {}
+
+  // &--step {}
+
+  // &--show {}
+
+  // &--show-more {}
+
+  // &--counter-directional-pointers::before {}
+
+  // &--counter-directional-pointers::after {}
+}

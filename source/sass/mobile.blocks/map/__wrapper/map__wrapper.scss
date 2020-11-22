@@ -1,9 +1,0 @@
-@import "../../../1-variables/variables";
-
-.map__wrapper {
-  padding-top: $map-ini-padding-top + $border-radius;
-  margin-top: - ($border-radius);
-  background-color: $basic-yellow;
-  border-bottom-left-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
-}
