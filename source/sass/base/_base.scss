@@ -1,0 +1,57 @@
+
+.container {
+  width: 270px;
+  min-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading-level-2 {
+  margin: 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  color: $mcg-2;
+}
+
+.heading-level-3 {
+  margin: 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 21px;
+  color: $dcg-3;
+}
+
+.invisible {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: $lcg-1;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}

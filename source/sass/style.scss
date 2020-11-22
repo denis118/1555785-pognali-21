@@ -1,1 +1,97 @@
-// Начните писать стили здесь
+// pre-formating
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/base";
+@import "./base/mixins";
+@import "./base/button";
+@import "./base/input";
+
+//
+// index.html
+//
+
+// section-0 //
+
+// page.scss
+@import "./blocks/page/page.scss";
+
+// general-header.scss
+@import "./blocks/general-header/general-header.scss";
+
+// logo
+@import "./blocks/logo/logo.scss";
+
+// contacts-group.scss
+@import "./blocks/contacts-group/contacts-group.scss";
+
+// general-main.scss
+@import "./blocks/general-main/general-main.scss";
+
+// section-1 //
+
+// intro.scss
+@import "./blocks/intro/intro.scss";
+
+// quote.scss
+@import "./blocks/quote/quote.scss";
+
+// section-2 //
+
+// main-text.scss
+@import "./blocks/main-text/main-text.scss";
+
+// additional-text.scss
+@import "./blocks/additional-text/additional-text.scss";
+
+// about-service.scss
+@import "./blocks/about-service/about-service.scss";
+
+// section-3 //
+
+// directions.scss
+@import "./blocks/directions/directions.scss";
+
+// section-4 //
+
+// fellow-travelers.scss"
+@import "./blocks/fellow-travelers/fellow-travelers.scss";
+
+// companion.scss
+@import "./blocks/companion/companion.scss";
+
+// circle-bar.scss
+@import "./blocks/circle-bar/circle-bar.scss";
+
+// wished-countries.scss
+@import "./blocks/wished-countries/wished-countries.scss";
+
+// hashtags.scss
+@import "./blocks/hashtags/hashtags.scss";
+
+// transport.scss
+@import "./blocks/transport/transport.scss";
+
+// section-5 //
+
+// profile.scss
+@import "./blocks/profile/profile.scss";
+
+// section-6 //
+
+// if-interested.scss
+@import "./blocks/if-interested/if-interested.scss";
+
+// section-7 //
+
+// map.scss
+@import "./blocks/map/map.scss";
+
+// section-8 //
+
+// general-footer.scss
+@import "./blocks/general-footer/general-footer.scss";
+
+// section-9 (modal) //
+
+// busines-tariffs.scss
+@import "./blocks/busines-tariffs/busines-tariffs.scss";

@@ -1,0 +1,33 @@
+
+.general-header {
+  background-color: $lcg-1;
+  padding-top: 28px;
+
+  // &__logo {}
+
+  // &__site-navigation-button {}
+
+  // &__burger-svg {}
+
+  // &__cross-svg {}
+
+  // &__site-navigation {}
+
+  // &__nav-list {}
+
+  // &__nav-item {}
+
+  &__nav-link {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 35px;
+    color: $dcg-4;
+    text-transform: uppercase;
+  }
+
+  // &__contacts-group {}
+
+  // &__socials {}
+}

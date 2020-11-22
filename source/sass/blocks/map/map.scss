@@ -1,0 +1,22 @@
+
+.map {
+  position: relative;
+  z-index: -5;
+
+  &__wrapper {
+    background-color: $mcg-1;
+    padding-top: 33px + $bottom-radii;
+    margin-top: - ($bottom-radii);
+    border-bottom-left-radius: $bottom-radii;
+    border-bottom-right-radius: $bottom-radii;
+  }
+
+  &__address {
+    color: $dcg-1;
+    text-transform: uppercase;
+  }
+
+  // &__route {}
+
+  // &__in-farme {}
+}

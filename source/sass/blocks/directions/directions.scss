@@ -1,0 +1,43 @@
+
+.directions {
+  background-color: $lcg-2;
+
+  @include overlap--bottom(-1, 71px, $bottom-radii);
+
+  // &__heading {}
+
+  &__main-text {
+    color: $dcg-9;
+  }
+
+  // &__list {}
+
+  // &__item {}
+
+  // &__country {}
+
+  &__tagline {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-9;
+  }
+
+  &__applicants-amount {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+    color: $dcg-6;
+    opacity: 0.3;
+  }
+
+  // &__country-view {}
+
+  // &__country-flag {}
+
+  // &__more {}
+}
