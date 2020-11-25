@@ -1,0 +1,54 @@
+
+.user-plans {
+  padding-top: 28px;
+  padding-bottom: 30px + $bottom-radii;
+  background-color: $lcg-4;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: $bottom-radii;
+  border-top-right-radius: $bottom-radii;
+
+  &__heading {
+    margin-bottom: 29px;
+  }
+
+  &__list {
+    counter-reset: num;
+  }
+
+  // &__item {}
+
+  &__countries-to-visit {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 16px;
+    color: $dcg-1;
+    text-align: left;
+
+    margin: 0;
+  }
+
+  &__countries-to-visit::before {
+    content: counter(num) ". ";
+    counter-increment: num;
+  }
+
+  &__travel-period,
+  &__companions-number {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 14px;
+    color: $dcg-1;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.06px;
+  }
+
+  // &__companions-number {}
+
+  // &__travel-period {}
+
+  // &__button {}
+}

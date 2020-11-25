@@ -1,0 +1,13 @@
+
+.avatar {
+  display: block;
+  width: min-content;
+
+  &__photo {
+    display: block;
+  }
+
+  &__photo--form {
+    border-radius: 50%;
+  }
+}

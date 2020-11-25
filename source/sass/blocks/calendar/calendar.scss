@@ -1,0 +1,81 @@
+
+.calendar {
+  // &__month {}
+
+  // &__month-list {}
+
+  &__month-item {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 20px;
+    text-transform: none;
+    color: $dcg-1;
+  }
+
+  // &__checkbox {}
+
+  // &__label {}
+
+  // &__previous-month {}
+
+  // &__next-month {}
+
+  // &__weekday-list {}
+
+  &__weekday-item {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $dcg-9;
+  }
+
+  &__weekday-item--weekend {
+    color: $mcg-3;
+  }
+
+  // &__days {}
+
+  &__day {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $dcg-9;
+  }
+
+  &__day:hover {
+    color: $lcg-1;
+    background-color: $dcg-1;
+    outline: 2px solid $mcg-3;
+    outline-offset: -2px;
+    opacity: 1;
+  }
+
+  &__day--banned {
+    opacity: 0.3;
+  }
+
+  &__day--available {
+    font-weight: 400;
+    color: $dcg-1;
+    background-color: $lcg-2;
+  }
+
+  // &__day--previous-month {}
+
+  // &__day--current-month {}
+
+  &__day--chosen {
+    color: $lcg-1;
+    background-color: $dcg-1;
+  }
+
+  // &__day--next-month {}
+}

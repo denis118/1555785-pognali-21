@@ -1,5 +1,8 @@
 
 .button {
+  border: none;
+  outline: none;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +11,7 @@
   height: 40px;
   color: $dcg-2;
   background-color: $mcg-1;
-  // text-transform: uppercase;
+  border-radius: 20px;
   cursor: pointer;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -16,7 +19,6 @@
   // &--triangular-pointer::after {}
 
   &--more {
-    width: 100%;
     height: 62px;
     justify-content: space-between;
     padding-left: 23px;
@@ -32,9 +34,96 @@
 
   // &--quadratic {}
 
-  // &--route {}
+  &--route {
+    height: 62px;
 
-  // &--step {}
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-1;
+
+    border: 3px solid $dcg-4;
+    border-radius: 10px;
+  }
+
+  &--change-photo {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-6;
+    background-color: $lcg-4;
+    text-transform: uppercase;
+  }
+
+  &--modify-plan {
+    height: auto;
+    justify-content: flex-start;
+
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 14px;
+    color: $dcg-6;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.03px;
+    border-radius: 0;
+    opacity: 0.3;
+  }
+
+  &--close,
+  &--math-sign {
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  // &--minus {}
+
+  // &__svg-minus {}
+
+  // &--plus {}
+
+  // &__svg-plus {}
+
+  // &__svg-line {}
+
+  &__svg-line--white {
+    stroke: $lcg-1;
+  }
+
+  &--next-step {
+    font-size: 17px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: $dcg-1;
+    text-transform: uppercase;
+  }
+
+  &--previous-step {
+    font-size: 17px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: $dcg-1;
+    text-transform: uppercase;
+    letter-spacing: 0.01px;
+    background-color: transparent;
+  }
+
+  &--form-submit {
+    font-size: 17px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: $dcg-1;
+    text-transform: uppercase;
+  }
 
   // &--show {}
 

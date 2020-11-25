@@ -1,0 +1,48 @@
+
+.user-basic-info {
+  background-color: $lcg-2;
+
+  &--text-style {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  // &__level {}
+
+  // &__avatar {}
+
+  // &__button  {}
+
+  // &__hashtags {}
+
+  // &__hashtags-label {}
+
+  &__textarea {
+    border: 1px solid $lcg-7;
+    border-radius: 10px;
+    resize: none;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-9;
+    background-color: $lcg-2;
+    opacity: 0.6;
+  }
+
+  &__fieldset {
+    border: 1px solid $lcg-7;
+    border-radius: 10px;
+  }
+
+  // &__legend {}
+
+  // &__user-transport {}
+}

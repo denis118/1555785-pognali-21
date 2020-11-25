@@ -1,0 +1,165 @@
+
+.add-plan {
+  margin-top: - ($bottom-radii);
+  padding-top: 30px;
+  background-color: $lcg-5;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: $bottom-radii;
+  border-top-right-radius: $bottom-radii;
+
+  &__heading {
+    padding-bottom: 29px;
+  }
+
+  // &__step-indicator {}
+
+  // &__step-1 {}
+
+  // &__step-2 {}
+
+  // &__step-3 {}
+
+  &__fieldset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__legend {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+    color: $dcg-1;
+    background-color: transparent;
+
+    padding-left: 25px;
+    padding-bottom: 16px;
+  }
+
+  &__main-text {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
+    color: $dcg-9;
+    background-color: transparent;
+  }
+
+  &__label {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
+    color: $dcg-1;
+  }
+
+  // &__label--amount {}
+
+  // &__companions-amount {}
+
+  // &__batton-minus {}
+
+  &__input {
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 14.86px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 14px;
+    color: $dcg-1;
+  }
+
+  // &__input--companions {}
+
+  // &__batton-plus {}
+
+  // &__batton-close {}
+
+  // &__label--duration {}
+
+  // &__travel-time {}
+
+  // &__input--travel-days {}
+
+  &__label--children {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 15px;
+    text-transform: none;
+    color: $dcg-1;
+  }
+
+  // &__calendar {}
+
+  // &__next-step {}
+
+  // &__countries {}
+
+  // &__country {}
+
+  &__input--chosen-country {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: $dcg-1;
+  }
+
+  // &__input--specify-country {}
+
+  // &__lands {}
+
+  &__add-country {
+    width: 220px;
+    height: 42px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 14.86px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 14px;
+    text-transform: uppercase;
+    background-color: $lcg-2;
+    color: $dcg-1;
+  }
+
+  // &__jollity-list {}
+
+  // &__jollity-item {}
+
+  // &__land-name {}
+
+  &__jollity-variants {
+    border: 1px solid $lcg-7;
+    border-radius: 5px;
+    resize: none;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
+    color: $dcg-9;
+  }
+
+  // &__submit {}
+}

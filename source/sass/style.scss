@@ -1,4 +1,5 @@
 // pre-formating
+@import "~normalize.css/normalize";
 @import "./base/fonts";
 @import "./base/variables";
 @import "./base/base";
@@ -59,6 +60,9 @@
 // companion.scss
 @import "./blocks/companion/companion.scss";
 
+// avatar.scss
+@import "./blocks/avatar/avatar.scss";
+
 // circle-bar.scss
 @import "./blocks/circle-bar/circle-bar.scss";
 
@@ -95,3 +99,31 @@
 
 // busines-tariffs.scss
 @import "./blocks/busines-tariffs/busines-tariffs.scss";
+
+//
+// form.html
+//
+
+// form-main.scss
+@import "./blocks/form-main/form-main.scss";
+
+// plans-form.scss
+@import "./blocks/plans-form/plans-form.scss";
+
+// user-basic-info.scss
+@import "./blocks/user-basic-info/user-basic-info.scss";
+
+// user-transport.scss
+@import "./blocks/user-transport/user-transport.scss";
+
+// user-plans.scss
+@import "./blocks/user-plans/user-plans.scss";
+
+// add-plan.scss
+@import "./blocks/add-plan/add-plan.scss";
+
+// calendar.scss
+@import "./blocks/calendar/calendar.scss";
+
+// lands.scss
+@import "./blocks/lands/lands.scss";
