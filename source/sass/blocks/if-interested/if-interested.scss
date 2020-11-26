@@ -1,5 +1,6 @@
 
 .if-interested {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $dcg-4;
 
   @include overlap--bottom(-4, 72px, $bottom-radii);
@@ -14,7 +15,6 @@
     height: auto;
     background-color: inherit;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 300;
     font-style: normal;

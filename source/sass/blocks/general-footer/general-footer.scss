@@ -1,5 +1,6 @@
 
 .general-footer {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
@@ -11,7 +12,6 @@
   // &__creators {}
 
   &__created-by {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;

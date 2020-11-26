@@ -1,11 +1,12 @@
 
 .calendar {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
   // &__month {}
 
   // &__month-list {}
 
   &__month-item {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 700;
     font-style: normal;
@@ -24,8 +25,8 @@
 
   // &__weekday-list {}
 
-  &__weekday-item {
-    font-family: "Blogger Sans", "Arial", sans-serif;
+  &__weekday-item,
+  &__day {
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
@@ -39,16 +40,6 @@
   }
 
   // &__days {}
-
-  &__day {
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: $dcg-9;
-  }
 
   &__day:hover {
     color: $lcg-1;

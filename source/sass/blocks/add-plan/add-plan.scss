@@ -8,6 +8,8 @@
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
   &__heading {
     padding-bottom: 29px;
   }
@@ -28,7 +30,6 @@
   }
 
   &__legend {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 500;
     font-style: normal;
@@ -41,7 +42,6 @@
   }
 
   &__main-text {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -51,7 +51,6 @@
   }
 
   &__label {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -73,7 +72,6 @@
     border: none;
     outline: none;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 14.86px;
     font-weight: 500;
     font-style: normal;
@@ -94,7 +92,6 @@
   // &__input--travel-days {}
 
   &__label--children {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
@@ -132,7 +129,6 @@
     outline: none;
     border-radius: 5px;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 14.86px;
     font-weight: 500;
     font-style: normal;
@@ -153,7 +149,6 @@
     border-radius: 5px;
     resize: none;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;

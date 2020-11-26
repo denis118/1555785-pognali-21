@@ -18,13 +18,20 @@
 
   // &__item {}
 
+  &__countries-to-visit,
+  &__travel-period,
+  &__companions-number {
+    font-style: normal;
+    color: $dcg-1;
+    text-align: left;
+  }
+
+
   &__countries-to-visit {
     font-size: 16px;
     font-weight: 700;
-    font-style: normal;
     line-height: 16px;
-    color: $dcg-1;
-    text-align: left;
+
 
     margin: 0;
   }
@@ -38,10 +45,7 @@
   &__companions-number {
     font-size: 14px;
     font-weight: 500;
-    font-style: normal;
     line-height: 14px;
-    color: $dcg-1;
-    text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.06px;
   }

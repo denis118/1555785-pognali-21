@@ -1,5 +1,6 @@
 
 .circle-bar {
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
   // &__box {}
 
@@ -11,25 +12,25 @@
 
   // &__level-number {}
 
+  &__level-number--form,
+  &__level-text--form {
+    font-style: normal;
+    text-align: center;
+  }
+
   &__level-number--form {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 38px;
     font-weight: 700;
-    font-style: normal;
     line-height: 38px;
     color: $dcg-6;
-    text-align: center;
   }
 
   // &__level-text {}
 
   &__level-text--form {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    font-style: normal;
     line-height: 18px;
     color: $dcg-9;
-    text-align: center;
   }
 }
