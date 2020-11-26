@@ -1,80 +1,80 @@
 
-.contacts-group {
-  &__telephone {
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 18px;
-    color: $dcg-4;
-  }
+// .contacts-group {
+//   &__telephone {
+//     font-family: "Blogger Sans", "Arial", sans-serif;
+//     font-size: 16px;
+//     font-weight: 700;
+//     font-style: normal;
+//     line-height: 18px;
+//     color: $dcg-4;
+//   }
 
-  &__telephone::before {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: $dcg-8;
-    background-image: $telephone-icon-1;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
+//   &__telephone::before {
+//     content: "";
+//     display: block;
+//     width: 40px;
+//     height: 40px;
+//     background-color: $dcg-8;
+//     background-image: $telephone-icon-1;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     border-radius: 50%;
+//   }
 
-  // &__telephone--displaced {}
+//   // &__telephone--displaced {}
 
-  &__email {
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 18px;
-    color: $dcg-4;
-    text-transform: uppercase;
-  }
+//   &__email {
+//     font-size: 16px;
+//     font-weight: 700;
+//     font-style: normal;
+//     line-height: 18px;
+//     color: $dcg-4;
+//     text-transform: uppercase;
+//   }
 
-  &__email::before {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: $dcg-8;
-    background-image: $email-icon-1;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
+//   &__email::before {
+//     content: "";
+//     display: block;
+//     width: 40px;
+//     height: 40px;
+//     background-color: $dcg-8;
+//     background-image: $email-icon-1;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     border-radius: 50%;
+//   }
 
-  // &__email--displaced {}
+//   // &__email--displaced {}
 
-  // &__span {}
+//   // &__span {}
 
-  &__span--inverse {
-    color: $mcg-1;
-  }
+//   &__span--inverse {
+//     color: $mcg-1;
+//   }
 
-  // &__span--displaced {}
+//   // &__span--displaced {}
 
-  &__user-authorization {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 50px;
-    background-color: $mcg-1;
-    border-radius: 25px;
+//   &__user-authorization {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 270px;
+//     height: 50px;
+//     background-color: $mcg-1;
+//     border-radius: 25px;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 20px;
-    color: $dcg-2;
-    text-transform: uppercase;
-  }
+//     font-family: "Blogger Sans", "Arial", sans-serif;
+//     font-size: 17px;
+//     font-weight: 700;
+//     font-style: normal;
+//     line-height: 20px;
+//     color: $dcg-2;
+//     text-transform: uppercase;
+//   }
 
-  // &__user-authorization--displaced {}
+//   // &__user-authorization--displaced {}
 
-  &__user-authorization--invisible {
-    display: none;
-  }
-}
+//   &__user-authorization--invisible {
+//     display: none;
+//   }
+// }

@@ -16,13 +16,17 @@
   }
 }
 
+.heading-level-3,
 .heading-level-2 {
   margin: 0;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 24px;
   font-weight: 700;
   font-style: normal;
+}
+
+.heading-level-2 {
+  font-size: 24px;
   line-height: 24px;
   color: $mcg-2;
 
@@ -32,12 +36,7 @@
 }
 
 .heading-level-3 {
-  margin: 0;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 21px;
-  font-weight: 700;
-  font-style: normal;
   line-height: 21px;
   color: $dcg-3;
 }

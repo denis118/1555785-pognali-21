@@ -1,189 +1,33 @@
 
-// .general-header {
-//   background-color: $lcg-1;
-//   padding-top: 28px;
-
-//   &__primary-layout {
-//     width: 100%;
-//     margin: 0;
-//   }
-
-//   &__logo {
-//     margin-top: 27px;
-//   }
-
-//   &__site-navigation {
-//     margin-top: 78px;
-//   }
-
-//   &__nav-list {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   // &__nav-item {}
-
-//   // &__nav-link {}
-
-//   &__nav-link--blue {
-//     font-family: "Blogger Sans", "Arial", sans-serif;
-//     font-size: 30px;
-//     font-weight: 500;
-//     font-style: normal;
-//     line-height: 35px;
-//     color: $dcg-4;
-//     text-transform: uppercase;
-//   }
-
-//   &__contacts-group {
-//     margin-top: 51px;
-
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: flex-start;
-//   }
-
-//   &__telephone {
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
-//     margin-top: 51px;
-
-//     font-family: "Blogger Sans", "Arial", sans-serif;
-//     font-size: 16px;
-//     font-weight: 700;
-//     font-style: normal;
-//     line-height: 18px;
-//     color: $dcg-4;
-//   }
-
-//   &__telephone::before {
-//     content: "";
-//     display: block;
-//     width: 40px;
-//     height: 40px;
-//     margin-right: 17px;
-
-//     background-color: $dcg-8;
-//     background-image: $telephone-icon-1;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     border-radius: 50%;
-//   }
-
-//   // &__telephone--displaced {}
-
-//   &__email {
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
-
-//     font-size: 16px;
-//     font-weight: 700;
-//     font-style: normal;
-//     line-height: 18px;
-//     color: $dcg-4;
-//     text-transform: uppercase;
-//   }
-
-//   &__email::before {
-//     content: "";
-//     display: block;
-//     width: 40px;
-//     height: 40px;
-//     margin-right: 17px;
-
-//     background-color: $dcg-8;
-//     background-image: $email-icon-1;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     border-radius: 50%;
-//   }
-
-//   // &__email--displaced {}
-
-//   // &__span {}
-
-//   &__span--inverse {
-//     color: $mcg-1;
-//   }
-
-//   // &__span--displaced {}
-
-//   &__user-authorization {
-//     order: -1;
-
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 270px;
-//     height: 50px;
-//     background-color: $mcg-1;
-//     border-radius: 25px;
-
-//     font-family: "Blogger Sans", "Arial", sans-serif;
-//     font-size: 17px;
-//     font-weight: 700;
-//     font-style: normal;
-//     line-height: 20px;
-//     color: $dcg-2;
-//     text-transform: uppercase;
-//   }
-
-//   // &__user-authorization--displaced {}
-
-//   &__user-authorization--invisible {
-//     display: none;
-//   }
-
-//   &__socials {
-//     margin-top: 69px;
-//   }
-
-//   // &__auxiliary-layout {}
-
-//   &__upper-part {
-//     width: 100%;
-//     margin: 0;
-//     padding-top: 27px;
-//     padding-bottom: 31px;
-
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   // &__site-navigation-button {}
-
-//   // &__burger-svg {}
-
-//   // &__cross-svg {}
-
-//   // &__under-part {}
-// }
-
 .general-header {
   background-color: $lcg-1;
-  padding-top: 28px;
+  padding-top: 26px;
 
-  // &__logo {}
+  &__primary-layout {
+    width: 100%;
+    margin: 0;
+  }
 
-  // &__site-navigation-button {}
+  &__logo {
+    margin-top: 27px;
+  }
 
-  // &__burger-svg {}
+  &__site-navigation {
+    margin-top: 70px;
+  }
 
-  // &__cross-svg {}
-
-  // &__site-navigation {}
-
-  // &__nav-list {}
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   // &__nav-item {}
 
-  &__nav-link {
+  // &__nav-link {}
+
+  &__nav-link--blue {
     font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 30px;
     font-weight: 500;
@@ -193,11 +37,168 @@
     text-transform: uppercase;
   }
 
-  // &__contacts-group {}
+  &__contacts-group {
+    margin-top: 52px;
 
-  // &__socials {}
-
-  &__upper-part--form {
-    background-color: $dcg-10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
   }
+
+  &__telephone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 51px;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-4;
+  }
+
+  &__telephone::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-right: 17px;
+
+    background-color: $dcg-8;
+    background-image: $telephone-icon-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  // &__telephone--displaced {}
+
+  &__email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: $dcg-4;
+    text-transform: uppercase;
+  }
+
+  &__email::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-right: 17px;
+
+    background-color: $dcg-8;
+    background-image: $email-icon-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  // &__email--displaced {}
+
+  // &__span {}
+
+  &__span--inverse {
+    color: $mcg-1;
+  }
+
+  // &__span--displaced {}
+
+  &__user-authorization {
+    order: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 50px;
+    background-color: $mcg-1;
+    border-radius: 25px;
+
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 20px;
+    color: $dcg-2;
+    text-transform: uppercase;
+  }
+
+  // &__user-authorization--displaced {}
+
+  &__user-authorization--invisible {
+    display: none;
+  }
+
+  &__socials {
+    margin-top: 40px;
+    margin-bottom: 41px;
+  }
+
+  // &__auxiliary-layout {}
+
+  &__upper-part {
+    width: 100%;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 31px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // &__site-navigation-button {}
+
+  // &__burger-svg {}
+
+  // &__cross-svg {}
+
+  // &__under-part {}
 }
+
+// .general-header {
+//   background-color: $lcg-1;
+//   padding-top: 28px;
+
+//   // &__logo {}
+
+//   // &__site-navigation-button {}
+
+//   // &__burger-svg {}
+
+//   // &__cross-svg {}
+
+//   // &__site-navigation {}
+
+//   // &__nav-list {}
+
+//   // &__nav-item {}
+
+//   &__nav-link {
+//     font-family: "Blogger Sans", "Arial", sans-serif;
+//     font-size: 30px;
+//     font-weight: 500;
+//     font-style: normal;
+//     line-height: 35px;
+//     color: $dcg-4;
+//     text-transform: uppercase;
+//   }
+
+//   // &__contacts-group {}
+
+//   // &__socials {}
+
+//   &__upper-part--form {
+//     background-color: $dcg-10;
+//   }
+// }
