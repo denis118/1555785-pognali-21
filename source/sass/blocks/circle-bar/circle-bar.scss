@@ -1,15 +1,36 @@
 
-// .circle-bar {
+.circle-bar {
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
-//   &__box {}
+  // &__box {}
 
-//   &__svg-container {}
+  // &__svg-container {}
 
-//   &__svg-circle {}
+  // &__svg-circle {}
 
-//   &__text-box {}
+  // &__text-box {}
 
-//   &__level-number {}
+  // &__level-number {}
 
-//   &__level-text {}
-// }
+  &__level-number--form,
+  &__level-text--form {
+    font-style: normal;
+    text-align: center;
+  }
+
+  &__level-number--form {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 38px;
+    color: $dcg-6;
+  }
+
+  // &__level-text {}
+
+  &__level-text--form {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $dcg-9;
+  }
+}

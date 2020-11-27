@@ -5,6 +5,7 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const tildeImporter = require("node-sass-tilde-importer");
 
 // Styles
 
@@ -12,7 +13,9 @@ const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass({
+      importer: tildeImporter
+  }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))

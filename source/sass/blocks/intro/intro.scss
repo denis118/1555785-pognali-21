@@ -1,12 +1,13 @@
 
 .intro {
   position: relative;
-  height: 966px;
   background-color: $dcg-6;
   background-image: $intro-bg-image-3;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
   &__box-upper {
     width: 100%;
@@ -17,18 +18,21 @@
     background-size: auto, cover;
   }
 
+  &__slogan,
+  &__item {
+    font-weight: 700;
+    font-style: normal;
+    color: $lcg-1;
+  }
+
   &__slogan {
     width: 88.148%;
     margin: 0 auto 0;
     padding-top: 31px;
     padding-bottom: 256px;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 36px;
-    font-weight: 700;
-    font-style: normal;
     line-height: 40px;
-    color: $lcg-1;
     text-align: center;
   }
 
@@ -44,11 +48,7 @@
   // &__list {}
 
   &__item {
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 18px;
-    font-weight: 700;
-    font-style: normal;
     line-height: 18px;
-    color: $lcg-1;
   }
 }

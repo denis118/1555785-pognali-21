@@ -1,0 +1,36 @@
+
+.form-main {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
+  &__heading {
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 12px;
+    position: relative;
+    background-color: $dcg-10;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 36px;
+    color: $lcg-1;
+    text-align: left;
+  }
+
+  &__heading::after {
+    content: "";
+    display: block;
+    width: 214px;
+    height: 5px;
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    background-color: $mcg-2;
+    border-radius: 2.5px;
+    transform: translateY(-50%);
+  }
+
+  // &__plans-form {}
+}

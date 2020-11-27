@@ -1,24 +1,39 @@
 
 .general-header {
   background-color: $lcg-1;
-  padding-top: 28px;
+  padding-top: 26px;
 
-  // &__logo {}
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
-  // &__site-navigation-button {}
+  &__primary-layout {
+    width: 100%;
+    margin: 0;
+  }
 
-  // &__burger-svg {}
+  &__logo {
+    margin-top: 27px;
+  }
 
-  // &__cross-svg {}
+  &__site-navigation {
+    margin-top: 70px;
+  }
 
-  // &__site-navigation {}
+  &__nav-list,
+  &__contacts-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-  // &__nav-list {}
+  &__nav-list {
+    align-items: center;
+  }
 
   // &__nav-item {}
 
-  &__nav-link {
-    font-family: "Blogger Sans", "Arial", sans-serif;
+  // &__nav-link {}
+
+  &__nav-link--blue {
     font-size: 30px;
     font-weight: 500;
     font-style: normal;
@@ -27,7 +42,26 @@
     text-transform: uppercase;
   }
 
-  // &__contacts-group {}
+  &__contacts-group {
+    margin-top: 52px;
+    align-items: flex-start;
+  }
 
-  // &__socials {}
+  &__socials {
+    margin-top: 40px;
+    margin-bottom: 41px;
+  }
+
+  // &__auxiliary-layout {}
+
+  &__upper-part {
+    width: 100%;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 31px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

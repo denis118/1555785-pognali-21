@@ -1,7 +1,11 @@
 
 .contacts-group {
-  &__telephone {
-    font-family: "Blogger Sans", "Arial", sans-serif;
+  &__telephone,
+  &__email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     font-size: 16px;
     font-weight: 700;
     font-style: normal;
@@ -9,39 +13,36 @@
     color: $dcg-4;
   }
 
-  &__telephone::before {
+  &__telephone {
+    margin-top: 51px;
+  }
+
+  &__telephone::before,
+  &__email::before {
     content: "";
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+    margin-right: 17px;
+
     background-color: $dcg-8;
-    background-image: $telephone-icon-1;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
+  }
+
+  &__telephone::before {
+    background-image: $telephone-icon-1;
   }
 
   // &__telephone--displaced {}
 
   &__email {
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 18px;
-    color: $dcg-4;
     text-transform: uppercase;
   }
 
   &__email::before {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: $dcg-8;
     background-image: $email-icon-1;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
   }
 
   // &__email--displaced {}
@@ -55,15 +56,17 @@
   // &__span--displaced {}
 
   &__user-authorization {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    order: -1;
+
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+
     width: 270px;
     height: 50px;
     background-color: $mcg-1;
     border-radius: 25px;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: 700;
     font-style: normal;
