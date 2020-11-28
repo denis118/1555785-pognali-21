@@ -1,0 +1,15 @@
+
+.selection-results {
+  // &__list {}
+
+  &__item {
+    margin-top: 10px;
+    padding-bottom: 23px;
+  }
+
+  &__item:first-child {
+    margin-top: 28px;
+  }
+
+  // &__companion {}
+}
