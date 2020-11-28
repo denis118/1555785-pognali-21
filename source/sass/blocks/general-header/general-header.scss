@@ -1,17 +1,22 @@
 
 .general-header {
+  position: relative;
   background-color: $lcg-1;
   padding-top: 26px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
 
-  &__primary-layout {
-    width: 100%;
-    margin: 0;
+  &--repainted {
+    background-color: $dcg-2;
   }
 
-  &__logo {
-    margin-top: 27px;
+  // &__logo {}
+
+  &__site-navigation-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 
   &__site-navigation {
@@ -31,9 +36,7 @@
 
   // &__nav-item {}
 
-  // &__nav-link {}
-
-  &__nav-link--blue {
+  &__nav-link {
     font-size: 30px;
     font-weight: 500;
     font-style: normal;
@@ -42,26 +45,39 @@
     text-transform: uppercase;
   }
 
+  // &__nav-link--white {
+  //   color: $lcg-1;
+  // }
+
   &__contacts-group {
     margin-top: 52px;
     align-items: flex-start;
   }
 
   &__socials {
-    margin-top: 40px;
-    margin-bottom: 41px;
+    padding-top: 40px;
+    padding-bottom: 41px;
   }
-
-  // &__auxiliary-layout {}
 
   &__upper-part {
-    width: 100%;
-    margin: 0;
-    padding-top: 27px;
-    padding-bottom: 31px;
-
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
+
+  // &__under-part {}
+
+  &__under-part--visible {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $lcg-1;
+    z-index: 1;
+  }
+
+
+  // &--form {}
+
+  // &--catalog {}
 }
