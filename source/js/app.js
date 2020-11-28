@@ -10,7 +10,13 @@ const burger = navButton.querySelector( '.general-header__burger-svg' );
 const cross = navButton.querySelector( '.general-header__cross-svg' );
 
 const switchLayout = function() {
-  generalHeader.classList.add( 'general-header--repainted' );
+  if ( generalHeader.classList.contains( 'general-header--form' ) ||
+        generalHeader.classList.contains( 'general-header--catalog' )  ) {
+          generalHeader.classList.add( 'general-header--repainted' );
+  } else {
+    generalHeader.classList.add( 'general-header--repainted-index' );
+  }
+
   underPart.classList.add( 'invisible' );
   logoPrimary.classList.add( 'invisible' );
   logoAuxiliary.classList.remove( 'invisible' );
@@ -21,7 +27,19 @@ const switchLayout = function() {
 switchLayout();
 
 navButton.addEventListener( 'click', function() {
-  generalHeader.classList.toggle( 'general-header--repainted' );
+  if ( generalHeader.classList.contains( 'general-header--form' )  ) {
+    generalHeader.classList.toggle( 'general-header--repainted' );
+  }
+
+  if ( generalHeader.classList.contains( 'general-header--catalog' )  ) {
+    generalHeader.classList.toggle( 'general-header--repainted' );
+  }
+
+  if ( !generalHeader.classList.contains( 'general-header--form' )
+      && !generalHeader.classList.contains( 'general-header--catalog' ) ) {
+        generalHeader.classList.toggle( 'general-header--repainted-index' );
+  }
+
   underPart.classList.toggle( 'invisible' );
   underPart.classList.toggle( 'general-header__under-part--visible' );
   logoPrimary.classList.toggle( 'invisible' );

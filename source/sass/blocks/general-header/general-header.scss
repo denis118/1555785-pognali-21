@@ -7,6 +7,10 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
 
   &--repainted {
+    background-color: $dcg-10;
+  }
+
+  &--repainted-index {
     background-color: $dcg-2;
   }
 
