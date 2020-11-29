@@ -1,6 +1,10 @@
 
-// .logo {
-//   &__svg-primary {}
+.logo {
+  display: block;
+  width: min-content;
+  line-height: 0;
 
-//   &__svg-auxiliary {}
-// }
+  // &__svg-primary {}
+
+  // &__svg-auxiliary {}
+}

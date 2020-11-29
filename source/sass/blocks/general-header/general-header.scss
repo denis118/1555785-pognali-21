@@ -2,7 +2,11 @@
 .general-header {
   position: relative;
   background-color: $lcg-1;
+
   padding-top: 26px;
+  padding-bottom: 27px;
+
+  @include outline(2px, dashed, rgb(108, 185, 8));
 
   font-family: "Blogger Sans", "Arial", sans-serif;
 
@@ -19,6 +23,8 @@
   &__site-navigation-button {
     border: none;
     outline: none;
+    padding: 0;
+    margin-top: 2px;
     background-color: transparent;
     cursor: pointer;
   }

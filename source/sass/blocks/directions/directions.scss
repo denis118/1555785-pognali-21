@@ -3,18 +3,62 @@
   background-color: $lcg-2;
 
   @include overlap--bottom(-1, 71px, $bottom-radii);
+  @include outline(2px, dashed, rgb(0, 222, 238));
 
   // &__heading {}
 
+  &__heading,
   &__main-text {
+    margin-left: 24px;
+  }
+
+  &__main-text {
+    margin-top: 19px;
+    margin-bottom: 0;
     color: $dcg-9;
   }
 
-  // &__list {}
+  &__list,
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
 
-  // &__item {}
+  &__list {
+    margin-top: 60px;
+  }
 
-  // &__country {}
+  &__item:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+
+    grid-template-areas:
+      "heading heading applicants"
+      "tagline tagline tagline";
+
+    position: relative;
+    z-index: 1;
+    margin-top: -11px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    background-color: $lcg-1;
+    border-radius: 10px;
+  }
+
+  &__country {
+    margin-top: 26px;
+  }
+
+  &__country,
+  &__applicants-amount {
+    margin-bottom: 0;
+  }
 
   &__applicants-amount,
   &__tagline {
@@ -25,19 +69,61 @@
   }
 
   &__tagline {
+    min-height: 30px;
+    margin-top: 2px;
+    margin-bottom: 9px;
+
     line-height: 18px;
     color: $dcg-9;
+    opacity: 0.3;
+
+    grid-area: tagline;
+  }
+
+  &__tagline--unusual {
+    height: 30px;
   }
 
   &__applicants-amount {
+    margin-top: 28px;
     line-height: 20px;
-    color: $dcg-6;
-    opacity: 0.3;
+    text-align: right;
+    color: $lcg-10;
+
+    grid-area: applicants;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  // &__country-view {}
+  &__applicants-amount--unusual {
+    justify-content: start;
+    margin-left: 10px;
+  }
 
-  // &__country-flag {}
+  &__applicants-amount::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    background: $applicants-icon center no-repeat;
+  }
 
-  // &__more {}
+  &__country-view {
+    grid-area: photo;
+  }
+
+  &__country-flag {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+
+  &__more {
+    margin-top: 28px;
+    margin-bottom: 34px;
+  }
 }

@@ -1,6 +1,7 @@
 
 .about-service {
   padding-top: 33px;
+  padding-bottom: 82px;
 
   background-color: $dcg-4;
   background-image: $about-service-bg-image-1, $about-service-bg-image-2;
@@ -11,13 +12,24 @@
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
 
-  // &__box {}
+  @include outline(2px, dashed, rgb(252, 111, 69));
 
   // &__heading {}
 
-  // &__main-text {}
+  &__heading,
+  &__main-text,
+  &__additional-text {
+    margin-left: 24px;
+  }
 
-  // &__additional-text {}
+  &__main-text {
+    margin-top: 19px;
+    margin-bottom: 0;
+  }
+
+  &__additional-text {
+    margin-top: 19px;
+  }
 
   // &__more {}
 }

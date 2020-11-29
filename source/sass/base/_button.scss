@@ -31,8 +31,20 @@
     height: 62px;
     justify-content: space-between;
     padding-left: 23px;
+    padding-right: 23px;
 
     border-radius: 10px;
+  }
+
+  &--more::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 13px * 0.87 solid $dcg-1;
+    border-top: 13px * 0.5 solid transparent;
+    border-bottom: 13px * 0.5 solid transparent;
+    border-right-width: 0;
   }
 
   // &--quadratic {}
