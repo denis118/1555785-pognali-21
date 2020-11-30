@@ -1,4 +1,4 @@
-//mixin overlap
+// overlap
 @mixin overlap--bottom($i, $padding-top-initial, $border-radius) {
   position: relative;
   z-index: $i;
@@ -6,4 +6,10 @@
   margin-top: - ($border-radius);
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+}
+
+// outline
+@mixin outline($width, $type, $color) {
+  outline: $width $type $color;
+  outline-offset: - $width;
 }

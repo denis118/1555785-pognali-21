@@ -1,5 +1,6 @@
 
 .quote {
+  padding-left: 25px;
   font-family: "Blogger Sans", "Arial", sans-serif;
 
   &__content,
@@ -12,6 +13,7 @@
 
   &__content {
     margin: 0;
+    padding-bottom: 18px;
     font-weight: 300;
   }
 

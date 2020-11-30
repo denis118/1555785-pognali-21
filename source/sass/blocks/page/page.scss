@@ -14,9 +14,15 @@
     font-style: normal;
     line-height: 22px;
     color: $lcg-1;
+
+    box-sizing: border-box;
   }
 
   &__body--form {
     background-color: $lcg-5;
+  }
+
+  &__body--catalog {
+    background-color: $lcg-2;
   }
 }

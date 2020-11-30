@@ -4,6 +4,7 @@
   min-width: 270px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 
   &--form {
     display: flex;
@@ -33,12 +34,24 @@
   &--form {
     color: $dcg-1;
   }
+
+  &--catalog-filter {
+    font-size: 16px;
+    line-height: 18px;
+    color: $dcg-4;
+    text-transform: uppercase;
+  }
 }
 
 .heading-level-3 {
   font-size: 21px;
   line-height: 21px;
-  color: $dcg-3;
+  color: $dcg-1;
+
+  &--catalog {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .invisible {
@@ -75,7 +88,22 @@
 
 .under-layer {
   margin-top: 10px;
-  padding: 24px 0 23px 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: $lcg-1;
   border-radius: 10px;
+
+  &--companions-selection {
+    background-color: $mcg-1;
+  }
+
+  &--companions-selection,
+  &--selection-results {
+    border-radius: 20px;
+  }
+
+  &--selection-results {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }

@@ -1,11 +1,10 @@
 
 .logo {
+  display: block;
+  width: min-content;
+  line-height: 0;
 
-  // &__svg {}
+  // &__svg-primary {}
 
-  // &__rect {}
-
-  &__rect--refilled {
-    fill: $dcg-4;
-  }
+  // &__svg-auxiliary {}
 }

@@ -1,20 +1,45 @@
 
-// .lands {
-//   &__regions {}
+.lands {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
 
-//   &__region {}
+  // &__regions {}
 
-//   &__letter-indexes {}
+  // &__region {}
 
-//   &__letter-index {}
+  &__link {
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 
-//   &__link {}
+  &__link--region {
+    font-size: 16px;
+    font-weight: 700;
+    color: $dcg-4;
+  }
 
-//   &__link--letter {}
+  // &__letter-indexes {}
 
-//   &__data {}
+  // &__letter-index {}
 
-//   &__item {}
+  &__link--letter {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dcg-1;
+  }
 
-//   &__batton-plus {}
-// }
+  &__link--letter-catalog {
+    line-height: 14px;
+  }
+
+  // &__data {}
+
+  &__item {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $dcg-9;
+  }
+
+  // &__roll-up-batton {}
+}

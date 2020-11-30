@@ -15,6 +15,7 @@
   cursor: pointer;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
 
   // &--triangular-pointer::after {}
 
@@ -22,7 +23,6 @@
   &--route {
     font-size: 18px;
     font-weight: 700;
-    font-style: normal;
     line-height: 18px;
     color: $dcg-1;
   }
@@ -31,8 +31,20 @@
     height: 62px;
     justify-content: space-between;
     padding-left: 23px;
+    padding-right: 23px;
 
     border-radius: 10px;
+  }
+
+  &--more::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 13px * 0.87 solid $dcg-1;
+    border-top: 13px * 0.5 solid transparent;
+    border-bottom: 13px * 0.5 solid transparent;
+    border-right-width: 0;
   }
 
   // &--quadratic {}
@@ -44,14 +56,27 @@
     border-radius: 10px;
   }
 
+  &--roll-up,
   &--change-photo {
+    width: 270px;
     font-size: 20px;
     font-weight: 500;
-    font-style: normal;
     line-height: 18px;
-    color: $dcg-6;
-    background-color: $lcg-4;
     text-transform: uppercase;
+  }
+
+  &--change-photo {
+    background-color: $lcg-4;
+    color: $dcg-6;
+  }
+
+  &--roll-up {
+    background-color: $lcg-9;
+    color: $dcg-4;
+  }
+
+  &__roll-up-svg {
+    margin-right: 12px;
   }
 
   &--modify-plan {
@@ -60,7 +85,6 @@
 
     font-size: 14px;
     font-weight: 500;
-    font-style: normal;
     line-height: 14px;
     color: $dcg-6;
     background-color: transparent;
@@ -95,13 +119,21 @@
 
   &--next-step,
   &--previous-step,
-  &--form-submit {
+  &--form-submit,
+  &--invite,
+  &--show,
+  &--show-more {
     font-size: 17px;
     font-weight: 700;
-    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  &--next-step,
+  &--previous-step,
+  &--form-submit,
+  &--show-more {
     line-height: 30px;
     color: $dcg-1;
-    text-transform: uppercase;
   }
 
   &--previous-step {
@@ -109,9 +141,34 @@
     background-color: transparent;
   }
 
-  // &--show {}
+  &--invite,
+  &--show {
+    width: 230px;
+    border-radius: 25px;
 
-  // &--show-more {}
+    line-height: 17px;
+    color: $dcg-6;
+  }
+
+  &--show {
+    background-color: $lcg-1;
+  }
+
+  &--invite {
+    background-color: $mcg-1;
+  }
+
+  &--show-more {
+    width: max-content;
+    height: min-content;
+    margin: 20px auto 0;
+    background-color: transparent;
+
+    svg {
+      margin-bottom: 5px;
+      margin-right: 15px;
+    }
+  }
 
   // &--counter-directional-pointers::before {}
 
