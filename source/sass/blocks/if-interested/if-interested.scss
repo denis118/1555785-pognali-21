@@ -33,3 +33,50 @@
 
   // &__contacts-group {}
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .if-interested {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, min-content);
+      grid-template-areas:
+        "heading heading heading"
+        "text1 text1 text1"
+        "text2 text2 text2"
+        "form form form"
+        "text3 text3 text3"
+        "contacts contacts .";
+      justify-items: center;
+    }
+
+    &__heading {
+      grid-area: heading;
+    }
+
+    &__main-text--1 {
+      grid-area: text1;
+    }
+
+    &__main-text--2 {
+      grid-area: text2;
+    }
+
+    &__form {
+      grid-area: form;
+    }
+
+    &__main-text--3 {
+      grid-area: text3;
+    }
+
+    &__contacts-group {
+      grid-area: contacts;
+      justify-self: start;
+    }
+  }
+}

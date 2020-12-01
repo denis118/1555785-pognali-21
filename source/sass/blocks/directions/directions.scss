@@ -3,7 +3,6 @@
   background-color: $lcg-2;
 
   @include overlap--bottom(-1, 71px, $bottom-radii);
-  @include outline(2px, dashed, rgb(0, 222, 238));
 
   // &__heading {}
 
@@ -28,11 +27,17 @@
     margin-top: 60px;
   }
 
+  &__item {
+    @include outline(2px, dashed, rgb(255, 0, 0));
+  }
+
   &__item:not(:first-child) {
     margin-top: 10px;
   }
 
   &__wrapper {
+    @include outline(2px, dashed, rgb(0, 0, 0));
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
@@ -125,5 +130,56 @@
   &__more {
     margin-top: 28px;
     margin-bottom: 34px;
+  }
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .directions {
+    &__item {
+      flex-direction: row;
+    }
+
+    &__wrapper {
+      order: -1;
+      flex-grow: 1;
+    }
+  }
+}
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .directions {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        "ls heading"
+        "ls text"
+        "ls button";
+    }
+
+    &__heading {
+      grid-area: heading;
+    }
+
+    &__main-text {
+      grid-area: text;
+    }
+
+    &__list {
+      grid-area: ls;
+    }
+
+    &__more {
+      grid-area: button;
+    }
   }
 }

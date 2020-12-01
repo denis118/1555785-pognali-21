@@ -1,0 +1,33 @@
+
+.authorization {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 270px;
+  height: 50px;
+  background-color: $mcg-1;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 20px;
+  color: $dcg-2;
+  text-transform: uppercase;
+
+  &--invisible {
+    display: none;
+  }
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .authorization {
+    &--tablet {
+      display: grid;
+      width: 188px;
+    }
+  }
+}

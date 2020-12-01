@@ -18,5 +18,80 @@
 
   // &__item {}
 
-  // &__companion {}
+  &__companion {
+    @include outline(2px, dashed, rgb(255, 255, 255));
+    height: 429px;
+    overflow: hidden;
+  }
+
+  // &__more {}
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .fellow-travelers {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item:nth-child(2n) {
+      margin-left: 50px;
+    }
+
+    &__companion {
+      width: 285px;
+    }
+
+    &__more {
+      width: 100%;
+    }
+  }
+}
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .fellow-travelers {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas:
+        "heading ls"
+        "main-text ls"
+        "add-text ls"
+        "button ls";
+    }
+
+    &__heading {
+      grid-area: heading;
+    }
+
+    &__main-text {
+      grid-area: main-text;
+
+      width: 427px;
+    }
+
+    &__additional-text {
+      grid-area: add-text;
+    }
+
+    &__list {
+      grid-area: ls;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__more {
+      grid-area: button;
+    }
+  }
 }

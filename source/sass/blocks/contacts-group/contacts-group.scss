@@ -1,5 +1,18 @@
 
 .contacts-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--row {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  &--invisible {
+    display: none;
+  }
+
   &__telephone,
   &__email {
     display: flex;
@@ -35,8 +48,6 @@
     background-image: $telephone-icon-1;
   }
 
-  // &__telephone--displaced {}
-
   &__email {
     text-transform: uppercase;
   }
@@ -45,7 +56,30 @@
     background-image: $email-icon-1;
   }
 
-  // &__email--displaced {}
+  &__telephone--row,
+  &__email--row,
+  &__telephone--row::before,
+  &__email--row::before {
+    margin: 0;
+  }
+
+  // &__email--row {}
+
+  &__telephone--row::before,
+  &__email--row::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__telephone--row::before {
+    background-color: $mcg-2;
+    background-image: $telephone-icon-2;
+  }
+
+  &__email--row::before {
+    background-color: $mcg-6;
+    background-image: $email-icon-2;
+  }
 
   // &__span {}
 
@@ -53,31 +87,71 @@
     color: $mcg-1;
   }
 
-  // &__span--displaced {}
+  &__span--row {
+    display: none;
+  }
 
   &__user-authorization {
     order: -1;
-
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-
-    width: 270px;
-    height: 50px;
-    background-color: $mcg-1;
-    border-radius: 25px;
-
-    font-size: 17px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 20px;
-    color: $dcg-2;
-    text-transform: uppercase;
   }
 
-  // &__user-authorization--displaced {}
+  &__user-authorization--row {
+    order: 0;
+    width: 190px;
+    height: 40px;
+  }
 
   &__user-authorization--invisible {
     display: none;
+  }
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .contacts-group {
+    &--row {
+      position: static;
+      transform: translateX(0);
+      z-index: auto;
+    }
+
+    &--tablet {
+      display: flex;
+    }
+
+    &__user-authorization {
+      display: none;
+    }
+
+    // &__telephone,
+    // &__email {
+    //   display: none;
+    // }
+  }
+}
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .contacts-group {
+    &--row {
+      position: static;
+      transform: translateX(0);
+      z-index: auto;
+    }
+
+    &--desktop {
+      display: flex;
+    }
+
+    &__telephone,
+    &__email {
+      display: block;
+    }
   }
 }

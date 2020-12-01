@@ -1,4 +1,9 @@
 
+// viewports
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
+
 // darken color`s group ( dcg )
 $dcg-1: #1d2e5b;
 $dcg-2: #161c36;
@@ -9,6 +14,7 @@ $dcg-7: #132576;
 $dcg-8: #121936;
 $dcg-9: #444444;
 $dcg-10: #182044;
+$dcg-11: #161c34;
 
 // middle color`s group ( mcg )
 $mcg-1: #ffd74b;
@@ -29,11 +35,14 @@ $lcg-7: #cbced9;
 $lcg-8: #e2e5f2;
 $lcg-9: #d6daed;
 $lcg-10: #b9bbc2;
+$lcg-11: #cccccc;
 
 //blok`s background images
 $intro-bg-image-1: url("../img/intro/bg/traveller-illustration-mobile-1.svg");
 $intro-bg-image-2: url("../img/intro/bg/globe-back-mobile-1.svg");
 $intro-bg-image-3: url("../img/intro/bg/data-rect.svg");
+$intro-bg-image-4: url("../img/intro/bg/globe-back-tablet.png");
+$intro-bg-image-5: url("../img/intro/bg/globe-back-desktop.png");
 $about-service-bg-image-1: url("../img/about-service/about-mobile.svg");
 $about-service-bg-image-2: url("../img/about-service/back.svg");
 $about-service-bg-image-3: url("../img/about-service/down-back-image.svg");
@@ -46,7 +55,9 @@ $applicants-icon: url("../img/directions/applicants-icon.png");
 
 // icons
 $email-icon-1: url("../img/email/email-icon-1.svg");
+$email-icon-2: url("../img/email/email-icon-2.svg");
 $telephone-icon-1: url("../img/telephone/telephone-icon-1.svg");
+$telephone-icon-2: url("../img/telephone/telephone-icon-2.svg");
 
 // other
 $bottom-radii: 30px;

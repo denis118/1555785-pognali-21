@@ -25,3 +25,74 @@
     color: $dcg-7;
   }
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .profile {
+    &__container,
+    &__benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, min-content);
+    }
+
+    &__container {
+      grid-template-areas:
+        "heading heading"
+        "ls ls"
+        "tariff .";
+    }
+
+    &__heading {
+      grid-area: heading;
+      justify-self: center;
+    }
+
+    &__benefits {
+      grid-area: ls;
+    }
+
+    &__busines-tariff {
+      grid-area: tariff;
+    }
+  }
+}
+
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .profile {
+    &__container,
+    &__benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, min-content);
+    }
+
+    &__container {
+      grid-template-areas:
+        "heading heading"
+        "ls ls"
+        "tariff .";
+    }
+
+    &__heading {
+      grid-area: heading;
+      justify-self: center;
+    }
+
+    &__benefits {
+      grid-area: ls;
+    }
+
+    &__busines-tariff {
+      grid-area: tariff;
+    }
+  }
+}

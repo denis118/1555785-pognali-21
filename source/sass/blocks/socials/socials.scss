@@ -16,3 +16,28 @@
     margin-left: 27px;
   }
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .socials {
+    &--tablet-left {
+      justify-content: flex-start;
+    }
+  }
+}
+
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .socials {
+    &--invisible {
+      display: none;
+    }
+  }
+}

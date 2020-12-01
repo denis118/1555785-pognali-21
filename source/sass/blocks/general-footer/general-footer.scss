@@ -1,15 +1,32 @@
 
 .general-footer {
+  @include outline(2px, dashed, rgb(253, 0, 0));
+  height: 239px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
+  &__container,
+  &__creators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__container {
+    flex-direction: column;
+    height: 100%;
+  }
+
   // &__logo {}
 
   // &__socials {}
 
-  // &__creators {}
+  &__creators {
+    width: 100%;
+  }
 
   &__created-by {
     font-size: 16px;
@@ -22,4 +39,22 @@
   // &__link {}
 
   // &__svg {}
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .general-footer {
+    height: 140px;
+
+    &__container {
+      flex-direction: row;
+    }
+
+    &__creators {
+      width: min-content;
+    }
+  }
 }

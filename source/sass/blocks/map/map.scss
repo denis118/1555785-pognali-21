@@ -20,3 +20,21 @@
 
   // &__in-farme {}
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .map {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__route {
+      width: 100%;
+    }
+  }
+}

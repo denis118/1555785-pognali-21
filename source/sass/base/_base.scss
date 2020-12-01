@@ -107,3 +107,29 @@
     padding-right: 18px;
   }
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .container {
+    &--thick {
+      width: 688px;
+    }
+
+    &--slim {
+      width: 620px;
+    }
+  }
+}
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1320px;
+  }
+}

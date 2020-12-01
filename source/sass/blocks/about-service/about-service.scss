@@ -12,8 +12,6 @@
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
 
-  @include outline(2px, dashed, rgb(252, 111, 69));
-
   // &__heading {}
 
   &__heading,
@@ -32,4 +30,16 @@
   }
 
   // &__more {}
+}
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .about-service {
+    &__more {
+      display: block;
+    }
+  }
 }
