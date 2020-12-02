@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
+
   <body class="page__body page__body--form">
     <header class="general-header general-header--form">
       <div class="general-header__auxiliary-layout invisible">
@@ -85,13 +86,13 @@
 
             <button class="general-header__cross-button invisible" type="button">
               <span class="visually-hidden">Кнопка закрытия окна навигации</span>
-              <svg class="general-header__cross-svg" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="general-header__cross-svg invisible" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
                 <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
               </svg>
             </button>
 
-            <a class="authorization authorization--invisible link" href="#!">Авторизация</a>
+            <a class="authorization authorization--invisible authorization--tablet general-header__authorization link" href="#!">Авторизация</a>
           </div>
 
           <nav class="general-header__site-navigation general-header__site-navigation--desktop">
@@ -108,7 +109,7 @@
             <a class="authorization contacts-group__user-authorization link" href="#!">Авторизация</a>
           </div>
 
-          <div class="socials general-header__socials">
+          <div class="socials socials--invisible socials--tablet-left general-header__socials">
             <ul class="socials__list list">
               <li class="socials__item">
                 <a class="socials__link link" href="#!">
@@ -143,6 +144,8 @@
         </div>
       </div>
     </header>
+
+    <div class="page__lining invisible"></div>
 
     <main class="form-main">
       <h1 class="form-main__heading heading-level-1">Направления</h1>

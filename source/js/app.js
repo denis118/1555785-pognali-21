@@ -15,7 +15,17 @@ const switchLayout = function() {
   generalHeader.style.position = 'fixed';
   lining.classList.remove( 'invisible' );
   primaryLayout.classList.add( 'invisible' );
-  auxiliaryLayout.classList.remove( 'invisible' );
+  // auxiliaryLayout.classList.remove( 'invisible' );
+  auxiliaryLayout.style.display = 'flex';
+
+  if ( generalHeader.classList.contains( 'general-header--form' ) ) {
+    auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--form' );
+  }
+
+  if ( generalHeader.classList.contains( 'general-header--catalog' ) ) {
+    auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--catalog' );
+  }
+
   cross.classList.remove( 'invisible' );
   crossSvg.classList.remove( 'invisible' );
 }
@@ -42,8 +52,8 @@ window.onscroll = function() {
     }
   } else {
     auxiliaryLayout.classList.remove( 'general-header__auxiliary-layout--scroll' );
-    logoPrime[0].classList.add( 'invisible' );
-    logoAux[0].classList.remove( 'invisible' );
+    logoPrime[ 0 ].classList.add( 'invisible' );
+    logoAux[ 0 ].classList.remove( 'invisible' );
     for ( let i = 0; i < burgerRect.length; i++ ) {
       burgerRect[ i ].classList.remove( 'general-header__burger-rect--scroll' );
     }

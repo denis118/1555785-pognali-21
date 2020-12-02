@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 4;
+  z-index: 5;
   background-color: $lcg-1;
   font-family: "Blogger Sans", "Arial", sans-serif;
 
@@ -12,6 +12,11 @@
     padding-top: 26px;
     padding-bottom: 27px;
     background-color: $dcg-2;
+  }
+
+  &__auxiliary-layout--form,
+  &__auxiliary-layout--catalog {
+    background-color: $dcg-10;
   }
 
   &__auxiliary-layout--scroll {
@@ -43,7 +48,7 @@
     left: 0;
     width: 100%;
     background-color: $lcg-1;
-    z-index: 5;
+    z-index: 6;
   }
 
   // &__logo--auxiliary {}
@@ -110,7 +115,19 @@
 @media (min-width: $tablet-width) {
   .general-header {
     &__auxiliary-layout {
+      // display: flex;
+      padding: 0;
       background-color: $dcg-10;
+      // box-sizing: border-box;
+    }
+
+    &__auxiliary-layout-container {
+      min-height: 132px;
+      z-index: 6;
+    }
+
+    &__auxiliary-layout--scroll {
+      background-color: $lcg-1;
     }
 
     &__primary-layout-wrapper {
@@ -134,9 +151,32 @@
     position: relative;
     z-index: auto;
 
+    &__auxiliary-layout,
+    &__primary-layout {
+      padding: 0;
+    }
+
+    &__auxiliary-layout,
+    &__primary-layout-container {
+      display: flex;
+    }
+
+    &__primary-layout-container {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__auxiliary-layout-container,
+    &__primary-layout-container {
+      min-height: 90px;
+    }
+
     &__auxiliary-layout {
-      display: block;
       background-color: $dcg-11;
+    }
+
+    &__auxiliary-layout--scroll {
+      background-color: $lcg-1;
     }
 
     &__burger-button,
@@ -144,13 +184,15 @@
       display: none;
     }
 
-    &__site-navigation--desktop {
+    &__site-navigation--desktop-aux,
+    &__site-navigation--desktop-prime {
       display: block;
       margin: 0;
     }
 
     &__nav-list {
       flex-direction: row;
+      align-items: center;
 
       @include outline(2px, dashed, rgb(60, 255, 0));
     }
@@ -165,8 +207,8 @@
       color: $lcg-1;
     }
 
-    &__primary-layout-container {
-      display: flex;
+    &__nav-link--desktop-prime {
+      color: $dcg-4;
     }
 
     &__socials {

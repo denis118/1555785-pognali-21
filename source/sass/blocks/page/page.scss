@@ -31,3 +31,27 @@
     height: 73.4px;
   }
 }
+
+//
+// @media-tablet
+//
+
+@media (min-width: $tablet-width) {
+  .page {
+    &__lining {
+      min-height: 132px;
+    }
+  }
+}
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .page {
+    &__lining {
+      min-height: 90px;
+    }
+  }
+}

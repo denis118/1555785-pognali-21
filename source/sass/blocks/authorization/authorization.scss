@@ -31,3 +31,13 @@
     }
   }
 }
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .authorization {
+    display: none;
+  }
+}

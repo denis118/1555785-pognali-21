@@ -139,19 +139,22 @@
 
 @media (min-width: $desktop-width) {
   .contacts-group {
+    display: none;
+
     &--row {
+      display: flex;
       position: static;
       transform: translateX(0);
       z-index: auto;
     }
 
-    &--desktop {
-      display: flex;
-    }
-
     &__telephone,
     &__email {
       display: block;
+    }
+
+    &__user-authorization--desktop-aux {
+      display: grid;
     }
   }
 }

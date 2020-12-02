@@ -129,7 +129,7 @@
     background-image: $intro-bg-image-1, $intro-bg-image-4;
     background-repeat: no-repeat, no-repeat;
     background-position: 62% 100%, center;
-    background-size: auto, cover;
+    background-size: auto, contain;
 
     &__box-upper {
       background-color: transparent;
