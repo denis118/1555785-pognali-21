@@ -15,7 +15,7 @@ const currentMode = ( document.documentElement.clientWidth < 1440 ) ? headerMobi
 currentMode();
 
 function headerMobileTablet() {
-  const switchLayout = function() {
+  ( function() {
     generalHeader.style.position = 'fixed';
     lining.classList.remove( 'invisible' );
     primaryLayout.classList.add( 'invisible' );
@@ -32,9 +32,7 @@ function headerMobileTablet() {
 
     cross.classList.remove( 'invisible' );
     crossSvg.classList.remove( 'invisible' );
-  }
-
-  switchLayout();
+  } ) ();
 
   burger.addEventListener( 'click', function() {
     primaryLayout.classList.remove( 'invisible' );
