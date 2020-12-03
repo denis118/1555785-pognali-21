@@ -43,3 +43,13 @@
     }
   }
 }
+
+//
+// @media-desktop
+//
+
+@media (min-width: $desktop-width) {
+  .about-service {
+    padding-top: 100px;
+  }
+}

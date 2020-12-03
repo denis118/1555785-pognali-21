@@ -123,7 +123,6 @@
 
     &__auxiliary-layout-container {
       min-height: 132px;
-      z-index: 6;
     }
 
     &__auxiliary-layout--scroll {
@@ -149,11 +148,27 @@
 @media (min-width: $desktop-width) {
   .general-header {
     position: relative;
-    z-index: auto;
 
     &__auxiliary-layout,
     &__primary-layout {
       padding: 0;
+    }
+
+    &__primary-layout,
+    &__primary-layout--scrolled {
+      left: 0;
+      width: 100%;
+    }
+
+    &__primary-layout {
+      position: absolute;
+      top: 830px;
+      background-color: $lcg-1;
+    }
+
+    &__primary-layout--scrolled {
+      position: fixed;
+      top: 0;
     }
 
     &__auxiliary-layout,
