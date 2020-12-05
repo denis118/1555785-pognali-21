@@ -8,57 +8,8 @@
 
   @include overlap--bottom(-2, 68px, $bottom-radii);
 
-  // &__heading {}
-
-  // &__main-text {}
-
-  // &__additional-text {}
-
-  // &__list {}
-
-  // &__item {}
-
-  &__companion {
-    @include outline(2px, dashed, rgb(255, 255, 255));
-    height: 429px;
-    overflow: hidden;
-  }
-
-  // &__more {}
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .fellow-travelers {
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    &__item:nth-child(2n) {
-      margin-left: 50px;
-    }
-
-    &__companion {
-      width: 285px;
-    }
-
-    &__more {
-      width: 100%;
-    }
-  }
-}
-
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .fellow-travelers {
-    &__container {
+  &__container {
+    @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, min-content);
@@ -68,29 +19,62 @@
         "add-text ls"
         "button ls";
     }
+  }
 
-    &__heading {
+  &__heading {
+    @media (min-width: $desktop-width) {
       grid-area: heading;
     }
+  }
 
-    &__main-text {
+  &__main-text {
+    @media (min-width: $desktop-width) {
       grid-area: main-text;
-
       width: 427px;
     }
+  }
 
-    &__additional-text {
+  &__additional-text {
+    @media (min-width: $desktop-width) {
       grid-area: add-text;
     }
+  }
 
-    &__list {
-      grid-area: ls;
-
+  &__list {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
       display: flex;
       flex-wrap: wrap;
     }
 
-    &__more {
+    @media (min-width: $desktop-width) {
+      grid-area: ls;
+    }
+  }
+
+  // &__item {}
+
+  &__item:nth-child(2n) {
+    @media (min-width: $tablet-width) {
+      margin-left: 50px;
+    }
+  }
+
+  &__companion {
+    @include outline(2px, dashed, rgb(255, 255, 255));
+    height: 429px;
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      width: 285px;
+    }
+  }
+
+  &__more {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
       grid-area: button;
     }
   }

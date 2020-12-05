@@ -12,6 +12,17 @@
     padding-top: 26px;
     padding-bottom: 27px;
     background-color: $dcg-2;
+
+    @media (min-width: $tablet-width) {
+      // display: flex;
+      padding: 0;
+      background-color: $dcg-10;
+      // box-sizing: border-box;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $dcg-11;
+    }
   }
 
   &__auxiliary-layout--form,
@@ -20,7 +31,7 @@
   }
 
   &__auxiliary-layout--scroll {
-    background-color: $lcg-1;
+    background-color: inherit;
   }
 
   &__auxiliary-layout-container,
@@ -30,12 +41,71 @@
     align-items: center;
   }
 
-  // &__primary-layout {}
+  &__auxiliary-layout-container {
+    @media (min-width: $tablet-width) {
+      min-height: 132px;
+    }
+  }
 
-  // &__primary-layout-container {}
+  &__auxiliary-layout,
+  &__primary-layout {
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
+  }
+
+  &__primary-layout {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 830px;
+      background-color: inherit;
+    }
+  }
+
+  &__primary-layout--scrolled {
+    @media (min-width: $desktop-width) {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  &__primary-layout,
+  &__primary-layout--scrolled {
+    @media (min-width: $desktop-width) {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &__auxiliary-layout,
+  &__primary-layout-container {
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+
+  &__primary-layout-container {
+    @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__auxiliary-layout-container,
+  &__primary-layout-container {
+    @media (min-width: $desktop-width) {
+      min-height: 90px;
+    }
+  }
 
   &__primary-layout-wrapper {
     padding-top: 21px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   // &__logo {}
@@ -47,7 +117,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $lcg-1;
+    background-color: inherit;
     z-index: 6;
   }
 
@@ -62,6 +132,10 @@
     background-color: transparent;
     cursor: pointer;
     display: block;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   // &__burger-rect {}
@@ -74,14 +148,36 @@
     margin-top: 70px;
   }
 
+  &__site-navigation--desktop-aux,
+  &__site-navigation--desktop-prime {
+    @media (min-width: $desktop-width) {
+      display: block;
+      margin: 0;
+    }
+  }
+
   &__nav-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+
+      @include outline(2px, dashed, rgb(60, 255, 0));
+    }
   }
 
-  // &__nav-item {}
+  &__nav-item {
+    @media (min-width: $desktop-width) {
+      margin-left: 34px;
+    }
+  }
 
   &__nav-link {
     font-size: 30px;
@@ -90,6 +186,18 @@
     line-height: 35px;
     color: $dcg-4;
     text-transform: uppercase;
+
+    @media (min-width: $desktop-width) {
+      font-size: 20px;
+      line-height: 20px;
+      color: $lcg-1;
+    }
+  }
+
+  &__nav-link--desktop-prime {
+    @media (min-width: $desktop-width) {
+      color: $dcg-4;
+    }
   }
 
   &__contacts-group {
@@ -99,135 +207,13 @@
   &__socials {
     padding-top: 40px;
     padding-bottom: 41px;
-  }
 
-  // &__authorization {}
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
 
   // &--form {}
 
   // &--catalog {}
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .general-header {
-    &__auxiliary-layout {
-      // display: flex;
-      padding: 0;
-      background-color: $dcg-10;
-      // box-sizing: border-box;
-    }
-
-    &__auxiliary-layout-container {
-      min-height: 132px;
-    }
-
-    &__auxiliary-layout--scroll {
-      background-color: $lcg-1;
-    }
-
-    &__primary-layout-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__nav-list {
-      align-items: flex-start;
-    }
-  }
-}
-
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .general-header {
-    position: relative;
-
-    &__auxiliary-layout,
-    &__primary-layout {
-      padding: 0;
-    }
-
-    &__primary-layout,
-    &__primary-layout--scrolled {
-      left: 0;
-      width: 100%;
-    }
-
-    &__primary-layout {
-      position: absolute;
-      top: 830px;
-      background-color: $lcg-1;
-    }
-
-    &__primary-layout--scrolled {
-      position: fixed;
-      top: 0;
-    }
-
-    &__auxiliary-layout,
-    &__primary-layout-container {
-      display: flex;
-    }
-
-    &__primary-layout-container {
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__auxiliary-layout-container,
-    &__primary-layout-container {
-      min-height: 90px;
-    }
-
-    &__auxiliary-layout {
-      background-color: $dcg-11;
-    }
-
-    &__auxiliary-layout--scroll {
-      background-color: $lcg-1;
-    }
-
-    &__burger-button,
-    &__cross-button {
-      display: none;
-    }
-
-    &__site-navigation--desktop-aux,
-    &__site-navigation--desktop-prime {
-      display: block;
-      margin: 0;
-    }
-
-    &__nav-list {
-      flex-direction: row;
-      align-items: center;
-
-      @include outline(2px, dashed, rgb(60, 255, 0));
-    }
-
-    &__nav-item {
-      margin-left: 34px;
-    }
-
-    &__nav-link {
-      font-size: 20px;
-      line-height: 20px;
-      color: $lcg-1;
-    }
-
-    &__nav-link--desktop-prime {
-      color: $dcg-4;
-    }
-
-    &__socials {
-      display: none;
-    }
-  }
 }

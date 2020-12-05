@@ -3,14 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
   &--row {
     margin: 0;
     flex-direction: row;
-  }
-
-  &--invisible {
-    display: none;
   }
 
   &__telephone,
@@ -28,6 +25,13 @@
 
   &__telephone {
     margin-top: 51px;
+  }
+
+  &__telephone--for-interested {
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      margin-right: 110px;
+    }
   }
 
   &__telephone::before,
@@ -63,12 +67,15 @@
     margin: 0;
   }
 
-  // &__email--row {}
-
   &__telephone--row::before,
   &__email--row::before {
     width: 40px;
     height: 40px;
+
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__telephone--row::before {
@@ -91,70 +98,24 @@
     display: none;
   }
 
-  &__user-authorization {
+  &__authorization {
     order: -1;
   }
 
-  &__user-authorization--row {
+  &__authorization--row {
     order: 0;
-    width: 190px;
-    height: 40px;
   }
 
-  &__user-authorization--invisible {
-    display: none;
-  }
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .contacts-group {
-    &--row {
-      position: static;
-      transform: translateX(0);
-      z-index: auto;
-    }
-
-    &--tablet {
-      display: flex;
-    }
-
-    &__user-authorization {
+  &--appearance,
+  &--prime-row {
+    @media (max-width: $desktop-width - 1) {
       display: none;
     }
-
-    // &__telephone,
-    // &__email {
-    //   display: none;
-    // }
   }
-}
 
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .contacts-group {
-    display: none;
-
-    &--row {
-      display: flex;
-      position: static;
-      transform: translateX(0);
-      z-index: auto;
-    }
-
-    &__telephone,
-    &__email {
-      display: block;
-    }
-
-    &__user-authorization--desktop-aux {
-      display: grid;
+  &--prime-column {
+    @media (min-width: $desktop-width) {
+      display: none;
     }
   }
 }

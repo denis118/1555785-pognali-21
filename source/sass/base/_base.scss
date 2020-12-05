@@ -15,6 +15,20 @@
     background-color: $lcg-1;
     border-radius: 10px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--thick {
+      width: 688px;
+    }
+
+    &--slim {
+      width: 620px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+  }
 }
 
 .heading-level-3,
@@ -105,31 +119,5 @@
   &--selection-results {
     padding-left: 18px;
     padding-right: 18px;
-  }
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .container {
-    &--thick {
-      width: 688px;
-    }
-
-    &--slim {
-      width: 620px;
-    }
-  }
-}
-
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .container {
-    width: 1320px;
   }
 }

@@ -12,6 +12,10 @@
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
 
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
+
   // &__heading {}
 
   &__heading,
@@ -29,27 +33,9 @@
     margin-top: 19px;
   }
 
-  // &__more {}
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .about-service {
-    &__more {
+  &__more {
+    @media (min-width: $tablet-width) {
       display: block;
     }
-  }
-}
-
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .about-service {
-    padding-top: 100px;
   }
 }

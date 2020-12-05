@@ -5,9 +5,47 @@
 
   @include overlap--bottom(-4, 72px, $bottom-radii);
 
-  // &__heading {}
+  &__container {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, min-content);
+      grid-template-areas:
+        "heading heading heading"
+        "text1 text1 text1"
+        "text2 text2 text2"
+        "form form form"
+        "text3 text3 text3"
+        "contacts contacts contacts";
+      justify-items: center;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $tablet-width) {
+      grid-area: heading;
+    }
+  }
 
   // &__main-text {}
+
+  &__main-text--1 {
+    @media (min-width: $tablet-width) {
+      grid-area: text1;
+    }
+  }
+
+  &__main-text--2 {
+    @media (min-width: $tablet-width) {
+      grid-area: text2;
+    }
+  }
+
+  &__main-text--3 {
+    @media (min-width: $tablet-width) {
+      grid-area: text3;
+    }
+  }
 
   &__user-authorization {
     display: inline;
@@ -25,58 +63,30 @@
     text-decoration: underline;
   }
 
-  // &__form {}
+  &__form {
+    @media (min-width: $tablet-width) {
+      grid-area: form;
+    }
+  }
 
   // &__form-email {}
 
   // &__form-submit {}
 
-  // &__contacts-group {}
-}
-
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .if-interested {
-    &__container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(6, min-content);
-      grid-template-areas:
-        "heading heading heading"
-        "text1 text1 text1"
-        "text2 text2 text2"
-        "form form form"
-        "text3 text3 text3"
-        "contacts contacts .";
-      justify-items: center;
-    }
-
-    &__heading {
-      grid-area: heading;
-    }
-
-    &__main-text--1 {
-      grid-area: text1;
-    }
-
-    &__main-text--2 {
-      grid-area: text2;
-    }
-
-    &__form {
-      grid-area: form;
-    }
-
-    &__main-text--3 {
-      grid-area: text3;
-    }
-
-    &__contacts-group {
+  &__contacts-group {
+    @media (min-width: $tablet-width) {
       grid-area: contacts;
       justify-self: start;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-area: contacts;
+      justify-self: center;
+
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
   }
 }

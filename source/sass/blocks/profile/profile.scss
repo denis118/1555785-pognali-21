@@ -11,9 +11,36 @@
 
   @include overlap--bottom(-3, 53px, $bottom-radii);
 
-  // &__heading {}
+  &__container,
+  &__benefits {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, min-content);
+    }
+  }
 
-  // &__benefits {}
+  &__container {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
+      grid-template-areas:
+        "heading heading"
+        "ls ls"
+        "tariff .";
+    }
+  }
+
+  &__heading {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
+      grid-area: heading;
+      justify-self: center;
+    }
+  }
+
+  &__benefits {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
+      grid-area: ls;
+    }
+  }
 
   // &__term {}
 
@@ -23,75 +50,8 @@
     font-weight: 700;
     font-style: normal;
     color: $dcg-7;
-  }
-}
 
-//
-// @media-tablet
-//
-
-@media (min-width: $tablet-width) {
-  .profile {
-    &__container,
-    &__benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, min-content);
-    }
-
-    &__container {
-      grid-template-areas:
-        "heading heading"
-        "ls ls"
-        "tariff .";
-    }
-
-    &__heading {
-      grid-area: heading;
-      justify-self: center;
-    }
-
-    &__benefits {
-      grid-area: ls;
-    }
-
-    &__busines-tariff {
-      grid-area: tariff;
-    }
-  }
-}
-
-
-//
-// @media-desktop
-//
-
-@media (min-width: $desktop-width) {
-  .profile {
-    &__container,
-    &__benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, min-content);
-    }
-
-    &__container {
-      grid-template-areas:
-        "heading heading"
-        "ls ls"
-        "tariff .";
-    }
-
-    &__heading {
-      grid-area: heading;
-      justify-self: center;
-    }
-
-    &__benefits {
-      grid-area: ls;
-    }
-
-    &__busines-tariff {
+    @media (min-width: $tablet-width), (min-width: $desktop-width) {
       grid-area: tariff;
     }
   }
