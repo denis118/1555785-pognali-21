@@ -14,11 +14,6 @@ const lining = document.querySelector( '.page__lining' );
 const currentMode = ( document.documentElement.clientWidth < 1440 ) ? headerMobileTablet : headerDesktop;
 currentMode();
 
-// window.addEventListener( "resize", function() {
-//   const currentMode = ( document.documentElement.clientWidth < 1440 ) ? headerMobileTablet : headerDesktop;
-//   currentMode();
-// } );
-
 function headerMobileTablet() {
   ( function() {
     generalHeader.style.position = 'fixed';
@@ -66,24 +61,6 @@ function headerMobileTablet() {
       }
     }
   } );
-
-  // window.onscroll = function() {
-  //   if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-  //     auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--scroll' );
-  //     logoPrime[ 0 ].classList.remove( 'invisible' );
-  //     logoAux[ 0 ].classList.add( 'invisible' );
-  //     for ( let i = 0; i < burgerRect.length; i++ ) {
-  //       burgerRect[ i ].classList.add( 'general-header__burger-rect--scroll' );
-  //     }
-  //   } else {
-  //     auxiliaryLayout.classList.remove( 'general-header__auxiliary-layout--scroll' );
-  //     logoPrime[ 0 ].classList.add( 'invisible' );
-  //     logoAux[ 0 ].classList.remove( 'invisible' );
-  //     for ( let i = 0; i < burgerRect.length; i++ ) {
-  //       burgerRect[ i ].classList.remove( 'general-header__burger-rect--scroll' );
-  //     }
-  //   }
-  // }
 }
 
 function headerDesktop() {
@@ -96,12 +73,4 @@ function headerDesktop() {
       }
     }
   } );
-
-  // window.onscroll = function() {
-  //   if ( window.pageYOffset > 830 ) {
-  //     primaryLayout.classList.add( 'general-header__primary-layout--scrolled' );
-  //   } else {
-  //     primaryLayout.classList.remove( 'general-header__primary-layout--scrolled' );
-  //   }
-  // }
 }
