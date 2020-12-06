@@ -99,7 +99,7 @@
   }
 
   &__primary-layout-wrapper {
-    padding-top: 21px;
+    padding-top: 27px;
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -145,7 +145,7 @@
   }
 
   &__site-navigation {
-    margin-top: 70px;
+    margin-top: 75px;
   }
 
   &__site-navigation--desktop-aux,
@@ -206,7 +206,7 @@
 
   &__socials {
     padding-top: 40px;
-    padding-bottom: 41px;
+    padding-bottom: 35.5px;
 
     @media (min-width: $desktop-width) {
       display: none;
