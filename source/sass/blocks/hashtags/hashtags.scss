@@ -1,8 +1,24 @@
 
 .hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   font-family: "Blogger Sans", "Arial", sans-serif;
 
+  &--tania-firsova {
+    width: 188px;
+  }
+
+  &--petia-diomin {
+    width: 164px;
+  }
+
   // &__item {}
+
+  &__item:not(:first-child) {
+    margin-left: 5px;
+  }
 
   // &__link {}
 
