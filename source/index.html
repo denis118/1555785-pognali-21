@@ -23,10 +23,10 @@
             </defs>
           </svg>
           <svg class="logo__svg-auxiliary" width="100" height="18" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
+            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
               <rect width="96" height="15" fill="url(#pattern1)"/>
             </mask>
-            <g mask="url(#mask1)">
+            <g mask="url(#mask0)">
               <rect width="96" height="15" fill="white"/>
             </g>
             <defs>
@@ -227,7 +227,7 @@
             </div>
           </li>
           <li class="directions__item">
-            <img class="directions__country-view image" src="./img/directions/france-mobile-1.png" width="270" height="110" role="img" alt="Вид одного из городов Франции">
+            <img class="directions__country-view image" src="./img/directions/france-mobile-1.png" width="270" height="110" alt="Вид одного из городов Франции">
             <div class="directions__wrapper">
               <h3 class="directions__country heading-level-3">Франция</h3>
               <p class="directions__tagline">Трэ бьен, манифик!</p>
@@ -569,14 +569,20 @@
 
     <section class="profile">
       <div class="container container--thick profile__container">
-        <h2 class="profile__heading heading-level-2">Добавьте свой профиль!</h2>
+        <h2 class="profile__heading heading-level-2">Добавьте свой профиль</h2>
         <dl class="profile__benefits list">
-          <dt class="profile__term">Базовое размещение</dt>
-          <dd class="profile__definition">Бесплатно</dd>
-          <dt class="profile__term">Вывод на первых позициях</dt>
-          <dd class="profile__definition">99 руб./мес</dd>
-          <dt class="profile__term">Кастомный цвет карточки</dt>
-          <dd class="profile__definition">59 руб./мес</dd>
+          <div class="profile__items-wrapper profile__items-wrapper--basic-placement">
+            <dt class="profile__term">Базовое размещение</dt>
+            <dd class="profile__definition">Бесплатно</dd>
+          </div>
+          <div class="profile__items-wrapper profile__items-wrapper--first-positions">
+            <dt class="profile__term">Вывод на первых позициях</dt>
+            <dd class="profile__definition">99 руб./мес</dd>
+          </div>
+          <div class="profile__items-wrapper profile__items-wrapper--card-color">
+            <dt class="profile__term">Кастомный цвет карточки</dt>
+            <dd class="profile__definition">59 руб./мес</dd>
+          </div>
         </dl>
         <a class="profile__busines-tariff link" href="#!">Показать тарифы для бизнеса</a>
       </div>
@@ -665,7 +671,7 @@
     </div>
   </footer>
 
-  <!-- <script type="text/javascript" src="./js/app.js"></script> -->
+  <!-- <script src="./js/app.js"></script> -->
 </body>
 
 <div class="busines-tariffs invisible">

@@ -8,6 +8,15 @@
   color: $dcg-9;
 
   background-color: $lcg-3;
+  background-image: $profile-bg-image;
+  background-repeat: no-repeat;
+  background-position: 89% 17%;
+
+  &,
+  &__items-wrapper {
+    background-size: auto;
+  }
+
 
   @include overlap--bottom(-3, 53px, $bottom-radii);
 
@@ -29,7 +38,15 @@
     }
   }
 
+  &__heading,
+  &__benefits {
+    margin-left: 24px;
+  }
+
   &__heading {
+    width: 72px;
+    margin-top: -2px;
+
     @media (min-width: $tablet-width), (min-width: $desktop-width) {
       grid-area: heading;
       justify-self: center;
@@ -37,16 +54,87 @@
   }
 
   &__benefits {
+    margin-top: 45px;
+    counter-reset: benefit;
+
     @media (min-width: $tablet-width), (min-width: $desktop-width) {
       grid-area: ls;
     }
   }
 
-  // &__term {}
+  &__items-wrapper {
+    position: relative;
+    background-image: $profile-items-wrapper-bg-image;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
 
-  // &__definition {}
+  &__items-wrapper::after {
+    content: counter(benefit);
+    counter-increment: benefit;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    // top: 5%;
+    // left: 86%;
+    color: $lcg-1;
+  }
+
+  &__items-wrapper:last-child {
+    background-image: $profile-items-wrapper-bg-image, $profile-items-wrapper-bg-image;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, left bottom;
+  }
+
+  &__items-wrapper--basic-placement {
+    padding-top: 11px;
+    padding-bottom: 18px;
+  }
+
+  &__items-wrapper--basic-placement::after {
+    top: 2%;
+    left: 85.6%;
+    background-color: $mcg-2;
+  }
+
+  &__items-wrapper--first-positions {
+    padding-top: 10px;
+    padding-bottom: 16px;
+  }
+
+  &__items-wrapper--first-positions::after {
+    top: 0;
+    left: 86%;
+    background-color: $mcg-6;
+  }
+
+  &__items-wrapper--card-color {
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+
+  &__items-wrapper--card-color::after {
+    top: 4%;
+    left: 86%;
+    background-color: $mcg-1;
+  }
+
+  &__term {
+    margin-bottom: 6px;
+  }
+
+  &__definition {
+    margin-left: 0;
+  }
 
   &__busines-tariff {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 38px;
     font-weight: 700;
     font-style: normal;
     color: $dcg-7;
