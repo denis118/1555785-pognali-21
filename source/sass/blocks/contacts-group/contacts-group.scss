@@ -28,8 +28,9 @@
   }
 
   &__telephone--for-interested {
+    margin-top: 0;
+
     @media (min-width: $desktop-width) {
-      margin-top: 0;
       margin-right: 110px;
     }
   }

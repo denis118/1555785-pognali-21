@@ -36,7 +36,8 @@
     border-radius: 10px;
   }
 
-  &--more::after {
+  &--more::after,
+  &--quadratic::after {
     content: "";
     display: block;
     width: 0;
@@ -47,7 +48,11 @@
     border-right-width: 0;
   }
 
-  // &--quadratic {}
+  &--quadratic {
+    width: 60px;
+    height: 62px;
+    border-radius: 10px;
+  }
 
   &--route {
     height: 62px;
