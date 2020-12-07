@@ -24,16 +24,43 @@
   }
 
   &__address {
+    width: 143px;
     color: $dcg-1;
     text-transform: uppercase;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      width: 430px;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: 223px;
     }
   }
 
+  &__address::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    transform: translateY(-50%);
+
+    background-color: $dcg-8;
+    background-image: $map-pin-bg-image;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+  }
+
   &__route {
     width: 100%;
+    margin-top: 32px;
+    margin-bottom: 35px;
 
     @media (min-width: $desktop-width) {
       width: 324px;

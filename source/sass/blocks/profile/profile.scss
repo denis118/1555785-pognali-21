@@ -20,17 +20,11 @@
 
   @include overlap--bottom(-3, 53px, $bottom-radii);
 
-  &__container,
-  &__benefits {
+  &__container {
     @media (min-width: $tablet-width), (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(3, min-content);
-    }
-  }
-
-  &__container {
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
       grid-template-areas:
         "heading heading"
         "ls ls"
