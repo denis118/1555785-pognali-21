@@ -1,11 +1,23 @@
 
-// .wished-countries {
+.wished-countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-//   &__item {}
+  position: absolute;
+  top: 270px;
+  transform: translateY(-50%);
 
-//   &__link {}
+  // &__item {}
 
-//   &__flag {}
+  &__item:not(:first-child) {
+    margin-left: 20px;
+  }
 
-//   &__title {}
-// }
+  // &__link {}
+
+  // &__flag {}
+
+  // &__title {}
+}

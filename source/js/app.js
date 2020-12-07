@@ -1,49 +1,76 @@
 'use strict'
 
 const generalHeader = document.querySelector( '.general-header' );
-const upperPart = generalHeader.querySelector( '.general-header__upper-part' );
-const underPart = generalHeader.querySelector( '.general-header__under-part' );
-const logoPrimary = upperPart.querySelector( '.logo__svg-primary' );
-const logoAuxiliary = upperPart.querySelector( '.logo__svg-auxiliary' );
-const navButton = upperPart.querySelector( '.general-header__site-navigation-button' );
-const burger = navButton.querySelector( '.general-header__burger-svg' );
-const cross = navButton.querySelector( '.general-header__cross-svg' );
+const primaryLayout = generalHeader.querySelector( '.general-header__primary-layout' );
+const auxiliaryLayout = generalHeader.querySelector( '.general-header__auxiliary-layout' );
+const logoPrime = generalHeader.querySelectorAll( '.logo__svg-primary' );
+const logoAux = generalHeader.querySelectorAll( '.logo__svg-auxiliary' );
+const cross = primaryLayout.querySelector( '.general-header__cross-button' );
+const burger = auxiliaryLayout.querySelector( '.general-header__burger-button' );
+const burgerRect = auxiliaryLayout.querySelectorAll( '.general-header__burger-rect' );
+const crossSvg = primaryLayout.querySelector( '.general-header__cross-svg' );
+const lining = document.querySelector( '.page__lining' );
 
-const switchLayout = function() {
-  if ( generalHeader.classList.contains( 'general-header--form' ) ||
-        generalHeader.classList.contains( 'general-header--catalog' )  ) {
-          generalHeader.classList.add( 'general-header--repainted' );
-  } else {
-    generalHeader.classList.add( 'general-header--repainted-index' );
-  }
+const currentMode = ( document.documentElement.clientWidth < 1440 ) ? headerMobileTablet : headerDesktop;
+currentMode();
 
-  underPart.classList.add( 'invisible' );
-  logoPrimary.classList.add( 'invisible' );
-  logoAuxiliary.classList.remove( 'invisible' );
-  navButton.classList.remove( 'invisible' );
-  burger.classList.remove( 'invisible' );
+function headerMobileTablet() {
+  ( function() {
+    generalHeader.style.position = 'fixed';
+    lining.classList.remove( 'invisible' );
+    primaryLayout.classList.add( 'invisible' );
+    // auxiliaryLayout.classList.remove( 'invisible' );
+    auxiliaryLayout.style.display = 'flex';
+
+    if ( generalHeader.classList.contains( 'general-header--form' ) ) {
+      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--form' );
+    }
+
+    if ( generalHeader.classList.contains( 'general-header--catalog' ) ) {
+      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--catalog' );
+    }
+
+    cross.classList.remove( 'invisible' );
+    crossSvg.classList.remove( 'invisible' );
+  } ) ();
+
+  burger.addEventListener( 'click', function() {
+    primaryLayout.classList.remove( 'invisible' );
+    primaryLayout.classList.add( 'general-header__primary-layout--positioned' );
+  } );
+
+  cross.addEventListener( 'click', function() {
+    primaryLayout.classList.add( 'invisible' );
+    primaryLayout.classList.remove( 'general-header__primary-layout--positioned' );
+  } );
+
+  window.addEventListener( "scroll", function() {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--scroll' );
+      logoPrime[ 0 ].classList.remove( 'invisible' );
+      logoAux[ 0 ].classList.add( 'invisible' );
+      for ( let i = 0; i < burgerRect.length; i++ ) {
+        burgerRect[ i ].classList.add( 'general-header__burger-rect--scroll' );
+      }
+    } else {
+      auxiliaryLayout.classList.remove( 'general-header__auxiliary-layout--scroll' );
+      logoPrime[ 0 ].classList.add( 'invisible' );
+      logoAux[ 0 ].classList.remove( 'invisible' );
+      for ( let i = 0; i < burgerRect.length; i++ ) {
+        burgerRect[ i ].classList.remove( 'general-header__burger-rect--scroll' );
+      }
+    }
+  } );
 }
 
-switchLayout();
-
-navButton.addEventListener( 'click', function() {
-  if ( generalHeader.classList.contains( 'general-header--form' )  ) {
-    generalHeader.classList.toggle( 'general-header--repainted' );
-  }
-
-  if ( generalHeader.classList.contains( 'general-header--catalog' )  ) {
-    generalHeader.classList.toggle( 'general-header--repainted' );
-  }
-
-  if ( !generalHeader.classList.contains( 'general-header--form' )
-      && !generalHeader.classList.contains( 'general-header--catalog' ) ) {
-        generalHeader.classList.toggle( 'general-header--repainted-index' );
-  }
-
-  underPart.classList.toggle( 'invisible' );
-  underPart.classList.toggle( 'general-header__under-part--visible' );
-  logoPrimary.classList.toggle( 'invisible' );
-  logoAuxiliary.classList.toggle( 'invisible' );
-  burger.classList.toggle( 'invisible' );
-  cross.classList.toggle( 'invisible' );
-} );
+function headerDesktop() {
+  window.addEventListener( "scroll", function() {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      if ( window.pageYOffset > 830 ) {
+        primaryLayout.classList.add( 'general-header__primary-layout--scrolled' );
+      } else {
+        primaryLayout.classList.remove( 'general-header__primary-layout--scrolled' );
+      }
+    }
+  } );
+}

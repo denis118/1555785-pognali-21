@@ -1,29 +1,41 @@
 
-// .transport {
+.transport {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-//   &__link {}
+  // &__link {}
 
-//   &__svg-path {}
+  // &__svg-path {}
 
-//   &__kind {}
+  // &__kind {}
 
-//   &__kind--aircraft {}
+  &__kind--unselected {
+    opacity: 0.15;
+  }
 
-//   &__kind--bus {}
+  &__kind:not(:first-child) {
+    margin-left: 10px;
+  }
 
-//   &__kind--bycicle {}
+  // &__kind--aircraft {}
 
-//   &__kind--feet {}
+  // &__kind--bus {}
 
-//   &__kind--chosen {}
+  // &__kind--bycicle {}
 
-//   &__aircraft-icon {}
+  // &__kind--feet {}
 
-//   &__bus-icon {}
+  // &__kind--chosen {}
 
-//   &__bycicle-icon {}
+  // &__aircraft-icon {}
 
-//   &__runer-icon {}
+  // &__bus-icon {}
 
-//   &__more {}
-// }
+  // &__bycicle-icon {}
+
+  // &__runer-icon {}
+
+  // &__more {}
+}

@@ -15,6 +15,20 @@
     background-color: $lcg-1;
     border-radius: 10px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--thick {
+      width: 688px;
+    }
+
+    &--slim {
+      width: 620px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+  }
 }
 
 .heading-level-3,

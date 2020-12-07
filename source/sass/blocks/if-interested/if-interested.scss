@@ -5,9 +5,57 @@
 
   @include overlap--bottom(-4, 72px, $bottom-radii);
 
-  // &__heading {}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, min-content);
+      grid-template-areas:
+        "heading heading heading"
+        "text1 text1 text1"
+        "form form form"
+        "text2 text2 text2"
+        "contacts contacts contacts";
+      justify-items: center;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $tablet-width) {
+      grid-area: heading;
+    }
+  }
 
   // &__main-text {}
+
+  &__main-text--1 {
+    width: 210px;
+    margin-top: 19px;
+
+    @media (min-width: $tablet-width) {
+      grid-area: text1;
+    }
+  }
+
+  &__main-text--2 {
+    width: 216px;
+    margin-top: 29px;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      grid-area: text2;
+    }
+  }
+
+  &__main-text--1,
+  &__main-text--2 {
+    text-align: center;
+  }
 
   &__user-authorization {
     display: inline;
@@ -25,11 +73,49 @@
     text-decoration: underline;
   }
 
-  // &__form {}
+  &__form {
+    position: relative;
+    width: 270px;
+    margin-top: 14px;
 
-  // &__form-email {}
+    @media (min-width: $tablet-width) {
+      grid-area: form;
+    }
+  }
 
-  // &__form-submit {}
+  &__form-email {
+    width: 230px;
+    height: 62px;
+    border-radius: 10px;
+    border: none;
+    padding-right: 65px;
+    box-sizing: border-box;
+  }
 
-  // &__contacts-group {}
+  &__form-submit {
+    position: absolute;
+    top: 0;
+    left: 210px;
+  }
+
+  &__contacts-group {
+    width: 270px;
+    margin-top: 17px;
+    margin-bottom: 29px;
+
+    @media (min-width: $tablet-width) {
+      grid-area: contacts;
+      justify-self: start;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-area: contacts;
+      justify-self: center;
+
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
 }

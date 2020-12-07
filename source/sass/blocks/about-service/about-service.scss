@@ -12,7 +12,9 @@
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
 
-  @include outline(2px, dashed, rgb(252, 111, 69));
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 
   // &__heading {}
 
@@ -31,5 +33,9 @@
     margin-top: 19px;
   }
 
-  // &__more {}
+  &__more {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
 }

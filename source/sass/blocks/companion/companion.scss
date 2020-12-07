@@ -1,20 +1,68 @@
 
 .companion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $lcg-1;
+  border-radius: 10px;
+
   &__name {
+    margin-top: 27px;
     color: $dcg-1;
+    position: relative;
+  }
+
+  &__name::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: -17px;
+    // transform: translate(-50%, -100%);
+  }
+
+  &__name--petia-diomin::before {
+    background-color: $mcg-7;
+  }
+
+  &__name--tania-firsova::before {
+    background-color: $mcg-8;
   }
 
   &__head-link {
     color: $dcg-1;
   }
 
-  // &__level {}
+  &__likes {
+    display: none;
+  }
+
+  &__avatar {
+    order: -1;
+  }
+
+  &__level {
+    position: absolute;
+    top: 18px;
+    left: 17px;
+  }
 
   // &__wished-countries {}
 
-  // &__hashtags {}
+  &__hashtags {
+    margin-top: 15px;
+  }
 
-  // &__transport {}
+  &__transport {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
 
-  // &__invite-button {}
+  &__invite-button {
+    display: none;
+  }
 }

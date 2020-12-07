@@ -1,5 +1,15 @@
 
 .contacts-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
+  &--row {
+    margin: 0;
+    flex-direction: row;
+  }
+
   &__telephone,
   &__email {
     display: flex;
@@ -15,6 +25,14 @@
 
   &__telephone {
     margin-top: 51px;
+  }
+
+  &__telephone--for-interested {
+    margin-top: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 110px;
+    }
   }
 
   &__telephone::before,
@@ -35,8 +53,6 @@
     background-image: $telephone-icon-1;
   }
 
-  // &__telephone--displaced {}
-
   &__email {
     text-transform: uppercase;
   }
@@ -45,7 +61,33 @@
     background-image: $email-icon-1;
   }
 
-  // &__email--displaced {}
+  &__telephone--row,
+  &__email--row,
+  &__telephone--row::before,
+  &__email--row::before {
+    margin: 0;
+  }
+
+  &__telephone--row::before,
+  &__email--row::before {
+    width: 40px;
+    height: 40px;
+
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__telephone--row::before {
+    background-color: $mcg-2;
+    background-image: $telephone-icon-2;
+  }
+
+  &__email--row::before {
+    background-color: $mcg-6;
+    background-image: $email-icon-2;
+  }
 
   // &__span {}
 
@@ -53,31 +95,28 @@
     color: $mcg-1;
   }
 
-  // &__span--displaced {}
-
-  &__user-authorization {
-    order: -1;
-
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-
-    width: 270px;
-    height: 50px;
-    background-color: $mcg-1;
-    border-radius: 25px;
-
-    font-size: 17px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 20px;
-    color: $dcg-2;
-    text-transform: uppercase;
+  &__span--row {
+    display: none;
   }
 
-  // &__user-authorization--displaced {}
+  &__authorization {
+    order: -1;
+  }
 
-  &__user-authorization--invisible {
-    display: none;
+  &__authorization--row {
+    order: 0;
+  }
+
+  &--appearance,
+  &--prime-row {
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
+
+  &--prime-column {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }
