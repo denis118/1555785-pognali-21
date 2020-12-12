@@ -15,6 +15,7 @@ $dcg-8: #121936;
 $dcg-9: #444444;
 $dcg-10: #182044;
 $dcg-11: #161c34;
+$dcg-12: rgba(0, 0, 0, 0.6);
 
 // middle color`s group ( mcg )
 $mcg-1: #ffd74b;
@@ -38,6 +39,11 @@ $lcg-8: #e2e5f2;
 $lcg-9: #d6daed;
 $lcg-10: #b9bbc2;
 $lcg-11: #cccccc;
+$lcg-12: #d6d9e6;
+
+//shadows
+
+$shadow-1: rgba(54, 80, 148, 0.18);
 
 //blok`s background images
 $intro-bg-image-1: url("../img/intro/bg/traveller-illustration-mobile-1.svg");
@@ -45,19 +51,29 @@ $intro-bg-image-2: url("../img/intro/bg/globe-back-mobile-1.svg");
 $intro-bg-image-3: url("../img/intro/bg/data-rect.svg");
 $intro-bg-image-4: url("../img/intro/bg/globe-back-tablet.svg");
 $intro-bg-image-5: url("../img/intro/bg/globe-back-desktop.svg");
+
 $about-service-bg-image-1: url("../img/about-service/about-mobile.svg");
 $about-service-bg-image-2: url("../img/about-service/back.svg");
 $about-service-bg-image-3: url("../img/about-service/down-back-image.svg");
+
 $fellow-travelers-bg-image-1: url("../img/fellow-travelers/rogovaya-back-desktop.png");
 $fellow-travelers-bg-image-2: url("../img/fellow-travelers/smolov-back-desktop.png");
 $fellow-travelers-bg-image-3: url("../img/fellow-travelers/back.svg");
+
 $site-nav-button-bg-image: url("../img/nav-menu-icon/icon_menu_mobile.svg");
+
 $pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
+
 $applicants-icon: url("../img/directions/applicants-icon.png");
+
 $text-box-bg-image: url("../img/circle-bar/bg/line.svg");
+
 $profile-items-wrapper-bg-image: url("../img/profile/bg/line.svg");
 $profile-bg-image: url("../img/profile/bg/rates.svg");
+
 $map-pin-bg-image: url("../img/map/bg/icon-location.svg");
+
+$drop-down-button-bg: url("../img/button/drop-down/bg/drop-down-gradient.svg");
 
 // icons
 $email-icon-1: url("../img/email/email-icon-1.svg");

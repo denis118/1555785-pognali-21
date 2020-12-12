@@ -52,8 +52,6 @@
   }
 
   &__item {
-    @include outline(2px, dashed, rgb(255, 0, 0));
-
     @media (min-width: $tablet-width) {
       flex-direction: row;
     }
@@ -64,8 +62,6 @@
   }
 
   &__wrapper {
-    @include outline(2px, dashed, rgb(0, 0, 0));
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);

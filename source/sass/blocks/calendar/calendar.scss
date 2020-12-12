@@ -1,72 +1,143 @@
 
 .calendar {
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
 
-  // &__month {}
+  &--common-text-style {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $dcg-9;
+  }
+
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--grid-centered {
+    display: grid;
+    place-items: center;
+  }
+
+  &__month {
+    min-height: 43px;
+    border-top: 1px solid $lcg-12;
+    border-bottom: 1px solid $lcg-12;
+    box-sizing: border-box;
+  }
+
+  &__switch-month {
+    display: grid;
+    place-items: center;
+
+    // &--previous {}
+
+    // &--next {}
+  }
+
+  // &__arrow {
+  //   &--back {}
+
+  //   &--next {}
+  // }
 
   // &__month-list {}
 
   &__month-item {
     font-size: 20px;
     font-weight: 700;
-    font-style: normal;
     line-height: 20px;
     text-transform: none;
     color: $dcg-1;
+
+    display: none;
+
+    &--current-month {
+      display: block;
+    }
+  }
+
+  &__wrap-toggle {
+    &--wrap {
+      display: none;
+    }
+
+    // &--nowrap {}
   }
 
   // &__checkbox {}
 
   // &__label {}
 
-  // &__previous-month {}
+  &__weekday-list {
+    padding-top: 22px;
+    padding-bottom: 10px;
+  }
 
-  // &__next-month {}
+  &__weekday-item {
+    flex-grow: 1;
+    text-align: center;
 
-  // &__weekday-list {}
+    &--weekend {
+      color: $mcg-3;
+    }
+  }
 
-  &__weekday-item,
+  &__days {
+    grid-template-columns: repeat(7, 30px);
+    grid-template-rows: repeat(6, 30px);
+    justify-content: center;
+    outline: 1px solid $lcg-12;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: repeat(7, 76px);
+      grid-template-rows: repeat(6, 68px);
+    }
+  }
+
   &__day {
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: $dcg-9;
+    width: 30px;
+    min-height: 30px;
+
+    &:hover {
+      color: $lcg-1;
+      background-color: $dcg-1;
+      outline: 2px solid $mcg-3;
+      outline-offset: -2px;
+      opacity: 1;
+    }
+
+    &--banned {
+      .calendar__label {
+        opacity: 0.3;
+      }
+    }
+
+    &--available {
+      font-weight: 400;
+      color: $dcg-1;
+      background-color: $lcg-2;
+    }
+
+    // &--previous-month {}
+
+    // &--current-month {}
+
+    &--chosen {
+      color: $lcg-1;
+      background-color: $dcg-1;
+    }
+
+    // &--next-month {}
+
+    @media (min-width: $tablet-width) {
+      width: 76px;
+      min-height: 68px;
+    }
   }
-
-  &__weekday-item--weekend {
-    color: $mcg-3;
-  }
-
-  // &__days {}
-
-  &__day:hover {
-    color: $lcg-1;
-    background-color: $dcg-1;
-    outline: 2px solid $mcg-3;
-    outline-offset: -2px;
-    opacity: 1;
-  }
-
-  &__day--banned {
-    opacity: 0.3;
-  }
-
-  &__day--available {
-    font-weight: 400;
-    color: $dcg-1;
-    background-color: $lcg-2;
-  }
-
-  // &__day--previous-month {}
-
-  // &__day--current-month {}
-
-  &__day--chosen {
-    color: $lcg-1;
-    background-color: $dcg-1;
-  }
-
-  // &__day--next-month {}
 }

@@ -19,8 +19,7 @@
 
   // &--triangular-pointer::after {}
 
-  &--more,
-  &--route {
+  &--more-and-route {
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
@@ -34,19 +33,6 @@
     padding-right: 23px;
 
     border-radius: 10px;
-  }
-
-  &--more::after,
-  &--quadratic::after,
-  &--route::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 13px * 0.87 solid $dcg-1;
-    border-top: 13px * 0.5 solid transparent;
-    border-bottom: 13px * 0.5 solid transparent;
-    border-right-width: 0;
   }
 
   &--quadratic {
@@ -65,21 +51,63 @@
     border-radius: 10px;
   }
 
-  &--roll-up,
-  &--change-photo {
+  &--with-arrow {
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 13px * 0.87 solid $dcg-1;
+      border-top: 13px * 0.5 solid transparent;
+      border-bottom: 13px * 0.5 solid transparent;
+      border-right-width: 0;
+    }
+  }
+
+  &--with-back-arrow {
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-right: 13px * 0.87 solid $dcg-1;
+      border-top: 13px * 0.5 solid transparent;
+      border-bottom: 13px * 0.5 solid transparent;
+      border-left-width: 0;
+    }
+  }
+
+  &--roll-and-change {
     width: 270px;
     font-size: 20px;
     font-weight: 500;
-    line-height: 18px;
+
     text-transform: uppercase;
   }
 
   &--change-photo {
+    line-height: 18px;
     background-color: $lcg-4;
     color: $dcg-6;
+
+    @media (min-width: $tablet-width) {
+      width: 618px;
+      height: 60px;
+      border-radius: 10px;
+      letter-spacing: 0.09px;
+      color: $dcg-1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 190px;
+      height: 47px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 
   &--roll-up {
+    line-height: 20px;
     background-color: $lcg-9;
     color: $dcg-4;
   }
@@ -103,14 +131,58 @@
     opacity: 0.3;
   }
 
-  &--close,
-  &--math-sign {
+  &--sign {
     width: auto;
     height: auto;
-    border: none;
-    outline: none;
+    // border: none;
+    // outline: none;
     background-color: transparent;
   }
+
+  &--drop-down {
+    width: 52px;
+    height: 36px;
+    justify-content: flex-end;
+    padding-left: 0;
+    // padding-right: 13.88px;
+    padding-right: 5px;
+    border-radius: 0;
+    background-image: $drop-down-button-bg;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 17px;
+      background-image: none;
+    }
+  }
+
+  // &--close {}
+
+  &__close-svg {
+    &--round {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    &--casual {
+      @media (max-width: $mobile-width-only) {
+        display: none;
+      }
+    }
+
+    &--white {
+      @media (min-width: $tablet-width) {
+        width: 22px;
+        height: 21px;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  // &--math-sign {}
 
   // &--minus {}
 
@@ -120,38 +192,58 @@
 
   // &__svg-plus {}
 
-  // &__svg-line {}
-
-  &__svg-line--white {
-    stroke: $lcg-1;
+  &__svg-line {
+    &--white {
+      stroke: $lcg-1;
+    }
   }
 
-  &--next-step,
-  &--previous-step,
-  &--form-submit,
-  &--invite,
-  &--show,
-  &--show-more {
+  &--common-text-set-one {
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
   }
 
-  &--next-step,
-  &--previous-step,
-  &--form-submit,
-  &--show-more {
+  &--common-text-set-two {
     line-height: 30px;
     color: $dcg-1;
   }
 
+  &--next-step {
+    width: 220px;
+  }
+
   &--previous-step {
+    width: 100%;
     letter-spacing: 0.01px;
     background-color: transparent;
   }
 
-  &--invite,
-  &--show {
+  &--form-submit {
+    width: 230px;
+    margin-left: -5px;
+  }
+
+  &--forward-steps {
+    @media (min-width: $tablet-width) {
+      width: 284px;
+      height: 80px;
+      border-radius: 20px;
+      justify-content: space-between;
+      padding-left: 33px;
+      padding-right: 33px;
+    }
+
+    &::after {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
+  }
+
+  &--invite-show {
     width: 230px;
     border-radius: 25px;
 

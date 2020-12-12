@@ -22,12 +22,9 @@ function headerMobileTablet() {
     // auxiliaryLayout.classList.remove( 'invisible' );
     auxiliaryLayout.style.display = 'flex';
 
-    if ( generalHeader.classList.contains( 'general-header--form' ) ) {
-      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--form' );
-    }
-
-    if ( generalHeader.classList.contains( 'general-header--catalog' ) ) {
-      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--catalog' );
+    if ( generalHeader.classList.contains( 'general-header--form' ) ||
+      generalHeader.classList.contains( 'general-header--catalog' ) ) {
+      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--changed-bg' );
     }
 
     cross.classList.remove( 'invisible' );
@@ -46,14 +43,14 @@ function headerMobileTablet() {
 
   window.addEventListener( "scroll", function() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--scroll' );
+      auxiliaryLayout.classList.add( 'general-header__auxiliary-layout--scrolled' );
       logoPrime[ 0 ].classList.remove( 'invisible' );
       logoAux[ 0 ].classList.add( 'invisible' );
       for ( let i = 0; i < burgerRect.length; i++ ) {
         burgerRect[ i ].classList.add( 'general-header__burger-rect--scroll' );
       }
     } else {
-      auxiliaryLayout.classList.remove( 'general-header__auxiliary-layout--scroll' );
+      auxiliaryLayout.classList.remove( 'general-header__auxiliary-layout--scrolled' );
       logoPrime[ 0 ].classList.add( 'invisible' );
       logoAux[ 0 ].classList.remove( 'invisible' );
       for ( let i = 0; i < burgerRect.length; i++ ) {
