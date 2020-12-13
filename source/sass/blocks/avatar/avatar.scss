@@ -9,8 +9,15 @@
     border-top-right-radius: 10px;
   }
 
-  &__photo--catalog,
+  // &__photo--catalog {}
+
   &__photo--form {
     border-radius: 50%;
+
+    @media (min-width: $desktop-width) {
+      width: 190px;
+      height: 190px;
+      border-radius: 0;
+    }
   }
 }

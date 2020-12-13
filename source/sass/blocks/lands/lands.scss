@@ -2,6 +2,18 @@
 .lands {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
+  background-color: $lcg-1;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $lcg-7;
+  border-top: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 575px;
+    border: none;
+    box-shadow: 0 8px 16px $shadow-1;
+  }
 
   // &__regions {}
 
@@ -10,29 +22,62 @@
   &__link {
     line-height: 18px;
     text-transform: uppercase;
+
+    &--letter {
+      font-size: 14px;
+      font-weight: 500;
+      color: $dcg-1;
+
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      place-items: center;
+      background-color: $lcg-1;
+    }
+
+    &--letter-catalog {
+      line-height: 14px;
+    }
+
+    &--region {
+      font-size: 16px;
+      font-weight: 700;
+      color: $dcg-4;
+    }
   }
 
-  &__link--region {
-    font-size: 16px;
-    font-weight: 700;
-    color: $dcg-4;
-  }
+  &__letter-indexes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 40px);
+    justify-content: center;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: $lcg-7;
+    border-bottom: 1px solid $lcg-7;
 
-  // &__letter-indexes {}
+    @media (min-width: $tablet-width) {
+      width: 262px;
+      height: 346px;
+      grid-template-rows: repeat(5, 1fr);
+      margin: 35px 0 33px 27px;
+      border: 1px solid $lcg-7;
+    }
+  }
 
   // &__letter-index {}
 
-  &__link--letter {
-    font-size: 14px;
-    font-weight: 500;
-    color: $dcg-1;
-  }
+  &__data {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 19px;
 
-  &__link--letter-catalog {
-    line-height: 14px;
+    @media (min-width: $tablet-width) {
+      margin: 37.46px auto 56.71px 105px;
+      padding: 0;
+    }
   }
-
-  // &__data {}
 
   &__item {
     font-size: 16px;
@@ -42,4 +87,8 @@
   }
 
   // &__roll-up-batton {}
+
+  &__invisible {
+    display: none;
+  }
 }

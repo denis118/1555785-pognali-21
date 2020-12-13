@@ -3,11 +3,12 @@
   width: 60px;
   height: 60px;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: $dcg-12;
   border-radius: 50%;
   overflow: hidden;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
 
   &__box {
     width: 100%;
@@ -24,26 +25,25 @@
 
   &__svg-circle {
     fill: none;
-    stroke: orangered;
+    stroke: $mcg-2;
     stroke-width: 7px;
     stroke-linecap: round;
 
     transform-origin: center;
     transform: translate(5px, -5px) rotate(-90deg);
     transition: stroke-dashoffset 0.5s ease;
-  }
 
-  &__svg-circle--firsova,
-  &__svg-circle--diomin {
-    stroke-dasharray: 188.4 188.4;
-  }
+    &--traveler {
+      stroke-dasharray: 188.4 188.4;
+    }
 
-  &__svg-circle--firsova {
-    stroke-dashoffset: 15;
-  }
+    &--firsova {
+      stroke-dashoffset: 15;
+    }
 
-  &__svg-circle--diomin {
-    stroke-dashoffset: 37.68;
+    &--diomin {
+      stroke-dashoffset: 37.68;
+    }
   }
 
   &__text-box {
@@ -58,46 +58,35 @@
     background-repeat: no-repeat;
     background-position: 0 60%;
     background-size: auto;
-  }
 
-  &__level-number,
-  &__level-text {
-    margin: 0;
+    &--member {
+      margin: 0;
+    }
   }
 
   &__level-number {
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
-  }
 
-  &__level-number,
-  &__level-text,
-  &__level-number--form,
-  &__level-text--form {
-    font-style: normal;
-    text-align: center;
-  }
-
-  &__level-number--form {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 38px;
-    color: $dcg-6;
+    &--form {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 38px;
+      color: $dcg-6;
+    }
   }
 
   &__level-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
-    // padding-top: 2px;
-    // border-top: 1px solid $lcg-1;
-  }
 
-  &__level-text--form {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 18px;
-    color: $dcg-9;
+    &--form {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $dcg-9;
+    }
   }
 }

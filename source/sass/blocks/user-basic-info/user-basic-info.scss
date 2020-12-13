@@ -1,14 +1,14 @@
 
 .user-basic-info {
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 18px;
   background-color: $lcg-2;
 
-  &__textarea,
-  &--text-style {
-    font-size: 16px;
-    font-style: normal;
-    line-height: 18px;
-  }
+  // @media (min-width: $tablet-width) {
+  //   padding-bottom: 58.5px;
+  // }
 
   &--text-style {
     font-weight: 700;
@@ -17,18 +17,93 @@
     text-align: center;
   }
 
-  // &__level {}
+  &--positioned-absolutely {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+    }
+  }
 
-  // &__avatar {}
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "rating avatar"
+      "button button"
+      "tags tags"
+      "transport transport";
+    place-items: center;
 
-  // &__button  {}
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        "rating transport avatar"
+        "button button button"
+        "tags tags tags";
+      padding-bottom: 58.5px;
+    }
 
-  // &__hashtags {}
+    @media (min-width: $desktop-width) {
+      position: relative;
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      padding-top: 73px;
+    }
+  }
+
+  &__level {
+    grid-area: rating;
+
+    @media (min-width: $desktop-width) {
+      top: -140px;
+      left: 900px;
+    }
+  }
+
+  &__avatar {
+    grid-area: avatar;
+
+    @media (min-width: $desktop-width) {
+      top: -190px;
+      left: 1035px;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    margin-top: 18px;
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 1035px;
+      margin-top: 0;
+    }
+  }
+
+  &__hashtags {
+    grid-area: tags;
+    margin-top: 33px;
+    width: 100%;
+
+    @media (min-width: $desktop-width) {
+      width: 732px;
+      margin: 0;
+    }
+  }
 
   // &__hashtags-label {}
 
   &__textarea {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25.15px 26.28px 25.15px 23.28px;
     border: 1px solid $lcg-7;
+    box-sizing: border-box;
     border-radius: 10px;
     resize: none;
 
@@ -36,11 +111,28 @@
     color: $dcg-9;
     background-color: $lcg-2;
     opacity: 0.6;
+
+    // width: 100%;
   }
 
   &__fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    margin-top: 17.89px;
+    margin-bottom: 34px;
+    box-sizing: border-box;
     border: 1px solid $lcg-7;
     border-radius: 10px;
+
+    grid-area: transport;
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+      margin-left: 140px;
+      width: 384px;
+    }
   }
 
   // &__legend {}

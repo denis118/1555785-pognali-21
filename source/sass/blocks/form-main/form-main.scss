@@ -17,19 +17,27 @@
     line-height: 36px;
     color: $lcg-1;
     text-align: left;
-  }
 
-  &__heading::after {
-    content: "";
-    display: block;
-    width: 214px;
-    height: 5px;
-    position: absolute;
-    top: 100%;
-    left: 25px;
-    background-color: $mcg-2;
-    border-radius: 2.5px;
-    transform: translateY(-50%);
+    &::after {
+      content: "";
+      display: block;
+      width: 214px;
+      height: 5px;
+      position: absolute;
+      top: 100%;
+      left: 25px;
+      background-color: $mcg-2;
+      border-radius: 2.5px;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: $tablet-width) {
+      min-height: 190px;
+      padding-top: 54px;
+      padding-bottom: 68px;
+      box-sizing: border-box;
+      background-color: $dcg-4;
+    }
   }
 
   // &__plans-form {}

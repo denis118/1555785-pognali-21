@@ -8,6 +8,19 @@
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  text-align: left;
+  color: $dcg-1;
+
+  &--text-style-one {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06px;
+  }
+
   &__heading {
     margin-bottom: 29px;
   }
@@ -16,43 +29,90 @@
     counter-reset: num;
   }
 
-  // &__item {}
+  &__item {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content);
+      grid-template-areas:
+        "countries countries countries"
+        "companions period button";
+      align-items: center;
+    }
 
-  &__countries-to-visit,
-  &__travel-period,
-  &__companions-number {
-    font-style: normal;
-    color: $dcg-1;
-    text-align: left;
+    @media (min-width: $desktop-width) {
+      display: flex;
+      align-items: center;
+      min-height: 97px;
+      padding-left: 42px;
+      padding-right: 42px;
+    }
   }
 
-
   &__countries-to-visit {
+    margin: 0;
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
 
+    &::before {
+      content: counter(num) ". ";
+      counter-increment: num;
 
-    margin: 0;
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        order: 1;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-area: countries;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 32px 34px 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-basis: 276px;
+      flex-grow: 1;
+      padding: 0;
+
+      justify-content: flex-start;
+    }
   }
 
-  &__countries-to-visit::before {
-    content: counter(num) ". ";
-    counter-increment: num;
-  }
-
-  &__travel-period,
   &__companions-number {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.06px;
+    @media (min-width: $tablet-width) {
+      grid-area: companions;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-basis: 145px;
+      flex-grow: 1;
+    }
   }
 
-  // &__companions-number {}
+  &__travel-period {
+    @media (min-width: $tablet-width) {
+      grid-area: period;
+    }
 
-  // &__travel-period {}
+    @media (min-width: $desktop-width) {
+      flex-basis: 190px;
+      flex-grow: 1;
+    }
+  }
 
-  // &__button {}
+  &__button {
+    @media (min-width: $tablet-width) {
+      grid-area: button;
+      justify-content: flex-end;
+    }
+  }
+
+  &--common-justification {
+    @media (min-width: $tablet-width) {
+      justify-self: end;
+    }
+  }
 }

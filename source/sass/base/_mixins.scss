@@ -13,3 +13,19 @@
   outline: $width $type $color;
   outline-offset: - $width;
 }
+
+//grid-for-mains
+@mixin grid-for-mains {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+// flex
+// @mixin flex($direction: row, $justify-content: space-between, $align-items: center) {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: $direction;
+//   justify-content: $justify-content;
+//   align-items: $align-items;
+// }
