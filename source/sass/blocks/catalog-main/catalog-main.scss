@@ -4,6 +4,10 @@
 
   font-family: "Blogger Sans", "Arial", sans-serif;
 
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+
   &__heading {
     margin: 0;
     padding-left: 25px;
@@ -15,6 +19,14 @@
 
     font-size: 36px;
     line-height: 36px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 110px;
+      padding-bottom: 88px;
+      padding-left: 74px;
+      font-size: 60px;
+      line-height: 20px;
+    }
   }
 
   &__heading::after {
@@ -28,6 +40,11 @@
     background-color: $mcg-2;
     border-radius: 2.5px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 288px;
+      left: 74px;
+    }
   }
 
   &__return-to-index,
@@ -40,15 +57,22 @@
 
   &__return-to-index {
     position: absolute;
-    top: 50px;
-    left: 67.45%;
-
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      top: 110px;
+      left: 67.45%;
+    }
   }
 
-  // &__return-svg {}
+  &__return-svg {
+    @media (min-width: $tablet-width) {
+      margin-left: 28px;
+    }
+  }
 
   &__land-filter {
     background-color: $lcg-8;
@@ -80,6 +104,14 @@
   // &__filter-down-box {}
 
   // &__lands {}
+
+  &__holder {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      align-items: flex-start;
+      padding-top: 151px;
+    }
+  }
 
   // &__reserved-checkboxes {}
 

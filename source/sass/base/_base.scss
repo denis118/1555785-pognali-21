@@ -6,11 +6,11 @@
   margin-right: auto;
   box-sizing: border-box;
 
-  &--form {
-    @media (min-width: $tablet-width) {
-      width: 618px;
-    }
-  }
+  // &--form {
+  //   @media (min-width: $tablet-width) {
+  //     width: 618px;
+  //   }
+  // }
 
   @media (min-width: $tablet-width) {
     &--thick {
@@ -18,12 +18,18 @@
     }
 
     &--slim {
-      width: 620px;
+      width: 618px;
     }
   }
 
   @media (min-width: $desktop-width) {
     width: 1320px;
+  }
+
+  &--auto-width {
+    @media (min-width: $desktop-width) {
+      width: auto;
+    }
   }
 }
 
@@ -115,5 +121,10 @@
   &--selection-results {
     padding-left: 18px;
     padding-right: 18px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding: 0;
+    }
   }
 }

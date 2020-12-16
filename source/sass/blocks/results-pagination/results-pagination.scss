@@ -9,6 +9,11 @@
 
   display: flex;
 
+  @media (min-width: $desktop-width) {
+    width: 949px;
+    margin-left: 60px;
+  }
+
   // &__pages {}
 
   // &__page {}

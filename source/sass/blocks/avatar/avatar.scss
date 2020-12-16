@@ -7,17 +7,25 @@
     display: block;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-  }
 
-  // &__photo--catalog {}
+    &--form {
+      border-radius: 50%;
 
-  &__photo--form {
-    border-radius: 50%;
+      @media (min-width: $desktop-width) {
+        width: 190px;
+        height: 190px;
+        border-radius: 0;
+      }
+    }
 
-    @media (min-width: $desktop-width) {
-      width: 190px;
-      height: 190px;
-      border-radius: 0;
+    &--catalog {
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        width: 190px;
+        height: 190px;
+        border-radius: 20px;
+      }
     }
   }
 }
