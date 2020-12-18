@@ -112,6 +112,15 @@
     color: $dcg-4;
   }
 
+  &--roll-up-catalog {
+    @media (min-width: $tablet-width) {
+      width: 615px;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   &__roll-up-svg {
     margin-right: 12px;
   }
@@ -255,8 +264,19 @@
     background-color: $lcg-1;
   }
 
+  &--show-catalog {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+
   &--invite {
     background-color: $mcg-1;
+
+    @media (min-width: $tablet-width) {
+      width: 150px;
+      height: 50px;
+    }
   }
 
   &--show-more {

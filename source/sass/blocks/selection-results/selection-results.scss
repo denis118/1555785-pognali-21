@@ -1,15 +1,28 @@
 
 .selection-results {
+  @media (min-width: $desktop-width) {
+    width: min-content;
+    padding: 0;
+    margin-left: 60px;
+    order: -1;
+  }
+
   // &__list {}
 
   &__item {
     margin-top: 10px;
     padding-bottom: 23px;
-  }
 
-  &__item:first-child {
-    margin-top: 28px;
+    &:first-child {
+      margin-top: 28px;
+
+      @media (min-width: $desktop-width) {
+        margin-top: 0;
+      }
+    }
   }
 
   // &__companion {}
+
+  // &__show-more {}
 }

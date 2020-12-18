@@ -8,20 +8,104 @@
   border: 1px solid $lcg-7;
   border-top: none;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    width: 575px;
-    border: none;
-    box-shadow: 0 8px 16px $shadow-1;
+  &--form {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      width: 575px;
+      border: none;
+      box-shadow: 0 8px 16px $shadow-1;
+    }
   }
 
-  // &__regions {}
+  &--catalog {
+    border: none;
+  }
 
-  // &__region {}
+  &--invisible {
+    display: none;
+  }
+
+  // &__container {}
+
+  &__uppper-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__heading {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+
+  &__roll-down-button {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    margin-right: 0;
+    margin-left: 24px;
+    padding: 0;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  // &__show-all {}
+
+  // &__ellipsis {}
+
+  &__roll-up {
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-right: 62px;
+    }
+  }
+
+  // &__cross {}
+
+  &__regions {
+    margin-top: 21px;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-right: 80px;
+      margin-left: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+    }
+  }
+
+  &__region {
+    opacity: 0.3;
+
+    &--active {
+      opacity: 1;
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $tablet-width) {
+        margin-left: 28px;
+      }
+    }
+  }
 
   &__link {
+    font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+
+    // &--region {}
 
     &--letter {
       font-size: 14px;
@@ -40,10 +124,35 @@
       line-height: 14px;
     }
 
-    &--region {
-      font-size: 16px;
-      font-weight: 700;
-      color: $dcg-4;
+    &--country {
+      line-height: 22px;
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+
+  &--common-text-style {
+    color: $dcg-4;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__down-box {
+    &--catalog {
+      @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, min-content);
+      }
+
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
     }
   }
 
@@ -64,6 +173,18 @@
       margin: 35px 0 33px 27px;
       border: 1px solid $lcg-7;
     }
+
+    &--catalog {
+      margin-top: 26px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
   }
 
   // &__letter-index {}
@@ -77,18 +198,73 @@
       margin: 37.46px auto 56.71px 105px;
       padding: 0;
     }
+
+    &--catalog {
+      @media (min-width: $tablet-width) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 
   &__item {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      flex-basis: 210px;
+      // flex-grow: 1;
+    }
+
+    &:not(:nth-child(5n+1)) {
+      @media (min-width: $desktop-width) {
+        margin-left: 40px;
+      }
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__alphabetical-box {
     color: $dcg-9;
   }
 
-  // &__roll-up-batton {}
-
-  &__invisible {
+  &__alphabetical-index {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dcg-4;
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  // &__sublist {
+  //   &--a {}
+  // }
+
+  // &__subitem {}
+
+  &__roll-up-button {
+    &--catalog {
+      @media (min-width: $tablet-width) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
   }
 }

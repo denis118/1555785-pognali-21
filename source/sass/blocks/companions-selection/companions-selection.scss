@@ -2,10 +2,17 @@
 .companions-selection {
   font-family: "Blogger Sans", "Arial", sans-serif;
 
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    margin-left: 86px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   &__heading {
@@ -27,10 +34,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
 
-  &__fieldset--hobby {
-    margin-top: 23px;
+    &--hobby {
+      margin-top: 23px;
+    }
   }
 
   &__label {
@@ -47,38 +54,74 @@
     text-align: left;
     text-transform: uppercase;
     cursor: pointer;
-  }
 
-  &__label::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: 6px solid $dcg-4;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-bottom-width: 0;
-    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border: 6px solid $dcg-4;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-bottom-width: 0;
+      cursor: pointer;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      flex-basis: 126px;
+    }
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding-top: 2px;
-    padding-bottom: 21px;
 
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 400;
-    font-style: normal;
-    color: $dcg-3;
+    &--for-inputs {
+      padding-top: 2px;
+      padding-bottom: 21px;
+
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      font-style: normal;
+      color: $dcg-3;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        padding: 0;
+        flex-grow: 1;
+      }
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
-  &__item-label:not(:last-child) {
-    padding-bottom: 12px;
+  &__item-label {
+    &:not(:last-child) {
+      padding-bottom: 12px;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      flex-basis: 115px;
+      flex-grow: 1;
+    }
   }
+
+  // &__customized-bar {}
 
   &__submit {
+    margin-top: 21px;
     margin-bottom: 22px;
+    margin-left: -5px;
   }
 }

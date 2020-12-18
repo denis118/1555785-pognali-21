@@ -1,10 +1,7 @@
 
 .hashtags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
 
   &--tania-firsova {
     width: 188px;
@@ -14,25 +11,38 @@
     width: 164px;
   }
 
-  // &__item {}
+  // &--mark-smolov {}
 
-  &__item:not(:first-child) {
-    margin-left: 5px;
+  // &--larisa-rogovaya {}
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &--catalog {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
   }
 
   // &__link {}
 
   &__text {
     margin: 0;
-
     font-size: 16px;
     font-weight: 400;
-    font-style: normal;
     line-height: 18px;
     color: $dcg-9;
-  }
 
-  &__text--catalog {
-    font-size: 15px;
+    &--catalog {
+      font-size: 15px;
+    }
   }
 }

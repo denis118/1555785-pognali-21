@@ -7,30 +7,85 @@
   background-color: $lcg-1;
   border-radius: 10px;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+
+  &--catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, min-content);
+    grid-template-areas:
+      "avatar name ."
+      "avatar name ."
+      "avatar likes ."
+      "hashtags hashtags hashtags"
+      "countries countries countries"
+      "transport transport lvl"
+      "button button button";
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 254px 150px 106px 178px;
+      // grid-template-rows: 72px 63px 32px 71px 95px;
+      grid-template-rows: repeat(5, min-content);
+      grid-template-areas:
+        "avatar name name transport"
+        "avatar hashtags hashtags transport"
+        "avatar hashtags hashtags transport"
+        "avatar button likes lvl"
+        "countries countries countries countries";
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 285px 54px 150px 106px 69px 182px 60px 43px;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        "avatar . name name . countries . ."
+        "avatar . hashtags hashtags . countries . ."
+        "avatar . button likes . transport lvl .";
+    }
+  }
+
   &__name {
     margin-top: 27px;
     color: $dcg-1;
     position: relative;
-  }
 
-  &__name::before {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    position: absolute;
-    top: 8px;
-    left: -17px;
-    // transform: translate(-50%, -100%);
-  }
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      left: -17px;
+    }
 
-  &__name--petia-diomin::before {
-    background-color: $mcg-7;
-  }
+    &--tania-firsova {
+      &::before {
+        background-color: $mcg-8;
+      }
+    }
 
-  &__name--tania-firsova::before {
-    background-color: $mcg-8;
+    &--petia-diomin {
+      &::before {
+        background-color: $mcg-7;
+      }
+    }
+
+    // &--mark-smolov {}
+
+    // &--larisa-rogovaya {}
+
+    &--catalog {
+      grid-area: name;
+      margin-top: 14.86px;
+
+      &::before {
+        top: 5px;
+        left: 145px;
+      }
+    }
   }
 
   &__head-link {
@@ -39,30 +94,80 @@
 
   &__likes {
     display: none;
+
+    &--catalog {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      color: $dcg-6;
+
+      grid-area: likes;
+      margin-top: 8.29px;
+    }
   }
 
   &__avatar {
     order: -1;
+
+    &--catalog {
+      grid-area: avatar;
+      margin-top: 15px;
+    }
   }
 
   &__level {
     position: absolute;
     top: 18px;
     left: 17px;
+
+    &--catalog {
+      grid-area: lvl;
+      position: static;
+      margin-top: 12px;
+    }
   }
 
-  // &__wished-countries {}
+  &__wished-countries {
+    position: absolute;
+    top: 270px;
+    transform: translateY(-50%);
+
+    &--catalog {
+      grid-area: countries;
+      position: static;
+      margin-top: 15.85px;
+      transform: translateY(0);
+    }
+  }
 
   &__hashtags {
     margin-top: 15px;
+
+    &--catalog {
+      grid-area: hashtags;
+      margin-top: 13.07px;
+    }
   }
 
   &__transport {
     margin-top: 14px;
     margin-bottom: 14px;
+
+    &--catalog {
+      grid-area: transport;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
   }
 
   &__invite-button {
     display: none;
+
+    &--catalog {
+      display: flex;
+      grid-area: button;
+      margin-top: 14px;
+    }
   }
 }

@@ -47,6 +47,12 @@
         background-color: $dcg-4;
       }
     }
+
+    &--catalog {
+      @media (min-width: $desktop-width) {
+        background-color: $dcg-4;
+      }
+    }
   }
 
   &__auxiliary-layout-container {

@@ -1,23 +1,77 @@
 
 .wished-countries {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 16px;
 
-  position: absolute;
-  top: 270px;
-  transform: translateY(-50%);
+  &__appearance {
+    display: none;
 
-  // &__item {}
-
-  &__item:not(:first-child) {
-    margin-left: 20px;
+    &--catalog {
+      display: block;
+      margin: 0;
+    }
   }
 
-  // &__link {}
+  &__heading {
+    font-weight: 400;
+    color: $dcg-9;
+    text-transform: lowercase;
+  }
 
-  // &__flag {}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &--catalog {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 18.56px;
+
+      @media (min-width: $tablet-width) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    &--catalog {
+      &:not(:first-child) {
+        margin-left: 0;
+
+        @media (max-width: $mobile-width-only) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    &--catalog {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__flag {
+    &--catalog {
+      margin-right: 14px;
+    }
+  }
+
+  &__country-name {
+    font-weight: 500;
+    color: $dcg-1;
+    text-transform: uppercase;
+  }
 
   // &__title {}
 }
