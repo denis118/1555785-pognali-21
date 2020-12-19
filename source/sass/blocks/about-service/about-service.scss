@@ -15,27 +15,21 @@
   @media (min-width: $desktop-width) {
     padding-top: 100px;
   }
+}
 
-  // &__heading {}
+// .about-service__heading {}
 
-  &__heading,
-  &__main-text,
-  &__additional-text {
-    margin-left: 24px;
-  }
+.about-service__main-text {
+  margin-top: 19px;
+  margin-bottom: 0;
+}
 
-  &__main-text {
-    margin-top: 19px;
-    margin-bottom: 0;
-  }
+.about-service__additional-text {
+  margin-top: 19px;
+}
 
-  &__additional-text {
-    margin-top: 19px;
-  }
-
-  &__more {
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
+.about-service__more {
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

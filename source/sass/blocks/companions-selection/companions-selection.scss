@@ -6,122 +6,122 @@
     width: 285px;
     margin-left: 86px;
   }
+}
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding-left: 25px;
-    padding-right: 25px;
+.companions-selection__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.companions-selection__heading {
+  margin: 0;
+  margin-top: 26px;
+
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  font-style: normal;
+  color: $dcg-1;
+  text-align: left;
+}
+
+.companions-selection__fieldset {
+  border: none;
+  border-top: 1px solid $mcg-4;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &--hobby {
+    margin-top: 23px;
   }
+}
 
-  &__heading {
-    margin: 0;
-    margin-top: 26px;
+.companions-selection__label {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 14px;
 
-    font-size: 22px;
-    line-height: 22px;
-    font-weight: 700;
-    font-style: normal;
-    color: $dcg-1;
-    text-align: left;
-  }
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  font-style: normal;
+  color: $dcg-1;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
 
-  &__fieldset {
-    border: none;
-    border-top: 1px solid $mcg-4;
-    outline: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    &--hobby {
-      margin-top: 23px;
-    }
-  }
-
-  &__label {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 12px;
-    padding-bottom: 14px;
-
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 700;
-    font-style: normal;
-    color: $dcg-1;
-    text-align: left;
-    text-transform: uppercase;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid $dcg-4;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-width: 0;
     cursor: pointer;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      border: 6px solid $dcg-4;
-      border-right-color: transparent;
-      border-left-color: transparent;
-      border-bottom-width: 0;
-      cursor: pointer;
-
-      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        display: none;
-      }
-    }
-
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      flex-basis: 126px;
+      display: none;
     }
   }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-
-    &--for-inputs {
-      padding-top: 2px;
-      padding-bottom: 21px;
-
-      font-size: 15px;
-      line-height: 20px;
-      font-weight: 400;
-      font-style: normal;
-      color: $dcg-3;
-
-      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        padding: 0;
-        flex-grow: 1;
-      }
-    }
-
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      flex-direction: row;
-      align-items: center;
-    }
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-basis: 126px;
   }
+}
 
-  &__item-label {
-    &:not(:last-child) {
-      padding-bottom: 12px;
+.companions-selection__wrapper {
+  display: flex;
+  flex-direction: column;
 
-      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        padding-bottom: 0;
-      }
-    }
+  &--for-inputs {
+    padding-top: 2px;
+    padding-bottom: 21px;
+
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: $dcg-3;
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      flex-basis: 115px;
+      padding: 0;
       flex-grow: 1;
     }
   }
 
-  // &__customized-bar {}
-
-  &__submit {
-    margin-top: 21px;
-    margin-bottom: 22px;
-    margin-left: -5px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-direction: row;
+    align-items: center;
   }
+}
+
+.companions-selection__item-label {
+  &:not(:last-child) {
+    padding-bottom: 12px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-basis: 115px;
+    flex-grow: 1;
+  }
+}
+
+// .companions-selection__customized-bar {}
+
+.companions-selection__submit {
+  margin-top: 21px;
+  margin-bottom: 22px;
+  margin-left: -5px;
 }

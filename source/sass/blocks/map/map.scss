@@ -2,43 +2,35 @@
 .map {
   position: relative;
   z-index: -5;
+}
 
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+.map__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 
-    @media (min-width: $desktop-width) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
 
-  &__wrapper {
-    background-color: $mcg-1;
-    padding-top: 33px + $bottom-radii;
-    margin-top: - ($bottom-radii);
-    border-bottom-left-radius: $bottom-radii;
-    border-bottom-right-radius: $bottom-radii;
-  }
+.map__wrapper {
+  background-color: $mcg-1;
+  padding-top: 33px + $bottom-radii;
+  margin-top: - ($bottom-radii);
+  border-bottom-left-radius: $bottom-radii;
+  border-bottom-right-radius: $bottom-radii;
+}
 
-  &__address {
-    width: 143px;
-    color: $dcg-1;
-    text-transform: uppercase;
-    position: relative;
+.map__address {
+  width: 143px;
+  color: $dcg-1;
+  text-transform: uppercase;
+  position: relative;
 
-    @media (min-width: $tablet-width) {
-      width: 430px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-left: 223px;
-    }
-  }
-
-  &__address::before {
+  &::before {
     content: "";
     display: block;
     width: 45px;
@@ -57,17 +49,25 @@
     background-size: auto;
   }
 
-  &__route {
-    width: 100%;
-    margin-top: 32px;
-    margin-bottom: 35px;
-
-    @media (min-width: $desktop-width) {
-      width: 324px;
-      height: 80px;
-      margin-right: 75px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 430px;
   }
 
-  // &__in-farme {}
+  @media (min-width: $desktop-width) {
+    margin-left: 223px;
+  }
 }
+
+.map__route {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    height: 80px;
+    margin-right: 75px;
+  }
+}
+
+// .map__in-farme {}

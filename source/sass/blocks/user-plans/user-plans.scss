@@ -21,98 +21,96 @@
     letter-spacing: 0.06px;
   }
 
-  &__heading {
-    margin-bottom: 29px;
-  }
-
-  &__list {
-    counter-reset: num;
-  }
-
-  &__item {
-    @media (min-width: $tablet-width) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, min-content);
-      grid-template-areas:
-        "countries countries countries"
-        "companions period button";
-      align-items: center;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: flex;
-      align-items: center;
-      min-height: 97px;
-      padding-left: 42px;
-      padding-right: 42px;
-    }
-  }
-
-  &__countries-to-visit {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-
-    &::before {
-      content: counter(num) ". ";
-      counter-increment: num;
-
-      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        order: 1;
-      }
-    }
-
-    @media (min-width: $tablet-width) {
-      grid-area: countries;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 40px 32px 34px 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-basis: 276px;
-      flex-grow: 1;
-      padding: 0;
-
-      justify-content: flex-start;
-    }
-  }
-
-  &__companions-number {
-    @media (min-width: $tablet-width) {
-      grid-area: companions;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-basis: 145px;
-      flex-grow: 1;
-    }
-  }
-
-  &__travel-period {
-    @media (min-width: $tablet-width) {
-      grid-area: period;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-basis: 190px;
-      flex-grow: 1;
-    }
-  }
-
-  &__button {
-    @media (min-width: $tablet-width) {
-      grid-area: button;
-      justify-content: flex-end;
-    }
-  }
-
   &--common-justification {
     @media (min-width: $tablet-width) {
       justify-self: end;
     }
+  }
+}
+
+.user-plans__heading {
+  margin-bottom: 29px;
+}
+
+.user-plans__list {
+  counter-reset: num;
+}
+
+.user-plans__item {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+      "countries countries countries"
+      "companions period button";
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    min-height: 97px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+.user-plans__countries-to-visit {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+
+  &::before {
+    content: counter(num) ". ";
+    counter-increment: num;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      order: 1;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: countries;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 32px 34px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 276px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+.user-plans__companions-number {
+  @media (min-width: $tablet-width) {
+    grid-area: companions;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 145px;
+    flex-grow: 1;
+  }
+}
+
+.user-plans__travel-period {
+  @media (min-width: $tablet-width) {
+    grid-area: period;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 190px;
+    flex-grow: 1;
+  }
+}
+
+.user-plans__button {
+  @media (min-width: $tablet-width) {
+    grid-area: button;
+    justify-content: flex-end;
   }
 }

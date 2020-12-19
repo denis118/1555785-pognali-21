@@ -44,130 +44,130 @@
         "avatar . button likes . transport lvl .";
     }
   }
+}
 
-  &__name {
-    margin-top: 27px;
-    color: $dcg-1;
-    position: relative;
+.companion__name {
+  margin-top: 27px;
+  color: $dcg-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: -17px;
+  }
+
+  &--tania-firsova {
+    &::before {
+      background-color: $mcg-8;
+    }
+  }
+
+  &--petia-diomin {
+    &::before {
+      background-color: $mcg-7;
+    }
+  }
+
+  // &--mark-smolov {}
+
+  // &--larisa-rogovaya {}
+
+  &--catalog {
+    grid-area: name;
+    margin-top: 14.86px;
 
     &::before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      position: absolute;
-      top: 8px;
-      left: -17px;
-    }
-
-    &--tania-firsova {
-      &::before {
-        background-color: $mcg-8;
-      }
-    }
-
-    &--petia-diomin {
-      &::before {
-        background-color: $mcg-7;
-      }
-    }
-
-    // &--mark-smolov {}
-
-    // &--larisa-rogovaya {}
-
-    &--catalog {
-      grid-area: name;
-      margin-top: 14.86px;
-
-      &::before {
-        top: 5px;
-        left: 145px;
-      }
+      top: 5px;
+      left: 145px;
     }
   }
+}
 
-  &__head-link {
-    color: $dcg-1;
+.companion__head-link {
+  color: $dcg-1;
+}
+
+.companion__likes {
+  display: none;
+
+  &--catalog {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $dcg-6;
+
+    grid-area: likes;
+    margin-top: 8.29px;
   }
+}
 
-  &__likes {
-    display: none;
+.companion__avatar {
+  order: -1;
 
-    &--catalog {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16px;
-      color: $dcg-6;
-
-      grid-area: likes;
-      margin-top: 8.29px;
-    }
-  }
-
-  &__avatar {
-    order: -1;
-
-    &--catalog {
-      grid-area: avatar;
-      margin-top: 15px;
-    }
-  }
-
-  &__level {
-    position: absolute;
-    top: 18px;
-    left: 17px;
-
-    &--catalog {
-      grid-area: lvl;
-      position: static;
-      margin-top: 12px;
-    }
-  }
-
-  &__wished-countries {
-    position: absolute;
-    top: 270px;
-    transform: translateY(-50%);
-
-    &--catalog {
-      grid-area: countries;
-      position: static;
-      margin-top: 15.85px;
-      transform: translateY(0);
-    }
-  }
-
-  &__hashtags {
+  &--catalog {
+    grid-area: avatar;
     margin-top: 15px;
-
-    &--catalog {
-      grid-area: hashtags;
-      margin-top: 13.07px;
-    }
   }
+}
 
-  &__transport {
+.companion__level {
+  position: absolute;
+  top: 18px;
+  left: 17px;
+
+  &--catalog {
+    grid-area: lvl;
+    position: static;
+    margin-top: 12px;
+  }
+}
+
+.companion__wished-countries {
+  position: absolute;
+  top: 270px;
+  transform: translateY(-50%);
+
+  &--catalog {
+    grid-area: countries;
+    position: static;
+    margin-top: 15.85px;
+    transform: translateY(0);
+  }
+}
+
+.companion__hashtags {
+  margin-top: 15px;
+
+  &--catalog {
+    grid-area: hashtags;
+    margin-top: 13.07px;
+  }
+}
+
+.companion__transport {
+  margin-top: 14px;
+  margin-bottom: 14px;
+
+  &--catalog {
+    grid-area: transport;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.companion__invite-button {
+  display: none;
+
+  &--catalog {
+    display: flex;
+    grid-area: button;
     margin-top: 14px;
-    margin-bottom: 14px;
-
-    &--catalog {
-      grid-area: transport;
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__invite-button {
-    display: none;
-
-    &--catalog {
-      display: flex;
-      grid-area: button;
-      margin-top: 14px;
-    }
   }
 }

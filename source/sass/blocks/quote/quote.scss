@@ -2,22 +2,17 @@
 .quote {
   padding-left: 25px;
   font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+  color: $lcg-1;
+}
 
-  &__content,
-  &__cite {
-    font-size: 16px;
-    font-style: normal;
-    line-height: 22px;
-    color: $lcg-1;
-  }
+.quote__content {
+  padding-bottom: 18px;
+  font-weight: 300;
+}
 
-  &__content {
-    margin: 0;
-    padding-bottom: 18px;
-    font-weight: 300;
-  }
-
-  &__cite {
-    font-weight: 700;
-  }
+.quote__cite {
+  font-weight: 700;
 }

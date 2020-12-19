@@ -6,23 +6,23 @@
     margin-left: 60px;
     order: -1;
   }
+}
 
-  // &__list {}
+// .selection-results__list {}
 
-  &__item {
-    margin-top: 10px;
-    padding-bottom: 23px;
+.selection-results__item {
+  margin-top: 10px;
+  padding-bottom: 23px;
 
-    &:first-child {
-      margin-top: 28px;
+  &:first-child {
+    margin-top: 28px;
 
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
     }
   }
-
-  // &__companion {}
-
-  // &__show-more {}
 }
+
+// .selection-results__companion {}
+
+// .selection-results__show-more {}

@@ -12,58 +12,51 @@
   background-repeat: no-repeat;
   background-position: 89% 17%;
 
-  &,
-  &__items-wrapper {
-    background-size: auto;
-  }
-
-
   @include overlap--bottom(-3, 53px, $bottom-radii);
 
-  &__container {
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, min-content);
-      grid-template-areas:
-        "heading heading"
-        "ls ls"
-        "tariff .";
-    }
+  &--bg-auto-size {
+    background-size: auto;
   }
+}
 
-  &__heading,
-  &__benefits {
-    margin-left: 24px;
+.profile__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+      "heading heading"
+      "ls ls"
+      "tariff .";
   }
+}
 
-  &__heading {
-    width: 72px;
-    margin-top: -2px;
+.profile__heading {
+  width: 72px;
+  margin-top: -2px;
 
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      grid-area: heading;
-      justify-self: center;
-    }
+  @media (min-width: $tablet-width) {
+    grid-area: heading;
+    justify-self: center;
   }
+}
 
-  &__benefits {
-    margin-top: 45px;
-    counter-reset: benefit;
+.profile__benefits {
+  margin-top: 45px;
+  counter-reset: benefit;
 
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      grid-area: ls;
-    }
+  @media (min-width: $tablet-width) {
+    grid-area: ls;
   }
+}
 
-  &__items-wrapper {
-    position: relative;
-    background-image: $profile-items-wrapper-bg-image;
-    background-repeat: no-repeat;
-    background-position: left top;
-  }
+.profile__items-wrapper {
+  position: relative;
+  background-image: $profile-items-wrapper-bg-image;
+  background-repeat: no-repeat;
+  background-position: left top;
 
-  &__items-wrapper::after {
+  &::after {
     content: counter(benefit);
     counter-increment: benefit;
     display: grid;
@@ -75,64 +68,64 @@
     color: $lcg-1;
   }
 
-  &__items-wrapper:last-child {
+  &:last-child {
     background-image: $profile-items-wrapper-bg-image, $profile-items-wrapper-bg-image;
     background-repeat: no-repeat, no-repeat;
     background-position: left top, left bottom;
   }
 
-  &__items-wrapper--basic-placement {
+  &--basic-placement {
     padding-top: 11px;
     padding-bottom: 18px;
+
+    &::after {
+      top: 2%;
+      left: 85.6%;
+      background-color: $mcg-2;
+    }
   }
 
-  &__items-wrapper--basic-placement::after {
-    top: 2%;
-    left: 85.6%;
-    background-color: $mcg-2;
-  }
-
-  &__items-wrapper--first-positions {
+  &--first-positions {
     padding-top: 10px;
     padding-bottom: 16px;
+
+    &::after {
+      top: 0;
+      left: 86%;
+      background-color: $mcg-6;
+    }
   }
 
-  &__items-wrapper--first-positions::after {
-    top: 0;
-    left: 86%;
-    background-color: $mcg-6;
-  }
-
-  &__items-wrapper--card-color {
+  &--card-color {
     padding-top: 12px;
     padding-bottom: 15px;
-  }
 
-  &__items-wrapper--card-color::after {
-    top: 4%;
-    left: 86%;
-    background-color: $mcg-1;
-  }
-
-  &__term {
-    margin-bottom: 6px;
-  }
-
-  &__definition {
-    margin-left: 0;
-  }
-
-  &__busines-tariff {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 38px;
-    font-weight: 700;
-    font-style: normal;
-    color: $dcg-7;
-
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      grid-area: tariff;
+    &::after {
+      top: 4%;
+      left: 86%;
+      background-color: $mcg-1;
     }
+  }
+}
+
+.profile__term {
+  margin-bottom: 6px;
+}
+
+.profile__definition {
+  margin-left: 0;
+}
+
+.profile__busines-tariff {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-style: normal;
+  color: $dcg-7;
+
+  @media (min-width: $tablet-width) {
+    grid-area: tariff;
   }
 }

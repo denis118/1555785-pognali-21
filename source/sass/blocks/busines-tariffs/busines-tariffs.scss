@@ -2,13 +2,17 @@
 .busines-tariffs {
   background-color: $lcg-1;
 
-  // &__heading {}
-
-  // &__list {}
-
-  // &__item {}
-
-  // &__cost {}
-
-  // &__close {}
+  &--invisible {
+    display: none;
+  }
 }
+
+// .busines-tariffs__heading {}
+
+// .busines-tariffs__list {}
+
+// .busines-tariffs__item {}
+
+// .busines-tariffs__cost {}
+
+// .busines-tariffs__close {}

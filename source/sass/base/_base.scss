@@ -6,24 +6,20 @@
   margin-right: auto;
   box-sizing: border-box;
 
-  // &--form {
-  //   @media (min-width: $tablet-width) {
-  //     width: 618px;
-  //   }
-  // }
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+  }
 
-  @media (min-width: $tablet-width) {
-    &--thick {
+  &--thick {
+    @media (min-width: $tablet-width) {
       width: 688px;
-    }
-
-    &--slim {
-      width: 618px;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 1320px;
+  &--slim {
+    @media (min-width: $tablet-width) {
+      width: 618px;
+    }
   }
 
   &--auto-width {
@@ -33,45 +29,68 @@
   }
 }
 
-.heading-level-3,
-.heading-level-2 {
+.zero-edges {
   margin: 0;
+  padding: 0;
+}
 
+.heading {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
+  color: $lcg-1;
 
-.heading-level-2 {
-  font-size: 24px;
-  line-height: 24px;
-  color: $mcg-2;
+  &--level-1 {
+    font-size: 36px;
+    line-height: 36px;
 
-  &--form {
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &--slogan {
+    line-height: 40px;
+
+    @media (min-width: $tablet-width) {
+      line-height: 70px;
+    }
+  }
+
+  &--level-1-catalog {
+    @media (min-width: $tablet-width) {
+      line-height: 20px;
+    }
+  }
+
+  &--level-2 {
+    font-size: 24px;
+    line-height: 24px;
+    color: $mcg-2;
+  }
+
+  &--level-2-form {
     color: $dcg-1;
   }
 
-  &--catalog-filter {
+  &--level-2-filter {
     font-size: 16px;
     line-height: 18px;
     color: $dcg-4;
     text-transform: uppercase;
   }
-}
 
-.heading-level-3 {
-  font-size: 21px;
-  line-height: 21px;
-  color: $dcg-1;
+  &--level-3 {
+    font-size: 21px;
+    line-height: 21px;
+    color: $dcg-1;
+  }
 
-  &--catalog {
+  &--level-3-catalog {
     font-size: 20px;
     line-height: 20px;
   }
-}
-
-.invisible {
-  display: none;
 }
 
 .link {
@@ -81,8 +100,6 @@
 
 .list {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .image {
@@ -109,13 +126,12 @@
   background-color: $lcg-1;
   border-radius: 10px;
 
-  &--companions-selection {
-    background-color: $mcg-1;
+  &--radius {
+    border-radius: 20px;
   }
 
-  &--companions-selection,
-  &--selection-results {
-    border-radius: 20px;
+  &--companions-selection {
+    background-color: $mcg-1;
   }
 
   &--selection-results {
@@ -126,5 +142,18 @@
       margin-top: 0;
       padding: 0;
     }
+  }
+}
+
+.margin-left-24 {
+  margin-left: 24px;
+}
+
+.columnar-flex {
+  display: flex;
+  flex-direction: column;
+
+  &--centered-alignment {
+    align-items: center;
   }
 }

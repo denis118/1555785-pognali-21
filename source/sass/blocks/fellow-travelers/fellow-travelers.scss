@@ -7,97 +7,88 @@
   background-size: auto, auto, auto;
 
   @include overlap--bottom(-2, 68px, $bottom-radii);
+}
 
-  &__container {
-    @media (min-width: $desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(4, min-content);
-      grid-template-areas:
-        "heading ls"
-        "main-text ls"
-        "add-text ls"
-        "button ls";
-    }
+.fellow-travelers__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "heading ls"
+      "main-text ls"
+      "add-text ls"
+      "button ls";
+  }
+}
+
+.fellow-travelers__heading {
+  @media (min-width: $desktop-width) {
+    grid-area: heading;
+  }
+}
+
+.fellow-travelers__main-text {
+  width: 217px;
+  margin-top: 19px;
+
+  @media (min-width: $desktop-width) {
+    grid-area: main-text;
+    width: 427px;
+  }
+}
+
+.fellow-travelers__additional-text {
+  margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    grid-area: add-text;
+  }
+}
+
+.fellow-travelers__list {
+  margin-top: 54px;
+
+  @media (min-width: $tablet-width), (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  &__heading,
-  &__main-text,
-  &__additional-text {
-    margin-left: 24px;
+  @media (min-width: $desktop-width) {
+    grid-area: ls;
   }
+}
 
-  &__heading {
-    @media (min-width: $desktop-width) {
-      grid-area: heading;
-    }
-  }
-
-  &__main-text {
-    width: 217px;
-    margin-top: 19px;
-
-    @media (min-width: $desktop-width) {
-      grid-area: main-text;
-      width: 427px;
-    }
-  }
-
-  &__additional-text {
-    margin-top: 20px;
-
-    @media (min-width: $desktop-width) {
-      grid-area: add-text;
-    }
-  }
-
-  &__list {
-    margin-top: 54px;
-
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-area: ls;
-    }
-  }
-
-  // &__item {}
-
-  &__item:not(:last-child) {
+.fellow-travelers__item {
+  &:not(:last-child) {
     margin-bottom: 9px;
   }
 
-  &__item:last-child {
+  &:last-child {
     margin-bottom: 20px;
   }
 
-  &__item:nth-child(2n) {
+  &:nth-child(2n) {
     @media (min-width: $tablet-width) {
       margin-left: 50px;
     }
   }
+}
 
-  &__companion {
-    // height: 429px;
-    // overflow: hidden;
+.fellow-travelers__companion {
+  @media (min-width: $tablet-width) {
+    width: 285px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      width: 285px;
-    }
+.fellow-travelers__more {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
 
-  &__more {
-    margin-bottom: 31px;
-
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-area: button;
-    }
+  @media (min-width: $desktop-width) {
+    grid-area: button;
   }
 }

@@ -8,6 +8,17 @@
   border: 1px solid $lcg-7;
   border-top: none;
 
+  &--common-text-style {
+    color: $dcg-4;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
   &--form {
     @media (min-width: $tablet-width) {
       display: flex;
@@ -24,247 +35,236 @@
   &--invisible {
     display: none;
   }
+}
 
-  // &__container {}
+// .lands__container {}
 
-  &__uppper-box {
+.lands__uppper-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lands__heading {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
     display: flex;
-    flex-wrap: wrap;
+  }
+}
+
+.lands__roll-down-button {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border-radius: 0;
+  margin-right: 0;
+  margin-left: 24px;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+// .lands__show-all {}
+
+// .lands__ellipsis {}
+
+.lands__roll-up {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-right: 62px;
+  }
+}
+
+// .lands__cross {}
+
+.lands__regions {
+  margin-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 80px;
+    margin-left: 32px;
   }
 
-  &__heading {
+  @media (min-width: $desktop-width) {
+    order: 0;
+  }
+}
+
+.lands__region {
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:not(:first-child) {
     @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: flex;
+      margin-left: 28px;
     }
   }
+}
 
-  &__roll-down-button {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    border-radius: 0;
-    margin-right: 0;
-    margin-left: 24px;
-    padding: 0;
+.lands__link {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
+  // &--region {}
 
-  // &__show-all {}
+  &--letter {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dcg-1;
 
-  // &__ellipsis {}
+    width: 100%;
+    height: 100%;
 
-  &__roll-up {
-    @media (min-width: $tablet-width) {
-      display: block;
-      margin-right: 62px;
-    }
-  }
-
-  // &__cross {}
-
-  &__regions {
-    margin-top: 21px;
-
-    @media (min-width: $tablet-width) {
-      order: -1;
-      display: flex;
-      align-items: center;
-      margin-top: 0;
-      margin-right: 80px;
-      margin-left: 32px;
-    }
-
-    @media (min-width: $desktop-width) {
-      order: 0;
-    }
-  }
-
-  &__region {
-    opacity: 0.3;
-
-    &--active {
-      opacity: 1;
-    }
-
-    &:not(:first-child) {
-      @media (min-width: $tablet-width) {
-        margin-left: 28px;
-      }
-    }
-  }
-
-  &__link {
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-
-    // &--region {}
-
-    &--letter {
-      font-size: 14px;
-      font-weight: 500;
-      color: $dcg-1;
-
-      width: 100%;
-      height: 100%;
-
-      display: grid;
-      place-items: center;
-      background-color: $lcg-1;
-    }
-
-    &--letter-catalog {
-      line-height: 14px;
-    }
-
-    &--country {
-      line-height: 22px;
-      font-weight: 400;
-      text-transform: none;
-    }
-  }
-
-  &--common-text-style {
-    color: $dcg-4;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 20px;
-    }
-  }
-
-  &__down-box {
-    &--catalog {
-      @media (min-width: $tablet-width) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, min-content);
-      }
-
-      @media (min-width: $desktop-width) {
-        display: block;
-      }
-    }
-  }
-
-  &__letter-indexes {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 40px);
-    justify-content: center;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-    background-color: $lcg-7;
-    border-bottom: 1px solid $lcg-7;
+    place-items: center;
+    background-color: $lcg-1;
+  }
 
+  &--letter-catalog {
+    line-height: 14px;
+  }
+
+  &--country {
+    line-height: 22px;
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+
+.lands__down-box {
+  &--catalog {
     @media (min-width: $tablet-width) {
-      width: 262px;
-      height: 346px;
-      grid-template-rows: repeat(5, 1fr);
-      margin: 35px 0 33px 27px;
-      border: 1px solid $lcg-7;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content);
     }
 
-    &--catalog {
-      margin-top: 26px;
-      grid-column-start: 1;
-      grid-column-end: 3;
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.lands__letter-indexes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 40px);
+  justify-content: center;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  background-color: $lcg-7;
+  border-bottom: 1px solid $lcg-7;
+
+  @media (min-width: $tablet-width) {
+    width: 262px;
+    height: 346px;
+    grid-template-rows: repeat(5, 1fr);
+    margin: 35px 0 33px 27px;
+    border: 1px solid $lcg-7;
+  }
+
+  &--catalog {
+    margin-top: 26px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+// .lands__letter-index {}
+
+.lands__data {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin: 37.46px auto 56.71px 105px;
+    padding: 0;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      grid-column-start: 3;
+      grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 2;
+    }
 
-      @media (min-width: $desktop-width) {
-        display: none;
-      }
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.lands__item {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    flex-basis: 210px;
+    // flex-grow: 1;
+  }
+
+  &:not(:nth-child(5n+1)) {
+    @media (min-width: $desktop-width) {
+      margin-left: 40px;
     }
   }
 
-  // &__letter-index {}
+  &--active {
+    display: block;
+  }
+}
 
-  &__data {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 19px;
+.lands__alphabetical-box {
+  color: $dcg-9;
+}
 
+.lands__alphabetical-index {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $dcg-4;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+// .lands__sublist {
+//   &--a {}
+// }
+
+// .lands__subitem {}
+
+.lands__roll-up-button {
+  &--catalog {
     @media (min-width: $tablet-width) {
-      margin: 37.46px auto 56.71px 105px;
-      padding: 0;
-    }
-
-    &--catalog {
-      @media (min-width: $tablet-width) {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      }
-
-      @media (min-width: $desktop-width) {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
-  }
-
-  &__item {
-    display: none;
-
-    @media (min-width: $desktop-width) {
-      display: block;
-      flex-basis: 210px;
-      // flex-grow: 1;
-    }
-
-    &:not(:nth-child(5n+1)) {
-      @media (min-width: $desktop-width) {
-        margin-left: 40px;
-      }
-    }
-
-    &--active {
-      display: block;
-    }
-  }
-
-  &__alphabetical-box {
-    color: $dcg-9;
-  }
-
-  &__alphabetical-index {
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $dcg-4;
-    display: none;
-
-    @media (min-width: $desktop-width) {
-      display: block;
-    }
-  }
-
-  // &__sublist {
-  //   &--a {}
-  // }
-
-  // &__subitem {}
-
-  &__roll-up-button {
-    &--catalog {
-      @media (min-width: $tablet-width) {
-        grid-column-start: 1;
-        grid-column-end: -1;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 2;
+      grid-row-end: 3;
     }
   }
 }

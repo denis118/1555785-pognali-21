@@ -15,18 +15,18 @@
       display: none;
     }
   }
+}
 
-  &__list {
-    display: flex;
-    width: min-content;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-  }
+.socials__list {
+  display: flex;
+  width: min-content;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
 
-  &__item {
-    &:not(:nth-child(1)) {
-      margin-left: 27px;
-    }
+.socials__item {
+  &:not(:nth-child(1)) {
+    margin-left: 27px;
   }
 }

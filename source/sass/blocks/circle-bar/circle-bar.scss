@@ -4,137 +4,135 @@
   flex-direction: column;
   align-items: center;
   font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
+}
 
-  &__heading {
-    display: none;
+.circle-bar__heading {
+  display: none;
 
-    &--catalog {
-      @media (max-width: $mobile-width-only) {
-        display: block;
-        margin: 0;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 16px;
-        color: $dcg-9;
-        text-transform: lowercase;
-      }
-    }
-  }
-
-  &__box {
-    width: 60px;
-    height: 60px;
-    background-color: $dcg-12;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-
-    &--catalog {
-      width: 45px;
-      height: 45px;
-    }
-  }
-
-  &__svg-container {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  &__svg-circle {
-    fill: none;
-    stroke: $mcg-2;
-    stroke-width: 7px;
-    stroke-linecap: round;
-
-    transform-origin: center;
-    transform: translate(5px, -5px) rotate(-90deg);
-    transition: stroke-dashoffset 0.5s ease;
-
-    &--traveler {
-      stroke-dasharray: 188.4 188.4;
-    }
-
-    &--firsova {
-      stroke-dashoffset: 15;
-    }
-
-    &--diomin {
-      stroke-dashoffset: 37.68;
-    }
-
-    &--smolov {
-      stroke-dashoffset: 141.3;
-    }
-
-    &--rogovaya {
-      stroke-dashoffset: 94.2;
-    }
-
-    &--traveler-catalog {
-      stroke-dasharray: 141.3 141.3;
-    }
-
-    // &--firsova-catalog {
-    //   stroke-dashoffset: 1.413;
-    // }
-
-    // &--diomin-catalog {
-    //   stroke-dashoffset: 28.26;
-    // }
-
-    // &--smolov-catalog {
-    //   stroke-dashoffset: 105.975;
-    // }
-
-    // &--rogovaya-catalog {
-    //   stroke-dashoffset: 70.65;
-    // }
-  }
-
-  &__text-box {
-    width: 30px;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: $lcg-1;
-    background-image: $text-box-bg-image;
-    background-repeat: no-repeat;
-    background-position: 0 60%;
-    background-size: auto;
-
-    &--member {
-      margin: 0;
-    }
-  }
-
-  &__level-number {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-
-    &--form {
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 38px;
-      color: $dcg-6;
-    }
-  }
-
-  &__level-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-
-    &--form {
-      font-size: 18px;
+  &--catalog {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 18px;
+      line-height: 16px;
       color: $dcg-9;
+      text-transform: lowercase;
     }
+  }
+}
+
+.circle-bar__box {
+  width: 60px;
+  height: 60px;
+  background-color: $dcg-12;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &--catalog {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.circle-bar__svg-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bar__svg-circle {
+  fill: none;
+  stroke: $mcg-2;
+  stroke-width: 7px;
+  stroke-linecap: round;
+
+  transform-origin: center;
+  transform: translate(5px, -5px) rotate(-90deg);
+  transition: stroke-dashoffset 0.5s ease;
+
+  &--traveler {
+    stroke-dasharray: 188.4 188.4;
+  }
+
+  &--firsova {
+    stroke-dashoffset: 15;
+  }
+
+  &--diomin {
+    stroke-dashoffset: 37.68;
+  }
+
+  &--smolov {
+    stroke-dashoffset: 141.3;
+  }
+
+  &--rogovaya {
+    stroke-dashoffset: 94.2;
+  }
+
+  &--traveler-catalog {
+    stroke-dasharray: 141.3 141.3;
+  }
+
+  // &--firsova-catalog {
+  //   stroke-dashoffset: 1.413;
+  // }
+
+  // &--diomin-catalog {
+  //   stroke-dashoffset: 28.26;
+  // }
+
+  // &--smolov-catalog {
+  //   stroke-dashoffset: 105.975;
+  // }
+
+  // &--rogovaya-catalog {
+  //   stroke-dashoffset: 70.65;
+  // }
+}
+
+.circle-bar__text-box {
+  width: 30px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $lcg-1;
+  background-image: $text-box-bg-image;
+  background-repeat: no-repeat;
+  background-position: 0 60%;
+  background-size: auto;
+
+  &--member {
+    margin: 0;
+  }
+}
+
+.circle-bar__level-number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+
+  &--form {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 38px;
+    color: $dcg-6;
+  }
+}
+
+.circle-bar__level-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  &--form {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $dcg-9;
   }
 }

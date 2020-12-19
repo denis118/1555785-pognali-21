@@ -14,35 +14,35 @@
   // &--mark-smolov {}
 
   // &--larisa-rogovaya {}
+}
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.hashtags__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-    &--catalog {
-      justify-content: flex-start;
-    }
+  &--catalog {
+    justify-content: flex-start;
   }
+}
 
-  &__item {
-    &:not(:first-child) {
-      margin-left: 5px;
-    }
+.hashtags__item {
+  &:not(:first-child) {
+    margin-left: 5px;
   }
+}
 
-  // &__link {}
+// .hashtags__link {}
 
-  &__text {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    color: $dcg-9;
+.hashtags__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $dcg-9;
 
-    &--catalog {
-      font-size: 15px;
-    }
+  &--catalog {
+    font-size: 15px;
   }
 }
