@@ -5,6 +5,30 @@
   line-height: 0;
 }
 
-// .logo__svg-primary {}
+.logo__image {
+  @media (min-width: $tablet-width) {
+    height: 42px;
+  }
 
-// .logo__svg-auxiliary {}
+  &--primary {
+    @media (min-width: $tablet-width) {
+      width: 164px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 198px;
+      height: 60px;
+    }
+  }
+
+  &--auxiliary {
+    @media (min-width: $tablet-width) {
+      width: 166px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 200px;
+      height: 52px;
+    }
+  }
+}

@@ -8,18 +8,6 @@
   &--row {
     flex-direction: row;
   }
-
-  &--before-desktop {
-    @media (max-width: $desktop-width - 1) {
-      display: none;
-    }
-  }
-
-  &--since-desktop {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
 }
 
 .contacts-group__contact {

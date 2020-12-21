@@ -11,13 +11,13 @@
   }
 
   &--thick {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       width: 688px;
     }
   }
 
   &--slim {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       width: 618px;
     }
   }

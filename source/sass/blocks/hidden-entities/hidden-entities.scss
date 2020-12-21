@@ -1,0 +1,16 @@
+
+.hidden-entity { // for using by JS only
+  display: none;
+}
+
+.hidden-before-desktop {
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.hidden-since-desktop {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

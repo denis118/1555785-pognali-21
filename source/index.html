@@ -9,50 +9,106 @@
   </head>
 
   <body class="page__body zero-edges">
+
+    <svg style="display: none;">
+      <!-- burger: width="25" height="11" -->
+      <symbol id="burger" viewBox="0 0 25 11">
+        <rect class="general-header__burger-rect" width="25" height="3" x="0" y="0" rx="1.5" fill="#fff"/>
+        <rect class="general-header__burger-rect" width="25" height="3" x="0" y="8" rx="1.5" fill="#fff"/>
+      </symbol>
+
+      <!-- cross-in-primary-layout: width="19" height="19" -->
+      <symbol id="cross-in-primary-layout" viewBox="0 0 19 19">
+        <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc" transform="translate(-2.445 0) rotate(45 11.945 9.5)"/>
+        <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc" transform="translate(-2.445 0) rotate(-45 11.945 9.5)"/>
+      </symbol>
+
+      <!-- facebook-in-site-menu: width="11" height="21" -->
+      <symbol id="facebook-in-site-menu" viewBox="0 0 11 21">
+        <path d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z" fill="#192144"/>
+      </symbol>
+
+      <!-- facebook-in-footer: width="45" height="45" -->
+      <symbol id="facebook-in-footer" viewBox="0 0 45 45">
+        <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B"/>
+        <path d="M24.49 32.77h-5.36v-9.52H17v-4.7h2.07c-.16-2.14.23-3.7 1.2-4.76a4.88 4.88 0 013.6-1.5h3.75v4.54h-2.95a4.55 4.55 0 00-.2 1.71h3.14v4.71h-3.14l.02 9.52zm-4.17-1.1h2.97v-9.53h3.14v-2.47h-3.14v-.56c0-1.47 0-2.8.78-3.29l.15-.1h2.2V13.4H23.9a3.88 3.88 0 00-2.74 1.1c-.79.92-1.11 2.44-.87 4.54l.08.61h-2.2v2.5h2.15v9.51z" fill="#192144"/>
+      </symbol>
+
+      <!-- vk-in-site-menu: width="23" height="12" -->
+      <symbol id="vk-in-site-menu" viewBox="0 0 23 12">
+        <path d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z" fill="#192144"/>
+      </symbol>
+
+      <!-- vk-in-footer: width="45" height="45" -->
+      <symbol id="vk-in-footer" viewBox="0 0 45 45">
+        <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B"/>
+        <path d="M28.77 28.85a3.02 3.02 0 01-1.55-.46c-.48-.32-.92-.7-1.32-1.13-.32-.32-.87-.87-1.07-.87-.21 0-.36.68-.35 1.16 0 .33-.12.65-.35.9-.26.2-.57.33-.9.36H21.8c-2.05-.04-4-.83-5.51-2.21-2.73-2.49-5.08-7.24-5.17-7.45a.98.98 0 01.1-1.09c.29-.23.65-.36 1.02-.35h3.12c.24.03.48.12.7.25.2.14.36.32.46.54.32.68.7 1.34 1.1 1.97.97 1.48 1.4 1.82 1.56 1.9.17-.7.22-1.42.14-2.13.03-.32-.03-.64-.15-.94a.99.99 0 00-.58-.21l-.54-.51c-.1-.49.44-.91.82-1.07a6.48 6.48 0 012.34-.28h.52a6.8 6.8 0 011.6.14c1.26.27 1.21 1.28 1.16 2.45 0 .34-.03.73-.03 1.2v.35c-.03.32-.01.64.06.95a6.72 6.72 0 001.54-1.83c.43-.65.8-1.34 1.13-2.06a1.17 1.17 0 011.18-.7h3.18c.1-.01.19-.01.28 0 .74 0 1.18.21 1.36.63.18.4.12 1.22-1.75 3.4l-.74.83c-.36.35-.67.74-.92 1.17.28.32.6.6.95.84.85.64 1.6 1.4 2.22 2.27a1.18 1.18 0 01.2 1.24 1.7 1.7 0 01-1.4.74l-2.81.03-.17-.03zm-3.94-3.57c.66 0 1.24.59 1.86 1.2.33.36.7.68 1.11.96.31.2.67.3 1.04.3h.07l2.82-.03c.14 0 .28-.04.4-.1l-.07-.12a9.78 9.78 0 00-1.99-2c-.88-.75-1.33-1.1-1.39-1.66-.05-.57.37-1.06 1.2-2l.74-.82a7.91 7.91 0 001.52-2.18 4.2 4.2 0 00-.5 0H28.4a.41.41 0 00-.18 0A15.1 15.1 0 0127 21.1c-1.4 2.08-2.06 2.36-2.53 2.36a.89.89 0 01-.41-.1c-.75-.43-.75-1.36-.7-2.04v-.32c0-.48 0-.9.03-1.25.06-1.24 0-1.24-.28-1.31a6.38 6.38 0 00-1.38-.12h-.5c-.48 0-.95.02-1.42.07l.19.19c.3.48.46 1.04.43 1.6.1 1.23.05 2.81-.74 3.2-.14.06-.29.1-.44.1-.7 0-1.38-.66-2.54-2.41-.45-.68-.85-1.38-1.2-2.1l-.05-.08a.9.9 0 00-.24-.08H12.2c.44.9 2.51 4.88 4.84 6.97 1.3 1.2 2.99 1.88 4.76 1.94h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.92 1.17-2.21.1-.04.19-.06.29-.08z" fill="#192144"/>
+      </symbol>
+
+      <!-- insta-in-site-menu: width="18" height="18" -->
+      <symbol id="insta-in-site-menu" viewBox="0 0 18 18">
+        <g opacity=".5" fill="#192144">
+          <path d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z"/>
+          <path d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z"/>
+        </g>
+      </symbol>
+
+      <!-- insta-in-footer: width="45" height="45" -->
+      <symbol id="insta-in-footer" viewBox="0 0 45 45">
+        <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B"/>
+        <g clip-path="url(#clip720)" fill="#192144">
+          <path d="M26.96 16.03c.86 0 1.68.34 2.29.94.6.6.95 1.4.95 2.25v7.8c0 .84-.34 1.65-.95 2.24-.6.6-1.43.94-2.29.94h-7.92c-.86 0-1.68-.34-2.28-.94-.61-.6-.95-1.4-.95-2.25v-7.79c0-.84.34-1.65.95-2.25.6-.6 1.42-.93 2.28-.94h7.92zm0-1.06h-7.92c-1.15 0-2.24.45-3.05 1.25a4.22 4.22 0 00-1.27 3v7.8c0 1.12.46 2.2 1.27 3 .8.8 1.9 1.24 3.05 1.24h7.92c1.15 0 2.24-.45 3.05-1.24a4.22 4.22 0 001.27-3v-7.8c0-1.13-.46-2.2-1.27-3a4.36 4.36 0 00-3.05-1.25z"/>
+          <path d="M23 19.99a3.23 3.23 0 012.95 1.93 3.1 3.1 0 01-.69 3.42 3.2 3.2 0 01-5.44-2.22 3.08 3.08 0 01.93-2.22 3.19 3.19 0 012.26-.91zm0-1.07a4.32 4.32 0 00-3.94 2.6 4.14 4.14 0 00.92 4.57 4.3 4.3 0 007.29-2.97 4.13 4.13 0 00-1.25-2.97 4.27 4.27 0 00-3.01-1.23zM27.43 19.73c.53 0 .96-.42.96-.95a.96.96 0 00-.96-.95.96.96 0 00-.97.95c0 .53.44.95.97.95z"/>
+        </g>
+        <defs>
+          <clipPath id="clip720">
+            <path fill="#fff" transform="translate(14 14.26)" d="M0 0h18v17.71H0z"/>
+          </clipPath>
+        </defs>
+      </symbol>
+
+      <!-- phone-in-row-contacts-group: width="40" height="40" -->
+      <symbol id="phone-in-row-contacts-group" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="20" fill="#FF8D30"/>
+        <path d="M19.77 19.22c0 .2.16.34.35.34.38 0 .7.32.7.7 0 .18.15.33.34.33.19 0 .34-.15.34-.33 0-.76-.62-1.37-1.38-1.37a.34.34 0 00-.35.33zm5.56 1.37c.2 0 .34-.15.34-.33 0-3.03-2.49-5.5-5.55-5.5a.34.34 0 00-.35.34c0 .19.16.34.35.34a4.85 4.85 0 014.87 4.82c0 .18.15.33.34.33z" fill="#161C35"/><path d="M22.9 20.26c0 .18.16.33.35.33.18 0 .34-.15.34-.33 0-1.9-1.56-3.44-3.47-3.44a.34.34 0 00-.35.34c0 .2.16.34.35.34a2.78 2.78 0 012.78 2.76zm-2.78-7.56a.34.34 0 00-.35.34c0 .18.16.34.35.34a6.93 6.93 0 016.96 6.88c0 .18.15.33.34.33.19 0 .34-.15.34-.33a7.61 7.61 0 00-7.64-7.56zm3.33 11.11l-.45.24c-.75.41-1.34 1.53-2.27.69L18.3 22.3l-2.1-2.04c-1.06-1.34.13-1.65.54-2.4l.24-.44a2.57 2.57 0 00-.45-3.1c-.5-.49-1.16-.76-1.87-.76-.7 0-1.37.27-1.87.76l-.17.18c-.93.91-1.03 2.48-.3 4.42a16.39 16.39 0 003.88 5.67c2.77 2.73 5.85 4.31 8.06 4.31.88 0 1.62-.25 2.14-.77l.18-.17a2.6 2.6 0 000-3.7c-.82-.81-2.1-1-3.13-.45z" fill="#161C35"/>
+      </symbol>
+
+      <!-- mail-in-row-contacts-group: width="40" height="40" -->
+      <symbol id="mail-in-row-contacts-group" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="20" fill="#FFBD30"/>
+        <path d="M12.02 15.33l6.75 4.23c.22.14.52.2.81.2.3 0 .6-.06.82-.2l6.75-4.23c.44-.28.85-1.36.05-1.36H11.97c-.8 0-.4 1.08.05 1.36zm15.33 2.3l-6.95 4.24c-.3.18-.52.2-.82.2-.3 0-.5-.02-.81-.2l-6.92-4.23c-.35-.22-.35.03-.35.23v7.65c0 .45.5 1.05.9 1.05h14.4c.4 0 .9-.6.9-1.05v-7.65c0-.2 0-.45-.35-.23z" fill="#161C35"/>
+      </symbol>
+    </svg>
+
     <header class="general-header">
-      <div class="general-header__auxiliary-layout general-header__layout general-header__visible-on-desktop invisible">
-        <div class="container container--thick general-header__auxiliary-layout-container general-header__container general-header__box">
+      <div class="general-header__auxiliary-layout general-header__layout hidden-entity">
+        <div class="container container--thick general-header__container general-header__container--auxiliary general-header__box">
           <a class="logo general-header__logo general-header__logo--auxiliary link">
-            <svg class="logo__svg-primary invisible" role="img" aria-label="Логотип сайта" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect width="100" height="15" fill="url(#pattern0)"/>
-              <defs>
-                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use xlink:href="#image0" transform="scale(0.00787402 0.05)"/>
-                </pattern>
-                <image id="image0" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
-              </defs>
-            </svg>
-            <svg class="logo__svg-auxiliary" width="100" height="18" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
-                <rect width="96" height="15" fill="url(#pattern1)"/>
-              </mask>
-              <g mask="url(#mask0)">
-                <rect width="96" height="15" fill="white"/>
-              </g>
-              <defs>
-                <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use xlink:href="#image1" transform="scale(0.00787402 0.05)"/>
-                </pattern>
-                <image id="image1" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
-              </defs>
-            </svg>
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/logo/content/png/logo-primary-desktop.png 1x, ./img/logo/content/png/logo-primary-desktop@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/logo/content/webp/logo-primary-tablet.webp 1x, ./img/logo/content/webp/logo-primary-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo/content/png/logo-primary-tablet.png 1x, ./img/logo/content/png/logo-primary-tablet@2x.png 2x">
+              <source type="image/webp" srcset="./img/logo/content/webp/logo-primary-mobile.webp 1x, ./img/logo/content/webp/logo-primary-mobile@2x.webp 2x">
+              <img class="logo__image logo__image--primary hidden-entity" src="./img/logo/content/png/logo-primary-mobile.png" width="100" height="15" alt="Логотип сайта" srcset="./img/logo/content/png/logo-primary-mobile@2x.png 2x">
+            </picture>
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-auxiliary-desktop.webp 1x, ./img/logo/content/webp/logo-auxiliary-desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/logo/content/png/logo-auxiliary-desktop.png 1x, ./img/logo/content/png/logo-auxiliary-desktop@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/logo/content/webp/logo-auxiliary-tablet.webp 1x, ./img/logo/content/webp/logo-auxiliary-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo/content/png/logo-auxiliary-tablet.png 1x, ./img/logo/content/png/logo-auxiliary-tablet@2x.png 2x">
+              <source type="image/webp" srcset="./img/logo/content/webp/logo-auxiliary-mobile.webp 1x, ./img/logo/content/webp/logo-auxiliary-mobile@2x.webp 2x">
+              <img class="logo__image logo__image--auxiliary" src="./img/logo/content/png/logo-auxiliary-mobile.png" width="96" height="15" alt="Логотип сайта" srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x">
+            </picture>
           </a>
 
-          <button class="general-header__burger-button general-header__toggle" type="button">
+          <button class="general-header__toggle general-header__toggle--burger" type="button">
             <span class="visually-hidden">Кнопка включения окна навигации</span>
-            <svg class="general-header__burger-svg" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect class="general-header__burger-rect" width="25" height="3" rx="1.5" fill="white"/>
-              <rect class="general-header__burger-rect" y="8" width="25" height="3" rx="1.5" fill="white"/>
+            <svg class="general-header__burger-svg" width="25" height="11">
+              <use xlink:href="#burger"></use>
             </svg>
           </button>
-
-          <nav class="general-header__site-navigation general-header__site-navigation--desktop invisible">
-            <ul class="general-header__nav-list list zero-edges">
-              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="#!">О сервисе</a></li>
-              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="./form.html">Направления</a></li>
-              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="./catalog.html">Попутчики</a></li>
-            </ul>
-          </nav>
 
           <a class="authorization authorization--modified authorization--appearance general-header__authorization link" href="#!">Авторизация</a>
 
@@ -61,51 +117,43 @@
             <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
             <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link" href="#!">Авторизация</a>
           </div>
-
         </div>
       </div>
 
       <div class="general-header__primary-layout general-header__layout">
-        <div class="container container--thick general-header__primary-layout-container general-header__container general-header__visible-on-desktop">
+        <div class="container container--thick general-header__container general-header__container--primary">
           <div class="general-header__primary-layout-wrapper general-header__box">
             <a class="logo general-header__logo general-header__logo--primary link">
-              <svg class="logo__svg-primary" role="img" aria-label="Логотип сайта" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="100" height="15" fill="url(#pattern6)"/>
-                <defs>
-                  <pattern id="pattern6" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image6" transform="scale(0.00787402 0.05)"/>
-                  </pattern>
-                  <image id="image6" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
-                </defs>
-              </svg>
-              <svg class="logo__svg-auxiliary invisible" width="100" height="18" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
-                  <rect width="96" height="15" fill="url(#pattern7)"/>
-                </mask>
-                <g mask="url(#mask1)">
-                  <rect width="96" height="15" fill="white"/>
-                </g>
-                <defs>
-                  <pattern id="pattern7" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image7" transform="scale(0.00787402 0.05)"/>
-                  </pattern>
-                  <image id="image7" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
-                </defs>
-              </svg>
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="./img/logo/content/png/logo-primary-desktop.png 1x, ./img/logo/content/png/logo-primary-desktop@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/logo/content/webp/logo-primary-tablet.webp 1x, ./img/logo/content/webp/logo-primary-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/logo/content/png/logo-primary-tablet.png 1x, ./img/logo/content/png/logo-primary-tablet@2x.png 2x">
+                <source type="image/webp" srcset="./img/logo/content/webp/logo-primary-mobile.webp 1x, ./img/logo/content/webp/logo-primary-mobile@2x.webp 2x">
+                <img class="logo__image logo__image--primary" src="./img/logo/content/png/logo-primary-mobile.png" width="100" height="15" alt="Логотип сайта" srcset="./img/logo/content/png/logo-primary-mobile@2x.png 2x">
+              </picture>
+
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-auxiliary-desktop.webp 1x, ./img/logo/content/webp/logo-auxiliary-desktop@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="./img/logo/content/png/logo-auxiliary-desktop.png 1x, ./img/logo/content/png/logo-auxiliary-desktop@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/logo/content/webp/logo-auxiliary-tablet.webp 1x, ./img/logo/content/webp/logo-auxiliary-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/logo/content/png/logo-auxiliary-tablet.png 1x, ./img/logo/content/png/logo-auxiliary-tablet@2x.png 2x">
+                <source type="image/webp" srcset="./img/logo/content/webp/logo-auxiliary-mobile.webp 1x, ./img/logo/content/webp/logo-auxiliary-mobile@2x.webp 2x">
+                <img class="logo__image logo__image--auxiliary hidden-entity" src="./img/logo/content/png/logo-auxiliary-mobile.png" width="96" height="15" alt="Логотип сайта" srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x">
+              </picture>
             </a>
 
-            <button class="general-header__cross-button general-header__toggle invisible" type="button">
+            <button class="general-header__toggle general-header__toggle--cross hidden-entity" type="button">
               <span class="visually-hidden">Кнопка закрытия окна навигации</span>
-              <svg class="general-header__cross-svg invisible" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
-                <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
+              <svg class="general-header__cross-svg" width="19" height="19">
+                <use xlink:href="#cross-in-primary-layout"></use>
               </svg>
             </button>
 
             <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link" href="#!">Авторизация</a>
           </div>
 
-          <nav class="general-header__site-navigation general-header__site-navigation--desktop">
+          <nav class="general-header__site-navigation">
             <ul class="general-header__nav-list list zero-edges">
               <li class="general-header__nav-item"><a class="general-header__nav-link general-header__nav-link--desktop-prime link" href="#!">О сервисе</a></li>
               <li class="general-header__nav-item"><a class="general-header__nav-link general-header__nav-link--desktop-prime link" href="./form.html">Направления</a></li>
@@ -113,19 +161,19 @@
             </ul>
           </nav>
 
-          <div class="contacts-group contacts-group--prime-column contacts-group--since-desktop general-header__contacts-group zero-edges">
+          <div class="contacts-group general-header__contacts-group zero-edges hidden-since-desktop">
             <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span">8 800 555-86-28</span></a>
             <a class="contacts-group__email contacts-group__contact link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span">mail@htmlacademy.ru</span></a>
             <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link" href="#!">Авторизация</a>
           </div>
 
-          <div class="contacts-group contacts-group--prime-row contacts-group--before-desktop contacts-group--row general-header__contacts-group zero-edges">
+          <div class="contacts-group contacts-group--row general-header__contacts-group zero-edges hidden-before-desktop">
             <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
             <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
             <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link" href="#!">Авторизация</a>
           </div>
 
-          <div class="socials socials--invisible socials--tablet-left general-header__socials">
+          <div class="socials socials--tablet-left general-header__socials hidden-since-desktop">
             <ul class="socials__list list zero-edges">
               <li class="socials__item">
                 <a class="socials__link link" href="#!">
@@ -159,10 +207,8 @@
           </div>
         </div>
       </div>
-      <div class="general-header__lining invisible"></div>
+      <div class="general-header__lining hidden-entity"></div>
     </header>
-
-    <!-- <div class="page__lining page__lining--tablet page__lining--desktop invisible"></div> -->
 
     <main class="general-main">
       <h1 class="visually-hidden">"Погнали?" - сервис поиска попутчиков для совместных путешествий</h1>
@@ -201,7 +247,7 @@
           <h2 class="about-service__heading margin-left-24 heading heading--level-2 zero-edges">О сервисе</h2>
           <p class="main-text about-service__main-text margin-left-24">Любое путешествие веселее<br>с попутчиками, которые на<br>одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
           <p class="additional-text about-service__additional-text margin-left-24">А если найдете кого-то<br>близкого по духу &mdash; скорее<br>зовите в совместный трип!</p>
-          <a class="button button--more button--more-and-route button--with-arrow button--invisible about-service__more link" href="#!">Подробнее</a>
+          <a class="button button--more button--more-and-route button--with-arrow about-service__more link hidden-entity" href="#!">Подробнее</a>
         </div>
       </section>
 
@@ -450,7 +496,7 @@
               <section class="companion fellow-travelers__companion">
                 <h3 class="companion__name companion__name--petia-diomin heading heading--level-3"><a class="companion__head-link link" href="#!">Петя Демин</a></h3>
 
-                <!-- <span class="companion__likes invisible">1500</span> -->
+                <!-- <span class="companion__likes hidden-entity">1500</span> -->
                 <a class="companion__likes link" href="#!">
                   <span class="visually-hidden">Колличество лайков</span>
                   1500
@@ -638,7 +684,7 @@
           <div class="contacts-group if-interested__contacts-group zero-edges">
             <a class="contacts-group__telephone contacts-group__contact contacts-group__telephone--for-interested link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--inverse">8 800 555-86-28</span></a>
             <a class="contacts-group__email contacts-group__contact link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span></a>
-            <a class="authorization authorization--invisible contacts-group__authorization link" href="#!">Авторизация</a>
+            <a class="authorization contacts-group__authorization link hidden-entity" href="#!">Авторизация</a>
           </div>
         </div>
       </section>
@@ -707,7 +753,7 @@
       </div>
     </footer>
 
-    <div class="busines-tariffs busines-tariffs--invisible">
+    <div class="busines-tariffs hidden-entity">
       <h4 class="busines-tariffs__heading">Бизнес-тарифы</h4>
       <dl class="busines-tariffs__list list zero-edges">
         <dt class="busines-tariffs__item">Реклама у блоггера</dt>
