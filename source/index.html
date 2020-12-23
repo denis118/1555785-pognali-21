@@ -17,10 +17,16 @@
         <rect class="general-header__burger-rect" width="25" height="3" x="0" y="8" rx="1.5" fill="#fff"/>
       </symbol>
 
-      <!-- cross-in-primary-layout: width="19" height="19" -->
-      <symbol id="cross-in-primary-layout" viewBox="0 0 19 19">
-        <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc" transform="translate(-2.445 0) rotate(45 11.945 9.5)"/>
-        <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc" transform="translate(-2.445 0) rotate(-45 11.945 9.5)"/>
+      <!-- cross-in-primary-layout-mobile: width="19" height="20" -->
+      <symbol id="cross-in-primary-layout-mobile" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)" fill="#CCCCCC"/>
+        <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)" fill="#CCCCCC"/>
+      </symbol>
+
+      <!-- cross-in-primary-layout-tablet: width="22" height="22" -->
+      <symbol id="cross-in-primary-layout-tablet" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.75 2.25L1.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
       </symbol>
 
       <!-- facebook-in-site-menu: width="11" height="21" -->
@@ -81,8 +87,8 @@
     </svg>
 
     <header class="general-header">
-      <div class="general-header__auxiliary-layout general-header__layout hidden-entity">
-        <div class="container container--thick general-header__container general-header__container--auxiliary general-header__box">
+      <div class="general-header__auxiliary-layout general-header__layout hidden-on-mobile hidden-on-tablet">
+        <div class="container container--thick general-header__container general-header__container--auxiliary flex flex--justification-between flex--alignment-center">
           <a class="logo general-header__logo general-header__logo--auxiliary link">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
@@ -105,24 +111,38 @@
 
           <button class="general-header__toggle general-header__toggle--burger" type="button">
             <span class="visually-hidden">Кнопка включения окна навигации</span>
-            <svg class="general-header__burger-svg" width="25" height="11">
-              <use xlink:href="#burger"></use>
-            </svg>
+            <svg class="general-header__burger-svg" width="25" height="11"><use xlink:href="#burger"></use></svg>
           </button>
 
-          <a class="authorization authorization--modified authorization--appearance general-header__authorization link" href="#!">Авторизация</a>
+          <a class="authorization authorization--modified authorization--appearance general-header__authorization link centering-grid" href="#!">Авторизация</a>
 
-          <div class="contacts-group contacts-group--row contacts-group--appearance contacts-group--before-desktop general-header__contacts-group zero-edges">
-            <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
-            <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
-            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link" href="#!">Авторизация</a>
+          <nav class="general-header__site-navigation">
+            <ul class="general-header__nav-list list zero-edges flex flex--columnar flex--justification-between flex--alignment-center">
+              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="#!">О сервисе</a></li>
+              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="./form.html">Направления</a></li>
+              <li class="general-header__nav-item"><a class="general-header__nav-link link" href="./catalog.html">Попутчики</a></li>
+            </ul>
+          </nav>
+
+          <div class="contacts-group contacts-group--row general-header__contacts-group zero-edges flex flex--columnar flex--justification-between hidden-on-mobile hidden-on-tablet">
+            <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628">
+              <span class="visually-hidden">Кнопка для звонка в сервис</span>
+              <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone" width="50" height="50"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
+              <span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span>
+            </a>
+            <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+              <span class="visually-hidden">Кнопка для отправки электронной почты</span>
+              <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
+              <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
+            </a>
+            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link centering-grid" href="#!">Авторизация</a>
           </div>
         </div>
       </div>
 
-      <div class="general-header__primary-layout general-header__layout">
+      <div class="general-header__primary-layout general-header__layout hidden-on-desktop">
         <div class="container container--thick general-header__container general-header__container--primary">
-          <div class="general-header__primary-layout-wrapper general-header__box">
+          <div class="general-header__primary-layout-wrapper flex flex--justification-between flex--alignment-center">
             <a class="logo general-header__logo general-header__logo--primary link">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
@@ -145,61 +165,68 @@
 
             <button class="general-header__toggle general-header__toggle--cross hidden-entity" type="button">
               <span class="visually-hidden">Кнопка закрытия окна навигации</span>
-              <svg class="general-header__cross-svg" width="19" height="19">
-                <use xlink:href="#cross-in-primary-layout"></use>
+              <svg class="general-header__cross-svg hidden-on-tablet hidden-on-desktop" width="19" height="20">
+                <use xlink:href="#cross-in-primary-layout-mobile"></use>
+              </svg>
+              <svg class="general-header__cross-svg hidden-on-mobile hidden-on-desktop" width="22" height="22">
+                <use xlink:href="#cross-in-primary-layout-tablet"></use>
               </svg>
             </button>
 
-            <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link" href="#!">Авторизация</a>
+            <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link centering-grid" href="#!">Авторизация</a>
           </div>
 
-          <nav class="general-header__site-navigation">
-            <ul class="general-header__nav-list list zero-edges">
+          <nav class="general-header__site-navigation general-header--common-margin-left">
+            <ul class="general-header__nav-list list zero-edges flex flex--columnar flex--justification-between flex--alignment-center">
               <li class="general-header__nav-item"><a class="general-header__nav-link general-header__nav-link--desktop-prime link" href="#!">О сервисе</a></li>
               <li class="general-header__nav-item"><a class="general-header__nav-link general-header__nav-link--desktop-prime link" href="./form.html">Направления</a></li>
               <li class="general-header__nav-item"><a class="general-header__nav-link general-header__nav-link--desktop-prime link" href="./catalog.html">Попутчики</a></li>
             </ul>
           </nav>
 
-          <div class="contacts-group general-header__contacts-group zero-edges hidden-since-desktop">
-            <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span">8 800 555-86-28</span></a>
-            <a class="contacts-group__email contacts-group__contact link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span">mail@htmlacademy.ru</span></a>
-            <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link" href="#!">Авторизация</a>
+          <div class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges flex flex--columnar flex--justification-between hidden-on-desktop">
+            <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link flex flex--alignment-center" href="tel:88005558628">
+              <span class="visually-hidden">Кнопка для звонка в сервис</span>
+              <svg class="contacts-group__svg contacts-group__svg--telephone" width="50" height="50"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
+              <span class="contacts-group__span">8 800 555-86-28</span>
+            </a>
+            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+              <span class="visually-hidden">Кнопка для отправки электронной почты</span>
+              <svg class="contacts-group__svg contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
+              <span class="contacts-group__span">mail@htmlacademy.ru</span>
+            </a>
+            <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link centering-grid" href="#!">Авторизация</a>
           </div>
 
-          <div class="contacts-group contacts-group--row general-header__contacts-group zero-edges hidden-before-desktop">
-            <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
-            <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
-            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link" href="#!">Авторизация</a>
+          <div class="contacts-group contacts-group--row general-header__contacts-group zero-edges flex flex--columnar flex--justification-between hidden-on-mobile hidden-on-tablet">
+            <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
+            <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
+            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link centering-grid" href="#!">Авторизация</a>
           </div>
 
-          <div class="socials socials--tablet-left general-header__socials hidden-since-desktop">
-            <ul class="socials__list list zero-edges">
-              <li class="socials__item">
+          <div class="socials socials--in-site-menu socials--tablet-left general-header__socials flex flex--justification-center flex--alignment-center hidden-on-desktop">
+            <ul class="socials__list list zero-edges flex flex--justification-center flex--alignment-center">
+              <li class="socials__item socials__item--facebook">
                 <a class="socials__link link" href="#!">
                   <span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span>
-                  <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.48786 20.8125H2.12929V11.1375H0V6.3525H2.06643C1.90929 4.185 2.30214 2.6025 3.26071 1.5225C3.71777 1.04316 4.27461 0.66015 4.89562 0.397985C5.51662 0.13582 6.18812 0.000268301 6.86714 0L10.6229 0V4.6125H7.66857C7.49452 5.1766 7.42799 5.76595 7.47214 6.3525H10.615V11.1375H7.47214L7.48786 20.8125ZM3.31571 19.6875H6.28571V10.0125H9.42857V7.5H6.28571V6.93C6.28571 5.43 6.28571 4.0875 7.07143 3.585L7.22071 3.4875H9.42857V1.125H6.89857C6.38444 1.11866 5.87465 1.21553 5.40225 1.40933C4.92986 1.60314 4.50541 1.88955 4.15643 2.25C3.37071 3.1725 3.04857 4.7175 3.29214 6.855L3.37071 7.4775H1.17857V10.0125H3.31571V19.6875Z" fill="#192144"/>
+                  <svg class="socials__svg socials__svg--facebook" width="11" height="21">
+                    <use xlink:href="#facebook-in-site-menu"></use>
                   </svg>
                 </a>
               </li>
-              <li class="socials__item">
+              <li class="socials__item socials__item--vk">
                 <a class="socials__link link" href="#!">
                   <span class="visually-hidden">Ссылка на аккаунт в ВКонтакте</span>
-                  <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.7664 11.8331C17.219 11.8207 16.6854 11.6573 16.2232 11.3606C15.7407 11.031 15.2975 10.6459 14.9026 10.2132C14.5761 9.88315 14.0345 9.32815 13.8268 9.32815C13.619 9.32815 13.4706 10.0181 13.478 10.5056C13.4812 10.8422 13.3564 11.167 13.1293 11.4131C12.8712 11.6263 12.5561 11.7569 12.2242 11.7881H10.7997C8.75222 11.7426 6.79178 10.9425 5.28708 9.53815C2.55676 7.01065 0.21224 2.18065 0.115789 1.97065C0.0237889 1.79521 -0.0147389 1.59616 0.00506792 1.3986C0.0248747 1.20105 0.102128 1.01386 0.227079 0.860649C0.509857 0.622256 0.867951 0.494496 1.23611 0.500649H4.26321H4.35224C4.6027 0.537588 4.84277 0.626997 5.05708 0.763149C5.25875 0.899848 5.42022 1.08899 5.5245 1.31065C5.8444 2.00295 6.2113 2.67204 6.62256 3.31315C7.5945 4.81315 8.02482 5.15815 8.18063 5.23315C8.35396 4.52985 8.40169 3.80091 8.3216 3.08065C8.3476 2.7526 8.29412 2.4231 8.16579 2.12065C8.00289 1.98893 7.80288 1.91278 7.5945 1.90315L7.05289 1.38565C6.94901 0.890649 7.49063 0.463149 7.86902 0.298149C8.62414 0.0589723 9.41638 -0.0376377 10.2061 0.013149H10.7329C11.2686 -0.000953053 11.8041 0.0494006 12.328 0.163149C13.5893 0.433149 13.5448 1.46065 13.4929 2.64565C13.4929 2.99065 13.4558 3.39565 13.4558 3.86065C13.4558 3.97315 13.4558 4.09315 13.4558 4.22065C13.4266 4.54717 13.4492 4.87631 13.5226 5.19565C14.1402 4.67331 14.6604 4.04337 15.0584 3.33565C15.4879 2.66645 15.865 1.96431 16.1861 1.23565C16.2839 1.00519 16.4516 0.812043 16.6649 0.684009C16.8782 0.555974 17.1262 0.499653 17.3732 0.523149H20.5487C20.6425 0.514104 20.7369 0.514104 20.8306 0.523149C21.5726 0.523149 22.0103 0.740649 22.1884 1.16065C22.3664 1.58065 22.3145 2.40565 20.4374 4.61815L19.6955 5.46565C19.336 5.81847 19.0264 6.21976 18.7755 6.65815C19.0565 6.98108 19.3754 7.2682 19.7251 7.51315C20.5778 8.16264 21.3283 8.93894 21.951 9.81565C22.097 9.98613 22.1925 10.1948 22.2266 10.4176C22.2608 10.6405 22.2321 10.8685 22.1439 11.0756C21.9884 11.3051 21.7803 11.4931 21.5375 11.6237C21.2946 11.7542 21.0241 11.8235 20.749 11.8256L17.9371 11.8631L17.7664 11.8331ZM13.8268 8.20315C14.4945 8.20315 15.0732 8.79565 15.689 9.41815C16.0217 9.78534 16.3951 10.1125 16.8019 10.3931C17.1096 10.6 17.4711 10.7096 17.8406 10.7081H17.9148L20.7342 10.6706C20.8732 10.6626 21.0094 10.6269 21.1348 10.5656L21.0606 10.4456C20.499 9.67196 19.8292 8.98479 19.0722 8.40565C18.1893 7.65565 17.7368 7.30315 17.6848 6.72565C17.6329 6.14815 18.0484 5.64565 18.8793 4.69315L19.6213 3.86065C20.2477 3.21479 20.7619 2.46681 21.1422 1.64815C20.9767 1.63823 20.8107 1.63823 20.6451 1.64815H17.4029C17.3443 1.6349 17.2835 1.6349 17.2248 1.64815C16.8814 2.44423 16.4719 3.20947 16.0006 3.93565C14.5984 6.05065 13.938 6.33565 13.4706 6.33565C13.3257 6.33565 13.183 6.29959 13.0551 6.23065C12.3132 5.80315 12.3132 4.85065 12.3577 4.16065C12.3577 4.04815 12.3577 3.93565 12.3577 3.83815C12.3577 3.35065 12.3577 2.93065 12.3948 2.57065C12.4542 1.31065 12.3948 1.30315 12.1129 1.23565C11.6586 1.14491 11.1958 1.10467 10.7329 1.11565H10.221C9.74988 1.10581 9.27872 1.13088 8.81127 1.19065C8.88206 1.24338 8.94459 1.30659 8.99676 1.37815C9.30278 1.8659 9.4554 2.43595 9.4345 3.01315C9.53095 4.25065 9.47902 5.86315 8.69256 6.25315C8.5533 6.31903 8.40115 6.35235 8.2474 6.35065C7.5574 6.35065 6.87482 5.69065 5.70998 3.90565C5.26298 3.22218 4.86383 2.50794 4.51547 1.76815L4.45611 1.69315C4.38118 1.65454 4.30126 1.62677 4.21869 1.61065H1.25095H1.19901C1.63676 2.52565 3.71418 6.57565 6.03643 8.69815C7.34044 9.90918 9.02993 10.6088 10.7997 10.6706H12.1722C12.2422 10.6555 12.3097 10.6303 12.3726 10.5956C12.3726 10.5956 12.3726 10.5956 12.3726 10.5281C12.3726 10.3256 12.3726 8.57815 13.5448 8.27815C13.6356 8.24202 13.7302 8.21685 13.8268 8.20315Z" fill="#192144"/>
+                  <svg class="socials__svg socials__svg--vk" width="23" height="12">
+                    <use xlink:href="#vk-in-site-menu"></use>
                   </svg>
                 </a>
               </li>
-              <li class="socials__item">
+              <li class="socials__item socials__item--insta">
                 <a class="socials__link link" href="#!">
                   <span class="visually-hidden">Ссылка на аккаунт в Инстаграм</span>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.5">
-                      <path d="M12.9601 1.80061C13.8188 1.80251 14.6418 2.14448 15.249 2.75169C15.8562 3.35889 16.1982 4.18189 16.2001 5.04061V12.9606C16.1982 13.8193 15.8562 14.6423 15.249 15.2495C14.6418 15.8567 13.8188 16.1987 12.9601 16.2006H5.04009C4.18262 16.1968 3.36147 15.854 2.75581 15.247C2.15016 14.64 1.80919 13.8181 1.80729 12.9606V5.04061C1.80919 4.18314 2.15016 3.36122 2.75581 2.75422C3.36147 2.14722 4.18262 1.80441 5.04009 1.80061H12.9601ZM12.9601 0.720612H5.04009C3.89436 0.720612 2.79555 1.17575 1.98539 1.98591C1.17523 2.79607 0.720093 3.89488 0.720093 5.04061L0.720093 12.9606C0.720093 14.1063 1.17523 15.2052 1.98539 16.0153C2.79555 16.8255 3.89436 17.2806 5.04009 17.2806H12.9601C14.1058 17.2806 15.2046 16.8255 16.0148 16.0153C16.8249 15.2052 17.2801 14.1063 17.2801 12.9606V5.04061C17.2801 3.89488 16.8249 2.79607 16.0148 1.98591C15.2046 1.17575 14.1058 0.720612 12.9601 0.720612V0.720612Z" fill="#192144"/>
-                      <path d="M9.00703 5.81737C9.63787 5.81737 10.2545 6.00444 10.7791 6.35492C11.3036 6.7054 11.7124 7.20354 11.9538 7.78637C12.1953 8.36919 12.2584 9.01051 12.1353 9.62923C12.0123 10.248 11.7085 10.8163 11.2624 11.2624C10.8163 11.7084 10.248 12.0122 9.62929 12.1353C9.01057 12.2584 8.36924 12.1952 7.78642 11.9538C7.2036 11.7124 6.70545 11.3035 6.35497 10.779C6.00449 10.2545 5.81743 9.63782 5.81743 9.00697C5.81648 8.58784 5.89833 8.17265 6.05829 7.78524C6.21824 7.39784 6.45315 7.04584 6.74952 6.74947C7.04589 6.4531 7.39789 6.21819 7.7853 6.05823C8.17271 5.89828 8.5879 5.81642 9.00703 5.81737ZM9.00703 4.73737C8.16228 4.73595 7.33609 4.98514 6.63301 5.45343C5.92993 5.92171 5.38156 6.58803 5.0573 7.36807C4.73304 8.14811 4.64746 9.00681 4.81139 9.83551C4.97532 10.6642 5.38139 11.4256 5.97822 12.0235C6.57504 12.6213 7.3358 13.0287 8.16422 13.194C8.99264 13.3593 9.85148 13.2752 10.6321 12.9523C11.4127 12.6293 12.0799 12.0821 12.5494 11.3798C13.0188 10.6775 13.2694 9.85173 13.2694 9.00697C13.2704 8.44662 13.1608 7.89158 12.947 7.37361C12.7333 6.85564 12.4194 6.38491 12.0236 5.98835C11.6277 5.59178 11.1575 5.27717 10.6398 5.06252C10.1222 4.84786 9.56738 4.73737 9.00703 4.73737Z" fill="#192144"/>
-                      <path d="M13.4282 5.55936C13.961 5.55936 14.393 5.12741 14.393 4.59456C14.393 4.06172 13.961 3.62976 13.4282 3.62976C12.8953 3.62976 12.4634 4.06172 12.4634 4.59456C12.4634 5.12741 12.8953 5.55936 13.4282 5.55936Z" fill="#192144"/>
-                    </g>
+                  <svg class="socials__svg socials__svg--insta" width="18" height="18">
+                    <use xlink:href="#insta-in-site-menu"></use>
                   </svg>
                 </a>
               </li>
@@ -219,10 +246,10 @@
           <div class="container container--thick">
             <p class="intro__slogan intro--common-margin heading heading--level-1 heading--slogan zero-edges">В путешествие<br>с крутыми<br>попутчиками!</p>
 
-            <div class="contacts-group contacts-group--row intro__contacts-group zero-edges">
-              <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
-              <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
-              <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link" href="#!">Авторизация</a>
+            <div class="contacts-group contacts-group--row intro__contacts-group zero-edges flex flex--columnar flex--justification-between">
+              <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
+              <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
+              <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link centering-grid" href="#!">Авторизация</a>
             </div>
           </div>
         </div>
@@ -233,10 +260,10 @@
               <cite class="quote__cite">Мурат Эльтазин<br>главный редактор<br>газеты «гаджетлайф»</cite>
             </blockquote>
             <ol class="intro__list intro--common-margin list zero-edges">
-              <li class="intro__item intro__item--first heading">Выберите<br>направление</li>
-              <li class="intro__item intro__item--2 heading">Изучите идеи<br>путешественников</li>
-              <li class="intro__item intro__item--3 heading">Находите тех,<br>кто похож на вас</li>
-              <li class="intro__item intro__item--last heading">Путешествуйте<br>вместе!</li>
+              <li class="intro__item intro__item--first heading flex flex--justification-between">Выберите<br>направление</li>
+              <li class="intro__item intro__item--2 heading flex flex--justification-between">Изучите идеи<br>путешественников</li>
+              <li class="intro__item intro__item--3 heading flex flex--justification-between">Находите тех,<br>кто похож на вас</li>
+              <li class="intro__item intro__item--last heading flex flex--justification-between">Путешествуйте<br>вместе!</li>
             </ol>
           </div>
         </div>
@@ -255,13 +282,13 @@
         <div class="container container--slim directions__container">
           <h2 class="directions__heading margin-left-24 heading heading--level-2 zero-edges">Направления</h2>
           <p class="main-text directions__main-text directions--absent-bottom margin-left-24">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
-          <ul class="directions__list columnar-flex list zero-edges">
-            <li class="directions__item columnar-flex">
+          <ul class="directions__list list zero-edges flex flex--columnar">
+            <li class="directions__item flex flex--columnar">
               <img class="directions__country-view image" src="./img/directions/thailand-mobile-1.png" width="270" height="110" alt="Вид одного из пляжей Таиланда">
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3">Таиланд</h3>
                 <p class="directions__tagline directions--common-text-style">Джунгли зовут!</p>
-                <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style">18321</p>
+                <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style flex flex--justification-end flex--alignment-center">18321</p>
                 <svg class="directions__country-flag image" width="35" height="24" role="img" aria-label="Флаг Тайланда" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <rect width="35" height="24" fill="url(#pattern3)"/>
                   <defs>
@@ -273,12 +300,12 @@
                 </svg>
               </div>
             </li>
-            <li class="directions__item columnar-flex">
+            <li class="directions__item flex flex--columnar">
               <img class="directions__country-view image" src="./img/directions/france-mobile-1.png" width="270" height="110" alt="Вид одного из городов Франции">
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3 zero-edges">Франция</h3>
                 <p class="directions__tagline directions--common-text-style">Трэ бьен, манифик!</p>
-                <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style">12518</p>
+                <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style flex flex--justification-end flex--alignment-center">12518</p>
                 <svg class="directions__country-flag image" width="35" height="24" aria-label="Флаг Франции" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <rect width="35" height="24" fill="url(#pattern4)"/>
                     <defs>
@@ -290,12 +317,12 @@
                 </svg>
               </div>
             </li>
-            <li class="directions__item columnar-flex">
+            <li class="directions__item flex flex--columnar">
               <img class="directions__country-view image" src="./img/directions/czech-mobile-1.png" width="270" height="110" alt="Вид одного из городов Чехии">
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3 zero-edges">Чехия</h3>
                 <p class="directions__tagline directions__tagline--unusual directions--common-text-style">Закоулки старой<br>Европы</p>
-                <p class="directions__applicants-amount directions--absent-bottom directions__applicants-amount--unusual directions--common-text-style">5326</p>
+                <p class="directions__applicants-amount directions--absent-bottom directions__applicants-amount--unusual directions--common-text-style flex flex--justification-end flex--alignment-center">5326</p>
                 <svg class="directions__country-flag image" role="img" aria-label="Флаг Чехии" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <rect width="35" height="24" fill="url(#pattern5)"/>
                     <defs>
@@ -320,7 +347,7 @@
 
           <ul class="fellow-travelers__list list zero-edges">
             <li class="fellow-travelers__item">
-              <section class="companion fellow-travelers__companion">
+              <section class="companion fellow-travelers__companion flex flex--columnar flex--alignment-center">
                 <h3 class="companion__name companion__name--tania-firsova heading heading--level-3 zero-edges"><a class="companion__head-link link" href="#!">Таня Фирсова</a></h3>
 
                 <!-- <span class="companion__likes companion__likes--active">1,5 M</span> -->
@@ -333,7 +360,7 @@
                   <img class="avatar__photo image" src="./img/companion/firsova/firsova-mobile-default.jpg" width="270" height="270" alt="Фото Тани Фирсовой во время плавания в бассейне">
                 </a>
 
-                <section class="circle-bar companion__level">
+                <section class="circle-bar companion__level flex flex--columnar flex--alignment-center">
                   <h4 class="circle-bar__heading zero-edges">Левел:</h4>
                   <div class="circle-bar__box">
                     <svg class="circle-bar__svg-container image">
@@ -348,7 +375,7 @@
 
                 <section class="wished-countries companion__wished-countries">
                   <h4 class="wished-countries__heading wished-countries__appearance">Хочет посетить:</h4>
-                  <ul class="wished-countries__list list zero-edges">
+                  <ul class="wished-countries__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="wished-countries__item">
                       <a class="wished-countries__link link" href="#!">
                         <svg class="wished-countries__flag image" role="img" aria-label="Шри-Ланка" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -396,7 +423,7 @@
 
                 <section class="hashtags hashtags--tania-firsova companion__hashtags">
                   <h4 class="visually-hidden">Хэштеги:</h4>
-                  <ul class="hashtags__list list zero-edges">
+                  <ul class="hashtags__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="hashtags__item">
                       <a class="hashtags__link link" href="#!">
                         <span class="visually-hidden">Хэштег ЗОЖ</span>
@@ -438,7 +465,7 @@
 
                 <section class="transport companion__transport">
                   <h4 class="transport__heading">Транспорт:</h4>
-                  <ul class="transport__list list zero-edges">
+                  <ul class="transport__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="transport__kind transport__kind--aircraft transport__kind--chosen" data-tooltip="Авиаперелёт">
                       <a class="transport__link link" href="#!">
                         <svg class="transport__aircraft-icon" role="img" aria-label="Иконка самолёта" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -493,7 +520,7 @@
             </li>
 
             <li class="fellow-travelers__item">
-              <section class="companion fellow-travelers__companion">
+              <section class="companion fellow-travelers__companion flex flex--columnar flex--alignment-center">
                 <h3 class="companion__name companion__name--petia-diomin heading heading--level-3"><a class="companion__head-link link" href="#!">Петя Демин</a></h3>
 
                 <!-- <span class="companion__likes hidden-entity">1500</span> -->
@@ -506,7 +533,7 @@
                   <img class="avatar__photo image" src="./img/companion/diomin/demin-mobile-default.jpg" width="270" height="270" alt="Фото Пети Демина на фоне заснеженного склона">
                 </a>
 
-                <section class="circle-bar companion__level">
+                <section class="circle-bar companion__level flex flex--columnar flex--alignment-center">
                   <h4 class="circle-bar__heading">Левел:</h4>
                   <div class="circle-bar__box">
                     <svg class="circle-bar__svg-container image">
@@ -521,7 +548,7 @@
 
                 <section class="wished-countries companion__wished-countries">
                   <h4 class="wished-countries__heading wished-countries__appearance">Хочет посетить:</h4>
-                  <ul class="wished-countries__list list zero-edges">
+                  <ul class="wished-countries__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="wished-countries__item">
                       <a class="wished-countries__link link" href="#!">
                         <svg class="wished-countries__flag image" role="img" aria-label="Бельгия" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -555,7 +582,7 @@
 
                 <section class="hashtags hashtags--petia-diomin companion__hashtags">
                   <h4 class="visually-hidden">Хэштеги:</h4>
-                  <ul class="hashtags__list list zero-edges">
+                  <ul class="hashtags__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="hashtags__item">
                       <a class="hashtags__link link" href="#!">
                         <span class="visually-hidden">Хэштег бургер</span>
@@ -591,7 +618,7 @@
 
                 <section class="transport companion__transport">
                   <h4 class="transport__heading">Транспорт:</h4>
-                  <ul class="transport__list list zero-edges">
+                  <ul class="transport__list list zero-edges flex flex--justification-center flex--alignment-center">
                     <li class="transport__kind transport__kind--aircraft transport__kind--chosen" data-tooltip="Авиаперелёт">
                       <a class="transport__link link" href="#!">
                         <svg class="transport__aircraft-icon" role="img" aria-label="Иконка самолёта" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -667,12 +694,12 @@
               <dd class="profile__definition">59 руб./мес</dd>
             </div>
           </dl>
-          <a class="profile__busines-tariff link" href="#!">Показать тарифы для бизнеса</a>
+          <a class="profile__busines-tariff link flex flex--alignment-center" href="#!">Показать тарифы для бизнеса</a>
         </div>
       </section>
 
       <section class="if-interested">
-        <div class="container container--slim if-interested__container">
+        <div class="container container--slim if-interested__container flex flex--columnar flex--justification-between flex--alignment-center">
           <h2 class="if-interested__heading heading heading--level-2">Заинтересовались?</h2>
           <p class="main-text if-interested__main-text if-interested__main-text--1">Зарегистрируйтесь,<br><span class="main-text main-text--shifted">это быстро и бесплатно!</span><br>Уже зарегистрированы? Тогда скорее <a class="if-interested__user-authorization link" href="#!">авторизуйтесь</a>.</p>
           <form class="if-interested__form" action="#" method="GET">
@@ -681,17 +708,17 @@
             <button class="button button--quadratic button--with-arrow if-interested__form-submit" type="submit"><span class="visually-hidden">Кнопка отправки адреса электронной почты</span></button>
           </form>
           <p class="main-text main-text--wider if-interested__main-text if-interested__main-text--2">Остались вопросы?<br>Мы с радостью на них ответим!</p>
-          <div class="contacts-group if-interested__contacts-group zero-edges">
-            <a class="contacts-group__telephone contacts-group__contact contacts-group__telephone--for-interested link" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--inverse">8 800 555-86-28</span></a>
-            <a class="contacts-group__email contacts-group__contact link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span></a>
-            <a class="authorization contacts-group__authorization link hidden-entity" href="#!">Авторизация</a>
+          <div class="contacts-group if-interested__contacts-group zero-edges flex flex--columnar flex--justification-between">
+            <a class="contacts-group__telephone contacts-group__contact contacts-group__telephone--for-interested link flex flex--alignment-center" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--inverse">8 800 555-86-28</span></a>
+            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span></a>
+            <a class="authorization contacts-group__authorization link centering-grid hidden-entity" href="#!">Авторизация</a>
           </div>
         </div>
       </section>
 
       <section class="map">
         <div class="map__wrapper">
-          <div class="container container--slim map__container">
+          <div class="container container--slim map__container flex flex--columnar flex--alignment-center">
             <h2 class="visually-hidden">Расположение офиса</h2>
             <address class="map__address additional-text">ул. Большая Конюшенная, 19/8</address>
             <a class="button button--route button--more-and-route button--with-arrow map__route link" href="">Проложить маршрут</a>
@@ -702,7 +729,7 @@
     </main>
 
     <footer class="general-footer">
-      <div class="container container--thick general-footer__container general-footer--common-flex-style columnar-flex">
+      <div class="container container--thick general-footer__container general-footer--common-flex-style flex flex--columnar">
         <a class="logo general-footer__logo link">
           <svg class="logo__svg" role="img" aria-label="Логотип сайта" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="100" height="15" fill="url(#pattern2)"/>
@@ -714,8 +741,8 @@
             </defs>
           </svg>
         </a>
-        <div class="socials general-footer__socials">
-          <ul class="socials__list list zero-edges">
+        <div class="socials general-footer__socials flex flex--justification-center flex--alignment-center">
+          <ul class="socials__list list zero-edges flex flex--justification-center flex--alignment-center">
             <li class="socials__item">
               <a class="socials__link link" href="#!">
                 <span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span>
@@ -746,7 +773,7 @@
             </li>
           </ul>
         </div>
-        <div class="general-footer__creators general-footer--common-flex-style">
+        <div class="general-footer__creators general-footer--common-flex-style flex">
           <span class="general-footer__created-by">Разработано</span>
           <a class="general-footer__link link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="general-footer__svg image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="33"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg></a>
         </div>

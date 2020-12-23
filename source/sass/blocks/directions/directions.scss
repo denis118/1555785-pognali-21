@@ -110,12 +110,7 @@
   line-height: 20px;
   text-align: right;
   color: $lcg-10;
-
   grid-area: applicants;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 
   &--unusual {
     justify-content: start;

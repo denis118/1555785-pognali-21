@@ -9,8 +9,6 @@
 }
 
 .customized-bar__level-wrapper {
-  display: flex;
-  align-items: center;
   width: 220px;
   height: 35px;
   background-color: $lcg-1;
@@ -50,8 +48,6 @@
   width: 100%;
   height: 2px;
   background-color: $dcg-13;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .customized-bar__bar-fill {

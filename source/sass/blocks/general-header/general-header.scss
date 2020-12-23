@@ -11,18 +11,18 @@
   // &--form {}
 
   // &--catalog {}
+
+  &--common-margin-left {
+    @media (min-width: $tablet-width) {
+      margin-left: 57px;
+    }
+  }
 }
 
 .general-header__layout {
   @media (min-width: $desktop-width) {
     padding: 0;
   }
-}
-
-.general-header__box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .general-header__auxiliary-layout {
@@ -100,17 +100,26 @@
     min-height: 90px;
   }
 
-  // &--primary {}
+  &--primary {
+    @media (min-width: $tablet-width) {
+      margin-top: 41px;
+    }
+  }
 
   &--auxiliary {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       min-height: 132px;
     }
   }
 }
 
 .general-header__primary-layout-wrapper {
-  padding-top: 27px;
+  min-height: 50px;
+  margin-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 41px;
+  }
 }
 
 .general-header__toggle {
@@ -128,7 +137,11 @@
 
   // &--burger {}
 
-  // &--cross {}
+  &--cross {
+    @media (min-width: $tablet-width) {
+      padding-left: 21px;
+    }
+  }
 }
 
 .general-header__burger-rect {
@@ -138,7 +151,11 @@
 }
 
 .general-header__site-navigation {
-  margin-top: 75px;
+  margin-top: 58px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 94px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
@@ -148,11 +165,6 @@
 // .general-header__authorization {}
 
 .general-header__nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
   @media (min-width: $tablet-width) {
     align-items: flex-start;
   }
@@ -176,6 +188,11 @@
   color: $dcg-4;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 20px;
@@ -191,16 +208,17 @@
 
 .general-header__contacts-group {
   margin-top: 52px;
-}
 
-.general-header__socials {
-  padding-top: 40px;
-  padding-bottom: 35.5px;
+  @media (min-width: $tablet-width) {
+    margin-top: 77px;
+  }
 
   @media (min-width: $desktop-width) {
-    display: none;
+    margin-top: 0;
   }
 }
+
+// .general-header__socials {}
 
 .general-header__lining {
   width: 100%;

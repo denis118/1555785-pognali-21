@@ -1,8 +1,5 @@
 
 .contacts-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-family: "Blogger Sans", "Arial", sans-serif;
 
   &--row {
@@ -11,15 +8,16 @@
 }
 
 .contacts-group__contact {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
   font-size: 16px;
   font-weight: 700;
   font-style: normal;
   line-height: 18px;
   color: $dcg-4;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 
   &::before {
     content: "";
@@ -27,29 +25,48 @@
     width: 45px;
     height: 45px;
     margin-right: 17px;
-
+    border-radius: 50%;
     background-color: $dcg-8;
     background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
+    background-size: auto;
+    background-position: 50% 50%;
 
-  &--row {
-    &::before {
-      width: 40px;
-      height: 40px;
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 23px;
+    }
 
-      @media (min-width: $desktop-width) {
-        width: 50px;
-        height: 50px;
-      }
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
     }
   }
 }
 
 .contacts-group__telephone {
   &::before {
-    background-image: $telephone-icon-1;
+    background-image: $icon-telephone-mobile;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $icon-telephone-mobile-2x;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: $icon-telephone-tablet;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $icon-telephone-tablet-2x;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: $icon-telephone-desktop;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $icon-telephone-desktop-2x;
+      }
+    }
   }
 
   &--in-site-menu {
@@ -61,27 +78,41 @@
       margin-right: 110px;
     }
   }
-
-  &--row {
-    &::before {
-      background-color: $mcg-2;
-      background-image: $telephone-icon-2;
-    }
-  }
 }
 
 .contacts-group__email {
   text-transform: uppercase;
 
   &::before {
-    background-image: $email-icon-1;
+    background-image: $icon-mail-mobile;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $icon-mail-mobile-2x;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: $icon-mail-tablet;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $icon-mail-tablet-2x;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: $icon-mail-desktop;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $icon-mail-desktop-2x;
+      }
+    }
   }
+}
+
+.contacts-group__svg {
+  display: none;
 
   &--row {
-    &::before {
-      background-color: $mcg-6;
-      background-image: $email-icon-2;
-    }
+    display: block;
   }
 }
 

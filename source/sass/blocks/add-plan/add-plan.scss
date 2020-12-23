@@ -11,12 +11,6 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
 
-  &--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &--border-with-radius {
     border: 1px solid $lcg-7;
     border-radius: 4px;
@@ -133,8 +127,6 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 6;
-
-    display: flex;
   }
 
   &--companions-amount {
@@ -395,8 +387,6 @@
   &--chosen-country-flag {
     width: 53px;
     height: 42px;
-    display: grid;
-    place-items: center;
     border-left: none;
 
     @media (min-width: $tablet-width) {

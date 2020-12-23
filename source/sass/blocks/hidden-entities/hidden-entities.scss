@@ -1,15 +1,21 @@
 
-.hidden-entity { // for using by JS only
+.hidden-entity {
   display: none;
 }
 
-.hidden-before-desktop {
-  @media (max-width: $desktop-width - 1) {
+.hidden-on-mobile {
+  @media (max-width: $tablet-width - 1) {
     display: none;
   }
 }
 
-.hidden-since-desktop {
+.hidden-on-tablet {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.hidden-on-desktop {
   @media (min-width: $desktop-width) {
     display: none;
   }

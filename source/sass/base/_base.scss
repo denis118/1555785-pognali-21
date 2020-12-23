@@ -145,15 +145,35 @@
   }
 }
 
-.margin-left-24 {
-  margin-left: 24px;
-}
-
-.columnar-flex {
+.flex {
   display: flex;
-  flex-direction: column;
 
-  &--centered-alignment {
+  &--columnar {
+    flex-direction: column;
+  }
+
+  &--justification-end {
+    justify-content: flex-end;
+  }
+
+  &--justification-center {
+    justify-content: center;
+  }
+
+  &--justification-between {
+    justify-content: space-between;
+  }
+
+  &--alignment-center {
     align-items: center;
   }
+}
+
+.centering-grid {
+  display: grid;
+  place-items: center;
+}
+
+.margin-left-24 {
+  margin-left: 24px;
 }

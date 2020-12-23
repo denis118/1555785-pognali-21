@@ -9,8 +9,6 @@
 }
 
 .companions-selection__container {
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   padding-left: 25px;
   padding-right: 25px;
@@ -42,8 +40,6 @@
 }
 
 .companions-selection__label {
-  display: flex;
-  justify-content: space-between;
   padding-top: 12px;
   padding-bottom: 14px;
 
@@ -78,9 +74,6 @@
 }
 
 .companions-selection__wrapper {
-  display: flex;
-  flex-direction: column;
-
   &--for-inputs {
     padding-top: 2px;
     padding-bottom: 21px;

@@ -10,17 +10,6 @@
     text-transform: uppercase;
     color: $dcg-9;
   }
-
-  &--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &--grid-centered {
-    display: grid;
-    place-items: center;
-  }
 }
 
 .calendar__month {
@@ -30,14 +19,11 @@
   box-sizing: border-box;
 }
 
-.calendar__switch-month {
-  display: grid;
-  place-items: center;
+// .calendar__switch-month {
+//   &--previous {}
 
-  // &--previous {}
-
-  // &--next {}
-}
+//   &--next {}
+// }
 
 // .calendar__arrow {
 //   &--back {}

@@ -7,17 +7,9 @@
   background-color: $lcg-1;
   border-radius: 20px;
 
-  display: flex;
-
   @media (min-width: $desktop-width) {
     width: 949px;
     margin-left: 60px;
-  }
-
-  &--double-centered-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -27,8 +19,6 @@
 
 .results-pagination__buttons {
   flex-grow: 1;
-
-  display: flex;
   background: $pagination-arrows-spliter center no-repeat;
 }
 

@@ -21,10 +21,7 @@
 }
 
 .wished-countries__list {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 
   &--catalog {
     flex-direction: column;
