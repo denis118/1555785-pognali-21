@@ -1,15 +1,14 @@
 
 .general-footer {
-  height: 239px;
+  outline: 3px dashed orchid;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
-  @media (min-width: $tablet-width) {
-    height: 140px;
-  }
+  // @media (min-width: $tablet-width) {
+  // }
 
   &--common-flex-style {
     justify-content: space-between;

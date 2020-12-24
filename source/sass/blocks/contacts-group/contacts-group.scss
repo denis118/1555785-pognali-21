@@ -42,6 +42,12 @@
       height: 90px;
     }
   }
+
+  &--row {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .contacts-group__telephone {
