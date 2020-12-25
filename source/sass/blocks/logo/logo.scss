@@ -31,4 +31,11 @@
       height: 52px;
     }
   }
+
+  &--in-footer {
+    @media (min-width: $desktop-width) {
+      width: 200px;
+      height: 55px;
+    }
+  }
 }

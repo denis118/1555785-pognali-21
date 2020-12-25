@@ -28,6 +28,10 @@
   @media (min-width: $tablet-width) {
     margin-left: 83px;
   }
+
+  &--in-footer {
+    margin-left: 0;
+  }
 }
 
 .socials__item {
@@ -50,7 +54,14 @@
   }
 }
 
-// .socials__link {}
+.socials__link {
+  display: block;
+  height: 45px;
+
+  @media (min-width: $tablet-width) {
+    height: 62px;
+  }
+}
 
 .socials__svg {
   &--facebook {
@@ -73,4 +84,15 @@
       height: 24px;
     }
   }
+
+  &--in-footer {
+    @media (min-width: $tablet-width) {
+      width: 62px;
+      height: 62px;
+    }
+  }
+}
+
+.socials__common-margin-left {
+  margin-left: 0;
 }
