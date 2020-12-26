@@ -30,8 +30,8 @@
 }
 
 .general-header__auxiliary-layout {
-  padding-top: 26px;
-  padding-bottom: 27px;
+  padding-top: 15px;
+  padding-bottom: 35px;
   background-color: $dcg-10;
 
   @media (min-width: $tablet-width) {
@@ -132,14 +132,10 @@
   border: none;
   outline: none;
   padding: 0;
-  margin-top: 2px;
+  margin-top: 5px;
   background-color: transparent;
   cursor: pointer;
   display: block;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 
   &--burger {
     @media (min-width: $tablet-width) {

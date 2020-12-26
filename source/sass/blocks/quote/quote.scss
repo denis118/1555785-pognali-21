@@ -1,18 +1,42 @@
 
 .quote {
+  padding-top: 47px;
+  padding-bottom: 109px;
   padding-left: 25px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 16px;
-  font-style: normal;
   line-height: 22px;
   color: $lcg-1;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 350px;
+    padding-left: 32px;
+  }
 }
 
 .quote__content {
+  width: 151px;
   padding-bottom: 18px;
   font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    width: 264px;
+    padding-bottom: 45px;
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .quote__cite {
+  display: block;
+  width: 161px;
   font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    width: 251px;
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

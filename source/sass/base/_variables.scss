@@ -44,16 +44,24 @@ $lcg-12: #d6d9e6;
 $lcg-13: #f2f2f2;
 
 //shadows
-
 $shadow-1: rgba(54, 80, 148, 0.18);
 
-//blok`s background images
-$intro-bg-image-1: url("../img/intro/bg/traveller-illustration-mobile-1.svg");
-$intro-bg-image-2: url("../img/intro/bg/globe-back-mobile-1.svg");
-$intro-bg-image-3: url("../img/intro/bg/data-rect.svg");
-$intro-bg-image-4: url("../img/intro/bg/globe-back-tablet.svg");
-$intro-bg-image-5: url("../img/intro/bg/globe-back-desktop.svg");
+// intro-bg
+$globe-bg-mobile: url("../img/intro/bg/png/globe-bg-mobile.png");
+$globe-bg-mobile-2x: url("../img/intro/bg/png/globe-bg-mobile@2x.png");
+$globe-bg-tablet: url("../img/intro/bg/png/globe-bg-tablet.png");
+$globe-bg-tablet-2x: url("../img/intro/bg/png/globe-bg-tablet@2x.png");
+$globe-bg-desktop: url("../img/intro/bg/png/globe-bg-desktop.png");
+$globe-bg-desktop-2x: url("../img/intro/bg/png/globe-bg-desktop@2x.png");
 
+$traveller-bg-mobile: url("../img/intro/bg/png/traveller-bg-mobile.png");
+$traveller-bg-mobile-2x: url("../img/intro/bg/png/traveller-bg-mobile@2x.png");
+$traveller-bg-tablet: url("../img/intro/bg/png/traveller-bg-tablet.png");
+$traveller-bg-tablet-2x: url("../img/intro/bg/png/traveller-bg-tablet@2x.png");
+$traveller-bg-desktop: url("../img/intro/bg/png/traveller-bg-desktop.png");
+$traveller-bg-desktop-2x: url("../img/intro/bg/png/traveller-bg-desktop@2x.png");
+
+//blok`s background images
 $about-service-bg-image-1: url("../img/about-service/about-mobile.svg");
 $about-service-bg-image-2: url("../img/about-service/back.svg");
 $about-service-bg-image-3: url("../img/about-service/down-back-image.svg");

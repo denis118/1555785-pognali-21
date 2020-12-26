@@ -91,7 +91,8 @@
     </svg>
 
     <header class="general-header">
-      <div class="general-header__auxiliary-layout general-header__auxiliary-layout--index general-header__layout hidden-on-mobile hidden-on-tablet">
+      <!-- hidden-on-mobile hidden-on-tablet -->
+      <div class="general-header__auxiliary-layout general-header__auxiliary-layout--index general-header__layout ">
         <div class="container container--thick general-header__container general-header__container--auxiliary flex flex--justification-between flex--alignment-center">
           <a class="logo general-header__logo general-header__logo--auxiliary link">
             <picture>
@@ -113,7 +114,7 @@
             </picture>
           </a>
 
-          <button class="general-header__toggle general-header__toggle--burger" type="button">
+          <button class="general-header__toggle general-header__toggle--burger hidden-on-desktop" type="button">
             <span class="visually-hidden">Кнопка включения окна навигации</span>
             <svg class="general-header__burger-svg" width="25" height="11"><use xlink:href="#burger"></use></svg>
           </button>
@@ -144,7 +145,7 @@
         </div>
       </div>
 
-      <div class="general-header__primary-layout general-header__layout hidden-on-desktop">
+      <div class="general-header__primary-layout general-header__layout hidden-on-desktop hidden-entity">
         <div class="container container--thick general-header__container general-header__container--primary">
           <div class="general-header__primary-layout-wrapper flex flex--justification-between flex--alignment-center">
             <a class="logo general-header__logo general-header__logo--primary link">
@@ -251,10 +252,17 @@
         <div class="intro__box-upper">
           <div class="container container--thick">
             <p class="intro__slogan intro--common-margin heading heading--level-1 heading--slogan zero-edges">В путешествие<br>с крутыми<br>попутчиками!</p>
-
-            <div class="contacts-group contacts-group--row intro__contacts-group zero-edges flex flex--columnar flex--justification-between">
-              <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628"><span class="visually-hidden">Кнопка для звонка в сервис</span><span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span></a>
-              <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Кнопка для отправки электронной почты</span><span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span></a>
+            <div class="contacts-group contacts-group--row intro__contacts-group zero-edges flex flex--justification-between hidden-on-tablet">
+              <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628">
+                <span class="visually-hidden">Кнопка для звонка в сервис</span>
+                <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone" width="40" height="40"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
+                <span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span>
+              </a>
+              <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+                <span class="visually-hidden">Кнопка для отправки электронной почты</span>
+                <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="40" height="40"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
+                <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
+              </a>
               <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link centering-grid" href="#!">Авторизация</a>
             </div>
           </div>
@@ -262,10 +270,10 @@
         <div class="intro__box-lower">
           <div class="container container--thick">
             <blockquote class="quote intro__quote intro--common-margin">
-              <p class="quote__content zero-edges">«Лучшее приложение,<br>что я видел в жизни!»</p>
-              <cite class="quote__cite">Мурат Эльтазин<br>главный редактор<br>газеты «гаджетлайф»</cite>
+              <p class="quote__content zero-edges">«Лучшее приложение, что я видел в жизни!»</p>
+              <cite class="quote__cite">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
             </blockquote>
-            <ol class="intro__list intro--common-margin list zero-edges">
+            <ol class="intro__list list zero-edges">
               <li class="intro__item intro__item--first heading flex flex--justification-between">Выберите<br>направление</li>
               <li class="intro__item intro__item--2 heading flex flex--justification-between">Изучите идеи<br>путешественников</li>
               <li class="intro__item intro__item--3 heading flex flex--justification-between">Находите тех,<br>кто похож на вас</li>
