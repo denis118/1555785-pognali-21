@@ -18,16 +18,16 @@
     // outline-offset: -2px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   background-color: $dcg-11;
-  //   background-image: $intro-bg-image-1, $intro-bg-image-5;
-  //   background-size: auto, cover;
-  // }
+  @media (min-width: $desktop-width) {
+    background-color: $dcg-11;
+    background-image: $traveller-bg-desktop, $globe-bg-desktop;
+    background-size: 431px 640px, 100%;
+    background-position: 604px 8px, bottom;
 
-  // @media (min-width: $tablet-width), (min-width: $desktop-width) {
-  //   background-repeat: no-repeat, no-repeat;
-  //   background-position: 62% 100%, center;
-  // }
+    @media (min-resolution: 2dppx) {
+      background-image: $traveller-bg-desktop-2x, $globe-bg-desktop-2x;
+    }
+  }
 
   &--common-margin {
     margin: 0 auto 0;
@@ -41,10 +41,6 @@
   background-repeat: no-repeat, no-repeat;
   background-position: 76px 149px, center;
   background-size: 200px 263px, cover;
-
-  @media (min-resolution: 2dppx) {
-    background-image: $traveller-bg-mobile-2x, $globe-bg-mobile-2x;
-  }
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
@@ -71,6 +67,13 @@
     padding-top: 30px;
     padding-bottom: 86px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-top: 107px;
+    padding-bottom: 331px;
+    margin-left: 67px;
+  }
 }
 
 .intro__box-lower {
@@ -84,7 +87,13 @@
   }
 }
 
-// .intro__quote {}
+.intro__quote {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 1093px;
+  }
+}
 
 .intro__list {
   position: absolute;
@@ -101,6 +110,11 @@
   @media (min-width: $tablet-width), (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+    top: 418px;
   }
 }
 
@@ -121,6 +135,10 @@
     flex-direction: column;
   }
 
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+
   &:not(:last-child) {
     padding-bottom: 32px;
 
@@ -135,10 +153,14 @@
     counter-increment: intro__list;
     color: $lcg-1;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: 10px;
       font-size: 30px;
       line-height: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -2px;
     }
   }
 
@@ -177,21 +199,27 @@
       padding: 31px 30px 21px 33px;
     }
 
-    @media (min-width: $desktop-width) {
-      width: 375px;
-      height: 107px;
-      position: relative;
-    }
-
     @media (min-width: $tablet-width), (min-width: $desktop-width) {
       margin: 0;
       z-index: auto;
       box-sizing: border-box;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 375px;
+      padding-top: 29px;
+      padding-right: 62px;
+      padding-bottom: 30px;
+      position: relative;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 0;
+    }
   }
 
   &:nth-child(2n-1) {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       width: 369px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -200,14 +228,14 @@
   }
 
   &:first-child {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 0;
     }
   }
 
   &:nth-child(2n) {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       width: 344px;
       margin-left: -25px;
       position: relative;
@@ -217,13 +245,15 @@
 
   &:nth-child(4n+1) {
     @media (min-width: $desktop-width) {
-      width: 369px;
+      width: 345px;
+      padding-right: 64px;
+      padding-left: 34px;
     }
   }
 
   &:not(:nth-child(4n+1)) {
     @media (min-width: $desktop-width) {
-      margin-left: -26px;
+      margin-left: -30px;
     }
   }
 
@@ -243,6 +273,9 @@
     @media (min-width: $desktop-width) {
       z-index: 3;
       width: 315px;
+      padding-right: 34px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
   }
 }
