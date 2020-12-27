@@ -19,13 +19,6 @@
   //   &::after {}
   // }
 
-  &--more-and-route {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $dcg-1;
-  }
-
   &--more {
     height: 62px;
     justify-content: space-between;
@@ -47,6 +40,24 @@
     padding-right: 20px;
     border: 3px solid $dcg-4;
     border-radius: 10px;
+  }
+
+  &--more-and-route {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $dcg-1;
+
+    @media (min-width: $tablet-width) {
+      width: 618px;
+      height: 80px;
+      padding-top: 5px;
+      padding-right: 32px;
+      padding-left: 32px;
+      font-size: 24px;
+      line-height: 24px;
+      border-radius: 20px;
+    }
   }
 
   &--with-arrow {

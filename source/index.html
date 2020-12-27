@@ -285,67 +285,71 @@
 
       <section class="about-service">
         <div class="container container--slim">
-          <h2 class="about-service__heading margin-left-24 margin-left-24--about-service heading heading--level-2 zero-edges">О сервисе</h2>
-          <p class="main-text about-service__main-text margin-left-24 margin-left-24--about-service">Любое путешествие веселее<span class="hidden-on-tablet hidden-on-desktop"><br></span> с попутчиками, которые на <span class="hidden-on-tablet hidden-on-desktop"><br></span>одной волне <span class="hidden-on-mobile hidden-on-desktop"><br></span>с тобой! Делитесь своими идеями путешествий<span class="hidden-on-mobile hidden-on-desktop"><br></span> и черпайте вдохновение <span class="hidden-on-mobile hidden-on-desktop"><br></span>в чужих.</p>
-          <p class="additional-text about-service__additional-text margin-left-24 margin-left-24--about-service">А если найдете кого-то <span class="hidden-on-desktop"><br></span>близкого по духу &mdash; скорее <span class="hidden-on-desktop"><br></span>зовите в совместный трип!</p>
-          <a class="button button--more button--more-and-route button--with-arrow about-service__more link margin-left-24 margin-left-24--about-service hidden-on-mobile" href="#!">Подробнее</a>
+          <h2 class="about-service__heading margin-left-24 margin-left-24--modified heading heading--level-2 zero-edges">О сервисе</h2>
+          <p class="main-text about-service__main-text margin-left-24 margin-left-24--modified">Любое путешествие веселее<span class="hidden-on-tablet hidden-on-desktop"><br></span> с попутчиками, которые на <span class="hidden-on-tablet hidden-on-desktop"><br></span>одной волне <span class="hidden-on-mobile hidden-on-desktop"><br></span>с тобой! Делитесь своими идеями путешествий<span class="hidden-on-mobile hidden-on-desktop"><br></span> и черпайте вдохновение <span class="hidden-on-mobile hidden-on-desktop"><br></span>в чужих.</p>
+          <p class="additional-text about-service__additional-text margin-left-24 margin-left-24--modified">А если найдете кого-то <span class="hidden-on-desktop"><br></span>близкого по духу &mdash; скорее <span class="hidden-on-desktop"><br></span>зовите в совместный трип!</p>
+          <a class="button button--more button--more-and-route button--with-arrow about-service__more link margin-left-24 margin-left-24--modified hidden-on-mobile" href="#!">Подробнее</a>
         </div>
       </section>
 
       <section class="directions">
         <div class="container container--slim directions__container">
-          <h2 class="directions__heading margin-left-24 heading heading--level-2 zero-edges">Направления</h2>
-          <p class="main-text directions__main-text directions--absent-bottom margin-left-24">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
+          <h2 class="directions__heading margin-left-24 margin-left-24--modified heading heading--level-2 zero-edges">Направления</h2>
+          <p class="main-text directions__main-text directions--absent-bottom margin-left-24 margin-left-24--modified">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
           <ul class="directions__list list zero-edges flex flex--columnar">
             <li class="directions__item flex flex--columnar">
-              <img class="directions__country-view image" src="./img/directions/thailand-mobile-1.png" width="270" height="110" alt="Вид одного из пляжей Таиланда">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions/content/webp/thailand-tablet.webp 1x, ./img/directions/content/webp/thailand-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/directions/content/png/thailand-tablet.png 1x, ./img/directions/content/png/thailand-tablet@2x.png 2x">
+                <source type="image/webp" srcset="./img/directions/content/webp/thailand-mobile.webp 1x, ./img/directions/content/webp/thailand-mobile@2x.webp 2x">
+                <img class="directions__country-view image" src="./img/directions/content/png/thailand-mobile.png" width="270" height="110" alt="Вид одного из пляжей Таиланда" srcset="./img/directions/content/png/thailand-mobile@2x.png 2x">
+              </picture>
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3">Таиланд</h3>
                 <p class="directions__tagline directions--common-text-style">Джунгли зовут!</p>
                 <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style flex flex--justification-end flex--alignment-center">18321</p>
-                <svg class="directions__country-flag image" width="35" height="24" role="img" aria-label="Флаг Тайланда" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <rect width="35" height="24" fill="url(#pattern3)"/>
-                  <defs>
-                    <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                      <use xlink:href="#image3" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
-                    </pattern>
-                    <image id="image3" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABQ0lEQVRoge3bq05DQRSF4f+cIMCT0kcBgyyoguEiQHJ5JJpaBBeFKiDB8CokVCMQQzaZkgJdeiac9ZmKVuz5szMVPW2meyfM2QbOgHVgDWj43xLwCrwAI+B+dto2vy4DV8AE2AX6HYhCPmM/n3mSG6zEG0v5A2PgoOyMVYgGH8BxbMwAOOp6kTnRYtDmO8V+Oo8wm47yx0aEWa1sqBr02vpnLKJ1GMFhhCallKqcrDBvjOAwgsMIzdbhte+YBbwxgsMIDiM4jOAwgsMIDiM4jOAwgsMIDiM4jOAwgsMIDiM4jOAwgsMIDiP4dyXBGyM4jOAwQjy16TtmAW+M4DBChHmrcrKyphHmucsFhKcIc1HlaGWNIswjcNnlCr9Ei4fZ5XsK3FQzWjm3ucX3t9J7fo5+CNzlf2R0RZw1zrwD7H+1AD4B8Mcst+Nn7CgAAAAASUVORK5CYII="/>
-                  </defs>
-                </svg>
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/flags/content/png/thailand/thailand-flag-tablet.png 1x, ./img/flags/content/png/thailand/thailand-flag-tablet@2x.png 2x">
+                  <img class="directions__country-flag image" src="./img/flags/content/png/thailand/thailand-flag-mobile.png" width="35" height="24" alt="Флаг Тайланда" srcset="./img/flags/content/png/thailand/thailand-flag-mobile@2x.png 2x">
+                </picture>
               </div>
             </li>
             <li class="directions__item flex flex--columnar">
-              <img class="directions__country-view image" src="./img/directions/france-mobile-1.png" width="270" height="110" alt="Вид одного из городов Франции">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions/content/webp/france-tablet.webp 1x, ./img/directions/content/webp/france-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/directions/content/png/france-tablet.png 1x, ./img/directions/content/png/france-tablet@2x.png 2x">
+                <source type="image/webp" srcset="./img/directions/content/webp/france-mobile.webp 1x, ./img/directions/content/webp/france-mobile@2x.webp 2x">
+                <img class="directions__country-view image" src="./img/directions/content/png/france-mobile.png" width="270" height="110" alt="Вид одного из городов Франции" srcset="./img/directions/content/png/france-mobile@2x.png 2x">
+              </picture>
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3 zero-edges">Франция</h3>
                 <p class="directions__tagline directions--common-text-style">Трэ бьен, манифик!</p>
                 <p class="directions__applicants-amount directions--absent-bottom directions--common-text-style flex flex--justification-end flex--alignment-center">12518</p>
-                <svg class="directions__country-flag image" width="35" height="24" aria-label="Флаг Франции" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <rect width="35" height="24" fill="url(#pattern4)"/>
-                    <defs>
-                      <pattern id="pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image4" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
-                      </pattern>
-                    <image id="image4" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABRUlEQVRoge3bPS8EURiG4XsmCtvL8lNss+VSrdWgQInEH7JRaBQ+EonKR0njr0ioSRTklbPCbh6KEXNknruZYjKT91yZnGlmioW1Yz61CGwD88AsUFChs4PlKpd/2/Pm7m/c5hW4B+6AIXA5OlGm4zRwBFwAA2CuKso/qUhrHaS1h0ErRp9K8+8Dqw2A+KkweAE24onpAet5z/unhUWvTHuK+9pOwHSNMlEnYGYyGyqH2mX+M9ZSaRiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBiRYUSGERlGZBhRwDxkOVm9PQbMbZMFRDcBs5flaPU2DJhr4LDJCmOFxdVo890CTrIZrb5Ok8XHW+kpfUffB87THxlNKdYaa14CVt4tgDcAjyLWdVlVQwAAAABJRU5ErkJggg=="/>
-                  </defs>
-                </svg>
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/flags/content/webp/france/france-flag-tablet.webp 1x, ./img/flags/content/webp/france/france-flag-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/flags/content/png/france/france-flag-tablet.png 1x, ./img/flags/content/png/france/france-flag-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="./img/flags/content/webp/france/france-flag-mobile.webp 1x, ./img/flags/content/webp/france/france-flag-mobile@2x.webp 2x">
+                  <img class="directions__country-flag image" src="./img/flags/content/png/france/france-flag-mobile.png" width="35" height="24" alt="Флаг Франции" srcset="./img/flags/content/png/france/france-flag-mobile@2x.png 2x">
+                </picture>
               </div>
             </li>
             <li class="directions__item flex flex--columnar">
-              <img class="directions__country-view image" src="./img/directions/czech-mobile-1.png" width="270" height="110" alt="Вид одного из городов Чехии">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions/content/webp/czech-tablet.webp 1x, ./img/directions/content/webp/czech-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/directions/content/png/czech-tablet.png 1x, ./img/directions/content/png/czech-tablet@2x.png 2x">
+                <source type="image/webp" srcset="./img/directions/content/webp/czech-mobile.webp 1x, ./img/directions/content/webp/czech-mobile@2x.webp 2x">
+                <img class="directions__country-view image" src="./img/directions/content/png/czech-mobile.png" width="270" height="110" alt="Вид одного из городов Чехии" srcset="./img/directions/content/png/czech-mobile@2x.png 2x">
+              </picture>
               <div class="directions__wrapper">
                 <h3 class="directions__country directions--absent-bottom heading heading--level-3 zero-edges">Чехия</h3>
-                <p class="directions__tagline directions__tagline--unusual directions--common-text-style">Закоулки старой<br>Европы</p>
+                <p class="directions__tagline directions__tagline--unusual directions--common-text-style">Закоулки <span class="hidden-on-mobile hidden-on-desktop"><br></span>старой <span class="hidden-on-tablet hidden-on-desktop"><br></span>Европы</p>
                 <p class="directions__applicants-amount directions--absent-bottom directions__applicants-amount--unusual directions--common-text-style flex flex--justification-end flex--alignment-center">5326</p>
-                <svg class="directions__country-flag image" role="img" aria-label="Флаг Чехии" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <rect width="35" height="24" fill="url(#pattern5)"/>
-                    <defs>
-                      <pattern id="pattern5" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image5" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
-                      </pattern>
-                    <image id="image5" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII="/>
-                  </defs>
-                </svg>
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/flags/content/webp/czech/czech-flag-tablet.webp 1x, ./img/flags/content/webp/czech/czech-flag-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/flags/content/png/czech/czech-flag-tablet.png 1x, ./img/flags/content/png/czech/czech-flag-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="./img/flags/content/webp/czech/czech-flag-mobile.webp 1x, ./img/flags/content/webp/czech/czech-flag-mobile@2x.webp 2x">
+                  <img class="directions__country-flag image" src="./img/flags/content/png/czech/czech-flag-mobile.png" width="35" height="24" alt="Флаг Франции" srcset="./img/flags/content/png/czech/czech-flag-mobile@2x.png 2x">
+                </picture>
               </div>
             </li>
           </ul>
