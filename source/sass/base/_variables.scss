@@ -61,11 +61,19 @@ $traveller-bg-tablet-2x: url("../img/intro/bg/png/traveller-bg-tablet@2x.png");
 $traveller-bg-desktop: url("../img/intro/bg/png/traveller-bg-desktop.png");
 $traveller-bg-desktop-2x: url("../img/intro/bg/png/traveller-bg-desktop@2x.png");
 
-//blok`s background images
-$about-service-bg-image-1: url("../img/about-service/about-mobile.svg");
-$about-service-bg-image-2: url("../img/about-service/back.svg");
-$about-service-bg-image-3: url("../img/about-service/down-back-image.svg");
+// about-service-bg
+$phone-bg-mobile: url("../img/about-service/bg/png/phone-bg-mobile.png");
+$phone-bg-mobile-2x: url("../img/about-service/bg/png/phone-bg-mobile@2x.png");
+$phone-bg-tablet: url("../img/about-service/bg/png/phone-bg-tablet.png");
+$phone-bg-tablet-2x: url("../img/about-service/bg/png/phone-bg-tablet@2x.png");
+$phone-bg-desktop: url("../img/about-service/bg/png/phone-bg-desktop.png");
+$phone-bg-desktop-2x: url("../img/about-service/bg/png/phone-bg-desktop@2x.png");
 
+$rect-bg-mobile: url("../img/about-service/bg/svg/rect-bg-mobile.svg");
+$rect-bg-tablet: url("../img/about-service/bg/svg/rect-bg-tablet.svg");
+$quadrate-bg-desktop: url("../img/about-service/bg/svg/quadrate-bg-desktop.svg");
+
+//blok`s background images
 $fellow-travelers-bg-image-1: url("../img/fellow-travelers/rogovaya-back-desktop.png");
 $fellow-travelers-bg-image-2: url("../img/fellow-travelers/smolov-back-desktop.png");
 $fellow-travelers-bg-image-3: url("../img/fellow-travelers/back.svg");

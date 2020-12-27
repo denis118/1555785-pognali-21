@@ -4,7 +4,7 @@
   font-style: normal;
   background-color: $lcg-2;
 
-  @include overlap--bottom(-1, 71px, $bottom-radii);
+  @include overlap--bottom(-2, 71px, $bottom-radii);
 
   &--absent-bottom {
     margin-bottom: 0;

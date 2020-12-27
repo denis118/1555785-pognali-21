@@ -3,7 +3,7 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $dcg-4;
 
-  @include overlap--bottom(-4, 72px, $bottom-radii);
+  @include overlap--bottom(-5, 72px, $bottom-radii);
 }
 
 .if-interested__container {

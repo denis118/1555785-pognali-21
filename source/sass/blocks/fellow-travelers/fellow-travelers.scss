@@ -6,7 +6,7 @@
   background-position: 0 341px, 152px 69px, 0 68px;
   background-size: auto, auto, auto;
 
-  @include overlap--bottom(-2, 68px, $bottom-radii);
+  @include overlap--bottom(-3, 68px, $bottom-radii);
 }
 
 .fellow-travelers__container {

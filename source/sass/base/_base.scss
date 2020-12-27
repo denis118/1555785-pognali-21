@@ -176,4 +176,13 @@
 
 .margin-left-24 {
   margin-left: 24px;
+
+  &--about-service {
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+    @media (min-width: $desktop-width) {
+      margin-left: 70px;
+    }
+  }
 }
