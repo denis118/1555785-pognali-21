@@ -84,7 +84,7 @@
 .fellow-travelers__more {
   margin-bottom: 31px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 100%;
   }
 

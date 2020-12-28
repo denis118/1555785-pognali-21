@@ -174,8 +174,12 @@
   place-items: center;
 }
 
-.margin-left-24 {
-  margin-left: 24px;
+.common-margin-left {
+  &--twenty-four {
+    @media (max-width: $mobile-width-only) {
+      margin-left: 24px;
+    }
+  }
 
   &--modified {
     @media (min-width: $tablet-width) {
@@ -184,6 +188,12 @@
 
     @media (min-width: $desktop-width) {
       margin-left: 70px;
+    }
+  }
+
+  &--altered {
+    @media (min-width: $desktop-width) {
+      margin-left: 114px;
     }
   }
 }
