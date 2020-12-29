@@ -7,6 +7,10 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
 
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+  }
+
   &--catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,7 +26,6 @@
 
     @media (min-width: $tablet-width) {
       grid-template-columns: 254px 150px 106px 178px;
-      // grid-template-rows: 72px 63px 32px 71px 95px;
       grid-template-rows: repeat(5, min-content);
       grid-template-areas:
         "avatar name name transport"
@@ -48,6 +51,12 @@
   color: $dcg-1;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 31px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -57,6 +66,12 @@
     position: absolute;
     top: 8px;
     left: -17px;
+
+    @media (min-width: $tablet-width) {
+      width: 8px;
+      height: 8px;
+      left: -21px;
+    }
   }
 
   &--tania-firsova {
@@ -68,6 +83,10 @@
   &--petia-diomin {
     &::before {
       background-color: $mcg-7;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: -20px;
     }
   }
 
@@ -119,6 +138,11 @@
   top: 18px;
   left: 17px;
 
+  @media (min-width: $tablet-width) {
+    top: 20px;
+    left: 21px;
+  }
+
   &--catalog {
     grid-area: lvl;
     position: static;
@@ -128,8 +152,12 @@
 
 .companion__wished-countries {
   position: absolute;
-  top: 270px;
+  top: 272px;
   transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    top: 285px;
+  }
 
   &--catalog {
     grid-area: countries;
@@ -142,6 +170,10 @@
 .companion__hashtags {
   margin-top: 15px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+  }
+
   &--catalog {
     grid-area: hashtags;
     margin-top: 13.07px;
@@ -151,6 +183,11 @@
 .companion__transport {
   margin-top: 14px;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+    margin-bottom: 19px;
+  }
 
   &--catalog {
     grid-area: transport;

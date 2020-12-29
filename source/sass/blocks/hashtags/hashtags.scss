@@ -5,10 +5,18 @@
 
   &--tania-firsova {
     width: 188px;
+
+    @media (min-width: $tablet-width) {
+      width: 223px;;
+    }
   }
 
   &--petia-diomin {
     width: 164px;
+
+    @media (min-width: $tablet-width) {
+      width: 184px;
+    }
   }
 
   // &--mark-smolov {}
@@ -38,6 +46,11 @@
   font-weight: 400;
   line-height: 18px;
   color: $dcg-9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 
   &--catalog {
     font-size: 15px;
