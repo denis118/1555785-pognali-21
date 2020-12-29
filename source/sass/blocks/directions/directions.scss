@@ -41,10 +41,8 @@
 
 .directions__container {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include grid-for-desktop;
     grid-template-rows: repeat(3, min-content);
-    column-gap: 60px;
     grid-template-areas:
       "ls ls heading heading"
       "ls ls text text"

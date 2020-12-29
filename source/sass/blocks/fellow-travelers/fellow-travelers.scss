@@ -23,18 +23,23 @@
       background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x, $quadrate-bg-desktop;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    background-position: 190px 446px, 547px 194px, 60px 130px;
+
+    @include overlap--bottom(-3, 130px, $bottom-radii-tablet);
+  }
 }
 
 .fellow-travelers__container {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include grid-for-desktop;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
-      "heading ls"
-      "main-text ls"
-      "add-text ls"
-      "button ls";
+      "heading heading ls ls"
+      "main-text main-text ls ls"
+      "add-text add-text ls ls"
+      "button button ls ls";
   }
 }
 
@@ -63,6 +68,7 @@
   @media (min-width: $desktop-width) {
     grid-area: main-text;
     width: 427px;
+    line-height: 33px;
   }
 }
 
@@ -77,6 +83,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 42px;
     grid-area: add-text;
   }
 }
@@ -84,7 +91,7 @@
 .fellow-travelers__list {
   margin-top: 54px;
 
-  @media (min-width: $tablet-width), (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     margin-top: 59px;
     grid-template-columns: 285px 285px;
@@ -95,6 +102,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    column-gap: 60px;
     grid-area: ls;
   }
 }
@@ -134,6 +143,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 280px;
+    margin-top: 85px;
+    margin-bottom: 134px;
     grid-area: button;
   }
 }

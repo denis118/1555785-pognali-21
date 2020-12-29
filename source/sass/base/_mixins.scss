@@ -14,9 +14,16 @@
   outline-offset: - $width;
 }
 
-//grid-for-mains
+// grid-for-mains
 @mixin grid-for-mains {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
+}
+
+// grid-for-desktop
+@mixin grid-for-desktop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 60px;
 }
