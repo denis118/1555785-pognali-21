@@ -46,11 +46,6 @@
 }
 
 .about-service__heading {
-  @media (min-width: $tablet-width) {
-    font-size: 45px;
-    line-height: 45px;
-  }
-
   @media (min-width: $desktop-width) {
     margin-top: -3px;
   }

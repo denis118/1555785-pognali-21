@@ -1,3 +1,4 @@
+
 // overlap
 @mixin overlap--bottom($i, $padding-top-initial, $border-radius) {
   position: relative;
@@ -12,6 +13,11 @@
 @mixin outline($width, $type, $color) {
   outline: $width $type $color;
   outline-offset: - $width;
+}
+
+@mixin centering-grid {
+  display: grid;
+  place-items: center;
 }
 
 // grid-for-mains

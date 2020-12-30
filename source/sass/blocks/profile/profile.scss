@@ -8,28 +8,31 @@
   color: $dcg-9;
 
   background-color: $lcg-3;
-  background-image: $profile-bg-image;
+  background-image: $rates-bg-mobile;
   background-repeat: no-repeat;
-  background-position: 89% 17%;
+  background-position: 195px 67px;
+  background-size: 100px 100px;
 
   @include overlap--bottom(-4, 53px, $bottom-radii);
 
-  &--bg-auto-size {
-    background-size: auto;
+  @media (min-resolution: 2dppx) {
+    background-image: $rates-bg-mobile-2x;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+
+    background-image: $rates-bg-mobile, $rect-in-profile-bg-tablet;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 583px 470px, 530px 210px;
+    background-size: 100px 100px, 198px 285px;
+
+    @include overlap--bottom(-4, 74px, $bottom-radii-tablet);
   }
 }
 
-.profile__container {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, min-content);
-    grid-template-areas:
-      "heading heading"
-      "ls ls"
-      "tariff .";
-  }
-}
+// .profile__container {}
 
 .profile__heading {
   width: 72px;
@@ -37,7 +40,9 @@
 
   @media (min-width: $tablet-width) {
     grid-area: heading;
-    justify-self: center;
+    width: 100%;
+
+    @include centering-grid;
   }
 }
 
@@ -46,32 +51,56 @@
   counter-reset: benefit;
 
   @media (min-width: $tablet-width) {
-    grid-area: ls;
+    margin-top: 75px;
   }
 }
 
 .profile__items-wrapper {
-  position: relative;
-  background-image: $profile-items-wrapper-bg-image;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+    "term pseudo"
+    "definition pseudo";
+
+  background-image: $line-in-profile-bg;
   background-repeat: no-repeat;
   background-position: left top;
+  background-size: 200px 1px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    padding-right: 35px;
+    background-position: 92px 0;
+    background-size: 398px 1px;
+  }
 
   &::after {
     content: counter(benefit);
     counter-increment: benefit;
-    display: grid;
-    place-items: center;
     width: 34px;
     height: 34px;
+    margin-top: -8px;
     border-radius: 50%;
-    position: absolute;
     color: $lcg-1;
+    grid-area: pseudo;
+
+    @include centering-grid;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+      margin-top: 0;
+    }
   }
 
   &:last-child {
-    background-image: $profile-items-wrapper-bg-image, $profile-items-wrapper-bg-image;
+    background-image: $line-in-profile-bg, $line-in-profile-bg;
     background-repeat: no-repeat, no-repeat;
     background-position: left top, left bottom;
+
+    @media (min-width: $tablet-width) {
+      background-position: 92px 0, 91px 100%;
+    }
   }
 
   &--basic-placement {
@@ -79,8 +108,6 @@
     padding-bottom: 18px;
 
     &::after {
-      top: 2%;
-      left: 85.6%;
       background-color: $mcg-2;
     }
   }
@@ -90,8 +117,6 @@
     padding-bottom: 16px;
 
     &::after {
-      top: 0;
-      left: 86%;
       background-color: $mcg-6;
     }
   }
@@ -101,29 +126,70 @@
     padding-bottom: 15px;
 
     &::after {
-      top: 4%;
-      left: 86%;
       background-color: $mcg-1;
+    }
+  }
+
+  &--element {
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
 
 .profile__term {
   margin-bottom: 6px;
+  grid-area: term;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .profile__definition {
-  margin-left: 0;
+  grid-area: definition;
 }
 
 .profile__busines-tariff {
   margin-top: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   font-weight: 700;
-  font-style: normal;
   color: $dcg-7;
 
   @media (min-width: $tablet-width) {
-    grid-area: tariff;
+    font-size: 20px;
+    line-height: 20px;
+    justify-content: flex-start;
+    margin-bottom: 61px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      order: -1;
+
+      background-color: $lcg-8;
+      background-image: $business-bg-tablet;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 68px 68px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $business-bg-tablet-2x;
+      }
+    }
+  }
+}
+
+.profile__common-pseudo {
+  &::after {
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 22px;
+    }
   }
 }
