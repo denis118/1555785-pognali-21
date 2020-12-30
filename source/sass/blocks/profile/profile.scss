@@ -30,6 +30,18 @@
 
     @include overlap--bottom(-4, 74px, $bottom-radii-tablet);
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: $rates-bg-desktop, $rect-in-profile-bg-desktop;
+    background-position: 1109px 347px, 750px 295px;
+    background-size: 198px 198px, 446px 300px;
+
+    @include overlap--bottom(-4, 107px, $bottom-radii-tablet);
+
+    @media (min-resolution: 2dppx) {
+      background-image: $rates-bg-desktop-2x;
+    }
+  }
 }
 
 // .profile__container {}
@@ -44,6 +56,10 @@
 
     @include centering-grid;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .profile__benefits {
@@ -52,6 +68,10 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 136px;
   }
 }
 
@@ -73,6 +93,11 @@
     padding-right: 35px;
     background-position: 92px 0;
     background-size: 398px 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 345px;
+    background-size: 528px 1px;
   }
 
   &::after {
@@ -162,6 +187,11 @@
     line-height: 20px;
     justify-content: flex-start;
     margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    margin-bottom: 162px;
   }
 
   &::after {
