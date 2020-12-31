@@ -1,6 +1,5 @@
 
 .general-footer {
-  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
@@ -10,6 +9,14 @@
     padding-bottom: 32px;
     border-top-left-radius: $bottom-radii-tablet;
     border-top-right-radius: $bottom-radii-tablet;
+  }
+
+  &--index {
+    margin-top: -37px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -60px;
+    }
   }
 
   &--common-flex-style {
@@ -46,7 +53,7 @@
   width: 100%;
   margin-top: 37px;
   padding-top: 12.24px;
-  padding-bottom: 18.61px;
+  padding-bottom: 17px;
   border-top: 1px solid $lcg-13;
 
   @media (min-width: $tablet-width) {
