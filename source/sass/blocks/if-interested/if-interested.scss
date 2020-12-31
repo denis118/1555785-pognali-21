@@ -7,38 +7,28 @@
   @media (min-width: $tablet-width) {
     @include overlap--bottom(-5, 76px, $bottom-radii-tablet);
   }
+
+  @media (min-width: $desktop-width) {
+    @include overlap--bottom(-5, 109px, $bottom-radii-tablet);
+  }
 }
 
-// .if-interested__container {
-//   @media (min-width: $tablet-width) {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: repeat(5, min-content);
-//     grid-template-areas:
-//       "heading heading heading"
-//       "text1 text1 text1"
-//       "form form form"
-//       "text2 text2 text2"
-//       "contacts contacts contacts";
-//     justify-items: center;
-//   }
-// }
-
-// .if-interested__heading {
-//   @media (min-width: $tablet-width) {
-//     grid-area: heading;
-//   }
-// }
+// .if-interested__container {}
 
 .if-interested__main-text {
   text-align: center;
 
-  &--1 {
+  &--common {
     width: 210px;
+  }
+
+  &--1 {
     margin-top: 19px;
   }
 
-  &--2 {
+  // &--2 {}
+
+  &--3 {
     width: 216px;
     margin-top: 29px;
 
@@ -51,6 +41,28 @@
     @media (min-width: $tablet-width) {
       width: 618px;
       margin-top: 59px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1180px;
+    }
+  }
+
+  &--element-1 {
+    @media (min-width: $desktop-width) {
+      margin-top: 57px;
+    }
+  }
+
+  &--element-2 {
+    @media (min-width: $mobile-width) {
+      margin-top: 0;
+    }
+  }
+
+  &--element-3 {
+    @media (min-width: $desktop-width) {
+      margin-top: 70px;
     }
   }
 }
@@ -73,6 +85,12 @@
     margin-top: 63px;
     margin-left: 71px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1180px;
+    margin-top: 57px;
+    margin-left: 6px;
+  }
 }
 
 .if-interested__form-email {
@@ -82,23 +100,45 @@
   border-bottom-left-radius: 10px;
   border: none;
   padding-right: 65px;
+  padding-left: 25px;
   box-sizing: border-box;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $lcg-14;
 
   @media (min-width: $tablet-width) {
     width: 536px;
     height: 80px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 850px;
   }
 }
 
 .if-interested__form-submit {
+  width: 60px;
+
   position: absolute;
   top: 0;
   left: 210px;
 
   @media (min-width: $tablet-width) {
+    width: 80px;
     left: 536px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    left: 849px;
   }
 }
 
@@ -115,12 +155,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: contacts;
-    justify-self: center;
-
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 42px;
+    margin-bottom: 101px;
   }
 }

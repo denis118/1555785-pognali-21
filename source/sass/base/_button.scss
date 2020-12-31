@@ -12,8 +12,6 @@
   background-color: $mcg-1;
   border-radius: 20px;
   cursor: pointer;
-  // font-family: "Blogger Sans", "Arial", sans-serif;
-  // font-style: normal;
 
   // &--triangular-pointer {
   //   &::after {}
@@ -28,21 +26,6 @@
 
     @media (min-width: $desktop-width) {
       width: 275px;
-    }
-  }
-
-  &--quadratic {
-    width: 60px;
-    height: 62px;
-    border-radius: 10px;
-
-    @media (min-width: $tablet-width) {
-      width: 80px;
-      height: 80px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
     }
   }
 
