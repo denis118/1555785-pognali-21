@@ -1,9 +1,5 @@
 
 .profile {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  font-style: normal;
   line-height: 16px;
   color: $dcg-9;
 
@@ -20,12 +16,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 28px;
     line-height: 28px;
 
     background-image: $rates-bg-mobile, $rect-in-profile-bg-tablet;
     background-repeat: no-repeat, no-repeat;
-    background-position: 583px 470px, 530px 210px;
+    background-position: 583px 467px, 530px 210px;
     background-size: 100px 100px, 198px 285px;
 
     @include overlap--bottom(-4, 74px, $bottom-radii-tablet);
@@ -67,7 +62,7 @@
   counter-reset: benefit;
 
   @media (min-width: $tablet-width) {
-    margin-top: 75px;
+    margin-top: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -169,6 +164,7 @@
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+    margin-bottom: 0;
   }
 }
 
@@ -186,7 +182,7 @@
     font-size: 20px;
     line-height: 20px;
     justify-content: flex-start;
-    margin-bottom: 61px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {

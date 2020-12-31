@@ -1,7 +1,5 @@
 
 .directions {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   background-color: $lcg-2;
 
   @include overlap--bottom(-2, 71px, $bottom-radii);
@@ -64,8 +62,6 @@
   @media (min-width: $tablet-width) {
     width: 378px;
     margin-top: 57px;
-    font-size: 28px;
-    line-height: 33px;
   }
 
   @media (min-width: $desktop-width) {

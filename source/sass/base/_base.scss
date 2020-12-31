@@ -98,6 +98,30 @@
   }
 }
 
+.main-text {
+  &--wider {
+    letter-spacing: 0.01em;
+  }
+
+  &--shifted-phrase {
+    margin-left: -10px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+  }
+
+  &--shifted-sentence {
+    @media (min-width: $tablet-width) {
+      margin-left: -20px;
+    }
+  }
+}
+
+.additional-text {
+  font-weight: 700;
+}
+
 .link {
   text-decoration: none;
   color: $lcg-1;

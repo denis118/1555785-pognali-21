@@ -1,16 +1,12 @@
 
 .contacts-group {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-
   &--row {
     flex-direction: row;
   }
 }
 
 .contacts-group__contact {
-  font-size: 16px;
   font-weight: 700;
-  font-style: normal;
   line-height: 18px;
   color: $dcg-4;
 
@@ -28,7 +24,6 @@
     border-radius: 50%;
     background-color: $dcg-8;
     background-repeat: no-repeat;
-    background-size: auto;
     background-position: 50% 50%;
 
     @media (min-width: $tablet-width) {
@@ -53,6 +48,7 @@
 .contacts-group__telephone {
   &::before {
     background-image: $icon-telephone-mobile;
+    background-size: 17px 15px;
 
     @media (min-resolution: 2dppx) {
       background-image: $icon-telephone-mobile-2x;
@@ -60,6 +56,7 @@
 
     @media (min-width: $tablet-width) {
       background-image: $icon-telephone-tablet;
+      background-size: 24px 24px;
 
       @media (min-resolution: 2dppx) {
         background-image: $icon-telephone-tablet-2x;
@@ -68,6 +65,7 @@
 
     @media (min-width: $desktop-width) {
       background-image: $icon-telephone-desktop;
+      background-size: 32px 30px;
 
       @media (min-resolution: 2dppx) {
         background-image: $icon-telephone-desktop-2x;
@@ -91,6 +89,7 @@
 
   &::before {
     background-image: $icon-mail-mobile;
+    background-size: 19px 13px;
 
     @media (min-resolution: 2dppx) {
       background-image: $icon-mail-mobile-2x;
@@ -98,6 +97,7 @@
 
     @media (min-width: $tablet-width) {
       background-image: $icon-mail-tablet;
+      background-size: 28px 19px;
 
       @media (min-resolution: 2dppx) {
         background-image: $icon-mail-tablet-2x;
@@ -106,6 +106,7 @@
 
     @media (min-width: $desktop-width) {
       background-image: $icon-mail-desktop;
+      background-size: 37px 26px;
 
       @media (min-resolution: 2dppx) {
         background-image: $icon-mail-desktop-2x;

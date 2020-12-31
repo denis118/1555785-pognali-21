@@ -1,31 +1,34 @@
 
 .if-interested {
-  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $dcg-4;
 
   @include overlap--bottom(-5, 72px, $bottom-radii);
-}
 
-.if-interested__container {
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, min-content);
-    grid-template-areas:
-      "heading heading heading"
-      "text1 text1 text1"
-      "form form form"
-      "text2 text2 text2"
-      "contacts contacts contacts";
-    justify-items: center;
+    @include overlap--bottom(-5, 76px, $bottom-radii-tablet);
   }
 }
 
-.if-interested__heading {
-  @media (min-width: $tablet-width) {
-    grid-area: heading;
-  }
-}
+// .if-interested__container {
+//   @media (min-width: $tablet-width) {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-rows: repeat(5, min-content);
+//     grid-template-areas:
+//       "heading heading heading"
+//       "text1 text1 text1"
+//       "form form form"
+//       "text2 text2 text2"
+//       "contacts contacts contacts";
+//     justify-items: center;
+//   }
+// }
+
+// .if-interested__heading {
+//   @media (min-width: $tablet-width) {
+//     grid-area: heading;
+//   }
+// }
 
 .if-interested__main-text {
   text-align: center;
@@ -33,33 +36,28 @@
   &--1 {
     width: 210px;
     margin-top: 19px;
-
-    @media (min-width: $tablet-width) {
-      grid-area: text1;
-    }
   }
 
   &--2 {
     width: 216px;
     margin-top: 29px;
-    margin-bottom: 0;
 
     @media (min-width: $tablet-width) {
-      grid-area: text2;
+      margin-left: 8px;
+    }
+  }
+
+  &--element {
+    @media (min-width: $tablet-width) {
+      width: 618px;
+      margin-top: 59px;
     }
   }
 }
 
 .if-interested__user-authorization {
   display: inline;
-  width: auto;
-  height: auto;
   background-color: inherit;
-
-  font-size: 16px;
-  font-weight: 300;
-  font-style: normal;
-  line-height: 22px;
   color: $mcg-1;
   text-transform: lowercase;
   text-decoration: underline;
@@ -68,26 +66,40 @@
 .if-interested__form {
   position: relative;
   width: 270px;
-  margin-top: 14px;
+  margin-top: 29px;
 
   @media (min-width: $tablet-width) {
-    grid-area: form;
+    width: 688px;
+    margin-top: 63px;
+    margin-left: 71px;
   }
 }
 
 .if-interested__form-email {
   width: 230px;
   height: 62px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   border: none;
   padding-right: 65px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 536px;
+    height: 80px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 }
 
 .if-interested__form-submit {
   position: absolute;
   top: 0;
   left: 210px;
+
+  @media (min-width: $tablet-width) {
+    left: 536px;
+  }
 }
 
 .if-interested__contacts-group {
@@ -96,8 +108,10 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    grid-area: contacts;
-    justify-self: start;
+    width: min-content;
+    margin-top: 40px;
+    margin-bottom: 58px;
+    align-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {

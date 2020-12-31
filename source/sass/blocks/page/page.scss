@@ -19,6 +19,11 @@
   box-sizing: border-box;
   background-color: $lcg-1;
 
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
   &--form {
     background-color: $lcg-5;
   }
