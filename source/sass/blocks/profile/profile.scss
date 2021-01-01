@@ -2,44 +2,51 @@
 .profile {
   line-height: 16px;
   color: $dcg-9;
-
   background-color: $lcg-3;
+
+  @include overlap--bottom(-4, $bottom-radii);
+
+  @media (min-width: $tablet-width) {
+    line-height: 28px;
+
+    @include overlap--bottom(-4, $bottom-radii-tablet);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include overlap--bottom(-4, $bottom-radii-tablet);
+  }
+}
+
+.profile__container {
+  padding-top: 53px;
   background-image: $rates-bg-mobile;
   background-repeat: no-repeat;
-  background-position: 195px 67px;
+  background-position: 195px 37px;
   background-size: 100px 100px;
-
-  @include overlap--bottom(-4, 53px, $bottom-radii);
 
   @media (min-resolution: 2dppx) {
     background-image: $rates-bg-mobile-2x;
   }
 
   @media (min-width: $tablet-width) {
-    line-height: 28px;
-
+    padding-top: 77px;
     background-image: $rates-bg-mobile, $rect-in-profile-bg-tablet;
     background-repeat: no-repeat, no-repeat;
-    background-position: 583px 467px, 530px 210px;
+    background-position: 583px 410px, 530px 153px;
     background-size: 100px 100px, 198px 285px;
-
-    @include overlap--bottom(-4, 74px, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 107px;
     background-image: $rates-bg-desktop, $rect-in-profile-bg-desktop;
-    background-position: 1109px 347px, 750px 295px;
+    background-position: 1109px 287px, 750px 235px;
     background-size: 198px 198px, 446px 300px;
-
-    @include overlap--bottom(-4, 107px, $bottom-radii-tablet);
 
     @media (min-resolution: 2dppx) {
       background-image: $rates-bg-desktop-2x;
     }
   }
 }
-
-// .profile__container {}
 
 .profile__heading {
   width: 72px;
@@ -95,17 +102,20 @@
     background-size: 528px 1px;
   }
 
-  &::after {
+  &::before {
     content: counter(benefit);
     counter-increment: benefit;
-    width: 34px;
-    height: 34px;
     margin-top: -8px;
     border-radius: 50%;
     color: $lcg-1;
     grid-area: pseudo;
 
     @include centering-grid;
+
+    @media (max-width: $mobile-width-only) {
+      width: 34px;
+      height: 34px;
+    }
 
     @media (min-width: $tablet-width) {
       order: -1;
@@ -127,7 +137,7 @@
     padding-top: 11px;
     padding-bottom: 18px;
 
-    &::after {
+    &::before {
       background-color: $mcg-2;
     }
   }
@@ -136,7 +146,7 @@
     padding-top: 10px;
     padding-bottom: 16px;
 
-    &::after {
+    &::before {
       background-color: $mcg-6;
     }
   }
@@ -145,7 +155,7 @@
     padding-top: 12px;
     padding-bottom: 15px;
 
-    &::after {
+    &::before {
       background-color: $mcg-1;
     }
   }
@@ -190,7 +200,7 @@
     margin-bottom: 162px;
   }
 
-  &::after {
+  &::before {
     @media (min-width: $tablet-width) {
       content: "";
       display: block;
@@ -211,10 +221,10 @@
 }
 
 .profile__common-pseudo {
-  &::after {
+  &::before {
     @media (min-width: $tablet-width) {
-      width: 68px;
-      height: 68px;
+      // width: 68px;
+      // height: 68px;
       margin-right: 22px;
     }
   }

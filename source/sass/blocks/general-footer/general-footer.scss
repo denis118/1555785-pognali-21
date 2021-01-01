@@ -12,10 +12,14 @@
   }
 
   &--index {
-    margin-top: -37px;
+    margin-top: -117px;
 
     @media (min-width: $tablet-width) {
-      margin-top: -60px;
+      margin-top: -80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -76px;
     }
   }
 

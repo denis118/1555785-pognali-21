@@ -1,24 +1,36 @@
 
 .container {
-  width: 270px;
-  min-width: 270px;
+  width: 320px;
+  min-width: 320px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 768px;
+    min-width: 768px;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 1320px;
+    width: 1440px;
+    min-width: 1440px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   &--thick {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      width: 688px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 
   &--slim {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      width: 618px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
@@ -236,6 +248,35 @@
   &--altered {
     @media (min-width: $desktop-width) {
       margin-left: 114px;
+    }
+  }
+}
+
+.same-pseudo {
+  &--mobile {
+    &::before {
+      @media (max-width: $mobile-width-only) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  &--tablet {
+    &::before {
+      @media (min-width: $tablet-width) {
+        width: 68px;
+        height: 68px;
+      }
+    }
+  }
+
+  &--desktop {
+    &::before {
+      @media (min-width: $desktop-width) {
+        width: 90px;
+        height: 90px;
+      }
     }
   }
 }

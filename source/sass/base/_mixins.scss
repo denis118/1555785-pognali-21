@@ -1,9 +1,9 @@
 
 // overlap
-@mixin overlap--bottom($i, $padding-top-initial, $border-radius) {
+@mixin overlap--bottom($i, $border-radius) {
   position: relative;
   z-index: $i;
-  padding-top: $padding-top-initial + $border-radius;
+  padding-top: $border-radius;
   margin-top: - ($border-radius);
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;

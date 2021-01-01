@@ -2,18 +2,28 @@
 .if-interested {
   background-color: $dcg-4;
 
-  @include overlap--bottom(-5, 72px, $bottom-radii);
+  @include overlap--bottom(-5, $bottom-radii);
 
   @media (min-width: $tablet-width) {
-    @include overlap--bottom(-5, 76px, $bottom-radii-tablet);
+    @include overlap--bottom(-5, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(-5, 109px, $bottom-radii-tablet);
+    @include overlap--bottom(-5, $bottom-radii-tablet);
   }
 }
 
-// .if-interested__container {}
+.if-interested__container {
+  padding-top: 72px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 109px;
+  }
+}
 
 .if-interested__main-text {
   text-align: center;

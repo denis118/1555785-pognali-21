@@ -17,11 +17,16 @@
   line-height: 22px;
   color: $lcg-1;
   box-sizing: border-box;
-  background-color: $lcg-1;
+  background-color: $dcg-2;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 33px;
+    background-color: $dcg-10;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $dcg-11;
   }
 
   &--form {

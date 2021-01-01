@@ -269,7 +269,7 @@
     <header class="general-header">
       <!-- hidden-on-mobile hidden-on-tablet -->
       <div class="general-header__auxiliary-layout general-header__auxiliary-layout--index general-header__layout ">
-        <div class="container container--thick general-header__container general-header__container--auxiliary flex flex--justification-between flex--alignment-center">
+        <div class="general-header__container general-header__container--auxiliary container container--thick flex flex--justification-between flex--alignment-center">
           <a class="logo general-header__logo general-header__logo--auxiliary link">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
@@ -322,7 +322,7 @@
       </div>
 
       <div class="general-header__primary-layout general-header__layout hidden-on-desktop hidden-entity">
-        <div class="container container--thick general-header__container general-header__container--primary">
+        <div class="general-header__container general-header__container--primary container container--thick">
           <div class="general-header__primary-layout-wrapper flex flex--justification-between flex--alignment-center">
             <a class="logo general-header__logo general-header__logo--primary link">
               <picture>
@@ -366,12 +366,12 @@
           </nav>
 
           <div class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges flex flex--columnar flex--justification-between hidden-on-desktop">
-            <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link flex flex--alignment-center" href="tel:88005558628">
+            <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link flex flex--alignment-center same-pseudo same-pseudo--mobile same-pseudo--tablet same-pseudo--desktop" href="tel:88005558628">
               <span class="visually-hidden">Кнопка для звонка в сервис</span>
               <svg class="contacts-group__svg contacts-group__svg--telephone" width="50" height="50"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
               <span class="contacts-group__span">8 800 555-86-28</span>
             </a>
-            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center same-pseudo same-pseudo--mobile same-pseudo--tablet same-pseudo--desktop" href="mailto:mail@htmlacademy.ru">
               <span class="visually-hidden">Кнопка для отправки электронной почты</span>
               <svg class="contacts-group__svg contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
               <span class="contacts-group__span">mail@htmlacademy.ru</span>
@@ -425,42 +425,44 @@
 
       <section class="intro">
         <h2 class="visually-hidden">Введение</h2>
-        <div class="intro__box-upper">
-          <div class="container container--thick">
-            <p class="intro__slogan intro--common-margin heading heading--level-1 heading--slogan zero-edges">В путешествие<br>с крутыми<br>попутчиками!</p>
-            <div class="contacts-group contacts-group--row intro__contacts-group zero-edges flex flex--justification-between hidden-on-tablet hidden-on-desktop">
-              <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628">
-                <span class="visually-hidden">Кнопка для звонка в сервис</span>
-                <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone" width="40" height="40"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
-                <span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span>
-              </a>
-              <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
-                <span class="visually-hidden">Кнопка для отправки электронной почты</span>
-                <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="40" height="40"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
-                <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
-              </a>
-              <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering" href="#!">Авторизация</a>
+        <div class="intro__container intro__container--outer container container--thick">
+          <div class="intro__box intro__box--upper">
+            <div class="intro__container intro__container--inner intro__container--upper container">
+              <p class="intro__slogan intro--common-margin heading heading--level-1 heading--slogan zero-edges">В путешествие<br>с крутыми<br>попутчиками!</p>
+              <div class="contacts-group contacts-group--row intro__contacts-group zero-edges flex flex--justification-between hidden-on-tablet hidden-on-desktop">
+                <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center" href="tel:88005558628">
+                  <span class="visually-hidden">Кнопка для звонка в сервис</span>
+                  <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone" width="40" height="40"><use xlink:href="#phone-in-row-contacts-group"></use></svg>
+                  <span class="contacts-group__span contacts-group__span--row">8 800 555-86-28</span>
+                </a>
+                <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+                  <span class="visually-hidden">Кнопка для отправки электронной почты</span>
+                  <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="40" height="40"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
+                  <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
+                </a>
+                <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering" href="#!">Авторизация</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="intro__box-lower">
-          <div class="container container--thick">
-            <blockquote class="quote intro__quote intro--common-margin">
-              <p class="quote__content zero-edges">«Лучшее приложение, что я видел в жизни!»</p>
-              <cite class="quote__cite">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
-            </blockquote>
-            <ol class="intro__list list zero-edges">
-              <li class="intro__item intro__item--first heading flex flex--justification-between">Выберите<br>направление</li>
-              <li class="intro__item intro__item--2 heading flex flex--justification-between">Изучите идеи<br>путешественников</li>
-              <li class="intro__item intro__item--3 heading flex flex--justification-between">Находите тех,<br>кто похож на вас</li>
-              <li class="intro__item intro__item--last heading flex flex--justification-between">Путешествуйте<br>вместе!</li>
-            </ol>
+          <div class="intro__box intro__box--lower">
+            <div class="intro__container intro__container--inner intro__container--lower container">
+              <blockquote class="quote intro__quote intro--common-margin">
+                <p class="quote__content zero-edges">«Лучшее приложение, что я видел в жизни!»</p>
+                <cite class="quote__cite">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
+              </blockquote>
+              <ol class="intro__list list zero-edges">
+                <li class="intro__item intro__item--first heading flex flex--justification-between">Выберите<br>направление</li>
+                <li class="intro__item intro__item--2 heading flex flex--justification-between">Изучите идеи<br>путешественников</li>
+                <li class="intro__item intro__item--3 heading flex flex--justification-between">Находите тех,<br>кто похож на вас</li>
+                <li class="intro__item intro__item--last heading flex flex--justification-between">Путешествуйте<br>вместе!</li>
+              </ol>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="about-service">
-        <div class="container container--slim">
+        <div class="about-service__container container container--slim">
           <h2 class="about-service__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">О сервисе</h2>
           <p class="about-service__main-text common-margin-left common-margin-left--twenty-four common-margin-left--modified">Любое путешествие веселее<span class="hidden-on-tablet hidden-on-desktop"><br></span> с попутчиками, которые на <span class="hidden-on-tablet hidden-on-desktop"><br></span>одной волне <span class="hidden-on-mobile hidden-on-desktop"><br></span>с тобой! Делитесь своими идеями путешествий<span class="hidden-on-mobile hidden-on-desktop"><br></span> и черпайте вдохновение <span class="hidden-on-mobile hidden-on-desktop"><br></span>в чужих.</p>
           <p class="about-service__additional-text additional-text common-margin-left common-margin-left--twenty-four common-margin-left--modified">А если найдете кого-то <span class="hidden-on-desktop"><br></span>близкого по духу &mdash; скорее <span class="hidden-on-desktop"><br></span>зовите в совместный трип!</p>
@@ -469,7 +471,7 @@
       </section>
 
       <section class="directions">
-        <div class="container container--slim directions__container">
+        <div class="directions__container container container--slim">
           <h2 class="directions__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified common-margin-left--altered">Направления</h2>
           <p class="directions__main-text directions--absent-bottom common-margin-left common-margin-left--twenty-four common-margin-left--modified common-margin-left--altered">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
           <ul class="directions__list list zero-edges flex flex--columnar">
@@ -534,7 +536,7 @@
       </section>
 
       <section class="fellow-travelers">
-        <div class="container container--slim fellow-travelers__container">
+        <div class="fellow-travelers__container container container--slim">
           <h2 class="fellow-travelers__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">Попутчики</h2>
           <p class="fellow-travelers__main-text zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <span class="hidden-on-mobile"><br></span>а другому маршрут для хайкинга.</p>
           <p class="additional-text fellow-travelers__additional-text zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">Теперь можно легко <span class="hidden-on-mobile"><br></span>найти единомышленников!</p>
@@ -804,23 +806,23 @@
       </section>
 
       <section class="profile">
-        <div class="container container--thick profile__container flex flex--columnar">
+        <div class="profile__container container container--thick flex flex--columnar">
           <h2 class="profile__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">Добавьте свой профиль</h2>
           <dl class="profile__benefits list zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">
-            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--basic-placement profile__common-pseudo grid">
+            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--basic-placement profile__common-pseudo same-pseudo same-pseudo--tablet grid">
               <dt class="profile__term">Базовое размещение</dt>
               <dd class="profile__definition zero-edges">Бесплатно</dd>
             </div>
-            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--first-positions profile__common-pseudo grid">
+            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--first-positions profile__common-pseudo same-pseudo same-pseudo--tablet grid">
               <dt class="profile__term">Вывод на первых позициях</dt>
               <dd class="profile__definition zero-edges">99 руб./мес</dd>
             </div>
-            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--card-color profile__common-pseudo grid">
+            <div class="profile__items-wrapper profile__items-wrapper--element profile__items-wrapper--card-color profile__common-pseudo same-pseudo same-pseudo--tablet grid">
               <dt class="profile__term">Кастомный цвет карточки</dt>
               <dd class="profile__definition zero-edges">59 руб./мес</dd>
             </div>
           </dl>
-          <a class="profile__busines-tariff profile__common-pseudo link flex flex--justification-center flex--alignment-center" href="#!">Показать тарифы для бизнеса</a>
+          <a class="profile__busines-tariff profile__common-pseudo same-pseudo same-pseudo--tablet link flex flex--justification-center flex--alignment-center" href="#!">Показать тарифы для бизнеса</a>
         </div>
       </section>
 
@@ -843,11 +845,11 @@
           </form>
           <p class="if-interested__main-text if-interested__main-text--3 main-text if-interested__main-text--element if-interested__main-text--element-3 main-text--wider zero-edges">Остались вопросы? <span class="hidden-on-tablet hidden-on-desktop"><br></span>Мы с радостью на них ответим!</p>
           <div class="contacts-group if-interested__contacts-group zero-edges flex flex--columnar flex--justification-between">
-            <a class="contacts-group__telephone contacts-group__telephone--for-interested contacts-group__contact link flex flex--alignment-center" href="tel:88005558628">
+            <a class="contacts-group__telephone contacts-group__telephone--for-interested contacts-group__contact link flex flex--alignment-center same-pseudo same-pseudo--mobile same-pseudo--tablet same-pseudo--desktop" href="tel:88005558628">
               <span class="visually-hidden">Кнопка для звонка в сервис</span>
               <span class="contacts-group__span contacts-group__span--inverse">8 800 555-86-28</span>
             </a>
-            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center" href="mailto:mail@htmlacademy.ru">
+            <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center same-pseudo same-pseudo--mobile same-pseudo--tablet same-pseudo--desktop" href="mailto:mail@htmlacademy.ru">
               <span class="visually-hidden">Кнопка для отправки электронной почты</span>
               <span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span>
             </a>
@@ -860,7 +862,7 @@
         <div class="map__wrapper">
           <div class="container container--slim map__container flex flex--columnar flex--alignment-center">
             <h2 class="visually-hidden">Расположение офиса</h2>
-            <address class="map__address additional-text">ул. Большая Конюшенная, 19/8</address>
+            <address class="map__address additional-text same-pseudo same-pseudo--mobile same-pseudo--tablet same-pseudo--desktop">ул. Большая Конюшенная, 19/8</address>
             <a class="button button--route button--more-and-route button--with-arrow map__route link" href="https://goo.gl/maps/zasR1U2WxyH4pgLU9">Проложить маршрут</a>
           </div>
         </div>

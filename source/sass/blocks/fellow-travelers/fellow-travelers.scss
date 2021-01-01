@@ -1,23 +1,34 @@
 
 .fellow-travelers {
   background-color: $dcg-4;
+
+  @include overlap--bottom(-3, $bottom-radii);
+
+  @media (min-width: $tablet-width) {
+    @include overlap--bottom(-3, $bottom-radii-tablet);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include overlap--bottom(-3, $bottom-radii-tablet);
+  }
+}
+
+.fellow-travelers__container {
+  padding-top: 68px;
   background-image: $rogovaya-bg-mobile, $smolov-bg, $rect-bg-mobile;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 341px, 152px 69px, 0 68px;
+  background-position: 0 307px, 152px 35px, 0 34px;
   background-size: 62px 71px, 143px 143px, 113px 132px;
-
-  @include overlap--bottom(-3, 68px, $bottom-radii);
 
   @media (min-resolution: 2dppx) {
     background-image: $rogovaya-bg-mobile-2x, $smolov-bg-2x, $rect-bg-mobile;
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 141px;
     background-image: $rogovaya-bg-tablet, $smolov-bg, $quadrate-bg-desktop;
-    background-position: 409px 140px, 40px 486px, 40px 131px;
+    background-position: 409px 80px, 40px 426px, 40px 71px;
     background-size: 285px 285px, 143px 143px, 212px 212px;
-
-    @include overlap--bottom(-3, 141px, $bottom-radii-tablet);
 
     @media (min-resolution: 2dppx) {
       background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x, $quadrate-bg-desktop;
@@ -25,14 +36,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 190px 446px, 547px 194px, 60px 130px;
+    padding-top: 130px;
 
-    @include overlap--bottom(-3, 130px, $bottom-radii-tablet);
-  }
-}
-
-.fellow-travelers__container {
-  @media (min-width: $desktop-width) {
     @include grid-for-desktop;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
@@ -40,6 +45,8 @@
       "main-text main-text ls ls"
       "add-text add-text ls ls"
       "button button ls ls";
+
+    background-position: 190px 386px, 547px 134px, 60px 70px;
   }
 }
 
@@ -128,7 +135,7 @@
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 81px;
+    margin-top: 78px;
     margin-bottom: 87px;
   }
 

@@ -2,25 +2,14 @@
 .directions {
   background-color: $lcg-2;
 
-  @include overlap--bottom(-2, 71px, $bottom-radii);
+  @include overlap--bottom(-2, $bottom-radii);
 
   @media (min-width: $tablet-width) {
-    background-image: $flags-bg, $rect-bg;
-    background-repeat: no-repeat, no-repeat;
-    background-position: 440px 140px, 40px 466px;
-    background-size: 287px 575px, 140px 140px;
-
-    @include overlap--bottom(-2, 73px, $bottom-radii-tablet);
-
-    @media (min-resolution: 2dppx) {
-      background-image: $flags-bg-2x, $rect-bg;
-    }
+    @include overlap--bottom(-2, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 1093px 148px, 60px 149px;
-
-    @include overlap--bottom(-2, 161px, $bottom-radii-tablet);
+    @include overlap--bottom(-2, $bottom-radii-tablet);
   }
 
   &--absent-bottom {
@@ -38,13 +27,31 @@
 }
 
 .directions__container {
+  padding-top: 71px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 73px;
+    background-image: $flags-bg, $rect-bg;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 440px 80px, 40px 406px;
+    background-size: 287px 575px, 140px 140px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $flags-bg-2x, $rect-bg;
+    }
+  }
+
   @media (min-width: $desktop-width) {
+    padding-top: 161px;
+
     @include grid-for-desktop;
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
       "ls ls heading heading"
       "ls ls text text"
       "ls ls button button";
+
+    background-position: 1093px 88px, 60px 89px;
   }
 }
 

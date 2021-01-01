@@ -1,46 +1,88 @@
 
 .intro {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    background-color: $dcg-10;
-    background-image: $traveller-bg-tablet, $globe-bg-tablet;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 372px 451px, 100%;
-    background-position: 285px 272px, center bottom;
-
-    @media (min-resolution: 2dppx) {
-      background-image: $traveller-bg-tablet-2x, $globe-bg-tablet-2x;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    background-color: transparent;
-    background-image: $traveller-bg-desktop, $globe-bg-desktop;
-    background-size: 431px 640px, 100%;
-    background-position: 604px 8px, bottom;
-
-    @media (min-resolution: 2dppx) {
-      background-image: $traveller-bg-desktop-2x, $globe-bg-desktop-2x;
-    }
-  }
-
   &--common-margin {
     margin: 0 auto 0;
   }
 }
 
-.intro__box-upper {
-  width: 100%;
-  background-color: $dcg-2;
-  background-image: $traveller-bg-mobile, $globe-bg-mobile;
+.intro__container {
   background-repeat: no-repeat, no-repeat;
-  background-position: 76px 149px, center;
-  background-size: 200px 263px, cover;
 
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    background-image: none;
+  &--outer {
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      background-image: $traveller-bg-tablet, $globe-bg-tablet;
+      background-size: 372px 451px, 100%;
+      background-position: 285px 272px, center bottom;
+      position: relative;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $traveller-bg-tablet-2x, $globe-bg-tablet-2x;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: $traveller-bg-desktop, $globe-bg-desktop;
+      background-size: 431px 640px, 100%;
+      background-position: 604px 8px, bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $traveller-bg-desktop-2x, $globe-bg-desktop-2x;
+      }
+    }
+  }
+
+  &--inner {
+    @media (max-width: $mobile-width-only) {
+      background-color: transparent;
+      position: relative;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 688px;
+      min-width: 688px;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+      background-image: none;
+      position: static;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1320px;
+      min-width: 1320px;
+    }
+  }
+
+  &--upper {
+    @media (max-width: $mobile-width-only) {
+      background-image: $traveller-bg-mobile, $globe-bg-mobile;
+      background-position: 76px 149px, center;
+      background-size: 200px 263px, cover;
+    }
+  }
+
+  // &--lower {}
+}
+
+.intro__box {
+  &--upper {
+    @media (max-width: $mobile-width-only) {
+      background-color: $dcg-2;
+    }
+  }
+
+  &--lower {
+    @media (max-width: $mobile-width-only) {
+      background-color: $dcg-6;
+    }
   }
 }
 
@@ -69,17 +111,6 @@
     padding-top: 107px;
     padding-bottom: 331px;
     margin-left: 67px;
-  }
-}
-
-.intro__box-lower {
-  width: 100%;
-  background-color: $dcg-6;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    position: static;
   }
 }
 
