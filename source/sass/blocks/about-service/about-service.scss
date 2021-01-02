@@ -3,6 +3,8 @@
   background-color: $dcg-4;
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
+  position: relative;
+  z-index: 999;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     background-color: $dcg-10;
@@ -14,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(-1, $bottom-radii-tablet);
+    @include overlap--bottom(999, $bottom-radii-tablet);
   }
 }
 

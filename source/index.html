@@ -8,7 +8,7 @@
     <title>HTML Academy: Погнали</title>
   </head>
 
-  <body class="page__body zero-edges">
+  <body class="page__body page__body--index zero-edges initial-z-index">
     <svg style="display: none;">
       <!-- index -->
 
@@ -295,7 +295,7 @@
             <svg class="general-header__burger-svg" width="25" height="11"><use xlink:href="#burger"></use></svg>
           </button>
 
-          <a class="authorization authorization--modified authorization--appearance general-header__authorization link grid grid--centering" href="#!">Авторизация</a>
+          <a class="authorization authorization--modified authorization--appearance general-header__authorization link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
 
           <nav class="general-header__site-navigation general-header__site-navigation--auxiliary hidden-on-mobile hidden-on-tablet">
             <ul class="general-header__nav-list list zero-edges flex flex--columnar flex--justification-between flex--alignment-center">
@@ -316,12 +316,13 @@
               <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
               <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
             </a>
-            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering" href="#!">Авторизация</a>
+            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
           </div>
         </div>
       </div>
 
-      <div class="general-header__primary-layout general-header__layout hidden-on-desktop hidden-entity">
+      <!-- hidden-entity -->
+      <div class="general-header__primary-layout general-header__layout hidden-on-desktop">
         <div class="general-header__container general-header__container--primary container container--thick">
           <div class="general-header__primary-layout-wrapper flex flex--justification-between flex--alignment-center">
             <a class="logo general-header__logo general-header__logo--primary link">
@@ -354,7 +355,7 @@
               </svg>
             </button>
 
-            <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link grid grid--centering" href="#!">Авторизация</a>
+            <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
           </div>
 
           <nav class="general-header__site-navigation general-header__site-navigation--primary general-header--common-margin-left">
@@ -376,7 +377,7 @@
               <svg class="contacts-group__svg contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
               <span class="contacts-group__span">mail@htmlacademy.ru</span>
             </a>
-            <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link grid grid--centering" href="#!">Авторизация</a>
+            <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
           </div>
 
           <div class="contacts-group contacts-group--row general-header__contacts-group zero-edges flex flex--justification-between hidden-on-mobile hidden-on-tablet">
@@ -390,7 +391,7 @@
               <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="50" height="50"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
               <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
             </a>
-            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering" href="#!">Авторизация</a>
+            <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
           </div>
 
           <div class="socials socials--in-site-menu socials--tablet-left general-header__socials flex flex--justification-center flex--alignment-center hidden-on-desktop">
@@ -420,10 +421,10 @@
       <div class="general-header__lining hidden-entity"></div>
     </header>
 
-    <main class="general-main">
+    <main class="general-main initial-z-index">
       <h1 class="visually-hidden">"Погнали?" - сервис поиска попутчиков для совместных путешествий</h1>
 
-      <section class="intro">
+      <section class="intro initial-z-index">
         <h2 class="visually-hidden">Введение</h2>
         <div class="intro__container intro__container--outer container container--thick">
           <div class="intro__box intro__box--upper">
@@ -440,7 +441,7 @@
                   <svg class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail" width="40" height="40"><use xlink:href="#mail-in-row-contacts-group"></use></svg>
                   <span class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
                 </a>
-                <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering" href="#!">Авторизация</a>
+                <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal" href="#!"><span>Авторизация</span></a>
               </div>
             </div>
           </div>
@@ -833,7 +834,7 @@
             Зарегистрируйтесь, <span class="hidden-on-tablet hidden-on-desktop"><br></span><span class="main-text main-text--shifted-phrase">это быстро и бесплатно!</span>
           </p>
           <p class="if-interested__main-text if-interested__main-text--2 if-interested__main-text--common if-interested__main-text--element if-interested__main-text--element-2 zero-edges main-text main-text--moved-sentence">
-            Уже зарегистрированы? Тогда скорее <a class="if-interested__user-authorization link" href="#!">авторизуйтесь</a>.
+            Уже зарегистрированы? Тогда скорее <a class="if-interested__user-authorization active-mode-opacity active-mode-opacity--external" href="#!">авторизуйтесь</a>.
           </p>
           <form class="if-interested__form" action="#" method="GET">
             <label class="visually-hidden" for="email">Электронная почта</label>
@@ -853,7 +854,7 @@
               <span class="visually-hidden">Кнопка для отправки электронной почты</span>
               <span class="contacts-group__span contacts-group__span--inverse">mail@htmlacademy.ru</span>
             </a>
-            <a class="authorization contacts-group__authorization link grid grid--centering hidden-entity" href="#!">Авторизация</a>
+            <a class="authorization contacts-group__authorization link grid grid--centering hover-mode-bg-color active-mode-opacity active-mode-opacity--internal hidden-entity" href="#!">Авторизация</a>
           </div>
         </div>
       </section>
@@ -870,7 +871,7 @@
       </section>
     </main>
 
-    <footer class="general-footer general-footer--index">
+    <footer class="general-footer general-footer--index initial-z-index">
       <div class="container container--thick general-footer__container flex flex--columnar flex--justification-between flex--alignment-center">
         <a class="logo general-footer__logo general-footer__element link">
           <picture>
@@ -914,7 +915,8 @@
       </div>
     </footer>
 
-    <section class="busines-tariffs flex flex--columnar flex--alignment-center">
+    <!-- hidden-entity -->
+    <section class="busines-tariffs flex flex--columnar flex--alignment-center hidden-entity">
       <h4 class="busines-tariffs__heading heading heading--level-2 zero-edges">Бизнес-тарифы</h4>
       <div class="busines-tariffs__box">
         <dl class="busines-tariffs__list list zero-edges flex flex--columnar">

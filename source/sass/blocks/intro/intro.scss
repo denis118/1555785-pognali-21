@@ -1,12 +1,12 @@
 
 .intro {
-  @media (min-width: $tablet-width) {
-    background-color: $dcg-10;
-  }
+  // @media (min-width: $tablet-width) {
+  //   background-color: $dcg-10;
+  // }
 
-  @media (min-width: $desktop-width) {
-    background-color: $dcg-11;
-  }
+  // @media (min-width: $desktop-width) {
+  //   background-color: $dcg-11;
+  // }
 
   &--common-margin {
     margin: 0 auto 0;
@@ -77,7 +77,9 @@
     }
   }
 
-  // &--lower {}
+  &--lower {
+    z-index: 1000;
+  }
 }
 
 .intro__box {
@@ -99,7 +101,7 @@
   top: 384px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 1001;
 }
 
 .intro__slogan {
@@ -205,17 +207,17 @@
   }
 
   &:nth-child(2) {
-    z-index: 1;
+    z-index: 1001;
     background-color: $mcg-5;
   }
 
   &:nth-child(3) {
-    z-index: 2;
+    z-index: 1002;
     background-color: $mcg-6;
   }
 
   &:last-child {
-    z-index: 3;
+    z-index: 1003;
     background-color: $mcg-1;
 
     border-bottom-left-radius: 10px;
@@ -236,7 +238,7 @@
 
     @media (min-width: $tablet-width), (min-width: $desktop-width) {
       margin: 0;
-      z-index: auto;
+      z-index: 1000;
       box-sizing: border-box;
     }
 
@@ -274,7 +276,7 @@
       width: 344px;
       margin-left: -25px;
       position: relative;
-      z-index: 1;
+      z-index: 1001;
     }
   }
 
@@ -294,19 +296,19 @@
 
   &:nth-child(4n+2) {
     @media (min-width: $desktop-width) {
-      z-index: 1;
+      z-index: 1001;
     }
   }
 
   &:nth-child(4n+3) {
     @media (min-width: $desktop-width) {
-      z-index: 2;
+      z-index: 1002;
     }
   }
 
   &:nth-child(4n+4) {
     @media (min-width: $desktop-width) {
-      z-index: 3;
+      z-index: 1003;
       width: 315px;
       padding-right: 34px;
       border-top-right-radius: 20px;

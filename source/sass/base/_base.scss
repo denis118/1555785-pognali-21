@@ -300,3 +300,34 @@
     }
   }
 }
+
+.initial-z-index {
+  position: relative;
+  z-index: 1000;
+}
+
+//
+// interactive modes
+//
+
+.hover-mode-bg-color {
+  &:hover {
+    background-color: $mcg-9;
+  }
+}
+
+.active-mode-opacity {
+  &--external {
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--internal { // for text in buttons, text must be placed in <span> without class
+    &:active {
+      & > * {
+        opacity: 0.3;
+      }
+    }
+  }
+}

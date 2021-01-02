@@ -2,14 +2,14 @@
 .if-interested {
   background-color: $dcg-4;
 
-  @include overlap--bottom(-5, $bottom-radii);
+  @include overlap--bottom(995, $bottom-radii);
 
   @media (min-width: $tablet-width) {
-    @include overlap--bottom(-5, $bottom-radii-tablet);
+    @include overlap--bottom(995, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(-5, $bottom-radii-tablet);
+    @include overlap--bottom(995, $bottom-radii-tablet);
   }
 }
 
@@ -78,11 +78,9 @@
 }
 
 .if-interested__user-authorization {
-  display: inline;
   background-color: inherit;
   color: $mcg-1;
   text-transform: lowercase;
-  text-decoration: underline;
 }
 
 .if-interested__form {

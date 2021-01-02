@@ -2,14 +2,14 @@
 .fellow-travelers {
   background-color: $dcg-4;
 
-  @include overlap--bottom(-3, $bottom-radii);
+  @include overlap--bottom(997, $bottom-radii);
 
   @media (min-width: $tablet-width) {
-    @include overlap--bottom(-3, $bottom-radii-tablet);
+    @include overlap--bottom(997, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(-3, $bottom-radii-tablet);
+    @include overlap--bottom(997, $bottom-radii-tablet);
   }
 }
 

@@ -4,16 +4,16 @@
   color: $dcg-9;
   background-color: $lcg-3;
 
-  @include overlap--bottom(-4, $bottom-radii);
+  @include overlap--bottom(996, $bottom-radii);
 
   @media (min-width: $tablet-width) {
     line-height: 28px;
 
-    @include overlap--bottom(-4, $bottom-radii-tablet);
+    @include overlap--bottom(996, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(-4, $bottom-radii-tablet);
+    @include overlap--bottom(996, $bottom-radii-tablet);
   }
 }
 
@@ -223,8 +223,6 @@
 .profile__common-pseudo {
   &::before {
     @media (min-width: $tablet-width) {
-      // width: 68px;
-      // height: 68px;
       margin-right: 22px;
     }
   }
