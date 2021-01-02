@@ -1,7 +1,5 @@
 
-.circle-bar {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-}
+// .circle-bar {}
 
 .circle-bar__heading {
   display: none;
@@ -96,26 +94,16 @@
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: $lcg-1;
   background-image: $text-box-bg-image;
   background-repeat: no-repeat;
   background-position: 0 60%;
   background-size: auto;
-
-  &--member {
-    margin: 0;
-  }
 }
 
 .circle-bar__level-number {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-
   &--form {
     font-size: 38px;
-    font-weight: 700;
+    // font-weight: 700;
     line-height: 38px;
     color: $dcg-6;
   }
@@ -132,4 +120,9 @@
     line-height: 18px;
     color: $dcg-9;
   }
+}
+
+.circle-bar__element {
+  margin: 0;
+  color: $lcg-1;
 }

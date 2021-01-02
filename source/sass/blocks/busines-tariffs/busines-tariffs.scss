@@ -14,43 +14,98 @@
   border-radius: 20px;
   background-color: $lcg-1;
   color: $dcg-9;
-  overflow: hidden;
+  overflow: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    height: 525px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 750px;
+    border-radius: 30px;
+  }
 }
 
 .busines-tariffs__heading {
   margin-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+  }
 }
 
-.busines-tariffs__list {
+.busines-tariffs__box {
   width: 219px;
   min-height: 269px;
   margin-top: 25px;
   overflow: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 506px;
+    min-height: 222px;
+    margin-top: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+  }
 }
 
-.busines-tariffs__item {
-  padding-top: 11px;
+.busines-tariffs__list {
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
 
-  &:first-of-type {
+.busines-tariffs__wrapper {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &:first-child {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 
+// .busines-tariffs__item {}
+
 .busines-tariffs__cost {
-  padding-bottom: 11px;
   margin-left: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .busines-tariffs__close {
   width: 100%;
   margin-top: 32px;
   padding-top: 21px;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
   line-height: 24px;
-  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: $dcg-1;
   background-color: $lcg-16;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 49px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 }

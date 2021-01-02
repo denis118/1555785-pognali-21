@@ -146,7 +146,8 @@
   padding-right: 24px;
 
   background-color: $lcg-1;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   @media (min-width: $tablet-width) {
     order: -1;
@@ -158,20 +159,17 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    border-top-left-radius: 20px;
     border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 0;
   }
 }
 
 .directions__country {
   margin-top: 26px;
+  color: $dcg-3;
 
   @media (min-width: $tablet-width) {
     margin-top: 30px;
-    font-size: 24px;
-    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {

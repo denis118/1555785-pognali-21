@@ -1,5 +1,13 @@
 
 .intro {
+  @media (min-width: $tablet-width) {
+    background-color: $dcg-10;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $dcg-11;
+  }
+
   &--common-margin {
     margin: 0 auto 0;
   }
@@ -151,14 +159,14 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: $mcg-2;
-
-  font-size: 18px;
-  line-height: 18px;
   color: $dcg-6;
 
+  @media (max-width: $mobile-width-only) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
   @media (min-width: $tablet-width) {
-    font-size: 24px;
-    line-height: 24px;
     flex-direction: column;
   }
 
