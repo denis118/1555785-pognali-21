@@ -38,7 +38,9 @@
 
 .transport__kind {
   &--unselected {
-    opacity: 0.15;
+    & .transport__icon-svg {
+      opacity: 0.15;
+    }
   }
 
   &:not(:first-child) {

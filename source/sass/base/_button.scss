@@ -36,6 +36,21 @@
     padding-right: 20px;
     border: 3px solid $dcg-4;
     border-radius: 10px;
+
+    &:hover {
+      color: $lcg-1;
+      background-color: $dcg-4;
+
+      &::after {
+        border-left-color: $lcg-1;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 
   &--more-and-route {
@@ -83,6 +98,21 @@
       border-top: 13px * 0.5 solid transparent;
       border-bottom: 13px * 0.5 solid transparent;
       border-left-width: 0;
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--with-pointer {
+    &:active {
+      &::before,
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 

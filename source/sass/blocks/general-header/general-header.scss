@@ -265,9 +265,8 @@
 
   &:hover {
     @media (min-width: $desktop-width) {
-      transform: translateY(-100%);
-      transition: transform 300ms;
       color: $mcg-1;
+      // animation: revolution 300ms linear;
     }
   }
 
@@ -301,6 +300,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 77px;
+    margin-left: 57px;
   }
 
   @media (min-width: $desktop-width) {

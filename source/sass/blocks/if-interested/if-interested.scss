@@ -81,6 +81,10 @@
   background-color: inherit;
   color: $mcg-1;
   text-transform: lowercase;
+
+  &:hover {
+    color: $mcg-2;
+  }
 }
 
 .if-interested__form {
@@ -124,6 +128,19 @@
   @media (min-width: $desktop-width) {
     width: 850px;
   }
+
+  &:hover {
+    background-color: $lcg-2;
+  }
+
+  &:active {
+    background-color: $dcg-4;
+    border: 4px solid $lcg-1;
+  }
+
+  // &:invalid {
+  //   color: $mcg-11;
+  // }
 }
 
 .if-interested__form-submit {

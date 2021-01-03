@@ -8,6 +8,10 @@
     border-radius: 20px;
   }
 
+  &:hover {
+    transform: scale(1.01);
+  }
+
   &--catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

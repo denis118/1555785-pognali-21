@@ -2,11 +2,11 @@
 .socials {
   &--in-site-menu {
     padding-top: 40px;
-    padding-bottom: 35.5px;
+    padding-bottom: 17.5px;
 
     @media (min-width: $tablet-width) {
       padding-top: 129px;
-      padding-bottom: 84px;
+      padding-bottom: 57px;
     }
 
     @media (min-width: $desktop-width) {
@@ -83,6 +83,26 @@
       width: 24px;
       height: 24px;
     }
+
+    &.socials__svg--in-site-menu {
+      @media (min-width: $tablet-width) {
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &--in-site-menu {
+    &:hover {
+      & .socials__svg-path {
+        fill: $lcg-17;
+      }
+    }
+
+    &:active {
+      & .socials__svg-path {
+        fill: $lcg-18;
+      }
+    }
   }
 
   &--in-footer {
@@ -90,8 +110,24 @@
       width: 62px;
       height: 62px;
     }
+
+    &:hover {
+      & .socials__svg-ellipse {
+        fill: $mcg-9;
+      }
+    }
+
+    &:active {
+      & .socials__svg-path {
+        opacity: 0.3;
+      }
+    }
   }
 }
+
+// .socials__svg-path {}
+
+// .socials__svg-ellipse {}
 
 .socials__common-margin-left {
   margin-left: 0;

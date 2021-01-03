@@ -13,12 +13,14 @@
 
   border-radius: 20px;
   background-color: $lcg-1;
+  box-shadow: 0 2px 8px $dcg-15;
   color: $dcg-9;
   overflow: auto;
 
   @media (min-width: $tablet-width) {
     width: 688px;
     height: 525px;
+    box-shadow: 0 4px 22px $dcg-16;
   }
 
   @media (min-width: $desktop-width) {
@@ -107,5 +109,9 @@
     line-height: 26px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+  }
+
+  &:hover {
+    background-color: $lcg-2;
   }
 }

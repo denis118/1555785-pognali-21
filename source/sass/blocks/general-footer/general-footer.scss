@@ -67,6 +67,26 @@
     border-top: none;
     justify-content: flex-start;
   }
+
+  &:hover {
+    & .general-footer__created-by {
+      color: $lcg-19;
+    }
+
+    & .general-footer__html-acad-svg-path {
+      fill: $lcg-19;
+    }
+  }
+
+  &:active {
+    & .general-footer__created-by {
+      color: $lcg-14;
+    }
+
+    & .general-footer__html-acad-svg-path {
+      fill: $lcg-14;
+    }
+  }
 }
 
 .general-footer__created-by {

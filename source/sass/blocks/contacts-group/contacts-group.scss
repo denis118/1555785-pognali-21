@@ -1,9 +1,9 @@
 
-.contacts-group {
-  &--row {
-    flex-direction: row;
-  }
-}
+// .contacts-group {
+//   &--inline {}
+
+//   &--initial {}
+// }
 
 .contacts-group__contact {
   font-weight: 700;
@@ -15,58 +15,37 @@
     line-height: 28px;
   }
 
-  &::before {
-    content: "";
-    display: block;
-    margin-right: 17px;
-    border-radius: 50%;
-    background-color: $dcg-8;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  // &--inline {}
 
-    @media (min-width: $tablet-width) {
-      margin-right: 23px;
+  &--initial {
+    &:hover {
+      color: $mcg-6;
+
+      & .contacts-group__svg-path {
+        &--initial {
+          fill: $mcg-6;
+        }
+      }
     }
 
-    @media (min-width: $desktop-width) {
-      margin-right: 31px;
-    }
-  }
+    &:active {
+      & .contacts-group__span {
+        opacity: 0.3;
+      }
 
-  &--row {
-    &::before {
-      display: none;
+      & .contacts-group__svg-path {
+        &--initial {
+          opacity: 0.3;
+        }
+      }
     }
   }
 }
 
 .contacts-group__telephone {
-  &::before {
-    background-image: $icon-telephone-mobile;
-    background-size: 17px 15px;
+  // &--inline {}
 
-    @media (min-resolution: 2dppx) {
-      background-image: $icon-telephone-mobile-2x;
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: $icon-telephone-tablet;
-      background-size: 24px 24px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: $icon-telephone-tablet-2x;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      background-image: $icon-telephone-desktop;
-      background-size: 32px 30px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: $icon-telephone-desktop-2x;
-      }
-    }
-  }
+  // &--initial {}
 
   &--in-site-menu {
     margin-top: 51px;
@@ -80,50 +59,108 @@
 }
 
 .contacts-group__email {
-  text-transform: uppercase;
+  // &--inline {}
 
-  &::before {
-    background-image: $icon-mail-mobile;
-    background-size: 19px 13px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: $icon-mail-mobile-2x;
-    }
+  &--initial {
+    text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
-      background-image: $icon-mail-tablet;
-      background-size: 28px 19px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: $icon-mail-tablet-2x;
-      }
+      margin-right: 23px;
     }
 
     @media (min-width: $desktop-width) {
-      background-image: $icon-mail-desktop;
-      background-size: 37px 26px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: $icon-mail-desktop-2x;
-      }
+      margin-right: 31px;
     }
   }
 }
 
 .contacts-group__svg {
-  display: none;
+  // &--inline {}
 
-  &--row {
-    display: block;
+  &--inline-telephone {
+    &:hover {
+      & .contacts-group__svg-circle {
+        fill: $mcg-10;
+      }
+    }
+  }
+
+  &--inline-mail {
+    &:hover {
+      & .contacts-group__svg-circle {
+        fill: $mcg-2;
+      }
+    }
+  }
+
+  &--initial {
+    margin-right: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  // &--initial-telephone {}
+
+  // &--initial-mail {}
+
+  &:active {
+    & .contacts-group__svg-path {
+      opacity: 0.3;
+    }
   }
 }
 
+// .contacts-group__svg-circle {
+//   &--inline {}
+
+//   &--inline-telephone {}
+
+//   &--inline-mail {}
+
+//   &--initial {}
+
+//   &--initial-telephone {}
+
+//   &--initial-mail {}
+// }
+
+// .contacts-group__svg-path {
+//   &--inline {}
+
+//   &--inline-telephone {}
+
+//   &--inline-mail {}
+
+//   &--initial {}
+
+//   &--initial-telephone {}
+
+//   &--initial-mail {}
+// }
+
 .contacts-group__span {
+  // &--telephone {}
+
+  // &--email {}
+
   &--inverse {
     color: $mcg-1;
+
+    &:hover {
+      color: $mcg-6;
+    }
   }
 
-  &--row {
+  &--inline {
     display: none;
   }
 }
@@ -131,7 +168,7 @@
 .contacts-group__authorization {
   order: -1;
 
-  &--row {
+  &--inline {
     order: 0;
   }
 }

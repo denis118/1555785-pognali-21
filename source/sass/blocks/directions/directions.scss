@@ -265,15 +265,13 @@
   }
 }
 
-.directions__country-flag {
+.directions__flag-box {
   position: absolute;
   top: 0;
   left: 25px;
   transform: translateY(-50%);
 
   @media (min-width: $tablet-width) {
-    width: 70px;
-    height: 47px;
     top: 17px;
     left: 398px;
     transform: translateY(0);
@@ -283,6 +281,26 @@
     top: 23px;
     left: 337px;
   }
+}
+
+.directions__country-flag {
+  // position: absolute;
+  // top: 0;
+  // left: 25px;
+  // transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
+    // top: 17px;
+    // left: 398px;
+    // transform: translateY(0);
+  }
+
+  // @media (min-width: $desktop-width) {
+  //   top: 23px;
+  //   left: 337px;
+  // }
 }
 
 .directions__more {
