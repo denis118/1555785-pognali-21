@@ -1,14 +1,16 @@
 
 .companion {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: $lcg-1;
   border-radius: 10px;
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   &--catalog {
     display: grid;
@@ -25,7 +27,6 @@
 
     @media (min-width: $tablet-width) {
       grid-template-columns: 254px 150px 106px 178px;
-      // grid-template-rows: 72px 63px 32px 71px 95px;
       grid-template-rows: repeat(5, min-content);
       grid-template-areas:
         "avatar name name transport"
@@ -44,130 +45,171 @@
         "avatar . button likes . transport lvl .";
     }
   }
+}
 
-  &__name {
-    margin-top: 27px;
-    color: $dcg-1;
-    position: relative;
+.companion__name {
+  margin-top: 27px;
+  color: $dcg-1;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 31px;
+    line-height: 22px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: -17px;
+
+    @media (min-width: $tablet-width) {
+      width: 8px;
+      height: 8px;
+      left: -21px;
+    }
+  }
+
+  &--tania-firsova {
+    &::before {
+      background-color: $mcg-8;
+    }
+  }
+
+  &--petia-diomin {
+    &::before {
+      background-color: $mcg-7;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: -20px;
+    }
+  }
+
+  // &--mark-smolov {}
+
+  // &--larisa-rogovaya {}
+
+  &--catalog {
+    grid-area: name;
+    margin-top: 14.86px;
 
     &::before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      position: absolute;
-      top: 8px;
-      left: -17px;
-    }
-
-    &--tania-firsova {
-      &::before {
-        background-color: $mcg-8;
-      }
-    }
-
-    &--petia-diomin {
-      &::before {
-        background-color: $mcg-7;
-      }
-    }
-
-    // &--mark-smolov {}
-
-    // &--larisa-rogovaya {}
-
-    &--catalog {
-      grid-area: name;
-      margin-top: 14.86px;
-
-      &::before {
-        top: 5px;
-        left: 145px;
-      }
+      top: 5px;
+      left: 145px;
     }
   }
+}
 
-  &__head-link {
-    color: $dcg-1;
+.companion__head-link {
+  color: $dcg-1;
+
+  &:hover {
+    color: $lcg-20;
   }
 
-  &__likes {
-    display: none;
-
-    &--catalog {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16px;
-      color: $dcg-6;
-
-      grid-area: likes;
-      margin-top: 8.29px;
-    }
+  &:active {
+    color: $lcg-21;
   }
+}
 
-  &__avatar {
-    order: -1;
+.companion__likes {
+  display: none;
 
-    &--catalog {
-      grid-area: avatar;
-      margin-top: 15px;
-    }
+  &--catalog {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $dcg-6;
+
+    grid-area: likes;
+    margin-top: 8.29px;
   }
+}
 
-  &__level {
-    position: absolute;
-    top: 18px;
-    left: 17px;
+.companion__avatar {
+  order: -1;
 
-    &--catalog {
-      grid-area: lvl;
-      position: static;
-      margin-top: 12px;
-    }
-  }
-
-  &__wished-countries {
-    position: absolute;
-    top: 270px;
-    transform: translateY(-50%);
-
-    &--catalog {
-      grid-area: countries;
-      position: static;
-      margin-top: 15.85px;
-      transform: translateY(0);
-    }
-  }
-
-  &__hashtags {
+  &--catalog {
+    grid-area: avatar;
     margin-top: 15px;
+  }
+}
 
-    &--catalog {
-      grid-area: hashtags;
-      margin-top: 13.07px;
-    }
+.companion__level {
+  position: absolute;
+  top: 18px;
+  left: 17px;
+
+  @media (min-width: $tablet-width) {
+    top: 20px;
+    left: 21px;
   }
 
-  &__transport {
+  &--catalog {
+    grid-area: lvl;
+    position: static;
+    margin-top: 12px;
+  }
+}
+
+.companion__wished-countries {
+  position: absolute;
+  top: 272px;
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    top: 285px;
+  }
+
+  &--catalog {
+    grid-area: countries;
+    position: static;
+    margin-top: 15.85px;
+    transform: translateY(0);
+  }
+}
+
+.companion__hashtags {
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+  }
+
+  &--catalog {
+    grid-area: hashtags;
+    margin-top: 13.07px;
+  }
+}
+
+.companion__transport {
+  margin-top: 14px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+    margin-bottom: 19px;
+  }
+
+  &--catalog {
+    grid-area: transport;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.companion__invite-button {
+  display: none;
+
+  &--catalog {
+    display: flex;
+    grid-area: button;
     margin-top: 14px;
-    margin-bottom: 14px;
-
-    &--catalog {
-      grid-area: transport;
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__invite-button {
-    display: none;
-
-    &--catalog {
-      display: flex;
-      grid-area: button;
-      margin-top: 14px;
-    }
   }
 }

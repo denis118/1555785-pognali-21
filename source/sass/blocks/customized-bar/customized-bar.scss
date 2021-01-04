@@ -6,74 +6,70 @@
       align-items: center;
     }
   }
+}
 
-  &__level-wrapper {
-    display: flex;
-    align-items: center;
-    width: 220px;
-    height: 35px;
-    background-color: $lcg-1;
-    box-sizing: border-box;
-    border: 1px solid $lcg-7;
-    border-radius: 4px;
-  }
+.customized-bar__level-wrapper {
+  width: 220px;
+  height: 35px;
+  background-color: $lcg-1;
+  box-sizing: border-box;
+  border: 1px solid $lcg-7;
+  border-radius: 4px;
+}
 
-  &__level-input {
-    border: none;
-    outline: none;
-    width: 80px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+.customized-bar__level-input {
+  border: none;
+  outline: none;
+  width: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 
-    // &--initial {}
+  // &--initial {}
 
-    // &--final {}
-  }
+  // &--final {}
+}
 
-  &__controls-wrapper {
-    width: 220px;
-    height: 10px;
-    margin-top: 20px;
-    position: relative;
+.customized-bar__controls-wrapper {
+  width: 220px;
+  height: 10px;
+  margin-top: 20px;
+  position: relative;
 
-    &--catalog {
-      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        order: -1;
-        margin-right: 69px;
-      }
+  &--catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      order: -1;
+      margin-right: 69px;
     }
   }
+}
 
-  &__bar-shell {
-    width: 100%;
-    height: 2px;
-    background-color: $dcg-13;
-    display: flex;
-    justify-content: flex-end;
+.customized-bar__bar-shell {
+  width: 100%;
+  height: 2px;
+  background-color: $dcg-13;
+}
+
+.customized-bar__bar-fill {
+  width: 62%;
+  height: 2px;
+  background-color: $dcg-1;
+}
+
+.customized-bar__bar-handle {
+  position: absolute;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border: 5px solid $dcg-1;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--initial {
+    left: 38%;
   }
 
-  &__bar-fill {
-    width: 62%;
-    height: 2px;
-    background-color: $dcg-1;
-  }
-
-  &__bar-handle {
-    position: absolute;
-    top: -4px;
-    width: 0;
-    height: 0;
-    border: 5px solid $dcg-1;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &--initial {
-      left: 38%;
-    }
-
-    &--final {
-      left: 210px;
-    }
+  &--final {
+    left: 210px;
   }
 }

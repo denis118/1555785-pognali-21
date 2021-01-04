@@ -1,103 +1,152 @@
 
 .fellow-travelers {
   background-color: $dcg-4;
-  background-image: $fellow-travelers-bg-image-1, $fellow-travelers-bg-image-2, $fellow-travelers-bg-image-3;
+
+  @include overlap--bottom(997, $bottom-radii);
+
+  @media (min-width: $tablet-width) {
+    @include overlap--bottom(997, $bottom-radii-tablet);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include overlap--bottom(997, $bottom-radii-tablet);
+  }
+}
+
+.fellow-travelers__container {
+  padding-top: 68px;
+  background-image: $rogovaya-bg-mobile, $smolov-bg, $rect-bg-mobile;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 341px, 152px 69px, 0 68px;
-  background-size: auto, auto, auto;
+  background-position: 0 307px, 152px 35px, 0 34px;
+  background-size: 62px 71px, 143px 143px, 113px 132px;
 
-  @include overlap--bottom(-2, 68px, $bottom-radii);
+  @media (min-resolution: 2dppx) {
+    background-image: $rogovaya-bg-mobile-2x, $smolov-bg-2x, $rect-bg-mobile;
+  }
 
-  &__container {
-    @media (min-width: $desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(4, min-content);
-      grid-template-areas:
-        "heading ls"
-        "main-text ls"
-        "add-text ls"
-        "button ls";
+  @media (min-width: $tablet-width) {
+    padding-top: 141px;
+    background-image: $rogovaya-bg-tablet, $smolov-bg, $quadrate-bg-desktop;
+    background-position: 409px 80px, 40px 426px, 40px 71px;
+    background-size: 285px 285px, 143px 143px, 212px 212px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x, $quadrate-bg-desktop;
     }
   }
 
-  &__heading,
-  &__main-text,
-  &__additional-text {
-    margin-left: 24px;
+  @media (min-width: $desktop-width) {
+    padding-top: 130px;
+
+    @include grid-for-desktop;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "heading heading ls ls"
+      "main-text main-text ls ls"
+      "add-text add-text ls ls"
+      "button button ls ls";
+
+    background-position: 190px 386px, 547px 134px, 60px 70px;
+  }
+}
+
+.fellow-travelers__heading {
+  @media (min-width: $desktop-width) {
+    grid-area: heading;
+  }
+}
+
+.fellow-travelers__main-text {
+  width: 217px;
+  margin-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 427px;
+    margin-top: 55px;
+    line-height: 34px;
   }
 
-  &__heading {
-    @media (min-width: $desktop-width) {
-      grid-area: heading;
-    }
+  @media (min-width: $desktop-width) {
+    grid-area: main-text;
+    width: 427px;
+    line-height: 33px;
+  }
+}
+
+.fellow-travelers__additional-text {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-top: 39px;
+    font-size: 21px;
+    line-height: 24px;
   }
 
-  &__main-text {
-    width: 217px;
-    margin-top: 19px;
+  @media (min-width: $desktop-width) {
+    margin-top: 42px;
+    grid-area: add-text;
+  }
+}
 
-    @media (min-width: $desktop-width) {
-      grid-area: main-text;
-      width: 427px;
-    }
+.fellow-travelers__list {
+  margin-top: 54px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    margin-top: 59px;
+    grid-template-columns: 285px 285px;
+    grid-auto-rows: min-content;
+    column-gap: 50px;
+    row-gap: 10px;
+    align-items: start;
   }
 
-  &__additional-text {
-    margin-top: 20px;
-
-    @media (min-width: $desktop-width) {
-      grid-area: add-text;
-    }
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    column-gap: 60px;
+    grid-area: ls;
   }
+}
 
-  &__list {
-    margin-top: 54px;
-
-    @media (min-width: $tablet-width), (min-width: $desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-area: ls;
-    }
-  }
-
-  // &__item {}
-
-  &__item:not(:last-child) {
+.fellow-travelers__item {
+  &:not(:last-child) {
     margin-bottom: 9px;
   }
 
-  &__item:last-child {
+  &:last-child {
     margin-bottom: 20px;
   }
 
-  &__item:nth-child(2n) {
+  &:nth-child(n) {
     @media (min-width: $tablet-width) {
-      margin-left: 50px;
+      margin-bottom: 0;
     }
   }
+}
 
-  &__companion {
-    // height: 429px;
-    // overflow: hidden;
+.fellow-travelers__companion {
+  @media (min-width: $tablet-width) {
+    width: 285px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      width: 285px;
-    }
+.fellow-travelers__more {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 78px;
+    margin-bottom: 87px;
   }
 
-  &__more {
-    margin-bottom: 31px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 100%;
+  }
 
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-area: button;
-    }
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    margin-top: 85px;
+    margin-bottom: 134px;
+    grid-area: button;
   }
 }

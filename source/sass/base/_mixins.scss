@@ -1,8 +1,9 @@
+
 // overlap
-@mixin overlap--bottom($i, $padding-top-initial, $border-radius) {
+@mixin overlap--bottom($i, $border-radius) {
   position: relative;
   z-index: $i;
-  padding-top: $padding-top-initial + $border-radius;
+  padding-top: $border-radius;
   margin-top: - ($border-radius);
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
@@ -14,18 +15,21 @@
   outline-offset: - $width;
 }
 
-//grid-for-mains
+@mixin centering-grid {
+  display: grid;
+  place-items: center;
+}
+
+// grid-for-mains
 @mixin grid-for-mains {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
 }
 
-// flex
-// @mixin flex($direction: row, $justify-content: space-between, $align-items: center) {
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: $direction;
-//   justify-content: $justify-content;
-//   align-items: $align-items;
-// }
+// grid-for-desktop
+@mixin grid-for-desktop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 60px;
+}

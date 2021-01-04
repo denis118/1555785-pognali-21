@@ -2,7 +2,6 @@
 .button {
   border: none;
   outline: none;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,31 +13,20 @@
   border-radius: 20px;
   cursor: pointer;
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-
-  // &--triangular-pointer::after {}
-
-  &--more-and-route {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $dcg-1;
-  }
+  // &--triangular-pointer {
+  //   &::after {}
+  // }
 
   &--more {
     height: 62px;
     justify-content: space-between;
     padding-left: 23px;
     padding-right: 23px;
-
     border-radius: 10px;
-  }
 
-  &--quadratic {
-    width: 60px;
-    height: 62px;
-    border-radius: 10px;
+    @media (min-width: $desktop-width) {
+      width: 275px;
+    }
   }
 
   &--route {
@@ -46,9 +34,45 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-
     border: 3px solid $dcg-4;
     border-radius: 10px;
+
+    &:hover {
+      color: $lcg-1;
+      background-color: $dcg-4;
+
+      &::after {
+        border-left-color: $lcg-1;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--more-and-route {
+    font-weight: 700;
+    color: $dcg-1;
+
+    @media (max-width: $mobile-width-only) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 618px;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 80px;
+      padding-top: 5px;
+      padding-right: 32px;
+      padding-left: 32px;
+      border-radius: 20px;
+    }
   }
 
   &--with-arrow {
@@ -75,13 +99,27 @@
       border-bottom: 13px * 0.5 solid transparent;
       border-left-width: 0;
     }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--with-pointer {
+    &:active {
+      &::before,
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 
   &--roll-and-change {
     width: 270px;
     font-size: 20px;
     font-weight: 500;
-
     text-transform: uppercase;
   }
 
@@ -121,14 +159,9 @@
     }
   }
 
-  &__roll-up-svg {
-    margin-right: 12px;
-  }
-
   &--modify-plan {
     height: auto;
     justify-content: flex-start;
-
     font-size: 14px;
     font-weight: 500;
     line-height: 14px;
@@ -143,8 +176,6 @@
   &--sign {
     width: auto;
     height: auto;
-    // border: none;
-    // outline: none;
     background-color: transparent;
   }
 
@@ -153,7 +184,6 @@
     height: 36px;
     justify-content: flex-end;
     padding-left: 0;
-    // padding-right: 13.88px;
     padding-right: 5px;
     border-radius: 0;
     background-image: $drop-down-button-bg;
@@ -169,43 +199,11 @@
 
   // &--close {}
 
-  &__close-svg {
-    &--round {
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
-    }
-
-    &--casual {
-      @media (max-width: $mobile-width-only) {
-        display: none;
-      }
-    }
-
-    &--white {
-      @media (min-width: $tablet-width) {
-        width: 22px;
-        height: 21px;
-        opacity: 0.3;
-      }
-    }
-  }
-
   // &--math-sign {}
 
   // &--minus {}
 
-  // &__svg-minus {}
-
   // &--plus {}
-
-  // &__svg-plus {}
-
-  &__svg-line {
-    &--white {
-      stroke: $lcg-1;
-    }
-  }
 
   &--common-text-set-one {
     font-size: 17px;
@@ -255,7 +253,6 @@
   &--invite-show {
     width: 230px;
     border-radius: 25px;
-
     line-height: 17px;
     color: $dcg-6;
   }
@@ -291,11 +288,51 @@
     }
   }
 
-  // &--counter-directional-pointers::before {}
+  // &--counter-directional-pointers {
+  //   &::before {}
+  // }
 
-  // &--counter-directional-pointers::after {}
+  // &--counter-directional-pointers {
+  //   &::after {}
+  // }
 
   &--invisible {
     display: none;
+  }
+}
+
+.button__roll-up-svg {
+  margin-right: 12px;
+}
+
+.button__close-svg {
+  &--round {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--casual {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &--white {
+    @media (min-width: $tablet-width) {
+      width: 22px;
+      height: 21px;
+      opacity: 0.3;
+    }
+  }
+}
+
+// .button__svg-minus {}
+
+// .button__svg-plus {}
+
+.button__svg-line {
+  &--white {
+    stroke: $lcg-1;
   }
 }

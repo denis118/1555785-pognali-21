@@ -1,121 +1,186 @@
 
 .if-interested {
-  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $dcg-4;
 
-  @include overlap--bottom(-4, 72px, $bottom-radii);
+  @include overlap--bottom(995, $bottom-radii);
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (min-width: $tablet-width) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(5, min-content);
-      grid-template-areas:
-        "heading heading heading"
-        "text1 text1 text1"
-        "form form form"
-        "text2 text2 text2"
-        "contacts contacts contacts";
-      justify-items: center;
-    }
+  @media (min-width: $tablet-width) {
+    @include overlap--bottom(995, $bottom-radii-tablet);
   }
 
-  &__heading {
-    @media (min-width: $tablet-width) {
-      grid-area: heading;
-    }
+  @media (min-width: $desktop-width) {
+    @include overlap--bottom(995, $bottom-radii-tablet);
+  }
+}
+
+.if-interested__container {
+  padding-top: 72px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 76px;
   }
 
-  // &__main-text {}
+  @media (min-width: $desktop-width) {
+    padding-top: 109px;
+  }
+}
 
-  &__main-text--1 {
+.if-interested__main-text {
+  text-align: center;
+
+  &--common {
     width: 210px;
+  }
+
+  &--1 {
     margin-top: 19px;
-
-    @media (min-width: $tablet-width) {
-      grid-area: text1;
-    }
   }
 
-  &__main-text--2 {
-    width: 216px;
+  // &--2 {}
+
+  &--3 {
+    width: 220px;
     margin-top: 29px;
-    margin-bottom: 0;
 
     @media (min-width: $tablet-width) {
-      grid-area: text2;
+      margin-left: 8px;
     }
   }
 
-  &__main-text--1,
-  &__main-text--2 {
-    text-align: center;
-  }
-
-  &__user-authorization {
-    display: inline;
-    width: auto;
-    height: auto;
-    background-color: inherit;
-
-    font-size: 16px;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 22px;
-    color: $mcg-1;
-
-    text-transform: lowercase;
-    text-decoration: underline;
-  }
-
-  &__form {
-    position: relative;
-    width: 270px;
-    margin-top: 14px;
-
+  &--element {
     @media (min-width: $tablet-width) {
-      grid-area: form;
-    }
-  }
-
-  &__form-email {
-    width: 230px;
-    height: 62px;
-    border-radius: 10px;
-    border: none;
-    padding-right: 65px;
-    box-sizing: border-box;
-  }
-
-  &__form-submit {
-    position: absolute;
-    top: 0;
-    left: 210px;
-  }
-
-  &__contacts-group {
-    width: 270px;
-    margin-top: 17px;
-    margin-bottom: 29px;
-
-    @media (min-width: $tablet-width) {
-      grid-area: contacts;
-      justify-self: start;
+      width: 618px;
+      margin-top: 59px;
     }
 
     @media (min-width: $desktop-width) {
-      grid-area: contacts;
-      justify-self: center;
-
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+      width: 1180px;
     }
+  }
+
+  &--element-1 {
+    @media (min-width: $desktop-width) {
+      margin-top: 57px;
+    }
+  }
+
+  &--element-2 {
+    @media (min-width: $mobile-width) {
+      margin-top: 0;
+    }
+  }
+
+  &--element-3 {
+    @media (min-width: $desktop-width) {
+      margin-top: 70px;
+    }
+  }
+}
+
+.if-interested__user-authorization {
+  background-color: inherit;
+  color: $mcg-1;
+  text-transform: lowercase;
+
+  &:hover {
+    color: $mcg-2;
+  }
+}
+
+.if-interested__form {
+  position: relative;
+  width: 270px;
+  margin-top: 29px;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    margin-top: 63px;
+    margin-left: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1180px;
+    margin-top: 57px;
+    margin-left: 6px;
+  }
+}
+
+.if-interested__form-email {
+  width: 230px;
+  height: 62px;
+  border: none;
+  padding-right: 65px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  color: $lcg-14;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 536px;
+    height: 80px;
+    padding-left: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 850px;
+  }
+
+  &:hover {
+    background-color: $lcg-2;
+  }
+
+  &:active {
+    background-color: $dcg-4;
+    border: 4px solid $lcg-1;
+  }
+
+  // &:invalid {
+  //   color: $mcg-11;
+  // }
+}
+
+.if-interested__form-submit {
+  width: 60px;
+
+  position: absolute;
+  top: 0;
+  left: 210px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    left: 536px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    left: 849px;
+  }
+}
+
+.if-interested__contacts-group {
+  width: 270px;
+  margin-top: 17px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    width: min-content;
+    margin-top: 40px;
+    margin-bottom: 58px;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 42px;
+    margin-bottom: 101px;
   }
 }

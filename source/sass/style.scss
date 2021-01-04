@@ -1,17 +1,17 @@
 // pre-formating
 @import "~normalize.css/normalize";
 @import "./base/fonts";
+@import "./base/keyframes";
 @import "./base/variables";
 @import "./base/base";
 @import "./base/mixins";
 @import "./base/button";
-@import "./base/input";
 
 //
 // index.html
 //
 
-// section-0 //
+// section-0
 
 // page.scss
 @import "./blocks/page/page.scss";
@@ -43,12 +43,6 @@
 @import "./blocks/quote/quote.scss";
 
 // section-2 //
-
-// main-text.scss
-@import "./blocks/main-text/main-text.scss";
-
-// additional-text.scss
-@import "./blocks/additional-text/additional-text.scss";
 
 // about-service.scss
 @import "./blocks/about-service/about-service.scss";
@@ -155,3 +149,10 @@
 
 // results-pagination.scss
 @import "./blocks/results-pagination/results-pagination.scss";
+
+//
+// service section
+//
+
+// hidden-entities.scss
+@import "./blocks/hidden-entities/hidden-entities.scss";

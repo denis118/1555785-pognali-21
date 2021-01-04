@@ -1,53 +1,114 @@
 
 .general-footer {
-  height: 239px;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
   @media (min-width: $tablet-width) {
-    height: 140px;
+    padding-top: 46px;
+    padding-bottom: 32px;
+    border-top-left-radius: $bottom-radii-tablet;
+    border-top-right-radius: $bottom-radii-tablet;
   }
 
-  &__container,
-  &__creators {
-    display: flex;
+  &--index {
+    margin-top: -117px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -76px;
+    }
+  }
+
+  &--common-flex-style {
     justify-content: space-between;
     align-items: center;
   }
+}
 
-  &__container {
-    flex-direction: column;
-    height: 100%;
+.general-footer__container {
+  height: 100%;
 
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.general-footer__logo {
+  margin-top: 37.4px;
+}
+
+.general-footer__socials {
+  margin-top: 40.34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -45px;
+  }
+}
+
+.general-footer__creators {
+  width: 100%;
+  margin-top: 37px;
+  padding-top: 12.24px;
+  padding-bottom: 17px;
+  border-top: 1px solid $lcg-13;
+
+  @media (min-width: $tablet-width) {
+    width: min-content;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    & .general-footer__created-by {
+      color: $lcg-19;
+    }
+
+    & .general-footer__html-acad-svg-path {
+      fill: $lcg-19;
     }
   }
 
-  // &__logo {}
+  &:active {
+    & .general-footer__created-by {
+      color: $lcg-14;
+    }
 
-  // &__socials {}
-
-  &__creators {
-    width: 100%;
-
-    @media (min-width: $tablet-width) {
-      width: min-content;
+    & .general-footer__html-acad-svg-path {
+      fill: $lcg-14;
     }
   }
+}
 
-  &__created-by {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 16px;
-    color: $dcg-9;
+.general-footer__created-by {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  color: $dcg-9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 23px;
   }
+}
 
-  // &__link {}
+// .general-footer__html-acad-logo {}
 
-  // &__svg {}
+// .general-footer__html-acad-svg {}
+
+.general-footer__element {
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }

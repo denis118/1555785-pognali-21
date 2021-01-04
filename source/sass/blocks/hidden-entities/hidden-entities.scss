@@ -1,0 +1,22 @@
+
+.hidden-entity {
+  display: none;
+}
+
+.hidden-on-mobile {
+  @media (max-width: $tablet-width - 1) {
+    display: none;
+  }
+}
+
+.hidden-on-tablet {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.hidden-on-desktop {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

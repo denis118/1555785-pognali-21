@@ -1,14 +1,117 @@
 
 .busines-tariffs {
+  width: 270px;
+  max-width: 100%;
+  height: 444px;
+  max-height: 100%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+
+  border-radius: 20px;
   background-color: $lcg-1;
+  box-shadow: 0 2px 8px $dcg-15;
+  color: $dcg-9;
+  overflow: auto;
 
-  // &__heading {}
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    height: 525px;
+    box-shadow: 0 4px 22px $dcg-16;
+  }
 
-  // &__list {}
+  @media (min-width: $desktop-width) {
+    width: 750px;
+    border-radius: 30px;
+  }
+}
 
-  // &__item {}
+.busines-tariffs__heading {
+  margin-top: 34px;
 
-  // &__cost {}
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+  }
+}
 
-  // &__close {}
+.busines-tariffs__box {
+  width: 219px;
+  min-height: 269px;
+  margin-top: 25px;
+  overflow: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 506px;
+    min-height: 222px;
+    margin-top: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+  }
+}
+
+.busines-tariffs__list {
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.busines-tariffs__wrapper {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+// .busines-tariffs__item {}
+
+.busines-tariffs__cost {
+  margin-left: 0;
+}
+
+.busines-tariffs__close {
+  width: 100%;
+  margin-top: 32px;
+  padding-top: 21px;
+  padding-bottom: 15px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dcg-1;
+  background-color: $lcg-16;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 49px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  &:hover {
+    background-color: $lcg-2;
+  }
 }

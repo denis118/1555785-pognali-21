@@ -1,15 +1,12 @@
 
 .authorization {
-  display: grid;
-  place-items: center;
-  font-family: "Blogger Sans", "Arial", sans-serif;
-
   box-sizing: border-box;
   width: 270px;
   height: 50px;
   background-color: $mcg-1;
   border-radius: 25px;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
@@ -32,7 +29,7 @@
   &--in-site-menu {
     @media (min-width: $tablet-width) {
       font-weight: 400;
-      letter-spacing: 0.03px;
+      letter-spacing: 0.03em;
     }
   }
 
@@ -46,9 +43,5 @@
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       display: none;
     }
-  }
-
-  &--invisible {
-    display: none;
   }
 }

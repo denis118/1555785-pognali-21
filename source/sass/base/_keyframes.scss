@@ -1,0 +1,26 @@
+
+@keyframes revolution {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(0, -100%);
+  }
+
+  40% {
+    transform: translate(100%, -100%);
+  }
+
+  60% {
+    transform: translate(100%, 100%);
+  }
+
+  80% {
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

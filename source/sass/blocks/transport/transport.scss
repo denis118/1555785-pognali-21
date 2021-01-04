@@ -2,81 +2,130 @@
 .transport {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
+}
 
-  &__heading {
-    display: none;
+.transport__heading {
+  display: none;
 
-    &--catalog {
-      @media (max-width: $mobile-width-only) {
-        display: block;
-        margin: 0;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 16px;
-        color: $dcg-9;
-        text-transform: lowercase;
-      }
+  &--catalog {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+      margin: 0;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $dcg-9;
+      text-transform: lowercase;
     }
   }
+}
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.transport__list {
+  flex-wrap: wrap;
 
-    &--catalog {
-      justify-content: flex-start;
+  &--catalog {
+    justify-content: flex-start;
 
-      @media (min-width: $tablet-width) {
-        flex-direction: column;
-      }
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+    }
 
-      @media (min-width: $desktop-width) {
-        flex-direction: row;
-      }
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
     }
   }
+}
 
-  &__kind {
-    &--unselected {
+.transport__kind {
+  &--unselected {
+    & .transport__icon-svg {
       opacity: 0.15;
     }
-
-    &:not(:first-child) {
-      margin-left: 10px;
-    }
   }
 
-  // &__link {}
-
-  // &__svg-path {}
-
-  // &__kind--unselected {***************
-  //   opacity: 0.15;
-  // }
-
-  // &__kind:not(:first-child) {*****************
-  //   margin-left: 10px;
-  // }
-
-  // &__kind--aircraft {}
-
-  // &__kind--bus {}
-
-  // &__kind--bycicle {}
-
-  // &__kind--feet {}
-
-  // &__kind--chosen {}
-
-  // &__aircraft-icon {}
-
-  // &__bus-icon {}
-
-  // &__bycicle-icon {}
-
-  // &__runer-icon {}
-
-  // &__more {}
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
 }
+
+// .transport__link {}
+
+// .transport__icon-svg {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__plane {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__bus {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__bicycle {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__by-feet {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__svg-path {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__plane-path {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__bus-path {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__bicycle-path {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }
+
+// .transport__by-feet-path {
+//   &--index {}
+
+//   &--form {}
+
+//   &--catalog {}
+// }

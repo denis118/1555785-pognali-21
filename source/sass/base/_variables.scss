@@ -1,5 +1,6 @@
 
 // viewports
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
@@ -17,6 +18,9 @@ $dcg-10: #182044;
 $dcg-11: #161c34;
 $dcg-12: rgba(0, 0, 0, 0.6);
 $dcg-13: rgba(29, 46, 91, 0.2);
+$dcg-14: #101d41;
+$dcg-15: rgba(29, 46, 91, 0.14);
+$dcg-16: rgba(29, 46, 91, 0.18);
 
 // middle color`s group ( mcg )
 $mcg-1: #ffd74b;
@@ -27,6 +31,9 @@ $mcg-5: #ffa530;
 $mcg-6: #ffbd30;
 $mcg-7: #81e31e;
 $mcg-8: #f97676;
+$mcg-9: #ffbd30;
+$mcg-10: #f26926;
+$mcg-11: #ff0000;
 
 // lighten color`s group ( lcg )
 $lcg-1: #ffffff;
@@ -41,46 +48,114 @@ $lcg-9: #d6daed;
 $lcg-10: #b9bbc2;
 $lcg-11: #cccccc;
 $lcg-12: #d6d9e6;
+$lcg-13: #f2f2f2;
+$lcg-14: #c7c7c7;
+$lcg-15: #f7f0da;
+$lcg-16: #f3f4f8;
+$lcg-17: #757a8f;
+$lcg-18: #babcc7;
+$lcg-19: #8f8f8f;
+$lcg-20: #5b6889;
+$lcg-21: #afb5c8;
 
-//shadows
-
+// shadows
 $shadow-1: rgba(54, 80, 148, 0.18);
 
-//blok`s background images
-$intro-bg-image-1: url("../img/intro/bg/traveller-illustration-mobile-1.svg");
-$intro-bg-image-2: url("../img/intro/bg/globe-back-mobile-1.svg");
-$intro-bg-image-3: url("../img/intro/bg/data-rect.svg");
-$intro-bg-image-4: url("../img/intro/bg/globe-back-tablet.svg");
-$intro-bg-image-5: url("../img/intro/bg/globe-back-desktop.svg");
+// intro-bg
+$globe-bg-mobile: url("../img/intro/bg/svg/globe-bg-mobile.svg");
+$globe-bg-mobile-2x: url("../img/intro/bg/svg/globe-bg-mobile.svg");
+$globe-bg-tablet: url("../img/intro/bg/jpg/globe-bg-tablet.jpg");
+$globe-bg-tablet-2x: url("../img/intro/bg/jpg/globe-bg-tablet@2x.jpg");
+$globe-bg-desktop: url("../img/intro/bg/png/globe-bg-desktop.png");
+$globe-bg-desktop-2x: url("../img/intro/bg/svg/globe-bg-desktop.svg");
 
-$about-service-bg-image-1: url("../img/about-service/about-mobile.svg");
-$about-service-bg-image-2: url("../img/about-service/back.svg");
-$about-service-bg-image-3: url("../img/about-service/down-back-image.svg");
+$traveller-bg-mobile: url("../img/intro/bg/png/traveller-bg-mobile.png");
+$traveller-bg-mobile-2x: url("../img/intro/bg/png/traveller-bg-mobile@2x.png");
+$traveller-bg-tablet: url("../img/intro/bg/png/traveller-bg-tablet.png");
+$traveller-bg-tablet-2x: url("../img/intro/bg/png/traveller-bg-tablet@2x.png");
+$traveller-bg-desktop: url("../img/intro/bg/png/traveller-bg-desktop.png");
+$traveller-bg-desktop-2x: url("../img/intro/bg/png/traveller-bg-desktop@2x.png");
 
-$fellow-travelers-bg-image-1: url("../img/fellow-travelers/rogovaya-back-desktop.png");
-$fellow-travelers-bg-image-2: url("../img/fellow-travelers/smolov-back-desktop.png");
-$fellow-travelers-bg-image-3: url("../img/fellow-travelers/back.svg");
+// about-service-bg
+$phone-bg-mobile: url("../img/about-service/bg/png/phone-bg-mobile.png");
+$phone-bg-mobile-2x: url("../img/about-service/bg/png/phone-bg-mobile@2x.png");
+$phone-bg-tablet: url("../img/about-service/bg/png/phone-bg-tablet.png");
+$phone-bg-tablet-2x: url("../img/about-service/bg/png/phone-bg-tablet@2x.png");
+$phone-bg-desktop: url("../img/about-service/bg/png/phone-bg-desktop.png");
+$phone-bg-desktop-2x: url("../img/about-service/bg/png/phone-bg-desktop@2x.png");
 
-$site-nav-button-bg-image: url("../img/nav-menu-icon/icon_menu_mobile.svg");
+$rect-bg-mobile: url("../img/about-service/bg/svg/rect-bg-mobile.svg");
+$rect-bg-tablet: url("../img/about-service/bg/svg/rect-bg-tablet.svg");
+$quadrate-bg-desktop: url("../img/about-service/bg/svg/quadrate-bg-desktop.svg");
 
-$pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
+// directions-bg
+$rect-bg: url("../img/directions/bg/svg/rect.svg");
+$flags-bg: url("../img/directions/bg/png/flags-bg.png");
+$flags-bg-2x: url("../img/directions/bg/png/flags-bg@2x.png");
 
-$applicants-icon: url("../img/directions/applicants-icon.png");
+// directions-fades
+$directions-list-fade: url("../img/directions/fades/png/directions-list-fade.png");
+$directions-list-fade-2x: url("../img/directions/fades/png/directions-list-fade@2x.png");
 
+// fellow-travelers-bg
+$rogovaya-bg-mobile: url("../img/fellow-travelers/bg/png/rogovaya-bg-mobile.png");
+$rogovaya-bg-mobile-2x: url("../img/fellow-travelers/bg/png/rogovaya-bg-mobile@2x.png");
+$rogovaya-bg-tablet: url("../img/fellow-travelers/bg/png/rogovaya-bg-tablet.png");
+$rogovaya-bg-tablet-2x: url("../img/fellow-travelers/bg/png/rogovaya-bg-tablet@2x.png");
+$smolov-bg: url("../img/fellow-travelers/bg/png/smolov-bg.png");
+$smolov-bg-2x: url("../img/fellow-travelers/bg/png/smolov-bg@2x.png");
+
+// circle-bar-bg
 $text-box-bg-image: url("../img/circle-bar/bg/line.svg");
 
-$profile-items-wrapper-bg-image: url("../img/profile/bg/line.svg");
-$profile-bg-image: url("../img/profile/bg/rates.svg");
+// profile-bg
+$rates-bg-mobile: url("../img/profile/bg/png/rates-bg-mobile.png");
+$rates-bg-mobile-2x: url("../img/profile/bg/png/rates-bg-mobile@2x.png");
+$rates-bg-desktop: url("../img/profile/bg/png/rates-bg-desktop.png");
+$rates-bg-desktop-2x: url("../img/profile/bg/png/rates-bg-desktop@2x.png");
+$business-bg-tablet: url("../img/profile/bg/png/business-bg-tablet.png");
+$business-bg-tablet-2x: url("../img/profile/bg/png/business-bg-tablet@2x.png");
 
-$map-pin-bg-image: url("../img/map/bg/icon-location.svg");
+$line-in-profile-bg: url("../img/profile/bg/svg/line-in-profile-bg.svg");
+$rect-in-profile-bg-tablet: url("../img/profile/bg/svg/rect-in-profile-bg-tablet.svg");
+$rect-in-profile-bg-desktop: url("../img/profile/bg/svg/rect-in-profile-bg-desktop.svg");
+
+// map-bg
+$map-bg-mobile: url("../img/map/bg/png/map-bg-mobile.png");
+$map-bg-mobile-2x: url("../img/map/bg/png/map-bg-mobile@2x.png");
+$map-bg-tablet: url("../img/map/bg/png/map-bg-tablet.png");
+$map-bg-tablet-2x: url("../img/map/bg/png/map-bg-tablet@2x.png");
+$map-bg-desktop: url("../img/map/bg/png/map-bg-desktop.png");
+$map-bg-desktop-2x: url("../img/map/bg/png/map-bg-desktop@2x.png");
+
+//blok`s background images
+
+$pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
 
 $drop-down-button-bg: url("../img/button/drop-down/bg/drop-down-gradient.svg");
 
 // icons
-$email-icon-1: url("../img/email/email-icon-1.svg");
-$email-icon-2: url("../img/email/email-icon-2.svg");
-$telephone-icon-1: url("../img/telephone/telephone-icon-1.svg");
-$telephone-icon-2: url("../img/telephone/telephone-icon-2.svg");
+$icon-telephone-mobile: url("../img/contacts-group/decor/icon-telephone-mobile.png");
+$icon-telephone-mobile-2x: url("../img/contacts-group/decor/icon-telephone-mobile@2x.png");
+$icon-telephone-tablet: url("../img/contacts-group/decor/icon-telephone-tablet.png");
+$icon-telephone-tablet-2x: url("../img/contacts-group/decor/icon-telephone-tablet@2x.png");
+$icon-telephone-desktop: url("../img/contacts-group/decor/icon-telephone-desktop.png");
+$icon-telephone-desktop-2x: url("../img/contacts-group/decor/icon-telephone-desktop@2x.png");
+
+$icon-mail-mobile: url("../img/contacts-group/decor/icon-mail-mobile.png");
+$icon-mail-mobile-2x: url("../img/contacts-group/decor/icon-mail-mobile@2x.png");
+$icon-mail-tablet: url("../img/contacts-group/decor/icon-mail-tablet.png");
+$icon-mail-tablet-2x: url("../img/contacts-group/decor/icon-mail-tablet@2x.png");
+$icon-mail-desktop: url("../img/contacts-group/decor/icon-mail-desktop.png");
+$icon-mail-desktop-2x: url("../img/contacts-group/decor/icon-mail-desktop@2x.png");
+
+$icon-man-mobile: url("../img/directions/decor/png/icon-man-mobile.png");
+$icon-man-mobile-2x: url("../img/directions/decor/png/icon-man-mobile@2x.png");
+$icon-man-tablet: url("../img/directions/decor/png/icon-man-tablet.png");
+$icon-man-tablet-2x: url("../img/directions/decor/png/icon-man-tablet@2x.png");
+
+$icon-map-pin: url("../img/map/decor/svg/icon-map-pin.svg");
 
 // other
 $bottom-radii: 30px;
+$bottom-radii-tablet: 60px;

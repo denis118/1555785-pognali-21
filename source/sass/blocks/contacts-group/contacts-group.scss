@@ -1,122 +1,167 @@
 
-.contacts-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: "Blogger Sans", "Arial", sans-serif;
+// .contacts-group {
+//   &--inline {}
 
-  &--row {
-    margin: 0;
-    flex-direction: row;
+//   &--initial {}
+// }
+
+.contacts-group__contact {
+  font-weight: 700;
+  line-height: 18px;
+  color: $dcg-4;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
   }
 
-  &--before-desktop {
-    @media (max-width: $desktop-width - 1) {
-      display: none;
-    }
-  }
+  // &--inline {}
 
-  &--since-desktop {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
+  &--initial {
+    &:hover {
+      color: $mcg-6;
 
-  &__contact {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 18px;
-    color: $dcg-4;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 45px;
-      height: 45px;
-      margin-right: 17px;
-
-      background-color: $dcg-8;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
+      & .contacts-group__svg-path {
+        &--initial {
+          fill: $mcg-6;
+        }
+      }
     }
 
-    &--row,
-    &--row::before {
-      margin: 0;
-    }
+    &:active {
+      & .contacts-group__span {
+        opacity: 0.3;
+      }
 
-    &--row {
-      &::before {
-        width: 40px;
-        height: 40px;
-
-        @media (min-width: $desktop-width) {
-          width: 50px;
-          height: 50px;
+      & .contacts-group__svg-path {
+        &--initial {
+          opacity: 0.3;
         }
       }
     }
   }
+}
 
-  &__telephone {
-    &::before {
-      background-image: $telephone-icon-1;
-    }
+.contacts-group__telephone {
+  // &--inline {}
 
-    &--in-site-menu {
-      margin-top: 51px;
-    }
+  // &--initial {}
 
-    &--for-interested {
-      @media (min-width: $desktop-width) {
-        margin-right: 110px;
-      }
-    }
-
-    &--row {
-      &::before {
-        background-color: $mcg-2;
-        background-image: $telephone-icon-2;
-      }
-    }
+  &--in-site-menu {
+    margin-top: 51px;
   }
 
-  &__email {
+  &--for-interested {
+    @media (min-width: $desktop-width) {
+      margin-right: 110px;
+    }
+  }
+}
+
+.contacts-group__email {
+  // &--inline {}
+
+  &--initial {
     text-transform: uppercase;
+  }
+}
 
-    &::before {
-      background-image: $email-icon-1;
-    }
+.contacts-group__svg {
+  // &--inline {}
 
-    &--row {
-      &::before {
-        background-color: $mcg-6;
-        background-image: $email-icon-2;
+  &--inline-telephone {
+    &:hover {
+      & .contacts-group__svg-circle {
+        fill: $mcg-10;
       }
     }
   }
 
-  &__span {
-    &--inverse {
-      color: $mcg-1;
-    }
-
-    &--row {
-      display: none;
+  &--inline-mail {
+    &:hover {
+      & .contacts-group__svg-circle {
+        fill: $mcg-2;
+      }
     }
   }
 
-  &__authorization {
-    order: -1;
+  &--initial {
+    margin-right: 17px;
 
-    &--row {
-      order: 0;
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 23px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+      margin-right: 31px;
+    }
+  }
+
+  // &--initial-telephone {}
+
+  // &--initial-mail {}
+
+  &:active {
+    & .contacts-group__svg-path {
+      opacity: 0.3;
+    }
+  }
+}
+
+// .contacts-group__svg-circle {
+//   &--inline {}
+
+//   &--inline-telephone {}
+
+//   &--inline-mail {}
+
+//   &--initial {}
+
+//   &--initial-telephone {}
+
+//   &--initial-mail {}
+// }
+
+// .contacts-group__svg-path {
+//   &--inline {}
+
+//   &--inline-telephone {}
+
+//   &--inline-mail {}
+
+//   &--initial {}
+
+//   &--initial-telephone {}
+
+//   &--initial-mail {}
+// }
+
+.contacts-group__span {
+  // &--telephone {}
+
+  // &--email {}
+
+  &--inverse {
+    color: $mcg-1;
+
+    &:hover {
+      color: $mcg-6;
+    }
+  }
+
+  &--inline {
+    display: none;
+  }
+}
+
+.contacts-group__authorization {
+  order: -1;
+
+  &--inline {
+    order: 0;
   }
 }
