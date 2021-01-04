@@ -21,6 +21,10 @@
       margin-left: 0;
     }
   }
+
+  &--scrolled {
+    position: fixed;
+  }
 }
 
 .general-header__layout {
@@ -51,39 +55,29 @@
       background-color: $dcg-11;
     }
   }
+
+  &--scrolled {
+    background-color: $lcg-1;
+  }
 }
 
-// .general-header__primary-layout {
-//   @media (min-width: $desktop-width) {
-//     position: absolute;
-//     top: 830px;
-//     left: 0;
-//     width: 100%;
-//     background-color: inherit;
-//   }
+.general-header__primary-layout {
+  // &--scrolled {
+  //   @media (min-width: $desktop-width) {
+  //     position: fixed;
+  //     top: 0;
+  //   }
+  // }
 
-//   &--scrolled {
-//     @media (min-width: $desktop-width) {
-//       position: fixed;
-//       top: 0;
-//     }
-//   }
-
-//   &--positioned {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     background-color: inherit;
-//     z-index: 1006;
-//   }
-
-//   &--not-first-page {
-//     @media (min-width: $desktop-width) {
-//       display: none;
-//     }
-//   }
-// }
+  &--positioned {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: inherit;
+    z-index: 1006;
+  }
+}
 
 .general-header__container {
   @media (min-width: $desktop-width) {
@@ -97,11 +91,11 @@
       margin-top: 41px;
     }
 
-    @media (min-width: $desktop-width) {
-      margin-top: 0;
-      padding-top: 17px;
-      padding-bottom: 13px;
-    }
+    // @media (min-width: $desktop-width) {
+    //   margin-top: 0;
+    //   padding-top: 17px;
+    //   padding-bottom: 13px;
+    // }
   }
 
   &--auxiliary {
@@ -111,6 +105,14 @@
 
     @media (min-width: $desktop-width) {
       justify-content: flex-start;
+    }
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding-top: 17px;
+      padding-bottom: 13px;
     }
   }
 }
@@ -152,7 +154,7 @@
 }
 
 .general-header__burger-rect {
-  &--scroll {
+  &--scrolled {
     fill: $lcg-11;
   }
 }
@@ -193,6 +195,14 @@
 
       &::before {
         width: 44px;
+        background-color: $dcg-4;
+      }
+    }
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      &::before {
         background-color: $dcg-4;
       }
     }
@@ -257,6 +267,12 @@
     position: relative;
   }
 
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      color: $dcg-4;
+    }
+  }
+
   &:focus {
     @media (min-width: $desktop-width) {
       color: $mcg-1;
@@ -310,16 +326,3 @@
 }
 
 // .general-header__socials {}
-
-.general-header__lining {
-  width: 100%;
-  height: 73.4px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 132px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 90px;
-  }
-}

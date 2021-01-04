@@ -107,6 +107,14 @@
 
 .companion__head-link {
   color: $dcg-1;
+
+  &:hover {
+    color: $lcg-20;
+  }
+
+  &:active {
+    color: $lcg-21;
+  }
 }
 
 .companion__likes {

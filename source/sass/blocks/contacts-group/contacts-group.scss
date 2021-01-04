@@ -63,14 +63,6 @@
 
   &--initial {
     text-transform: uppercase;
-
-    @media (min-width: $tablet-width) {
-      margin-right: 23px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-right: 31px;
-    }
   }
 }
 
@@ -105,6 +97,7 @@
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
+      margin-right: 31px;
     }
   }
 
