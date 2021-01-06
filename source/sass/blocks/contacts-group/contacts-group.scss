@@ -4,6 +4,15 @@
       display: none;
     }
   }
+
+  &--if-interested {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .contacts-group__contact {
@@ -46,7 +55,7 @@
 
   // &--initial {}
 
-  &--for-interested {
+  &--if-interested {
     @media (min-width: $desktop-width) {
       margin-right: 110px;
     }
@@ -74,7 +83,6 @@
   }
 
   &--inline-telephone {
-    // left: 26px;
     left: 0;
 
     @media (min-width: $desktop-width) {
@@ -172,5 +180,9 @@
 
   &--inline {
     display: none;
+  }
+
+  &--if-interested {
+    color: $mcg-1;
   }
 }

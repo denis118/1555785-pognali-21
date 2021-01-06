@@ -1,4 +1,3 @@
-
 .general-footer {
   background-color: $lcg-1;
   border-top-left-radius: $bottom-radii;
@@ -30,8 +29,6 @@
 }
 
 .general-footer__container {
-  height: 100%;
-
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }

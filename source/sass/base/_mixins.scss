@@ -1,10 +1,8 @@
-
 // overlap
 @mixin overlap--bottom($i, $border-radius) {
   position: relative;
   z-index: $i;
-  padding-top: $border-radius;
-  margin-top: - ($border-radius);
+  margin-top: -($border-radius);
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 }
@@ -12,9 +10,16 @@
 // outline
 @mixin outline($width, $type, $color) {
   outline: $width $type $color;
-  outline-offset: - $width;
+  outline-offset: -$width;
 }
 
+// centering-margins
+@mixin centering-margins {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// centering-grid
 @mixin centering-grid {
   display: grid;
   place-items: center;
@@ -32,4 +37,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 60px;
+}
+
+// words-splitter
+@mixin words-splitter {
+  display: inline-block;
+  vertical-align: middle;
+  width: inherit;
 }

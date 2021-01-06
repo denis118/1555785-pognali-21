@@ -215,10 +215,12 @@
   }
 
   &--modified {
-    @media (min-width: $tablet-width) {
-      margin-left: 0;
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 35px;
     }
+  }
 
+  &--changed {
     @media (min-width: $desktop-width) {
       margin-left: 70px;
     }
@@ -228,6 +230,12 @@
     @media (min-width: $desktop-width) {
       margin-left: 114px;
     }
+  }
+}
+
+.centering-margins {
+  @media (max-width: $desktop-width - 1) {
+    @include centering-margins;
   }
 }
 
