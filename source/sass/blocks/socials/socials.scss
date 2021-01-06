@@ -1,8 +1,9 @@
-
 .socials {
+  @include centering-grid;
+
   &--in-site-menu {
-    padding-top: 40px;
-    padding-bottom: 17.5px;
+    padding-top: 42px;
+    padding-bottom: 15.5px;
 
     @media (min-width: $tablet-width) {
       padding-top: 129px;
@@ -16,12 +17,15 @@
 
   &--tablet-left {
     @media (min-width: $tablet-width) {
-      justify-content: flex-start;
+      justify-items: start;
     }
   }
 }
 
 .socials__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: min-content;
   margin-left: 5px;
 

@@ -1,43 +1,21 @@
-
 .container {
-  width: 320px;
-  min-width: 320px;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 270px;
+  min-width: 270px;
+  max-width: 270px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 768px;
-    min-width: 768px;
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    min-width: 688px;
+    max-width: 688px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    min-width: 1440px;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  &--thick {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  }
-
-  &--slim {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
-  }
-
-  &--auto-width {
-    @media (min-width: $desktop-width) {
-      width: auto;
-    }
+    width: 1320px;
+    min-width: 1320px;
+    max-width: 1320px;
   }
 }
 
@@ -333,7 +311,8 @@
     }
   }
 
-  &--internal { // for text in buttons, text must be placed in <span> without class
+  &--internal {
+    // for text in buttons, text must be placed in <span> without class
     &:active {
       & > * {
         opacity: 0.3;
