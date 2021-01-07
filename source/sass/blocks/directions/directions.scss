@@ -195,8 +195,19 @@
     line-height: 20px;
   }
 
-  &--unusual {
-    height: 30px;
+  &--czech {
+    @media (max-width: $mobile-width-only) {
+      width: 178px;
+      height: 30px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 150px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 220px;
+    }
   }
 }
 
@@ -220,9 +231,13 @@
     margin-left: 10px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 15px;
+      margin-top: 5px;
       margin-left: 0;
       margin-bottom: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 29px;
     }
   }
 
@@ -308,4 +323,22 @@
 
 .directions__span {
   @include words-splitter;
+
+  &--czech {
+    display: inline;
+  }
+
+  &--czech-1 {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      display: block;
+    }
+  }
+
+  // &--czech-2 {}
+
+  &--czech-3 {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+    }
+  }
 }

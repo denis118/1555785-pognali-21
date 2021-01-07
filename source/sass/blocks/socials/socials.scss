@@ -1,19 +1,23 @@
 .socials {
-  @include centering-grid;
+  // @include centering-grid;
 
-  &--in-site-menu {
-    padding-top: 42px;
-    padding-bottom: 15.5px;
+  // &--in-site-menu {
+  //   padding-top: 30px;
+  //   padding-bottom: 29px;
 
-    @media (min-width: $tablet-width) {
-      padding-top: 129px;
-      padding-bottom: 57px;
-    }
+  //   @media (min-width: $tablet-width) {
+  //     padding-top: 129px;
+  //     padding-bottom: 57px;
+  //   }
 
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
+  //   @media (min-width: $desktop-width) {
+  //     display: none;
+  //   }
+  // }
+
+  // &--in-footer {
+  //   margin-top: 42px;
+  // }
 
   &--tablet-left {
     @media (min-width: $tablet-width) {
@@ -27,43 +31,33 @@
   justify-content: center;
   align-items: center;
   width: min-content;
-  margin-left: 5px;
 
-  @media (min-width: $tablet-width) {
-    margin-left: 83px;
-  }
-
-  &--in-footer {
-    margin-left: 0;
-  }
-}
-
-.socials__item {
-  margin-left: 27px;
-
-  &--facebook {
-    margin-left: 0;
-  }
-
-  &--vk {
-    @media (min-width: $tablet-width) {
-      margin-left: 37px;
-    }
-  }
-
-  &--insta {
-    @media (min-width: $tablet-width) {
-      margin-left: 33px;
+  &--in-site-menu {
+    @media (max-width: $mobile-width-only) {
+      @include centering-margins;
     }
   }
 }
+
+// .socials__item {}
 
 .socials__link {
-  display: block;
+  @include centering-grid;
+  width: 45px;
   height: 45px;
 
   @media (min-width: $tablet-width) {
+    width: 62px;
     height: 62px;
+  }
+
+  &--in-site-menu {
+    background-color: currentColor;
+  }
+
+  &--in-footer {
+    background-color: $mcg-1;
+    border-radius: 50%;
   }
 }
 
@@ -110,11 +104,6 @@
   }
 
   &--in-footer {
-    @media (min-width: $tablet-width) {
-      width: 62px;
-      height: 62px;
-    }
-
     &:hover {
       & .socials__svg-ellipse {
         fill: $mcg-9;
@@ -129,10 +118,12 @@
   }
 }
 
+.socials__svg-group {
+  &--in-footer {
+    opacity: 1;
+  }
+}
+
 // .socials__svg-path {}
 
 // .socials__svg-ellipse {}
-
-.socials__common-margin-left {
-  margin-left: 0;
-}

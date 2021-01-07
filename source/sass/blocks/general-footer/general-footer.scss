@@ -39,14 +39,20 @@
 }
 
 .general-footer__socials {
-  margin-top: 40.34px;
+  margin-top: 38px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: -1px;
+  }
 
   @media (min-width: $tablet-width) {
+    margin-top: -1px;
     margin-left: -9px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: -45px;
+    margin-top: 1px;
+    margin-left: -47px;
   }
 }
 

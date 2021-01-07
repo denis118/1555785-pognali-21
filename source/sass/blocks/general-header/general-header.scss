@@ -578,4 +578,17 @@
 
 .general-header__socials {
   grid-area: socials;
+
+  margin-top: 30px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 112px;
+    margin-bottom: 74px;
+    margin-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

@@ -192,10 +192,9 @@
 
       <div
         class="socials socials--in-site-menu socials--tablet-left general-header__socials hidden-on-desktop">
-        <ul class="socials__list list zero-edges">
-          <li
-            class="socials__item socials__item--facebook socials__common-margin-left">
-            <a class="socials__link link" href="#!">
+        <ul class="socials__list socials__list--in-site-menu list zero-edges">
+          <li class="socials__item socials__item--facebook">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в Фейсбук
               </span>
@@ -209,7 +208,7 @@
             </a>
           </li>
           <li class="socials__item socials__item--vk">
-            <a class="socials__link link" href="#!">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в ВКонтакте
               </span>
@@ -223,7 +222,7 @@
             </a>
           </li>
           <li class="socials__item socials__item--insta">
-            <a class="socials__link link" href="#!">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в Инстаграм
               </span>
@@ -303,7 +302,7 @@
     </section>
 
     <section class="about-service">
-      <div class="about-service__container container">
+      <div class="container">
         <h2
           class="about-service__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified common-margin-left--changed">
           О сервисе
@@ -406,10 +405,6 @@
                 class="directions__applicants-amount directions--absent-bottom directions--common-text-style flex flex--justification-end flex--alignment-center">
                 18321
               </p>
-              <!-- <picture>
-                  <source media="(min-width: 768px)" srcset="./img/flags/content/png/thailand/thailand-flag-tablet.png 1x, ./img/flags/content/png/thailand/thailand-flag-tablet@2x.png 2x">
-                  <img class="directions__country-flag image" src="./img/flags/content/png/thailand/thailand-flag-mobile.png" width="35" height="24" alt="Флаг Тайланда" srcset="./img/flags/content/png/thailand/thailand-flag-mobile@2x.png 2x">
-                </picture> -->
               <div class="directions__flag-box tooltip tooltip--altered"
                 data-tooltip="Тайланд">
                 <picture>
@@ -508,8 +503,19 @@
                 Чехия
               </h3>
               <p
-                class="directions__tagline directions__tagline--unusual directions--common-text-style">
-                Закоулки старой Европы
+                class="directions__tagline directions__tagline--czech directions--common-text-style">
+                <span
+                  class="directions__span directions__span--czech directions__span--czech-1">
+                  Закоулки
+                </span>
+                <span
+                  class="directions__span directions__span--czech directions__span--czech-2">
+                  старой
+                </span>
+                <span
+                  class="directions__span directions__span--czech directions__span--czech-3">
+                  Европы
+                </span>
               </p>
               <p
                 class="directions__applicants-amount directions--absent-bottom directions__applicants-amount--unusual directions--common-text-style flex flex--justification-end flex--alignment-center">
@@ -1121,7 +1127,7 @@
     <section class="profile">
       <div class="profile__container container flex flex--columnar">
         <h2
-          class="profile__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four common-margin-left--modified">
+          class="profile__heading heading heading--level-2 zero-edges common-margin-left common-margin-left--twenty-four">
           Добавьте свой профиль
         </h2>
         <dl
@@ -1163,7 +1169,7 @@
 
     <section class="if-interested">
       <div
-        class="container container--slim if-interested__container flex flex--columnar flex--justification-between flex--alignment-center">
+        class="if-interested__container container flex flex--columnar flex--justification-between flex--alignment-center">
         <h2 class="if-interested__heading heading heading--level-2 zero-edges">
           Заинтересовались?
         </h2>
@@ -1318,7 +1324,7 @@
     <section class="map">
       <div class="map__wrapper">
         <div
-          class="container container--slim map__container flex flex--columnar flex--alignment-center">
+          class="map__container container flex flex--columnar flex--alignment-center">
           <h2 class="visually-hidden">
             Расположение офиса
           </h2>
@@ -1343,7 +1349,7 @@
 
   <footer class="general-footer general-footer--index initial-z-index">
     <div
-      class="container container--thick general-footer__container flex flex--columnar flex--justification-between flex--alignment-center">
+      class="general-footer__container container flex flex--columnar flex--justification-between flex--alignment-center">
       <a class="logo general-footer__logo general-footer__element link">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="
@@ -1373,66 +1379,51 @@
         </picture>
       </a>
       <div
-        class="socials general-footer__socials general-footer__element flex flex--justification-center flex--alignment-center">
+        class="socials socials--in-footer general-footer__socials flex flex--justification-center flex--alignment-center">
         <ul
-          class="socials__list socials__common-margin-left list zero-edges flex flex--justification-center flex--alignment-center">
-          <li
-            class="socials__item socials__common-margin-left socials__common-margin-left">
-            <a class="socials__link link" href="#!">
+          class="socials__list socials__list--in-footer list zero-edges flex flex--justification-center flex--alignment-center">
+          <li class="socials__item socials__item--facebook">
+            <a class="socials__link socials__link--in-footer link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в Фейсбук
               </span>
-              <!-- <svg class="socials__svg socials__svg--facebook socials__svg--in-footer" width="45" height="45"><use xlink:href="#facebook-in-footer"></use></svg> -->
               <svg
                 class="socials__svg socials__svg--facebook socials__svg--in-footer"
-                width="45" height="45" viewBox="0 0 45 45">
-                <ellipse class="socials__svg-ellipse" cx="22.5" cy="22.62"
-                  rx="22.5" ry="22.14" fill="#FFD74B" />
+                width="11" height="21" viewBox="0 0 11 21">
                 <path class="socials__svg-path"
-                  d="M24.49 32.77h-5.36v-9.52H17v-4.7h2.07c-.16-2.14.23-3.7 1.2-4.76a4.88 4.88 0 013.6-1.5h3.75v4.54h-2.95a4.55 4.55 0 00-.2 1.71h3.14v4.71h-3.14l.02 9.52zm-4.17-1.1h2.97v-9.53h3.14v-2.47h-3.14v-.56c0-1.47 0-2.8.78-3.29l.15-.1h2.2V13.4H23.9a3.88 3.88 0 00-2.74 1.1c-.79.92-1.11 2.44-.87 4.54l.08.61h-2.2v2.5h2.15v9.51z"
+                  d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"
                   fill="#192144" />
               </svg>
             </a>
           </li>
-          <li class="socials__item socials__common-margin-left">
-            <a class="socials__link link" href="#!">
+          <li class="socials__item socials__item--vk">
+            <a class="socials__link socials__link--in-footer link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в ВКонтакте
               </span>
-              <!-- <svg class="socials__svg socials__svg--vk socials__svg--in-footer" width="45" height="45"><use xlink:href="#vk-in-footer"></use></svg> -->
               <svg class="socials__svg socials__svg--vk socials__svg--in-footer"
-                width="45" height="45" viewBox="0 0 45 45">
-                <ellipse class="socials__svg-ellipse" cx="22.5" cy="22.62"
-                  rx="22.5" ry="22.14" fill="#FFD74B" />
+                width="23" height="12" viewBox="0 0 23 12">
                 <path class="socials__svg-path"
-                  d="M28.77 28.85a3.02 3.02 0 01-1.55-.46c-.48-.32-.92-.7-1.32-1.13-.32-.32-.87-.87-1.07-.87-.21 0-.36.68-.35 1.16 0 .33-.12.65-.35.9-.26.2-.57.33-.9.36H21.8c-2.05-.04-4-.83-5.51-2.21-2.73-2.49-5.08-7.24-5.17-7.45a.98.98 0 01.1-1.09c.29-.23.65-.36 1.02-.35h3.12c.24.03.48.12.7.25.2.14.36.32.46.54.32.68.7 1.34 1.1 1.97.97 1.48 1.4 1.82 1.56 1.9.17-.7.22-1.42.14-2.13.03-.32-.03-.64-.15-.94a.99.99 0 00-.58-.21l-.54-.51c-.1-.49.44-.91.82-1.07a6.48 6.48 0 012.34-.28h.52a6.8 6.8 0 011.6.14c1.26.27 1.21 1.28 1.16 2.45 0 .34-.03.73-.03 1.2v.35c-.03.32-.01.64.06.95a6.72 6.72 0 001.54-1.83c.43-.65.8-1.34 1.13-2.06a1.17 1.17 0 011.18-.7h3.18c.1-.01.19-.01.28 0 .74 0 1.18.21 1.36.63.18.4.12 1.22-1.75 3.4l-.74.83c-.36.35-.67.74-.92 1.17.28.32.6.6.95.84.85.64 1.6 1.4 2.22 2.27a1.18 1.18 0 01.2 1.24 1.7 1.7 0 01-1.4.74l-2.81.03-.17-.03zm-3.94-3.57c.66 0 1.24.59 1.86 1.2.33.36.7.68 1.11.96.31.2.67.3 1.04.3h.07l2.82-.03c.14 0 .28-.04.4-.1l-.07-.12a9.78 9.78 0 00-1.99-2c-.88-.75-1.33-1.1-1.39-1.66-.05-.57.37-1.06 1.2-2l.74-.82a7.91 7.91 0 001.52-2.18 4.2 4.2 0 00-.5 0H28.4a.41.41 0 00-.18 0A15.1 15.1 0 0127 21.1c-1.4 2.08-2.06 2.36-2.53 2.36a.89.89 0 01-.41-.1c-.75-.43-.75-1.36-.7-2.04v-.32c0-.48 0-.9.03-1.25.06-1.24 0-1.24-.28-1.31a6.38 6.38 0 00-1.38-.12h-.5c-.48 0-.95.02-1.42.07l.19.19c.3.48.46 1.04.43 1.6.1 1.23.05 2.81-.74 3.2-.14.06-.29.1-.44.1-.7 0-1.38-.66-2.54-2.41-.45-.68-.85-1.38-1.2-2.1l-.05-.08a.9.9 0 00-.24-.08H12.2c.44.9 2.51 4.88 4.84 6.97 1.3 1.2 2.99 1.88 4.76 1.94h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.92 1.17-2.21.1-.04.19-.06.29-.08z"
+                  d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"
                   fill="#192144" />
               </svg>
             </a>
           </li>
-          <li class="socials__item socials__common-margin-left">
-            <a class="socials__link link" href="#!">
+          <li class="socials__item socials__item--insta">
+            <a class="socials__link socials__link--in-footer link" href="#!">
               <span class="visually-hidden">
                 Ссылка на аккаунт в Инстаграм
               </span>
-              <!-- <svg class="socials__svg socials__svg--insta socials__svg--in-footer" width="45" height="45"><use xlink:href="#insta-in-footer"></use></svg> -->
               <svg
                 class="socials__svg socials__svg--insta socials__svg--in-footer"
-                width="45" height="45" viewBox="0 0 45 45">
-                <ellipse class="socials__svg-ellipse" cx="22.5" cy="22.62"
-                  rx="22.5" ry="22.14" fill="#FFD74B" />
-                <g clip-path="url(#clip720)" fill="#192144">
+                width="18" height="18" viewBox="0 0 18 18">
+                <g class="socials__svg-group socials__svg-group--in-footer"
+                  opacity=".5" fill="#192144">
                   <path class="socials__svg-path"
-                    d="M26.96 16.03c.86 0 1.68.34 2.29.94.6.6.95 1.4.95 2.25v7.8c0 .84-.34 1.65-.95 2.24-.6.6-1.43.94-2.29.94h-7.92c-.86 0-1.68-.34-2.28-.94-.61-.6-.95-1.4-.95-2.25v-7.79c0-.84.34-1.65.95-2.25.6-.6 1.42-.93 2.28-.94h7.92zm0-1.06h-7.92c-1.15 0-2.24.45-3.05 1.25a4.22 4.22 0 00-1.27 3v7.8c0 1.12.46 2.2 1.27 3 .8.8 1.9 1.24 3.05 1.24h7.92c1.15 0 2.24-.45 3.05-1.24a4.22 4.22 0 001.27-3v-7.8c0-1.13-.46-2.2-1.27-3a4.36 4.36 0 00-3.05-1.25z" />
+                    d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z" />
                   <path class="socials__svg-path"
-                    d="M23 19.99a3.23 3.23 0 012.95 1.93 3.1 3.1 0 01-.69 3.42 3.2 3.2 0 01-5.44-2.22 3.08 3.08 0 01.93-2.22 3.19 3.19 0 012.26-.91zm0-1.07a4.32 4.32 0 00-3.94 2.6 4.14 4.14 0 00.92 4.57 4.3 4.3 0 007.29-2.97 4.13 4.13 0 00-1.25-2.97 4.27 4.27 0 00-3.01-1.23zM27.43 19.73c.53 0 .96-.42.96-.95a.96.96 0 00-.96-.95.96.96 0 00-.97.95c0 .53.44.95.97.95z" />
+                    d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z" />
                 </g>
-                <defs>
-                  <clipPath id="clip720">
-                    <path class="socials__svg-path" fill="#fff"
-                      transform="translate(14 14.26)" d="M0 0h18v17.71H0z" />
-                  </clipPath>
-                </defs>
               </svg>
             </a>
           </li>
@@ -1534,61 +1525,28 @@
         stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
-    <!-- facebook-in-site-menu: width="11" height="21" -->
-    <symbol id="facebook-in-site-menu" viewBox="0 0 11 21">
+    <!-- facebook-icon: width="11" height="21" -->
+    <symbol id="facebook-icon" viewBox="0 0 11 21">
       <path
         d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"
         fill="#192144" />
     </symbol>
 
-    <!-- facebook-in-footer: width="45" height="45" -->
-    <symbol id="facebook-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <path
-        d="M24.49 32.77h-5.36v-9.52H17v-4.7h2.07c-.16-2.14.23-3.7 1.2-4.76a4.88 4.88 0 013.6-1.5h3.75v4.54h-2.95a4.55 4.55 0 00-.2 1.71h3.14v4.71h-3.14l.02 9.52zm-4.17-1.1h2.97v-9.53h3.14v-2.47h-3.14v-.56c0-1.47 0-2.8.78-3.29l.15-.1h2.2V13.4H23.9a3.88 3.88 0 00-2.74 1.1c-.79.92-1.11 2.44-.87 4.54l.08.61h-2.2v2.5h2.15v9.51z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- vk-in-site-menu: width="23" height="12" -->
-    <symbol id="vk-in-site-menu" viewBox="0 0 23 12">
+    <!-- vk-icon: width="23" height="12" -->
+    <symbol id="vk-icon" viewBox="0 0 23 12">
       <path
         d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"
         fill="#192144" />
     </symbol>
 
-    <!-- vk-in-footer: width="45" height="45" -->
-    <symbol id="vk-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <path
-        d="M28.77 28.85a3.02 3.02 0 01-1.55-.46c-.48-.32-.92-.7-1.32-1.13-.32-.32-.87-.87-1.07-.87-.21 0-.36.68-.35 1.16 0 .33-.12.65-.35.9-.26.2-.57.33-.9.36H21.8c-2.05-.04-4-.83-5.51-2.21-2.73-2.49-5.08-7.24-5.17-7.45a.98.98 0 01.1-1.09c.29-.23.65-.36 1.02-.35h3.12c.24.03.48.12.7.25.2.14.36.32.46.54.32.68.7 1.34 1.1 1.97.97 1.48 1.4 1.82 1.56 1.9.17-.7.22-1.42.14-2.13.03-.32-.03-.64-.15-.94a.99.99 0 00-.58-.21l-.54-.51c-.1-.49.44-.91.82-1.07a6.48 6.48 0 012.34-.28h.52a6.8 6.8 0 011.6.14c1.26.27 1.21 1.28 1.16 2.45 0 .34-.03.73-.03 1.2v.35c-.03.32-.01.64.06.95a6.72 6.72 0 001.54-1.83c.43-.65.8-1.34 1.13-2.06a1.17 1.17 0 011.18-.7h3.18c.1-.01.19-.01.28 0 .74 0 1.18.21 1.36.63.18.4.12 1.22-1.75 3.4l-.74.83c-.36.35-.67.74-.92 1.17.28.32.6.6.95.84.85.64 1.6 1.4 2.22 2.27a1.18 1.18 0 01.2 1.24 1.7 1.7 0 01-1.4.74l-2.81.03-.17-.03zm-3.94-3.57c.66 0 1.24.59 1.86 1.2.33.36.7.68 1.11.96.31.2.67.3 1.04.3h.07l2.82-.03c.14 0 .28-.04.4-.1l-.07-.12a9.78 9.78 0 00-1.99-2c-.88-.75-1.33-1.1-1.39-1.66-.05-.57.37-1.06 1.2-2l.74-.82a7.91 7.91 0 001.52-2.18 4.2 4.2 0 00-.5 0H28.4a.41.41 0 00-.18 0A15.1 15.1 0 0127 21.1c-1.4 2.08-2.06 2.36-2.53 2.36a.89.89 0 01-.41-.1c-.75-.43-.75-1.36-.7-2.04v-.32c0-.48 0-.9.03-1.25.06-1.24 0-1.24-.28-1.31a6.38 6.38 0 00-1.38-.12h-.5c-.48 0-.95.02-1.42.07l.19.19c.3.48.46 1.04.43 1.6.1 1.23.05 2.81-.74 3.2-.14.06-.29.1-.44.1-.7 0-1.38-.66-2.54-2.41-.45-.68-.85-1.38-1.2-2.1l-.05-.08a.9.9 0 00-.24-.08H12.2c.44.9 2.51 4.88 4.84 6.97 1.3 1.2 2.99 1.88 4.76 1.94h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.92 1.17-2.21.1-.04.19-.06.29-.08z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- insta-in-site-menu: width="18" height="18" -->
-    <symbol id="insta-in-site-menu" viewBox="0 0 18 18">
+    <!-- insta-icon: width="18" height="18" -->
+    <symbol id="insta-icon" viewBox="0 0 18 18">
       <g opacity=".5" fill="#192144">
         <path
           d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z" />
         <path
           d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z" />
       </g>
-    </symbol>
-
-    <!-- insta-in-footer: width="45" height="45" -->
-    <symbol id="insta-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <g clip-path="url(#clip720)" fill="#192144">
-        <path
-          d="M26.96 16.03c.86 0 1.68.34 2.29.94.6.6.95 1.4.95 2.25v7.8c0 .84-.34 1.65-.95 2.24-.6.6-1.43.94-2.29.94h-7.92c-.86 0-1.68-.34-2.28-.94-.61-.6-.95-1.4-.95-2.25v-7.79c0-.84.34-1.65.95-2.25.6-.6 1.42-.93 2.28-.94h7.92zm0-1.06h-7.92c-1.15 0-2.24.45-3.05 1.25a4.22 4.22 0 00-1.27 3v7.8c0 1.12.46 2.2 1.27 3 .8.8 1.9 1.24 3.05 1.24h7.92c1.15 0 2.24-.45 3.05-1.24a4.22 4.22 0 001.27-3v-7.8c0-1.13-.46-2.2-1.27-3a4.36 4.36 0 00-3.05-1.25z" />
-        <path
-          d="M23 19.99a3.23 3.23 0 012.95 1.93 3.1 3.1 0 01-.69 3.42 3.2 3.2 0 01-5.44-2.22 3.08 3.08 0 01.93-2.22 3.19 3.19 0 012.26-.91zm0-1.07a4.32 4.32 0 00-3.94 2.6 4.14 4.14 0 00.92 4.57 4.3 4.3 0 007.29-2.97 4.13 4.13 0 00-1.25-2.97 4.27 4.27 0 00-3.01-1.23zM27.43 19.73c.53 0 .96-.42.96-.95a.96.96 0 00-.96-.95.96.96 0 00-.97.95c0 .53.44.95.97.95z" />
-      </g>
-      <defs>
-        <clipPath id="clip720">
-          <path fill="#fff" transform="translate(14 14.26)"
-            d="M0 0h18v17.71H0z" />
-        </clipPath>
-      </defs>
     </symbol>
 
     <!-- phone-in-columnar-contacts-group: width="45" height="45" -->
