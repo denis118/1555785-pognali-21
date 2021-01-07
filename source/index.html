@@ -11,7 +11,7 @@
 <body class="page__body page__body--index zero-edges initial-z-index">
   <header class="general-header general-header--index">
     <div class="container general-header__container">
-      <a class="logo general-header__logo general-header__logo--auxiliary link">
+      <a class="logo general-header__logo link">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="
                 ./img/logo/content/webp/logo-primary-desktop.webp    1x,
@@ -65,9 +65,11 @@
             srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x" />
         </picture>
       </a>
-      <button class="general-header__toggle hidden-on-desktop" type="button">
-        <svg class="general-header__burger-svg hidden-entity" width="25"
-          height="11" viewBox="0 0 25 11"
+      <button class="general-header__toggle hidden-on-desktop hidden-entity"
+        type="button">
+        <svg class="general-header__burger-svg" width="25" height="11"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 11"
           aria-label="Кнопка включения меню сайта">
           <rect class="general-header__burger-rect" width="25" height="3" x="0"
             y="0" rx="1.5" fill="#fff" />
@@ -75,13 +77,17 @@
             y="8" rx="1.5" fill="#fff" />
         </svg>
         <svg
-          class="general-header__cross-svg general-header__cross-svg--mobile hidden-after-mobile"
-          width="19" height="20" aria-label="Кнопка закрытия меню сайта">
+          class="general-header__cross-svg general-header__cross-svg--mobile hidden-after-mobile hidden-entity"
+          width="19" height="20" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-label="Кнопка закрытия меню сайта">
           <use xlink:href="#cross-in-primary-layout-mobile"></use>
         </svg>
         <svg
-          class="general-header__cross-svg general-header__cross-svg--tablet hidden-except-tablet"
-          width="22" height="22" aria-label="Кнопка закрытия меню сайта">
+          class="general-header__cross-svg general-header__cross-svg--tablet hidden-except-tablet hidden-entity"
+          width="22" height="22" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-label="Кнопка закрытия меню сайта">
           <use xlink:href="#cross-in-primary-layout-tablet"></use>
         </svg>
       </button>
@@ -124,7 +130,8 @@
           <svg
             class="contacts-group__svg contacts-group__svg--initial contacts-group__svg--initial-telephone contacts-group--in-site-menu"
             width="45" height="45" viewBox="0 0 45 45" fill="none"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
             <circle
               class="contacts-group__svg-circle contacts-group__svg-circle--initial contacts-group__svg-circle--initial-telephone"
               cx="22.5" cy="22.5" r="22.5" fill="#121936" />
@@ -136,7 +143,8 @@
           </svg>
           <svg
             class="contacts-group__svg contacts-group__svg--inline contacts-group__svg--inline-telephone hidden-on-tablet"
-            width="40" height="40" viewBox="0 0 40 40">
+            width="40" height="40" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
             <circle
               class="contacts-group__svg-circle contacts-group__svg-circle--inline contacts-group__svg-circle--inline-telephone"
               cx="20" cy="20" r="20" fill="#FF8D30" />
@@ -162,7 +170,8 @@
           <svg
             class="contacts-group__svg contacts-group__svg--initial contacts-group__svg--initial-mail contacts-group--in-site-menu"
             width="45" height="45" viewBox="0 0 45 45" fill="none"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
             <circle
               class="contacts-group__svg-circle contacts-group__svg-circle--initial contacts-group__svg-circle--initial-mail"
               cx="22.5" cy="22.5" r="22.5" fill="#121936" />
@@ -174,7 +183,8 @@
           </svg>
           <svg
             class="contacts-group__svg contacts-group__svg--inline contacts-group__svg--inline-mail hidden-on-tablet"
-            width="40" height="40" viewBox="0 0 40 40">
+            width="40" height="40" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
             <circle
               class="contacts-group__svg-circle contacts-group__svg-circle--inline contacts-group__svg-circle--inline-mail"
               cx="20" cy="20" r="20" fill="#FFBD30" />
@@ -189,7 +199,6 @@
           </span>
         </a>
       </div>
-
       <div
         class="socials socials--in-site-menu socials--tablet-left general-header__socials hidden-on-desktop">
         <ul class="socials__list socials__list--in-site-menu list zero-edges">
@@ -1545,7 +1554,7 @@
     </symbol>
   </svg>
 
-  <!-- <script src="./js/app.js"></script> -->
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

@@ -1,24 +1,4 @@
 .socials {
-  // @include centering-grid;
-
-  // &--in-site-menu {
-  //   padding-top: 30px;
-  //   padding-bottom: 29px;
-
-  //   @media (min-width: $tablet-width) {
-  //     padding-top: 129px;
-  //     padding-bottom: 57px;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     display: none;
-  //   }
-  // }
-
-  // &--in-footer {
-  //   margin-top: 42px;
-  // }
-
   &--tablet-left {
     @media (min-width: $tablet-width) {
       justify-items: start;
