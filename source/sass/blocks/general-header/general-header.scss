@@ -320,6 +320,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 48px;
     padding-bottom: 9px;
+    background-color: $dcg-4;
   }
 
   &--index {
@@ -341,18 +342,18 @@
   &--js {
     background-color: $dcg-10;
 
-    @media (min-width: $desktop-width) {
-      background-color: $dcg-4;
+    @media (max-width: $mobile-width-only) {
+      max-height: 73px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      max-height: 132px;
     }
   }
 
   &--index-js {
     @media (max-width: $mobile-width-only) {
       background-color: $dcg-2;
-    }
-
-    @media (min-width: $desktop-width) {
-      background-color: $dcg-11;
     }
   }
 }
@@ -400,8 +401,10 @@
   }
 
   &--js {
-    padding-top: 21px;
-    padding-bottom: 31px;
+    @media (max-width: $mobile-width-only) {
+      padding-top: 21px;
+      padding-bottom: 31px;
+    }
   }
 }
 
@@ -421,12 +424,21 @@
   }
 
   &--js {
-    padding-top: 22px;
-    padding-bottom: 33px;
+    @media (max-width: $mobile-width-only) {
+      padding-top: 22px;
+      padding-bottom: 33px;
+    }
   }
 }
 
-// .general-header__burger-svg {}
+.general-header__burger-svg {
+  &--js {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      display: block;
+      margin-top: -5px;
+    }
+  }
+}
 
 // .general-header__cross-svg {
 //   &--mobile {}
@@ -620,7 +632,9 @@
 
 .general-header__element {
   &--js {
-    margin: 0;
-    max-height: 0;
+    @media (max-width: $mobile-width-only) {
+      margin: 0;
+      max-height: 0;
+    }
   }
 }

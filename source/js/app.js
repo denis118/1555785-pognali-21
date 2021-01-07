@@ -1,14 +1,11 @@
-'use strict'
+'use strict';
 
-let screenWidth = document.documentElement.clientWidth;
+jsMode();
+window.addEventListener('resize', jsMode);
 
-switchHeaderView();
-
-// const tariffsOpenning = document.querySelector( '.profile__busines-tariff' ); это только для index.html!!!!!!!!!!
-// const businesTariffs = document.querySelector( '.busines-tariffs' );          это только для index.html!!!!!!!!!!
-// const tariffsClosing = businesTariffs.querySelector( '.busines-tariffs__close' ); это только для index.html!!!!!!
-
-function switchHeaderView() {
+function jsMode() {
+  let screenWidth = document.documentElement.clientWidth;
+  const pageBody = document.querySelector('.page__body');
   const generalHeader = document.querySelector('.general-header');
   const logoLink = generalHeader.querySelector('.general-header__logo');
   const logoPrime = generalHeader.querySelector('.logo__image--primary');
@@ -25,6 +22,7 @@ function switchHeaderView() {
   const socials = generalHeader.querySelector('.general-header__socials');
 
   const elements = [
+    pageBody,
     generalHeader,
     logoPrime,
     logoAux,
@@ -42,51 +40,106 @@ function switchHeaderView() {
 
   console.log(elements);
 
-  if (generalHeader.classList.contains('general-header--index')) {
-    generalHeader.classList.add('general-header--index-js');
-  } else {
+  if (screenWidth < 1440) {
     generalHeader.classList.add('general-header--js');
+
+    if (generalHeader.classList.contains('general-header--index')) {
+      generalHeader.classList.add('general-header--index-js');
+    }
+
+    logoLink.classList.add('general-header__logo--js');
+    logoAux.classList.remove('hidden-before-desktop');
+    toggle.classList.remove('hidden-entity');
+    toggle.classList.add('general-header__toggle--js');
+    burger.classList.add('general-header__burger-svg--js');
+    authorization.classList.add('authorization--js');
+
+    const hiddenElements = [
+      logoPrime,
+      navigation,
+      socials
+    ];
+
+    hiddenElements.forEach(function (item) {
+      item.classList.add('hidden-entity');
+    });
+
+    const collapsedElements = [
+      authorization,
+      contactsGroup
+    ];
+
+    collapsedElements.forEach(function (item) {
+      item.classList.add('general-header__element');
+      item.classList.add('general-header__element--js');
+    });
+
+    initialContactIcons.forEach(function (item) {
+      item.classList.add('hidden-entity');
+    });
+
+    contactsContent.forEach(function (item) {
+      item.classList.add('hidden-entity');
+    });
+
+    inlineContactIcons.forEach(function (item) {
+      item.classList.add('contacts-group__svg--js');
+    });
   }
 
-  logoLink.classList.add('general-header__logo--js');
-  logoAux.classList.remove('hidden-before-desktop');
-  toggle.classList.remove('hidden-entity');
-  toggle.classList.add('general-header__toggle--js');
-  authorization.classList.add('authorization--js');
+  if (screenWidth > 1439) {
+    if (authorization.classList.contains('authorization--js')) {
+      generalHeader.classList.remove('authorization--js');
+    }
 
-  const hiddenElements = [
-    logoPrime,
-    navigation,
-    socials
-  ];
+    if (navigation.classList.contains('hidden-entity')) {
+      navigation.classList.remove('authorization--js');
+    }
 
-  hiddenElements.forEach(function (item) {
-    item.classList.add('hidden-entity');
-  });
+    if (contactsGroup.classList.contains('general-header__element')) {
+      contactsGroup.classList.remove('general-header__element');
+    }
 
-  const collapsedElements = [
-    authorization,
-    contactsGroup
-  ];
+    if (contactsGroup.classList.contains('general-header__element--js')) {
+      contactsGroup.classList.remove('general-header__element--js');
+    }
 
-  collapsedElements.forEach(function (item) {
-    item.classList.add('general-header__element');
-    item.classList.add('general-header__element--js');
-  });
+    // for creating turn-effect of site navigation text
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    const navItems = [];
 
-  initialContactIcons.forEach(function (item) {
-    item.classList.add('hidden-entity');
-  });
+    for (let i = 0; i < navLinks.length; i++) {
+      let navItem = navLinks[i].closest('.general-header__nav-item');
+      navItems.push(navItem);
+      navItems[i].addEventListener('mouseenter', function (evt) {
+        evt.preventDefault();
+        navLinks[i].classList.remove('translate-down');
+        navLinks[i].classList.add('translate-up');
+      });
 
-  contactsContent.forEach(function (item) {
-    item.classList.add('hidden-entity');
-  });
+      navItems[i].addEventListener('mouseleave', function (evt) {
+        evt.preventDefault();
+        navLinks[i].classList.remove('translate-up');
+        navLinks[i].classList.add('translate-down');
+      });
+    }
+  }
 
-  inlineContactIcons.forEach(function (item) {
-    item.classList.add('contacts-group__svg--js');
-  });
+  if (pageBody.classList.contains('page__body--index')) {
+    const businesTariffs = document.querySelector('.busines-tariffs');
+    const tariffsOpenning = document.querySelector('.profile__busines-tariff');
+    const tariffsClosing = businesTariffs.querySelector('.busines-tariffs__close');
 
-  return;
+    tariffsOpenning.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      businesTariffs.classList.remove('hidden-entity');
+    });
+
+    tariffsClosing.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      businesTariffs.classList.add('hidden-entity');
+    });
+  }
 }
 
 //  mobile and tablet
@@ -157,23 +210,23 @@ function switchHeaderView() {
 // if ( screenWidth > 1439 ) {
 
 //   for creating turn-effect of site navigation text
-//   const navLinks = document.querySelectorAll('[data-nav-link]');
-//   const navItems = [];
+  // const navLinks = document.querySelectorAll('[data-nav-link]');
+  // const navItems = [];
 
-//   for (let i = 0; i < navLinks.length; i++) {
-//     let navItem = navLinks[ i ].closest('.general-header__nav-item');
-//     navItems.push(navItem);
-//     navItems[ i ].addEventListener( 'mouseenter', function( evt ) {
-//       evt.preventDefault();
-//       navLinks[ i ].classList.remove( 'translate-down' );
-//       navLinks[ i ].classList.add( 'translate-up' );
-//     } );
-//     navItems[ i ].addEventListener( 'mouseleave', function( evt ) {
-//       evt.preventDefault();
-//       navLinks[ i ].classList.remove( 'translate-up' );
-//       navLinks[ i ].classList.add( 'translate-down' );
-//     } );
-//   }
+  // for (let i = 0; i < navLinks.length; i++) {
+  //   let navItem = navLinks[ i ].closest('.general-header__nav-item');
+  //   navItems.push(navItem);
+  //   navItems[ i ].addEventListener( 'mouseenter', function( evt ) {
+  //     evt.preventDefault();
+  //     navLinks[ i ].classList.remove( 'translate-down' );
+  //     navLinks[ i ].classList.add( 'translate-up' );
+  //   } );
+  //   navItems[ i ].addEventListener( 'mouseleave', function( evt ) {
+  //     evt.preventDefault();
+  //     navLinks[ i ].classList.remove( 'translate-up' );
+  //     navLinks[ i ].classList.add( 'translate-down' );
+  //   } );
+  // }
 
 //   for scrolling
 //   const auxiliaryContainer = auxiliaryLayout.querySelector( '.general-header__container--auxiliary' );
