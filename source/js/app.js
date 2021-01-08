@@ -3,6 +3,7 @@
 let screenWidth = document.documentElement.clientWidth;
 const pageBody = document.querySelector('.page__body');
 const generalHeader = document.querySelector('.general-header');
+// const wrapper = generalHeader.querySelector('.general-header__wrapper');
 const logoLink = generalHeader.querySelector('.general-header__logo');
 const logoPrime = generalHeader.querySelector('.logo__image--primary');
 const logoAux = generalHeader.querySelector('.logo__image--auxiliary');
@@ -20,9 +21,9 @@ const contactsContent = contactsGroup.querySelectorAll('.contacts-group__span');
 const socials = generalHeader.querySelector('.general-header__socials');
 const main = document.querySelector('.main');
 
-jsMode();
-window.addEventListener('resize', jsMode);
-window.addEventListener('scroll', scrollMode);
+// jsMode();
+// window.addEventListener('resize', jsMode);
+// window.addEventListener('scroll', scrollMode);
 
 function jsMode() {
   const elements = [
@@ -205,6 +206,8 @@ function scrollMode() {
     }
   }
 }
+
+//**************************************************************************************************//////////
 
 //  mobile and tablet
 
