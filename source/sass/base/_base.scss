@@ -398,3 +398,19 @@
     }
   }
 }
+
+.main {
+  &--js {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 73px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: 132px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 90px;
+    }
+  }
+}

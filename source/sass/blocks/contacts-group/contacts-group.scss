@@ -86,7 +86,7 @@
     left: 0;
 
     @media (min-width: $desktop-width) {
-      left: 1033px;
+      left: 1031px;
     }
 
     // &:hover {
@@ -100,7 +100,7 @@
     left: 40px;
 
     @media (min-width: $desktop-width) {
-      left: 1082px;
+      left: 1081px;
     }
 
     // &:hover {
@@ -138,6 +138,12 @@
 
   &--js {
     top: 457px;
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      top: 5px;
+    }
   }
 }
 

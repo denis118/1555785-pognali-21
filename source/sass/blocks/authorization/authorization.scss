@@ -64,4 +64,10 @@
   @media (min-width: $desktop-width) {
     visibility: hidden;
   }
+
+  &--js {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
 }

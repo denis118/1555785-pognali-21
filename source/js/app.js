@@ -1,26 +1,30 @@
 'use strict';
 
+let screenWidth = document.documentElement.clientWidth;
+const pageBody = document.querySelector('.page__body');
+const generalHeader = document.querySelector('.general-header');
+const logoLink = generalHeader.querySelector('.general-header__logo');
+const logoPrime = generalHeader.querySelector('.logo__image--primary');
+const logoAux = generalHeader.querySelector('.logo__image--auxiliary');
+const toggle = generalHeader.querySelector('.general-header__toggle');
+const burger = toggle.querySelector('.general-header__burger-svg');
+const burgerRect = burger.querySelectorAll('.general-header__burger-rect');
+const crosses = toggle.querySelectorAll('.general-header__cross-svg');
+const navigation = generalHeader.querySelector('.general-header__site-navigation');
+const authorization = generalHeader.querySelector('.general-header__authorization');
+const authorizationText = authorization.querySelector('.authorization__text');
+const contactsGroup = generalHeader.querySelector('.general-header__contacts-group');
+const initialContactIcons = contactsGroup.querySelectorAll('.contacts-group__svg--initial');
+const inlineContactIcons = contactsGroup.querySelectorAll('.contacts-group__svg--inline');
+const contactsContent = contactsGroup.querySelectorAll('.contacts-group__span');
+const socials = generalHeader.querySelector('.general-header__socials');
+const main = document.querySelector('.main');
+
 jsMode();
 window.addEventListener('resize', jsMode);
+window.addEventListener('scroll', scrollMode);
 
 function jsMode() {
-  let screenWidth = document.documentElement.clientWidth;
-  const pageBody = document.querySelector('.page__body');
-  const generalHeader = document.querySelector('.general-header');
-  const logoLink = generalHeader.querySelector('.general-header__logo');
-  const logoPrime = generalHeader.querySelector('.logo__image--primary');
-  const logoAux = generalHeader.querySelector('.logo__image--auxiliary');
-  const toggle = generalHeader.querySelector('.general-header__toggle');
-  const burger = toggle.querySelector('.general-header__burger-svg');
-  const crosses = toggle.querySelectorAll('.general-header__cross-svg');
-  const navigation = generalHeader.querySelector('.general-header__site-navigation');
-  const authorization = generalHeader.querySelector('.general-header__authorization');
-  const contactsGroup = generalHeader.querySelector('.general-header__contacts-group');
-  const initialContactIcons = contactsGroup.querySelectorAll('.contacts-group__svg--initial');
-  const inlineContactIcons = contactsGroup.querySelectorAll('.contacts-group__svg--inline');
-  const contactsContent = contactsGroup.querySelectorAll('.contacts-group__span');
-  const socials = generalHeader.querySelector('.general-header__socials');
-
   const elements = [
     pageBody,
     generalHeader,
@@ -31,6 +35,7 @@ function jsMode() {
     crosses,
     navigation,
     authorization,
+    authorizationText,
     contactsGroup,
     initialContactIcons,
     inlineContactIcons,
@@ -53,6 +58,7 @@ function jsMode() {
     toggle.classList.add('general-header__toggle--js');
     burger.classList.add('general-header__burger-svg--js');
     authorization.classList.add('authorization--js');
+    authorizationText.classList.add('authorization__text--js');
 
     const hiddenElements = [
       logoPrime,
@@ -93,7 +99,7 @@ function jsMode() {
     }
 
     if (navigation.classList.contains('hidden-entity')) {
-      navigation.classList.remove('authorization--js');
+      navigation.classList.remove('hidden-entity');
     }
 
     if (contactsGroup.classList.contains('general-header__element')) {
@@ -139,6 +145,64 @@ function jsMode() {
       evt.preventDefault();
       businesTariffs.classList.add('hidden-entity');
     });
+  }
+}
+
+function scrollMode() {
+  if (screenWidth < 1440) {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      generalHeader.classList.add('general-header--scrolled');
+      logoAux.classList.add('hidden-entity');
+      logoPrime.classList.remove('hidden-entity');
+      main.classList.add('main--js');
+
+      burgerRect.forEach(function (item) {
+        item.classList.add('general-header__burger-rect--scrolled');
+      });
+
+    } else {
+      generalHeader.classList.remove('general-header--scrolled');
+      logoPrime.classList.add('hidden-entity');
+      logoAux.classList.remove('hidden-entity');
+      main.classList.remove('main--js');
+
+      burgerRect.forEach(function (item) {
+        item.classList.remove('general-header__burger-rect--scrolled');
+      });
+    }
+  }
+
+  if (screenWidth > 1439) {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+      generalHeader.classList.add('general-header--scrolled');
+      logoAux.classList.add('hidden-entity');
+
+      if (logoPrime.classList.contains('hidden-entity')) {
+        logoPrime.classList.remove('hidden-entity');
+      }
+      logoPrime.classList.remove('hidden-on-desktop');
+
+      if (navigation.classList.contains('hidden-entity')) {
+        navigation.classList.remove('hidden-entity');
+      }
+      navigation.classList.add('general-header__site-navigation--scrolled');
+
+      inlineContactIcons.forEach(function (item) {
+        if (item.classList.contains('contacts-group__svg--js')) {
+          item.classList.remove('contacts-group__svg--js');
+        }
+        item.classList.add('contacts-group__svg--scrolled');
+      });
+
+    } else {
+      generalHeader.classList.remove('general-header--scrolled');
+      logoAux.classList.remove('hidden-entity');
+      logoPrime.classList.add('hidden-on-desktop');
+      navigation.classList.remove('general-header__site-navigation--scrolled');
+      inlineContactIcons.forEach(function (item) {
+        item.classList.remove('contacts-group__svg--scrolled');
+      });
+    }
   }
 }
 
