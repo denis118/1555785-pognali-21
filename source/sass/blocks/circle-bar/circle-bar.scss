@@ -1,5 +1,8 @@
-
-// .circle-bar {}
+.circle-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .circle-bar__heading {
   display: none;

@@ -1,4 +1,8 @@
 .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &--tablet-left {
     @media (min-width: $tablet-width) {
       justify-items: start;

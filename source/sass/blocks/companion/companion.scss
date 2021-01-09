@@ -9,6 +9,7 @@
 
   &:hover {
     transform: scale(1.01);
+    z-index: 1000;
   }
 
   &--catalog {

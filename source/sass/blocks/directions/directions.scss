@@ -73,6 +73,8 @@
 }
 
 .directions__list {
+  display: flex;
+  flex-direction: column;
   margin-top: 58px;
   width: 270px;
   height: min-content;
@@ -117,6 +119,9 @@
 }
 
 .directions__item {
+  display: flex;
+  flex-direction: column;
+
   &:not(:first-child) {
     margin-top: 10px;
   }
@@ -212,6 +217,9 @@
 }
 
 .directions__applicants-amount {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: 28px;
   line-height: 20px;
   color: $lcg-10;

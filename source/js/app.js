@@ -23,14 +23,18 @@ const socials = generalHeader.querySelector('.general-header__socials');
 const main = document.querySelector('.main');
 const email = document.querySelector("#email");
 const errorMessage = document.querySelector("#error-message");
-const sbmitButton = document.querySelector("#submit");
+const submitButton = document.querySelector("#submit");
 
 jsMode();
 window.addEventListener('resize', jsMode);
 window.addEventListener('scroll', scrollMode);
-// burger.addEventListener('click', useSiteMenu);
-sbmitButton.onclick = showErrorMessage;
-email.onclick = hideErrorMessage;
+burger.addEventListener('click', openSiteMenu);
+crosses.forEach(function (item) {
+  item.addEventListener('click', closeSiteMenu);
+});
+submitButton.addEventListener('click', showErrorMessage);
+email.addEventListener('click', hideErrorMessage);
+email.addEventListener('blur', showPlaceholder);
 
 function jsMode() {
   const elements = [
@@ -159,11 +163,17 @@ function jsMode() {
 
 function scrollMode() {
   if (screenWidth < 1440) {
-    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       generalHeader.classList.add('generalHeader--scrolled');
       wrapper.classList.add('general-header__wrapper--scrolled');
-      logoAux.classList.add('hidden-entity');
-      logoPrime.classList.remove('hidden-entity');
+
+      if (!logoAux.classList.contains('hidden-before-desktop')) {
+        logoAux.classList.add('hidden-before-desktop');
+      }
+
+      if (logoPrime.classList.contains('hidden-entity')) {
+        logoPrime.classList.remove('hidden-entity');
+      }
 
       burgerRect.forEach(function (item) {
         item.classList.add('general-header__burger-rect--scrolled');
@@ -172,8 +182,13 @@ function scrollMode() {
     } else {
       generalHeader.classList.remove('general-header--scrolled');
       wrapper.classList.remove('general-header__wrapper--scrolled');
+
+      // if () {
+
+      // }
+
       logoPrime.classList.add('hidden-entity');
-      logoAux.classList.remove('hidden-entity');
+      logoAux.classList.remove('hidden-before-desktop');
 
       burgerRect.forEach(function (item) {
         item.classList.remove('general-header__burger-rect--scrolled');
@@ -182,7 +197,7 @@ function scrollMode() {
   }
 
   if (screenWidth > 1439) {
-    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       generalHeader.classList.add('general-header--scrolled');
       logoAux.classList.add('hidden-entity');
 
@@ -215,7 +230,7 @@ function scrollMode() {
   }
 }
 
-function useSiteMenu() {
+function openSiteMenu() {
   generalHeader.classList.remove('general-header--js');
 
   if (generalHeader.classList.contains('general-header--index')) {
@@ -225,11 +240,15 @@ function useSiteMenu() {
   lowerContainer.classList.add('general-header__container--js');
 
   logoLink.classList.remove('general-header__logo--js');
-  logoAux.classList.add('hidden-before-desktop');
+
+  if (!logoAux.classList.contains('hidden-before-desktop')) {
+    logoAux.classList.add('hidden-before-desktop');
+  }
+
   burger.classList.add('hidden-entity');
   crosses.forEach(function (item) {
     item.classList.remove('hidden-entity');
-  })
+  });
   authorization.classList.remove('authorization--js');
   authorizationText.classList.remove('authorization__text--js');
 
@@ -266,20 +285,85 @@ function useSiteMenu() {
   });
 }
 
+function closeSiteMenu() {
+  generalHeader.classList.add('general-header--js');
+
+  if (generalHeader.classList.contains('general-header--index')) {
+    generalHeader.classList.add('general-header--index-js');
+  }
+
+  if (!generalHeader.classList.contains('general-header--index')) {
+    generalHeader.classList.add('general-header--index-js');
+  }
+
+  lowerContainer.classList.remove('general-header__container--js');
+
+  logoLink.classList.add('general-header__logo--js');
+
+  if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
+    if (logoAux.classList.contains('hidden-before-desktop')) {
+      logoAux.classList.remove('hidden-before-desktop');
+    }
+  }
+
+  burger.classList.remove('hidden-entity');
+  crosses.forEach(function (item) {
+    item.classList.add('hidden-entity');
+  });
+  authorization.classList.add('authorization--js');
+  authorizationText.classList.add('authorization__text--js');
+
+  const hiddenElements = [
+    logoPrime,
+    navigation,
+    socials
+  ];
+
+  hiddenElements.forEach(function (item) {
+    item.classList.add('hidden-entity');
+  });
+
+  const collapsedElements = [
+    authorization,
+    contactsGroup
+  ];
+
+  collapsedElements.forEach(function (item) {
+    item.classList.add('general-header__element');
+    item.classList.add('general-header__element--js');
+  });
+
+  initialContactIcons.forEach(function (item) {
+    item.classList.add('hidden-entity');
+  });
+
+  contactsContent.forEach(function (item) {
+    item.classList.add('hidden-entity');
+  });
+
+  inlineContactIcons.forEach(function (item) {
+    item.classList.add('contacts-group__svg--js');
+  });
+}
+
 function showErrorMessage(evt) {
   evt.preventDefault();
   if (!email.checkValidity()) {
-    email.placeholder = "";
-    email.value = "";
-    errorMessage.classList.remove("hidden-entity");
+    email.placeholder = '';
+    email.value = '';
+    errorMessage.classList.remove('hidden-entity');
   }
 }
 
 function hideErrorMessage(evt) {
   evt.preventDefault();
-  if (!errorMessage.classList.contains("hidden-entity")) {
-    errorMessage.classList.add("hidden-entity");
+  if (!errorMessage.classList.contains('hidden-entity')) {
+    errorMessage.classList.add('hidden-entity');
   }
+}
+
+function showPlaceholder() {
+  email.placeholder = 'E-mail';
 }
 
 

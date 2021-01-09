@@ -111,6 +111,8 @@
 }
 
 .intro__item {
+  display: flex;
+  justify-content: space-between;
   padding: 22px 21px 22px 24px;
 
   border-top-left-radius: 10px;
@@ -119,6 +121,7 @@
 
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
   color: $dcg-6;
 
   @media (min-width: $tablet-width) {

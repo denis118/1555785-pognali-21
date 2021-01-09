@@ -40,7 +40,10 @@
   }
 }
 
-// .profile__container {}
+.profile__container {
+  display: flex;
+  flex-direction: column;
+}
 
 .profile__heading {
   width: 72px;
@@ -177,6 +180,9 @@
 }
 
 .profile__busines-tariff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
   margin-bottom: 40px;
   font-weight: 700;
