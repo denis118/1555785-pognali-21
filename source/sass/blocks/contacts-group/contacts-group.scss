@@ -77,7 +77,8 @@
 .contacts-group__svg {
   &--inline {
     position: absolute;
-    top: 950px;
+    // top: 950px;
+    top: 877px;
 
     @media (min-width: $desktop-width) {
       top: 1px;
@@ -141,7 +142,8 @@
   // }
 
   &--js {
-    top: 457px;
+    // top: 457px;
+    top: 384px;
   }
 
   &--scrolled {

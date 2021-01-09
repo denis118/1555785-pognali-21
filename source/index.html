@@ -9,7 +9,7 @@
 </head>
 
 <body class="page__body page__body--index zero-edges initial-z-index">
-  <header class="general-header general-header--index">
+  <!-- <header class="general-header general-header--index">
     <div class="container general-header__container">
       <a class="logo general-header__logo link">
         <picture>
@@ -250,9 +250,9 @@
         </ul>
       </div>
     </div>
-  </header>
+  </header> -->
 
-  <!-- <header class="general-header general-header--index">
+  <header class="general-header general-header--index">
     <div class="general-header__wrapper">
       <div
         class="container general-header__container general-header__container--upper">
@@ -311,9 +311,10 @@
               srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x" />
           </picture>
         </a>
-        <button class="general-header__toggle hidden-on-desktop" type="button">
-          <svg class="general-header__burger-svg hidden-entity" width="25"
-            height="11" xmlns="http://www.w3.org/2000/svg"
+        <button class="general-header__toggle hidden-on-desktop hidden-entity"
+          type="button">
+          <svg class="general-header__burger-svg" width="25" height="11"
+            xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 11"
             aria-label="Кнопка включения меню сайта">
             <rect class="general-header__burger-rect" width="25" height="3"
@@ -322,14 +323,14 @@
               x="0" y="8" rx="1.5" fill="#fff" />
           </svg>
           <svg
-            class="general-header__cross-svg general-header__cross-svg--mobile hidden-after-mobile"
+            class="general-header__cross-svg general-header__cross-svg--mobile hidden-after-mobile hidden-entity"
             width="19" height="20" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-label="Кнопка закрытия меню сайта">
             <use xlink:href="#cross-in-primary-layout-mobile"></use>
           </svg>
           <svg
-            class="general-header__cross-svg general-header__cross-svg--tablet hidden-except-tablet"
+            class="general-header__cross-svg general-header__cross-svg--tablet hidden-except-tablet hidden-entity"
             width="22" height="22" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-label="Кнопка закрытия меню сайта">
@@ -499,7 +500,7 @@
         </ul>
       </div>
     </div>
-  </header> -->
+  </header>
 
   <main class="general-main main initial-z-index">
     <h1 class="visually-hidden">
@@ -1445,7 +1446,36 @@
           </span>
         </p>
 
-        <form class="if-interested__form" action="#" method="GET">
+        <!-- placeholder="E-mail" -->
+        <form class="if-interested__form" action="#" method="GET"
+          id="index-form" novalidate>
+          <label class="if-interested__label" for="email">
+            <span class="visually-hidden">
+              Электронная почта
+            </span>
+            <input
+              class="if-interested__form-email joint-text-style joint-border-radius joint-border-radius--ten joint-border-radius--twenty"
+              type="email" name="email" id="email" placeholder="E-mail"
+              required />
+            <span
+              class="if-interested__error-message joint-text-style header hidden-entity"
+              id="error-message">
+              Введите e-mail
+            </span>
+          </label>
+          <button
+            class="button button--with-arrow button--more button--more-and-route button--with-pointer if-interested__form-submit joint-text-style hover-mode-bg-color active-mode-opacity active-mode-opacity--internal"
+            type="submit" id="submit">
+            <span class="visually-hidden">
+              Кнопка отправки адреса электронной почты
+            </span>
+            <span class="hidden-before-desktop">
+              Регистрация
+            </span>
+          </button>
+        </form>
+
+        <!-- <form class="if-interested__form" action="#" method="GET">
           <label class="visually-hidden" for="email">
             Электронная почта
           </label>
@@ -1463,7 +1493,8 @@
               Регистрация
             </span>
           </button>
-        </form>
+        </form> -->
+
         <p
           class="if-interested__main-text if-interested__main-text--3 main-text if-interested__main-text--element if-interested__main-text--element-3 main-text--wider zero-edges">
           <span class="if-interested__span if-interested__span--5">
@@ -1803,7 +1834,7 @@
     </symbol>
   </svg>
 
-  <script src="./js/app.js"></script>
+  <!-- <script src="./js/app.js"></script> -->
 </body>
 
 </html>
