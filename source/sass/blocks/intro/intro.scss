@@ -30,7 +30,7 @@
 
   &--common-position {
     position: absolute;
-    top: 385px;
+    top: 382px;
     z-index: 1;
   }
 }
@@ -97,19 +97,15 @@
 
 .intro__contacts-group {
   left: 0;
-
-  @media (min-width: $desktop-width) {
-    top: 1px;
-  }
 }
 
 .intro__authorization {
-  left: 80px;
-
-  // @media (min-width: $desktop-width) {
-  //   top: 0;
-  //   left: 0;
-  // }
+  @media (max-width: $mobile-width-only) {
+    left: 80px;
+    width: 190px;
+    height: 40px;
+    line-height: 20px;
+  }
 }
 
 .intro__quote {

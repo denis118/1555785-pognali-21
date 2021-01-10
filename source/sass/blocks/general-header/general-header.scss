@@ -78,8 +78,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    align-items: center;
+    @include grid-for-desktop;
+
+    grid-template-rows: min-content;
+    grid-template-areas: "logo navigation navigation buttons";
   }
 }
 
@@ -159,13 +161,16 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-left: 40px;
     display: flex;
     align-items: center;
+    position: relative;
 
     &::before {
       content: "";
-      display: block;
+      position: absolute;
+      top: 50%;
+      left: -105px;
+      transform: translateY(-50%);
       height: 2px;
       width: 60px;
       background-color: $lcg-1;
@@ -203,7 +208,7 @@
 .general-header__nav-item {
   &:first-child {
     @media (min-width: $desktop-width) {
-      margin-left: 45px;
+      margin-left: 0;
     }
   }
 
@@ -302,7 +307,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 397px;
+    grid-area: buttons;
+    justify-self: end;
   }
 }
 
@@ -318,6 +324,9 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
+    margin-left: -3px;
+    flex-direction: row;
+    grid-area: buttons;
   }
 }
 

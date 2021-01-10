@@ -43,9 +43,11 @@
     }
 
     & .contacts-group__svg-path {
-      &--initial {
-        opacity: 0.3;
-      }
+      // &--initial {
+      //   opacity: 0.3;
+      // }
+
+      opacity: 0.3;
     }
   }
 
@@ -79,7 +81,12 @@
 }
 
 .contacts-group__svg {
-  // &--inline {}
+  &--inline {
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
 
   &--inline-telephone {
     left: 0;
@@ -181,6 +188,8 @@
   // &--email {}
 
   // &--inline {}
+
+  // &--in-site-menu {}
 
   &--if-interested {
     color: $mcg-1;
