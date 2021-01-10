@@ -9,7 +9,7 @@
 </head>
 
 <body class="page__body page__body--index zero-edges">
-  <!-- <header class="general-header general-header--index">
+  <header class="general-header general-header--index">
     <div class="container general-header__container">
       <a class="logo general-header__logo link">
         <picture>
@@ -122,7 +122,7 @@
       </a>
       <div
         class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges">
-        <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--in-menu link zero-edges"
+        <a class="contacts-group__telephone contacts-group__contact link zero-edges"
           href="tel:88005558628">
           <span class="visually-hidden">
             Кнопка для звонка в сервис
@@ -158,11 +158,11 @@
               fill="#161C35" />
           </svg>
           <span
-            class="contacts-group__span contacts-group__span--telephone contacts-group__span--telephone-in-menu contacts-group--in-site-menu">
+            class="contacts-group__span contacts-group__span--telephone contacts-group--in-site-menu">
             8 800 555-86-28
           </span>
         </a>
-        <a class="contacts-group__email contacts-group__contact contacts-group__contact--in-menu link zero-edges"
+        <a class="contacts-group__email contacts-group__contact link zero-edges"
           href="mailto:mail@htmlacademy.ru">
           <span class="visually-hidden">
             Кнопка для отправки электронной почты
@@ -250,9 +250,9 @@
         </ul>
       </div>
     </div>
-  </header> -->
+  </header>
 
-  <header class="general-header general-header--index">
+  <!-- <header class="general-header general-header--index">
     <div class="general-header__wrapper">
       <div
         class="container general-header__container general-header__container--upper">
@@ -500,7 +500,7 @@
         </ul>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <main class="general-main main">
     <h1 class="visually-hidden">
@@ -1430,8 +1430,7 @@
           </span>
         </p>
 
-        <!-- placeholder="E-mail" -->
-        <form class="if-interested__form" action="#" method="GET"
+        <form class="if-interested__form" action="#" method="POST"
           id="index-form" novalidate>
           <label class="if-interested__label" for="email">
             <span class="visually-hidden">
@@ -1440,7 +1439,7 @@
             <input
               class="if-interested__form-email joint-text-style joint-border-radius joint-border-radius--ten joint-border-radius--twenty"
               type="email" name="email" id="email" placeholder="E-mail"
-              pattern="$+@+$" required />
+              required />
             <span
               class="if-interested__error-message joint-text-style header hidden-entity"
               id="error-message">
@@ -1458,26 +1457,6 @@
             </span>
           </button>
         </form>
-
-        <!-- <form class="if-interested__form" action="#" method="GET">
-          <label class="visually-hidden" for="email">
-            Электронная почта
-          </label>
-          <input
-            class="if-interested__form-email heading joint-text-style joint-border-radius joint-border-radius--ten joint-border-radius--twenty"
-            type="email" name="email" id="email" placeholder="E-mail"
-            required />
-          <button
-            class="button button--with-arrow button--more button--more-and-route button--with-pointer if-interested__form-submit joint-text-style hover-mode-bg-color active-mode-opacity active-mode-opacity--internal"
-            type="submit">
-            <span class="visually-hidden">
-              Кнопка отправки адреса электронной почты
-            </span>
-            <span class="hidden-before-desktop">
-              Регистрация
-            </span>
-          </button>
-        </form> -->
 
         <p
           class="if-interested__main-text if-interested__main-text--3 main-text if-interested__main-text--element if-interested__main-text--element-3 main-text--wider zero-edges">
