@@ -1,8 +1,8 @@
 .contacts-group {
-  &--in-site-menu {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
+  // &--in-site-menu {}
+
+  &--in-intro {
+    display: inline-flex;
   }
 
   &--if-interested {
@@ -48,6 +48,10 @@
       }
     }
   }
+
+  &--in-intro {
+    width: min-content;
+  }
 }
 
 .contacts-group__telephone {
@@ -75,17 +79,7 @@
 }
 
 .contacts-group__svg {
-  &--inline {
-    position: absolute;
-    // top: 950px;
-    top: 877px;
-
-    @media (min-width: $desktop-width) {
-      top: 1px;
-      width: 50px;
-      height: 50px;
-    }
-  }
+  // &--inline {}
 
   &--inline-telephone {
     left: 0;
@@ -186,9 +180,7 @@
 
   // &--email {}
 
-  &--inline {
-    display: none;
-  }
+  // &--inline {}
 
   &--if-interested {
     color: $mcg-1;

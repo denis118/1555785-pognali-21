@@ -1,6 +1,4 @@
 .intro {
-  position: relative;
-
   @media (min-width: $tablet-width) {
     background-color: $dcg-10;
     background-image: $traveller-bg-tablet, $globe-bg-tablet;
@@ -29,21 +27,50 @@
   &--common-margin {
     margin: 0 auto 0;
   }
+
+  &--common-position {
+    position: absolute;
+    top: 385px;
+    z-index: 1;
+  }
 }
 
-.intro__box-upper {
+.intro__box {
   width: 100%;
-  background-color: $dcg-2;
-  background-image: $traveller-bg-mobile, $globe-bg-mobile;
-  background-repeat: no-repeat, no-repeat;
-  // background-position: 76px 149px, center;
-  background-position: right 37% top 104%, center;
-  background-size: 200px 263px, cover;
 
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    background-image: none;
+  &--upper {
+    background-color: $dcg-2;
+    background-image: $traveller-bg-mobile, $globe-bg-mobile;
+    background-repeat: no-repeat, no-repeat;
+    // background-position: 76px 149px, center;
+    background-position: right 37% top 104%, center;
+    background-size: 200px 263px, cover;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      background-image: none;
+    }
   }
+
+  &--lower {
+    background-color: $dcg-6;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      position: static;
+    }
+  }
+}
+
+.intro__container {
+  &--upper {
+    @media (max-width: $mobile-width-only) {
+      position: relative;
+    }
+  }
+
+  // &--lower {}
 }
 
 .intro__slogan {
@@ -68,15 +95,21 @@
   }
 }
 
-.intro__box-lower {
-  width: 100%;
-  background-color: $dcg-6;
-  position: relative;
+.intro__contacts-group {
+  left: 0;
 
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    position: static;
+  @media (min-width: $desktop-width) {
+    top: 1px;
   }
+}
+
+.intro__authorization {
+  left: 80px;
+
+  // @media (min-width: $desktop-width) {
+  //   top: 0;
+  //   left: 0;
+  // }
 }
 
 .intro__quote {

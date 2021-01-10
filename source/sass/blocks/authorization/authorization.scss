@@ -12,9 +12,6 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    position: absolute;
-    left: 500px;
-    top: -92px;
     width: 188px;
     font-weight: 400;
     letter-spacing: 0.03em;
@@ -25,52 +22,12 @@
     line-height: 20px;
   }
 
-  @media (min-width: $desktop-width) {
-    position: relative;
-    background-color: transparent;
-  }
-
-  &::before {
-    @include centering-grid;
-    content: attr(data-text);
-    position: absolute;
-    left: 80px;
+  &--in-intro {
     width: 190px;
     height: 40px;
-    top: 877px;
-    line-height: inherit;
-    color: inherit;
-    background-color: inherit;
-    border-radius: inherit;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: grid;
-      top: 0;
-      left: 0;
-      height: inherit;
-      background-color: $mcg-1;
-    }
-  }
-
-  &--js {
-    &::before {
-      top: 384px;
-    }
   }
 }
 
-.authorization__text {
-  @media (min-width: $desktop-width) {
-    visibility: hidden;
-  }
-
-  &--js {
-    @media (max-width: $mobile-width-only) {
-      display: none;
-    }
-  }
-}
+// .authorization__text {
+//   &--js {}
+// }
