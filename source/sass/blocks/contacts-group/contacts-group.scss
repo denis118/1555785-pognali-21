@@ -1,6 +1,4 @@
 .contacts-group {
-  // &--in-site-menu {}
-
   &--in-intro {
     display: inline-flex;
   }
@@ -43,10 +41,6 @@
     }
 
     & .contacts-group__svg-path {
-      // &--initial {
-      //   opacity: 0.3;
-      // }
-
       opacity: 0.3;
     }
   }
@@ -89,12 +83,6 @@
   }
 
   &--inline-telephone {
-    left: 0;
-
-    @media (min-width: $desktop-width) {
-      left: 1031px;
-    }
-
     &:hover {
       & .contacts-group__svg-circle {
         fill: $mcg-10;
@@ -103,12 +91,6 @@
   }
 
   &--inline-mail {
-    left: 40px;
-
-    @media (min-width: $desktop-width) {
-      left: 1081px;
-    }
-
     &:hover {
       & .contacts-group__svg-circle {
         fill: $mcg-2;

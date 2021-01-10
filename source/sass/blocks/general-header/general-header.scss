@@ -25,13 +25,21 @@
   }
 
   &--js {
-    background-color: $dcg-10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &:not(.general-header--index) {
+      background-color: $dcg-10;
+    }
 
     @media (max-width: $mobile-width-only) {
+      min-height: 73px;
       max-height: 73px;
     }
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      min-height: 132px;
       max-height: 132px;
     }
   }
@@ -43,14 +51,12 @@
   }
 
   &--scrolled {
-    position: fixed;
-    width: 100%;
     background-color: $lcg-1;
 
     @media (min-width: $desktop-width) {
-      margin-top: 0;
-      padding-top: 17px;
-      padding-bottom: 13px;
+      padding-top: 20px;
+      padding-bottom: 9px;
+      box-sizing: border-box;
     }
   }
 }
@@ -184,6 +190,9 @@
       }
 
       &::before {
+        left: -89px;
+        width: 44px;
+        margin-top: -4px;
         background-color: $dcg-4;
       }
     }
@@ -327,6 +336,12 @@
     margin-left: -3px;
     flex-direction: row;
     grid-area: buttons;
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      margin-top: -8px;
+    }
   }
 }
 

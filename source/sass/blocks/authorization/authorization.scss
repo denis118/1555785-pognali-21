@@ -11,15 +11,22 @@
   color: $dcg-6;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    font-weight: 400;
-    letter-spacing: 0.03em;
-  }
+  // @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  //   font-weight: 400;
+  //   letter-spacing: 0.03em;
+  // }
 
   @media (min-width: $tablet-width) {
     width: 188px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &--modified {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
   }
 }
 
