@@ -12,6 +12,8 @@ const burger = toggle.querySelector(".general-header__burger-svg");
 const burgerRect = burger.querySelectorAll(".general-header__burger-rect");
 const crosses = toggle.querySelectorAll(".general-header__cross-svg");
 const navigation = generalHeader.querySelector(".general-header__site-navigation");
+const navItems = navigation.querySelectorAll(".general-header__nav-item");
+const navLinks = navigation.querySelectorAll(".general-header__nav-link");
 const authorization = generalHeader.querySelector(".general-header__authorization");
 const contactsGroup = generalHeader.querySelector(".general-header__contacts-group");
 const socials = generalHeader.querySelector(".general-header__socials");
@@ -19,66 +21,53 @@ const main = document.querySelector(".main");
 const email = document.querySelector("#email");
 const errorMessage = document.querySelector("#error-message");
 const submitButton = document.querySelector("#submit");
+const businesTariffsOpenningButton = document.querySelector(".profile__busines-tariffs");
+const businesTariffsClosingButton = document.querySelector(".busines-tariffs__close");
+const businesTariffs = document.querySelector(".busines-tariffs");
+
+const menuStateIndicator = {
+  isOpen: false,
+  isScrolled: false
+}
 
 jsMode();
-// window.addEventListener('resize', jsMode);
+window.addEventListener('resize', jsMode);
 window.addEventListener('scroll', scrollMode);
-// burger.addEventListener('click', openSiteMenu);
-// crosses.forEach(function (item) {
-//   item.addEventListener('click', closeSiteMenu);
-// });
 
-// submitButton.addEventListener('click', showErrorMessage);
-// email.addEventListener('click', hideErrorMessage);
-// email.addEventListener('blur', showPlaceholder);
+burger.addEventListener('click', openSiteMenu);
+crosses.forEach((item) => {
+  item.addEventListener('click', closeSiteMenu);
+});
 
-// function showErrorMessage(evt) {
-//   if (!email.checkValidity()) {
-//     evt.preventDefault();
-//     email.placeholder = '';
-//     email.value = '';
-//     errorMessage.classList.remove('hidden-entity');
-//   }
-// }
+navItems.forEach((item) => {
+  item.addEventListener('mouseenter', translateTextUp);
+  item.addEventListener('mouseleave', translateTextDown);
+});
 
-// function hideErrorMessage(evt) {
-//   evt.preventDefault();
-//   if (!errorMessage.classList.contains('hidden-entity')) {
-//     errorMessage.classList.add('hidden-entity');
-//   }
-// }
+submitButton.addEventListener('click', showErrorMessage);
+email.addEventListener('click', hideErrorMessage);
+email.addEventListener('blur', showPlaceholder);
 
-// function showPlaceholder() {
-//   email.placeholder = 'E-mail';
-// }
+businesTariffsOpenningButton.addEventListener("click", openBusinesTariffs);
+businesTariffsClosingButton.addEventListener("click", closeBusinesTariffs);
 
 function jsMode() {
-  // const elements = [
-  //   pageBody,
-  //   generalHeader,
-  //   container,
-  //   logoLink,
-  //   logoPrime,
-  //   logoAux,
-  //   toggle,
-  //   burger,
-  //   burgerRect,
-  //   crosses,
-  //   navigation,
-  //   authorization,
-  //   contactsGroup,
-  //   socials,
-  //   main
-  // ];
-
-  // console.log(elements);
+  screenWidth = document.documentElement.clientWidth;
 
   generalHeader.classList.add("general-header--js");
+
+  generalHeader.classList.add("general-header--bg-js");
+  if (generalHeader.classList.contains("general-header--index")) {
+    if (screenWidth > 1439) {
+      generalHeader.classList.remove("general-header--bg-js");
+    }
+  }
+
   main.classList.add("main--js");
 
   if (screenWidth < 1440) {
     if (generalHeader.classList.contains("general-header--index")) {
-      generalHeader.classList.add("general-header--index-js");
+      generalHeader.classList.add("general-header--index-bg-js");
     }
 
     logoAux.classList.remove("hidden-before-desktop");
@@ -92,6 +81,7 @@ function jsMode() {
       if (authorization.classList.contains("hidden-entity")) {
         authorization.classList.remove("hidden-entity");
       }
+
       authorization.classList.remove("authorization--modified");
     }
 
@@ -106,14 +96,39 @@ function jsMode() {
       item.classList.add("hidden-entity");
     });
   }
+
+  if (screenWidth > 1439) {
+    const elements = [
+      logoPrime,
+      navigation,
+      contactsGroup
+    ];
+
+    elements.forEach((item) => {
+      if (item.classList.contains("hidden-entity")) {
+        item.classList.remove("hidden-entity");
+      }
+    });
+  }
 }
 
 function scrollMode() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    generalHeader.classList.add("general-header--scrolled");
+    menuStateIndicator.isScrolled = true;
 
-    if (!logoAux.classList.contains("hidden-before-desktop")) {
-      logoAux.classList.add("hidden-before-desktop");
+    generalHeader.classList.remove("general-header--bg-js");
+    if (generalHeader.classList.contains("general-header--index-bg-js")) {
+      generalHeader.classList.remove("general-header--index-bg-js");
+    }
+
+    if (screenWidth > 1439) {
+      if (!generalHeader.classList.contains("general-header--scrolled")) {
+        generalHeader.classList.add("general-header--scrolled");
+      }
+    }
+
+    if (!logoAux.classList.contains("hidden-entity")) {
+      logoAux.classList.add("hidden-entity");
     }
 
     if (logoPrime.classList.contains("hidden-entity")) {
@@ -127,8 +142,6 @@ function scrollMode() {
     }
 
     if (screenWidth > 1439) {
-      logoAux.classList.add("hidden-entity");
-
       if (logoPrime.classList.contains("hidden-on-desktop")) {
         logoPrime.classList.remove("hidden-on-desktop");
       }
@@ -138,17 +151,35 @@ function scrollMode() {
     }
 
   } else {
-    generalHeader.classList.remove("general-header--scrolled");
+    menuStateIndicator.isScrolled = false;
 
-    if (logoAux.classList.contains("hidden-before-desktop")) {
-      logoAux.classList.remove("hidden-before-desktop");
+    if (!menuStateIndicator.isOpen) {
+      generalHeader.classList.add("general-header--bg-js");
+
+      if (generalHeader.classList.contains("general-header--index")) {
+        generalHeader.classList.add("general-header--index-bg-js");
+      }
     }
 
-    if (!logoPrime.classList.contains("hidden-entity")) {
-      logoPrime.classList.add("hidden-entity");
+    if (screenWidth > 1439) {
+      generalHeader.classList.remove("general-header--scrolled");
+
+      if (generalHeader.classList.contains("general-header--index")) {
+        generalHeader.classList.remove("general-header--bg-js");
+      }
     }
 
     if (screenWidth < 1440) {
+      if (!menuStateIndicator.isOpen) {
+        if (logoAux.classList.contains("hidden-entity")) {
+          logoAux.classList.remove("hidden-entity");
+        }
+
+        if (!logoPrime.classList.contains("hidden-entity")) {
+          logoPrime.classList.add("hidden-entity");
+        }
+      }
+
       burgerRect.forEach((item) => {
         item.classList.remove("general-header__burger-rect--scrolled");
       });
@@ -167,339 +198,163 @@ function scrollMode() {
   }
 }
 
+function openSiteMenu() {
+  if (screenWidth < 1440) {
+    menuStateIndicator.isOpen = true;
 
+    if (!menuStateIndicator.isScrolled) {
+      generalHeader.classList.remove("general-header--bg-js");
 
+      if (generalHeader.classList.contains("general-header--index-bg-js")) {
+        generalHeader.classList.remove("general-header--index-bg-js");
+      }
 
+      if (!logoAux.classList.contains("hidden-entity")) {
+        logoAux.classList.add("hidden-entity");
+      }
 
+      if (logoPrime.classList.contains("hidden-entity")) {
+        logoPrime.classList.remove("hidden-entity");
+      }
+    }
 
+    burger.classList.add("hidden-entity");
 
+    crosses.forEach((item) => {
+      item.classList.remove("hidden-entity");
+    });
 
+    if (authorization.classList.contains("hidden-entity")) {
+      authorization.classList.remove("hidden-entity");
+    }
 
+    if (screenWidth > 767) {
+      if (!authorization.classList.contains("authorization--modified")) {
+        authorization.classList.add("authorization--modified");
+      }
+    }
 
+    const hiddenElements = [
+      navigation,
+      contactsGroup,
+      socials
+    ];
 
+    hiddenElements.forEach((item) => {
+      if (item.classList.contains("hidden-entity")) {
+        item.classList.remove("hidden-entity");
+      }
+    });
+  }
+}
 
+function closeSiteMenu() {
+  if (screenWidth < 1440) {
+    menuStateIndicator.isOpen = false;
 
+    if (!menuStateIndicator.isScrolled) {
+      generalHeader.classList.add("general-header--bg-js");
 
+      if (generalHeader.classList.contains("general-header--index")) {
+        generalHeader.classList.add("general-header--index-bg-js");
+      }
 
+      if (logoAux.classList.contains("hidden-entity")) {
+        logoAux.classList.remove("hidden-entity");
+      }
 
+      if (!logoPrime.classList.contains("hidden-entity")) {
+        logoPrime.classList.add("hidden-entity");
+      }
+    }
 
+    burger.classList.remove("hidden-entity");
 
+    crosses.forEach((item) => {
+      item.classList.add("hidden-entity");
+    });
 
+    if (screenWidth < 768) {
+      if (!authorization.classList.contains("hidden-entity")) {
+        authorization.classList.add("hidden-entity");
+      }
+    }
 
+    if (screenWidth > 767) {
+      console.log("ok");
+      if (authorization.classList.contains("authorization--modified")) {
+        authorization.classList.remove("authorization--modified");
+      }
+    }
 
+    const hiddenElements = [
+      navigation,
+      contactsGroup,
+      socials
+    ];
 
+    hiddenElements.forEach((item) => {
+      if (!item.classList.contains("hidden-entity")) {
+        item.classList.add("hidden-entity");
+      }
+    });
+  }
+}
 
-
-// function jsMode() {
-//   const elements = [
-//     pageBody,
-//     generalHeader,
-//     wrapper,
-//     logoPrime,
-//     logoAux,
-//     toggle,
-//     burger,
-//     crosses,
-//     navigation,
-//     authorization,
-//     authorizationText,
-//     contactsGroup,
-//     initialContactIcons,
-//     inlineContactIcons,
-//     contactsContent,
-//     socials
-//   ];
-
-//   console.log(elements);
-
-//   if (screenWidth < 1440) {
-    // generalHeader.classList.add('general-header--js');
-
-    // if (generalHeader.classList.contains('general-header--index')) {
-    //   generalHeader.classList.add('general-header--index-js');
-    // }
-
-//     logoLink.classList.add('general-header__logo--js');
-//     logoAux.classList.remove('hidden-before-desktop');
-//     toggle.classList.remove('hidden-entity');
-//     toggle.classList.add('general-header__toggle--js');
-//     burger.classList.add('general-header__burger-svg--js');
-//     authorization.classList.add('authorization--js');
-//     authorizationText.classList.add('authorization__text--js');
-
-//     const hiddenElements = [
-//       logoPrime,
-//       navigation,
-//       socials
-//     ];
-
-//     hiddenElements.forEach(function (item) {
-//       item.classList.add('hidden-entity');
-//     });
-
-//     const collapsedElements = [
-//       authorization,
-//       contactsGroup
-//     ];
-
-//     collapsedElements.forEach(function (item) {
-//       item.classList.add('general-header__element');
-//       item.classList.add('general-header__element--js');
-//     });
-
-//     initialContactIcons.forEach(function (item) {
-//       item.classList.add('hidden-entity');
-//     });
-
-//     contactsContent.forEach(function (item) {
-//       item.classList.add('hidden-entity');
-//     });
-
-//     inlineContactIcons.forEach(function (item) {
-//       item.classList.add('contacts-group__svg--js');
-//     });
-//   }
-
-//   if (screenWidth > 1439) {
-//     if (authorization.classList.contains('authorization--js')) {
-//       generalHeader.classList.remove('authorization--js');
-//     }
-
-//     if (navigation.classList.contains('hidden-entity')) {
-//       navigation.classList.remove('hidden-entity');
-//     }
-
-//     if (contactsGroup.classList.contains('general-header__element')) {
-//       contactsGroup.classList.remove('general-header__element');
-//     }
-
-//     if (contactsGroup.classList.contains('general-header__element--js')) {
-//       contactsGroup.classList.remove('general-header__element--js');
-//     }
-
-//     // for creating turn-effect of site navigation text
-//     const navLinks = document.querySelectorAll('[data-nav-link]');
-//     const navItems = [];
-
-//     for (let i = 0; i < navLinks.length; i++) {
-//       let navItem = navLinks[i].closest('.general-header__nav-item');
-//       navItems.push(navItem);
-//       navItems[i].addEventListener('mouseenter', function (evt) {
-//         evt.preventDefault();
-//         navLinks[i].classList.remove('translate-down');
-//         navLinks[i].classList.add('translate-up');
-//       });
-
-//       navItems[i].addEventListener('mouseleave', function (evt) {
-//         evt.preventDefault();
-//         navLinks[i].classList.remove('translate-up');
-//         navLinks[i].classList.add('translate-down');
-//       });
-//     }
-//   }
-
-//   if (pageBody.classList.contains('page__body--index')) {
-//     const businesTariffs = document.querySelector('.busines-tariffs');
-//     const tariffsOpenning = document.querySelector('.profile__busines-tariff');
-//     const tariffsClosing = businesTariffs.querySelector('.busines-tariffs__close');
-
-//     tariffsOpenning.addEventListener('click', function (evt) {
-//       evt.preventDefault();
-//       businesTariffs.classList.remove('hidden-entity');
-//     });
-
-//     tariffsClosing.addEventListener('click', function (evt) {
-//       evt.preventDefault();
-//       businesTariffs.classList.add('hidden-entity');
-//     });
-//   }
-// }
-
-// function scrollMode() {
-  // if (screenWidth < 1440) {
-  //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-  //     generalHeader.classList.add('generalHeader--scrolled');
-  //     wrapper.classList.add('general-header__wrapper--scrolled');
-
-      // if (!logoAux.classList.contains('hidden-before-desktop')) {
-      //   logoAux.classList.add('hidden-before-desktop');
+function translateTextUp() {
+  if (screenWidth > 1439) {
+    navLinks.forEach((item) => {
+      // if (item.classList.contains("translate-down")) {
+      //   item.classList.remove("translate-down");
       // }
 
-      // if (logoPrime.classList.contains('hidden-entity')) {
-      //   logoPrime.classList.remove('hidden-entity');
+      item.classList.add("translate-up");
+    });
+  }
+}
+
+function translateTextDown() {
+  if (screenWidth > 1439) {
+    navLinks.forEach((item) => {
+      // if (item.classList.contains("translate-up")) {
+      //   item.classList.remove("translate-up");
       // }
 
-      // burgerRect.forEach(function (item) {
-      //   item.classList.add('general-header__burger-rect--scrolled');
-      // });
+      item.classList.add("translate-down");
+    });
+  }
+}
 
-//     } else {
-//       generalHeader.classList.remove('general-header--scrolled');
-//       wrapper.classList.remove('general-header__wrapper--scrolled');
+function showErrorMessage(evt) {
+  if (!email.checkValidity()) {
+    evt.preventDefault();
+    email.placeholder = '';
+    email.value = '';
+    errorMessage.classList.remove('hidden-entity');
+  }
+}
 
-//       if (!burger.classList.contains('hidden-entity')) {
-//         logoPrime.classList.add('hidden-entity');
-//         logoAux.classList.remove('hidden-before-desktop');
-//       }
+function hideErrorMessage(evt) {
+  evt.preventDefault();
+  if (!errorMessage.classList.contains('hidden-entity')) {
+    errorMessage.classList.add('hidden-entity');
+  }
+}
 
-//       burgerRect.forEach(function (item) {
-//         item.classList.remove('general-header__burger-rect--scrolled');
-//       });
-//     }
-//   }
+function showPlaceholder() {
+  email.placeholder = 'E-mail';
+}
 
-//   if (screenWidth > 1439) {
-//     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-//       generalHeader.classList.add('general-header--scrolled');
-//       logoAux.classList.add('hidden-entity');
+function openBusinesTariffs(evt) {
+  evt.preventDefault();
+  if (businesTariffs.classList.contains("hidden-entity")) {
+    businesTariffs.classList.remove("hidden-entity");
+  }
+}
 
-//       if (logoPrime.classList.contains('hidden-entity')) {
-//         logoPrime.classList.remove('hidden-entity');
-//       }
-//       logoPrime.classList.remove('hidden-on-desktop');
-
-//       if (navigation.classList.contains('hidden-entity')) {
-//         navigation.classList.remove('hidden-entity');
-//       }
-//       navigation.classList.add('general-header__site-navigation--scrolled');
-
-//       inlineContactIcons.forEach(function (item) {
-//         if (item.classList.contains('contacts-group__svg--js')) {
-//           item.classList.remove('contacts-group__svg--js');
-//         }
-//         item.classList.add('contacts-group__svg--scrolled');
-//       });
-
-//     } else {
-//       generalHeader.classList.remove('general-header--scrolled');
-//       logoAux.classList.remove('hidden-entity');
-//       logoPrime.classList.add('hidden-on-desktop');
-//       navigation.classList.remove('general-header__site-navigation--scrolled');
-//       inlineContactIcons.forEach(function (item) {
-//         item.classList.remove('contacts-group__svg--scrolled');
-//       });
-//     }
-//   }
-// }
-
-// function openSiteMenu() {
-//   generalHeader.classList.remove('general-header--js');
-
-//   if (generalHeader.classList.contains('general-header--index')) {
-//     generalHeader.classList.remove('general-header--index-js');
-//   }
-
-//   lowerContainer.classList.add('general-header__container--js');
-
-//   logoLink.classList.remove('general-header__logo--js');
-
-//   if (!logoAux.classList.contains('hidden-before-desktop')) {
-//     logoAux.classList.add('hidden-before-desktop');
-//   }
-
-//   burger.classList.add('hidden-entity');
-//   crosses.forEach(function (item) {
-//     item.classList.remove('hidden-entity');
-//   });
-//   authorization.classList.remove('authorization--js');
-//   authorizationText.classList.remove('authorization__text--js');
-
-//   const hiddenElements = [
-//     logoPrime,
-//     navigation,
-//     socials
-//   ];
-
-//   hiddenElements.forEach(function (item) {
-//     item.classList.remove('hidden-entity');
-//   });
-
-//   const collapsedElements = [
-//     authorization,
-//     contactsGroup
-//   ];
-
-//   collapsedElements.forEach(function (item) {
-//     item.classList.remove('general-header__element');
-//     item.classList.remove('general-header__element--js');
-//   });
-
-//   initialContactIcons.forEach(function (item) {
-//     item.classList.remove('hidden-entity');
-//   });
-
-//   contactsContent.forEach(function (item) {
-//     item.classList.remove('hidden-entity');
-//   });
-
-//   inlineContactIcons.forEach(function (item) {
-//     item.classList.remove('contacts-group__svg--js');
-//   });
-// }
-
-// function closeSiteMenu() {
-//   generalHeader.classList.add('general-header--js');
-
-//   if (generalHeader.classList.contains('general-header--index')) {
-//     generalHeader.classList.add('general-header--index-js');
-//   }
-
-//   if (!generalHeader.classList.contains('general-header--index')) {
-//     generalHeader.classList.add('general-header--index-js');
-//   }
-
-//   lowerContainer.classList.remove('general-header__container--js');
-
-//   logoLink.classList.add('general-header__logo--js');
-
-//   if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
-//     if (logoAux.classList.contains('hidden-before-desktop')) {
-//       logoAux.classList.remove('hidden-before-desktop');
-//     }
-//   }
-
-//   burger.classList.remove('hidden-entity');
-//   crosses.forEach(function (item) {
-//     item.classList.add('hidden-entity');
-//   });
-//   authorization.classList.add('authorization--js');
-//   authorizationText.classList.add('authorization__text--js');
-
-//   if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
-//     if (!logoPrime.classList.contains('hidden-entity')) {
-//       logoPrime.classList.add('hidden-entity');
-//     }
-//   }
-
-//   const hiddenElements = [
-//     // logoPrime,
-//     navigation,
-//     socials
-//   ];
-
-//   hiddenElements.forEach(function (item) {
-//     item.classList.add('hidden-entity');
-//   });
-
-//   const collapsedElements = [
-//     authorization,
-//     contactsGroup
-//   ];
-
-//   collapsedElements.forEach(function (item) {
-//     item.classList.add('general-header__element');
-//     item.classList.add('general-header__element--js');
-//   });
-
-//   initialContactIcons.forEach(function (item) {
-//     item.classList.add('hidden-entity');
-//   });
-
-//   contactsContent.forEach(function (item) {
-//     item.classList.add('hidden-entity');
-//   });
-
-//   inlineContactIcons.forEach(function (item) {
-//     item.classList.add('contacts-group__svg--js');
-//   });
-// }
+function closeBusinesTariffs(evt) {
+  evt.preventDefault();
+  if (!businesTariffs.classList.contains("hidden-entity")) {
+    businesTariffs.classList.add("hidden-entity");
+  }
+}
