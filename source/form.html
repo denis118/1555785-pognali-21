@@ -9,445 +9,342 @@
 </head>
 
 <body class="page__body page__body--form zero-edges">
-  <svg style="display: none;">
-    <!-- burger: width="25" height="11" -->
-    <symbol id="burger" viewBox="0 0 25 11">
-      <rect class="general-header__burger-rect" width="25" height="3" x="0"
-        y="0" rx="1.5" fill="#fff" />
-      <rect class="general-header__burger-rect" width="25" height="3" x="0"
-        y="8" rx="1.5" fill="#fff" />
-    </symbol>
-
-    <!-- cross-in-primary-layout-mobile: width="19" height="20" -->
-    <symbol id="cross-in-primary-layout-mobile" viewBox="0 0 19 20" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-      <rect width="23.8906" height="2.0318" rx="1.0159"
-        transform="matrix(0.69604 0.718003 -0.69604 0.718003 1.97168 0.988155)"
-        fill="#CCCCCC" />
-      <rect width="23.8906" height="2.0318" rx="1.0159"
-        transform="matrix(0.69604 -0.718003 0.69604 0.718003 -0.399414 17.754)"
-        fill="#CCCCCC" />
-    </symbol>
-
-    <!-- cross-in-primary-layout-tablet: width="22" height="22" -->
-    <symbol id="cross-in-primary-layout-tablet" viewBox="0 0 22 22" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-      <path d="M19.75 2.25L1.75 20.25" stroke="#CCCCCC" stroke-width="1.7"
-        stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7"
-        stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-
-    <!-- facebook-in-site-menu: width="11" height="21" -->
-    <symbol id="facebook-in-site-menu" viewBox="0 0 11 21">
-      <path
-        d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- facebook-in-footer: width="45" height="45" -->
-    <symbol id="facebook-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <path
-        d="M24.49 32.77h-5.36v-9.52H17v-4.7h2.07c-.16-2.14.23-3.7 1.2-4.76a4.88 4.88 0 013.6-1.5h3.75v4.54h-2.95a4.55 4.55 0 00-.2 1.71h3.14v4.71h-3.14l.02 9.52zm-4.17-1.1h2.97v-9.53h3.14v-2.47h-3.14v-.56c0-1.47 0-2.8.78-3.29l.15-.1h2.2V13.4H23.9a3.88 3.88 0 00-2.74 1.1c-.79.92-1.11 2.44-.87 4.54l.08.61h-2.2v2.5h2.15v9.51z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- vk-in-site-menu: width="23" height="12" -->
-    <symbol id="vk-in-site-menu" viewBox="0 0 23 12">
-      <path
-        d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- vk-in-footer: width="45" height="45" -->
-    <symbol id="vk-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <path
-        d="M28.77 28.85a3.02 3.02 0 01-1.55-.46c-.48-.32-.92-.7-1.32-1.13-.32-.32-.87-.87-1.07-.87-.21 0-.36.68-.35 1.16 0 .33-.12.65-.35.9-.26.2-.57.33-.9.36H21.8c-2.05-.04-4-.83-5.51-2.21-2.73-2.49-5.08-7.24-5.17-7.45a.98.98 0 01.1-1.09c.29-.23.65-.36 1.02-.35h3.12c.24.03.48.12.7.25.2.14.36.32.46.54.32.68.7 1.34 1.1 1.97.97 1.48 1.4 1.82 1.56 1.9.17-.7.22-1.42.14-2.13.03-.32-.03-.64-.15-.94a.99.99 0 00-.58-.21l-.54-.51c-.1-.49.44-.91.82-1.07a6.48 6.48 0 012.34-.28h.52a6.8 6.8 0 011.6.14c1.26.27 1.21 1.28 1.16 2.45 0 .34-.03.73-.03 1.2v.35c-.03.32-.01.64.06.95a6.72 6.72 0 001.54-1.83c.43-.65.8-1.34 1.13-2.06a1.17 1.17 0 011.18-.7h3.18c.1-.01.19-.01.28 0 .74 0 1.18.21 1.36.63.18.4.12 1.22-1.75 3.4l-.74.83c-.36.35-.67.74-.92 1.17.28.32.6.6.95.84.85.64 1.6 1.4 2.22 2.27a1.18 1.18 0 01.2 1.24 1.7 1.7 0 01-1.4.74l-2.81.03-.17-.03zm-3.94-3.57c.66 0 1.24.59 1.86 1.2.33.36.7.68 1.11.96.31.2.67.3 1.04.3h.07l2.82-.03c.14 0 .28-.04.4-.1l-.07-.12a9.78 9.78 0 00-1.99-2c-.88-.75-1.33-1.1-1.39-1.66-.05-.57.37-1.06 1.2-2l.74-.82a7.91 7.91 0 001.52-2.18 4.2 4.2 0 00-.5 0H28.4a.41.41 0 00-.18 0A15.1 15.1 0 0127 21.1c-1.4 2.08-2.06 2.36-2.53 2.36a.89.89 0 01-.41-.1c-.75-.43-.75-1.36-.7-2.04v-.32c0-.48 0-.9.03-1.25.06-1.24 0-1.24-.28-1.31a6.38 6.38 0 00-1.38-.12h-.5c-.48 0-.95.02-1.42.07l.19.19c.3.48.46 1.04.43 1.6.1 1.23.05 2.81-.74 3.2-.14.06-.29.1-.44.1-.7 0-1.38-.66-2.54-2.41-.45-.68-.85-1.38-1.2-2.1l-.05-.08a.9.9 0 00-.24-.08H12.2c.44.9 2.51 4.88 4.84 6.97 1.3 1.2 2.99 1.88 4.76 1.94h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.92 1.17-2.21.1-.04.19-.06.29-.08z"
-        fill="#192144" />
-    </symbol>
-
-    <!-- insta-in-site-menu: width="18" height="18" -->
-    <symbol id="insta-in-site-menu" viewBox="0 0 18 18">
-      <g opacity=".5" fill="#192144">
-        <path
-          d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z" />
-        <path
-          d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z" />
-      </g>
-    </symbol>
-
-    <!-- insta-in-footer: width="45" height="45" -->
-    <symbol id="insta-in-footer" viewBox="0 0 45 45">
-      <ellipse cx="22.5" cy="22.62" rx="22.5" ry="22.14" fill="#FFD74B" />
-      <g clip-path="url(#clip720)" fill="#192144">
-        <path
-          d="M26.96 16.03c.86 0 1.68.34 2.29.94.6.6.95 1.4.95 2.25v7.8c0 .84-.34 1.65-.95 2.24-.6.6-1.43.94-2.29.94h-7.92c-.86 0-1.68-.34-2.28-.94-.61-.6-.95-1.4-.95-2.25v-7.79c0-.84.34-1.65.95-2.25.6-.6 1.42-.93 2.28-.94h7.92zm0-1.06h-7.92c-1.15 0-2.24.45-3.05 1.25a4.22 4.22 0 00-1.27 3v7.8c0 1.12.46 2.2 1.27 3 .8.8 1.9 1.24 3.05 1.24h7.92c1.15 0 2.24-.45 3.05-1.24a4.22 4.22 0 001.27-3v-7.8c0-1.13-.46-2.2-1.27-3a4.36 4.36 0 00-3.05-1.25z" />
-        <path
-          d="M23 19.99a3.23 3.23 0 012.95 1.93 3.1 3.1 0 01-.69 3.42 3.2 3.2 0 01-5.44-2.22 3.08 3.08 0 01.93-2.22 3.19 3.19 0 012.26-.91zm0-1.07a4.32 4.32 0 00-3.94 2.6 4.14 4.14 0 00.92 4.57 4.3 4.3 0 007.29-2.97 4.13 4.13 0 00-1.25-2.97 4.27 4.27 0 00-3.01-1.23zM27.43 19.73c.53 0 .96-.42.96-.95a.96.96 0 00-.96-.95.96.96 0 00-.97.95c0 .53.44.95.97.95z" />
-      </g>
-      <defs>
-        <clipPath id="clip720">
-          <path fill="#fff" transform="translate(14 14.26)"
-            d="M0 0h18v17.71H0z" />
-        </clipPath>
-      </defs>
-    </symbol>
-
-    <!-- phone-in-row-contacts-group: width="40" height="40" -->
-    <symbol id="phone-in-row-contacts-group" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="20" fill="#FF8D30" />
-      <path
-        d="M19.77 19.22c0 .2.16.34.35.34.38 0 .7.32.7.7 0 .18.15.33.34.33.19 0 .34-.15.34-.33 0-.76-.62-1.37-1.38-1.37a.34.34 0 00-.35.33zm5.56 1.37c.2 0 .34-.15.34-.33 0-3.03-2.49-5.5-5.55-5.5a.34.34 0 00-.35.34c0 .19.16.34.35.34a4.85 4.85 0 014.87 4.82c0 .18.15.33.34.33z"
-        fill="#161C35" />
-      <path
-        d="M22.9 20.26c0 .18.16.33.35.33.18 0 .34-.15.34-.33 0-1.9-1.56-3.44-3.47-3.44a.34.34 0 00-.35.34c0 .2.16.34.35.34a2.78 2.78 0 012.78 2.76zm-2.78-7.56a.34.34 0 00-.35.34c0 .18.16.34.35.34a6.93 6.93 0 016.96 6.88c0 .18.15.33.34.33.19 0 .34-.15.34-.33a7.61 7.61 0 00-7.64-7.56zm3.33 11.11l-.45.24c-.75.41-1.34 1.53-2.27.69L18.3 22.3l-2.1-2.04c-1.06-1.34.13-1.65.54-2.4l.24-.44a2.57 2.57 0 00-.45-3.1c-.5-.49-1.16-.76-1.87-.76-.7 0-1.37.27-1.87.76l-.17.18c-.93.91-1.03 2.48-.3 4.42a16.39 16.39 0 003.88 5.67c2.77 2.73 5.85 4.31 8.06 4.31.88 0 1.62-.25 2.14-.77l.18-.17a2.6 2.6 0 000-3.7c-.82-.81-2.1-1-3.13-.45z"
-        fill="#161C35" />
-    </symbol>
-
-    <!-- mail-in-row-contacts-group: width="40" height="40" -->
-    <symbol id="mail-in-row-contacts-group" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="20" fill="#FFBD30" />
-      <path
-        d="M12.02 15.33l6.75 4.23c.22.14.52.2.81.2.3 0 .6-.06.82-.2l6.75-4.23c.44-.28.85-1.36.05-1.36H11.97c-.8 0-.4 1.08.05 1.36zm15.33 2.3l-6.95 4.24c-.3.18-.52.2-.82.2-.3 0-.5-.02-.81-.2l-6.92-4.23c-.35-.22-.35.03-.35.23v7.65c0 .45.5 1.05.9 1.05h14.4c.4 0 .9-.6.9-1.05v-7.65c0-.2 0-.45-.35-.23z"
-        fill="#161C35" />
-    </symbol>
-
-    <!-- html-acad-logo: width="27" height="34" -->
-    <symbol id="html-acad-logo" viewBox="0 0 27 34">
-      <path
-        d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"
-        fill="#192144" />
-    </symbol>
-  </svg>
-
   <header class="general-header general-header--form">
-    <div
-      class="general-header__auxiliary-layout general-header__layout hidden-on-mobile hidden-on-tablet">
+    <div class="container general-header__container">
+      <a class="logo general-header__logo link">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
+                ./img/logo/content/webp/logo-primary-desktop.webp    1x,
+                ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x
+              " />
+          <source media="(min-width: 1440px)" srcset="
+                ./img/logo/content/png/logo-primary-desktop.png    1x,
+                ./img/logo/content/png/logo-primary-desktop@2x.png 2x
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+                ./img/logo/content/webp/logo-primary-tablet.webp    1x,
+                ./img/logo/content/webp/logo-primary-tablet@2x.webp 2x
+              " />
+          <source media="(min-width: 768px)" srcset="
+                ./img/logo/content/png/logo-primary-tablet.png    1x,
+                ./img/logo/content/png/logo-primary-tablet@2x.png 2x
+              " />
+          <source type="image/webp" srcset="
+                ./img/logo/content/webp/logo-primary-mobile.webp    1x,
+                ./img/logo/content/webp/logo-primary-mobile@2x.webp 2x
+              " />
+          <img class="logo__image logo__image--primary hidden-on-desktop"
+            src="./img/logo/content/png/logo-primary-mobile.png" width="100"
+            height="15" alt="Логотип сайта"
+            srcset="./img/logo/content/png/logo-primary-mobile@2x.png 2x" />
+        </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
+                ./img/logo/content/webp/logo-auxiliary-desktop.webp    1x,
+                ./img/logo/content/webp/logo-auxiliary-desktop@2x.webp 2x
+              " />
+          <source media="(min-width: 1440px)" srcset="
+                ./img/logo/content/png/logo-auxiliary-desktop.png    1x,
+                ./img/logo/content/png/logo-auxiliary-desktop@2x.png 2x
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+                ./img/logo/content/webp/logo-auxiliary-tablet.webp    1x,
+                ./img/logo/content/webp/logo-auxiliary-tablet@2x.webp 2x
+              " />
+          <source media="(min-width: 768px)" srcset="
+                ./img/logo/content/png/logo-auxiliary-tablet.png    1x,
+                ./img/logo/content/png/logo-auxiliary-tablet@2x.png 2x
+              " />
+          <source type="image/webp" srcset="
+                ./img/logo/content/webp/logo-auxiliary-mobile.webp    1x,
+                ./img/logo/content/webp/logo-auxiliary-mobile@2x.webp 2x
+              " />
+          <img class="logo__image logo__image--auxiliary hidden-before-desktop"
+            src="./img/logo/content/png/logo-auxiliary-mobile.png" width="96"
+            height="15" alt="Логотип сайта"
+            srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x" />
+        </picture>
+      </a>
+      <button class="general-header__toggle hidden-on-desktop hidden-entity"
+        type="button">
+        <svg class="general-header__burger-svg" width="25" height="11"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 11"
+          aria-label="Кнопка включения меню сайта">
+          <rect class="general-header__burger-rect" width="25" height="3" x="0"
+            y="0" rx="1.5" fill="#fff" />
+          <rect class="general-header__burger-rect" width="25" height="3" x="0"
+            y="8" rx="1.5" fill="#fff" />
+        </svg>
+        <svg
+          class="general-header__cross-svg general-header__cross-svg--mobile hidden-after-mobile hidden-entity"
+          width="19" height="20" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-label="Кнопка закрытия меню сайта">
+          <use xlink:href="#cross-in-primary-layout-mobile"></use>
+        </svg>
+        <svg
+          class="general-header__cross-svg general-header__cross-svg--tablet hidden-except-tablet hidden-entity"
+          width="22" height="22" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-label="Кнопка закрытия меню сайта">
+          <use xlink:href="#cross-in-primary-layout-tablet"></use>
+        </svg>
+      </button>
+      <nav
+        class="general-header__site-navigation general-header--common-margin-left">
+        <ul class="general-header__nav-list list zero-edges">
+          <li class="general-header__nav-item">
+            <a class="general-header__nav-link link" href="#!"
+              data-nav-link="О сервисе">
+              О сервисе
+            </a>
+          </li>
+          <li class="general-header__nav-item">
+            <a class="general-header__nav-link link" href="./form.html"
+              data-nav-link="Направления">
+              Направления
+            </a>
+          </li>
+          <li class="general-header__nav-item">
+            <a class="general-header__nav-link link" href="./catalog.html"
+              data-nav-link="Попутчики">
+              Попутчики
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="authorization general-header__authorization link hover-mode-bg-color active-mode-opacity active-mode-opacity--internal"
+        href="#!">
+        <span class="authorization__text">
+          Авторизация
+        </span>
+      </a>
       <div
-        class="container container--thick general-header__container general-header__container--auxiliary flex flex--justification-between flex--alignment-center">
-        <a class="logo general-header__logo general-header__logo--auxiliary link"
-          href="./index.html">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)"
-              srcset="./img/logo/content/png/logo-primary-desktop.png 1x, ./img/logo/content/png/logo-primary-desktop@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="./img/logo/content/webp/logo-primary-tablet.webp 1x, ./img/logo/content/webp/logo-primary-tablet@2x.webp 2x">
-            <source media="(min-width: 768px)"
-              srcset="./img/logo/content/png/logo-primary-tablet.png 1x, ./img/logo/content/png/logo-primary-tablet@2x.png 2x">
-            <source type="image/webp"
-              srcset="./img/logo/content/webp/logo-primary-mobile.webp 1x, ./img/logo/content/webp/logo-primary-mobile@2x.webp 2x">
-            <img class="logo__image logo__image--primary hidden-entity"
-              src="./img/logo/content/png/logo-primary-mobile.png" width="100"
-              height="15" alt="Логотип сайта"
-              srcset="./img/logo/content/png/logo-primary-mobile@2x.png 2x">
-          </picture>
-
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="./img/logo/content/webp/logo-auxiliary-desktop.webp 1x, ./img/logo/content/webp/logo-auxiliary-desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)"
-              srcset="./img/logo/content/png/logo-auxiliary-desktop.png 1x, ./img/logo/content/png/logo-auxiliary-desktop@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="./img/logo/content/webp/logo-auxiliary-tablet.webp 1x, ./img/logo/content/webp/logo-auxiliary-tablet@2x.webp 2x">
-            <source media="(min-width: 768px)"
-              srcset="./img/logo/content/png/logo-auxiliary-tablet.png 1x, ./img/logo/content/png/logo-auxiliary-tablet@2x.png 2x">
-            <source type="image/webp"
-              srcset="./img/logo/content/webp/logo-auxiliary-mobile.webp 1x, ./img/logo/content/webp/logo-auxiliary-mobile@2x.webp 2x">
-            <img class="logo__image logo__image--auxiliary"
-              src="./img/logo/content/png/logo-auxiliary-mobile.png" width="96"
-              height="15" alt="Логотип сайта"
-              srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x">
-          </picture>
-        </a>
-
-        <button class="general-header__toggle general-header__toggle--burger"
-          type="button">
-          <span class="visually-hidden">Кнопка включения окна навигации</span>
-          <svg class="general-header__burger-svg" width="25" height="11">
-            <use xlink:href="#burger"></use>
+        class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges">
+        <a class="contacts-group__telephone contacts-group__contact link zero-edges"
+          href="tel:88005558628">
+          <svg
+            class="contacts-group__svg contacts-group__svg--initial contacts-group__svg--initial-telephone hidden-on-desktop"
+            width="45" height="45" viewBox="0 0 45 45" fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-label="Кнопка для звонка в сервис">
+            <circle
+              class="contacts-group__svg-circle contacts-group__svg-circle--initial contacts-group__svg-circle--initial-telephone"
+              cx="22.5" cy="22.5" r="22.5" fill="#121936" />
+            <path
+              class="contacts-group__svg-path contacts-group__svg-path--initial contacts-group__svg-path--initial-telephone"
+              fill-rule="evenodd" clip-rule="evenodd"
+              d="M22.5 15.09c-2.8 0-5.6.47-6.62 1.41-.84.78-1.12 2.16-1.22 3.04l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.63-.29.63-.63v-1.21c0-.38.33-.68.73-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04-1.02-.94-3.82-1.41-6.62-1.41zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V25.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77h-1.96zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47 2.55 2.55 0 012.62-2.47z"
+              fill="#FFD74B" />
           </svg>
-        </button>
-
-        <a class="authorization authorization--modified authorization--appearance general-header__authorization link grid grid--centering"
-          href="#!">Авторизация</a>
-
-        <nav
-          class="general-header__site-navigation general-header__site-navigation--auxiliary hidden-on-mobile hidden-on-tablet">
-          <ul
-            class="general-header__nav-list list zero-edges flex flex--columnar flex--justification-between flex--alignment-center">
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link link" href="#!">О сервисе</a>
-            </li>
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link link"
-                href="./form.html">Направления</a></li>
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link link"
-                href="./catalog.html">Попутчики</a></li>
-          </ul>
-        </nav>
-
-        <div
-          class="contacts-group contacts-group--row general-header__contacts-group zero-edges flex flex--justification-between hidden-on-mobile hidden-on-tablet">
-          <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center"
-            href="tel:88005558628">
-            <span class="visually-hidden">Кнопка для звонка в сервис</span>
-            <svg
-              class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone"
-              width="50" height="50">
-              <use xlink:href="#phone-in-row-contacts-group"></use>
-            </svg>
-            <span class="contacts-group__span contacts-group__span--row">8 800
-              555-86-28</span>
-          </a>
-          <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center"
-            href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">Кнопка для отправки электронной
-              почты</span>
-            <svg
-              class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail"
-              width="50" height="50">
-              <use xlink:href="#mail-in-row-contacts-group"></use>
-            </svg>
-            <span
-              class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
-          </a>
-          <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering"
-            href="#!">Авторизация</a>
-        </div>
+          <svg
+            class="contacts-group__svg contacts-group__svg--inline contacts-group__svg--inline-telephone hidden-before-desktop"
+            width="40" height="40" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"
+            aria-label="Кнопка для звонка в сервис по телефону 8 800 555-86-28">
+            <circle
+              class="contacts-group__svg-circle contacts-group__svg-circle--inline contacts-group__svg-circle--inline-telephone"
+              cx="20" cy="20" r="20" fill="#FF8D30" />
+            <path
+              class="contacts-group__svg-path contacts-group__svg-path--inline contacts-group__svg-path--inline-telephone"
+              d="M19.77 19.22c0 .2.16.34.35.34.38 0 .7.32.7.7 0 .18.15.33.34.33.19 0 .34-.15.34-.33 0-.76-.62-1.37-1.38-1.37a.34.34 0 00-.35.33zm5.56 1.37c.2 0 .34-.15.34-.33 0-3.03-2.49-5.5-5.55-5.5a.34.34 0 00-.35.34c0 .19.16.34.35.34a4.85 4.85 0 014.87 4.82c0 .18.15.33.34.33z"
+              fill="#161C35" />
+            <path
+              class="contacts-group__svg-path contacts-group__svg-path--inline contacts-group__svg-path--inline-telephone"
+              d="M22.9 20.26c0 .18.16.33.35.33.18 0 .34-.15.34-.33 0-1.9-1.56-3.44-3.47-3.44a.34.34 0 00-.35.34c0 .2.16.34.35.34a2.78 2.78 0 012.78 2.76zm-2.78-7.56a.34.34 0 00-.35.34c0 .18.16.34.35.34a6.93 6.93 0 016.96 6.88c0 .18.15.33.34.33.19 0 .34-.15.34-.33a7.61 7.61 0 00-7.64-7.56zm3.33 11.11l-.45.24c-.75.41-1.34 1.53-2.27.69L18.3 22.3l-2.1-2.04c-1.06-1.34.13-1.65.54-2.4l.24-.44a2.57 2.57 0 00-.45-3.1c-.5-.49-1.16-.76-1.87-.76-.7 0-1.37.27-1.87.76l-.17.18c-.93.91-1.03 2.48-.3 4.42a16.39 16.39 0 003.88 5.67c2.77 2.73 5.85 4.31 8.06 4.31.88 0 1.62-.25 2.14-.77l.18-.17a2.6 2.6 0 000-3.7c-.82-.81-2.1-1-3.13-.45z"
+              fill="#161C35" />
+          </svg>
+          <span
+            class="contacts-group__span contacts-group__span--telephone hidden-on-desktop">
+            8 800 555-86-28
+          </span>
+        </a>
+        <a class="contacts-group__email contacts-group__contact link zero-edges"
+          href="mailto:mail@htmlacademy.ru">
+          <svg
+            class="contacts-group__svg contacts-group__svg--initial contacts-group__svg--initial-mail hidden-on-desktop"
+            width="45" height="45" viewBox="0 0 45 45" fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-label="Кнопка для отправки электронной почты">
+            <circle
+              class="contacts-group__svg-circle contacts-group__svg-circle--initial contacts-group__svg-circle--initial-mail"
+              cx="22.5" cy="22.5" r="22.5" fill="#121936" />
+            <path
+              class="contacts-group__svg-path contacts-group__svg-path--initial contacts-group__svg-path--initial-mail"
+              fill-rule="evenodd" clip-rule="evenodd"
+              d="M30.14 27.47L25.8 23.5l4.33-3.97-.6-.63-6.29 5.77-6.3-5.77-.59.63 4.33 3.97-4.33 3.97.6.63 4.37-4.01 1.92 1.75 1.92-1.75 4.38 4 .59-.62zM15.58 17.25c-.81 0-1.47.7-1.47 1.56v9.38c0 .86.65 1.56 1.47 1.56h15.34c.81 0 1.47-.7 1.47-1.56v-9.38c0-.86-.65-1.56-1.47-1.56H15.58z"
+              fill="#FFD74B" />
+          </svg>
+          <svg
+            class="contacts-group__svg contacts-group__svg--inline contacts-group__svg--inline-mail hidden-before-desktop"
+            width="40" height="40" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"
+            aria-label="Кнопка для отправки электронной почты по адресу mail@htmlacademy.ru">
+            <circle
+              class="contacts-group__svg-circle contacts-group__svg-circle--inline contacts-group__svg-circle--inline-mail"
+              cx="20" cy="20" r="20" fill="#FFBD30" />
+            <path
+              class="contacts-group__svg-path contacts-group__svg-path--inline contacts-group__svg-path--inline-mail"
+              d="M12.02 15.33l6.75 4.23c.22.14.52.2.81.2.3 0 .6-.06.82-.2l6.75-4.23c.44-.28.85-1.36.05-1.36H11.97c-.8 0-.4 1.08.05 1.36zm15.33 2.3l-6.95 4.24c-.3.18-.52.2-.82.2-.3 0-.5-.02-.81-.2l-6.92-4.23c-.35-.22-.35.03-.35.23v7.65c0 .45.5 1.05.9 1.05h14.4c.4 0 .9-.6.9-1.05v-7.65c0-.2 0-.45-.35-.23z"
+              fill="#161C35" />
+          </svg>
+          <span
+            class="contacts-group__span contacts-group__span--email hidden-on-desktop">
+            mail@htmlacademy.ru
+          </span>
+        </a>
       </div>
-    </div>
-
-    <div
-      class="general-header__primary-layout general-header__layout hidden-on-desktop">
       <div
-        class="container container--thick general-header__container general-header__container--primary">
-        <div
-          class="general-header__primary-layout-wrapper flex flex--justification-between flex--alignment-center">
-          <a class="logo general-header__logo general-header__logo--primary link"
-            href="./index.html">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/logo/content/webp/logo-primary-desktop.webp 1x, ./img/logo/content/webp/logo-primary-desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
-                srcset="./img/logo/content/png/logo-primary-desktop.png 1x, ./img/logo/content/png/logo-primary-desktop@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/logo/content/webp/logo-primary-tablet.webp 1x, ./img/logo/content/webp/logo-primary-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/logo/content/png/logo-primary-tablet.png 1x, ./img/logo/content/png/logo-primary-tablet@2x.png 2x">
-              <source type="image/webp"
-                srcset="./img/logo/content/webp/logo-primary-mobile.webp 1x, ./img/logo/content/webp/logo-primary-mobile@2x.webp 2x">
-              <img class="logo__image logo__image--primary"
-                src="./img/logo/content/png/logo-primary-mobile.png" width="100"
-                height="15" alt="Логотип сайта"
-                srcset="./img/logo/content/png/logo-primary-mobile@2x.png 2x">
-            </picture>
-
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/logo/content/webp/logo-auxiliary-desktop.webp 1x, ./img/logo/content/webp/logo-auxiliary-desktop@2x.webp 2x">
-              <source media="(min-width: 1440px)"
-                srcset="./img/logo/content/png/logo-auxiliary-desktop.png 1x, ./img/logo/content/png/logo-auxiliary-desktop@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/logo/content/webp/logo-auxiliary-tablet.webp 1x, ./img/logo/content/webp/logo-auxiliary-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/logo/content/png/logo-auxiliary-tablet.png 1x, ./img/logo/content/png/logo-auxiliary-tablet@2x.png 2x">
-              <source type="image/webp"
-                srcset="./img/logo/content/webp/logo-auxiliary-mobile.webp 1x, ./img/logo/content/webp/logo-auxiliary-mobile@2x.webp 2x">
-              <img class="logo__image logo__image--auxiliary hidden-entity"
-                src="./img/logo/content/png/logo-auxiliary-mobile.png"
-                width="96" height="15" alt="Логотип сайта"
-                srcset="./img/logo/content/png/logo-auxiliary-mobile@2x.png 2x">
-            </picture>
-          </a>
-
-          <button
-            class="general-header__toggle general-header__toggle--cross hidden-entity"
-            type="button">
-            <span class="visually-hidden">Кнопка закрытия окна навигации</span>
-            <svg
-              class="general-header__cross-svg hidden-on-tablet hidden-on-desktop"
-              width="19" height="20">
-              <use xlink:href="#cross-in-primary-layout-mobile"></use>
-            </svg>
-            <svg
-              class="general-header__cross-svg hidden-on-mobile hidden-on-desktop"
-              width="22" height="22">
-              <use xlink:href="#cross-in-primary-layout-tablet"></use>
-            </svg>
-          </button>
-
-          <a class="authorization authorization--modified authorization--in-site-menu authorization--appearance general-header__authorization link grid grid--centering"
-            href="#!">Авторизация</a>
-        </div>
-
-        <nav
-          class="general-header__site-navigation general-header__site-navigation--primary general-header--common-margin-left">
-          <ul
-            class="general-header__nav-list list zero-edges flex flex--columnar flex--justification-between flex--alignment-center">
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link general-header__nav-link--desktop-prime link"
-                href="#!">О сервисе</a></li>
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link general-header__nav-link--desktop-prime link"
-                href="./form.html">Направления</a></li>
-            <li class="general-header__nav-item"><a
-                class="general-header__nav-link general-header__nav-link--desktop-prime link"
-                href="./catalog.html">Попутчики</a></li>
-          </ul>
-        </nav>
-
-        <div
-          class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges flex flex--columnar flex--justification-between hidden-on-desktop">
-          <a class="contacts-group__telephone contacts-group__telephone--in-site-menu contacts-group__contact link flex flex--alignment-center"
-            href="tel:88005558628">
-            <span class="visually-hidden">Кнопка для звонка в сервис</span>
-            <svg class="contacts-group__svg contacts-group__svg--telephone"
-              width="50" height="50">
-              <use xlink:href="#phone-in-row-contacts-group"></use>
-            </svg>
-            <span class="contacts-group__span">8 800 555-86-28</span>
-          </a>
-          <a class="contacts-group__email contacts-group__contact link flex flex--alignment-center"
-            href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">Кнопка для отправки электронной
-              почты</span>
-            <svg class="contacts-group__svg contacts-group__svg--mail"
-              width="50" height="50">
-              <use xlink:href="#mail-in-row-contacts-group"></use>
-            </svg>
-            <span class="contacts-group__span">mail@htmlacademy.ru</span>
-          </a>
-          <a class="authorization authorization--appearance-with-contacts contacts-group__authorization link grid grid--centering"
-            href="#!">Авторизация</a>
-        </div>
-
-        <div
-          class="contacts-group contacts-group--row general-header__contacts-group zero-edges flex flex--justification-between hidden-on-mobile hidden-on-tablet">
-          <a class="contacts-group__telephone contacts-group__contact contacts-group__contact--row contacts-group__telephone--row link zero-edges flex flex--alignment-center"
-            href="tel:88005558628">
-            <span class="visually-hidden">Кнопка для звонка в сервис</span>
-            <svg
-              class="contacts-group__svg contacts-group__svg--row contacts-group__svg--telephone"
-              width="50" height="50">
-              <use xlink:href="#phone-in-row-contacts-group"></use>
-            </svg>
-            <span class="contacts-group__span contacts-group__span--row">8 800
-              555-86-28</span>
-          </a>
-          <a class="contacts-group__email contacts-group__contact contacts-group__contact--row contacts-group__email--row link zero-edges flex flex--alignment-center"
-            href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">Кнопка для отправки электронной
-              почты</span>
-            <svg
-              class="contacts-group__svg contacts-group__svg--row contacts-group__svg--mail"
-              width="50" height="50">
-              <use xlink:href="#mail-in-row-contacts-group"></use>
-            </svg>
-            <span
-              class="contacts-group__span contacts-group__span--row">mail@htmlacademy.ru</span>
-          </a>
-          <a class="authorization authorization--modified contacts-group__authorization contacts-group__authorization--row link grid grid--centering"
-            href="#!">Авторизация</a>
-        </div>
-
-        <div
-          class="socials socials--in-site-menu socials--tablet-left general-header__socials flex flex--justification-center flex--alignment-center hidden-on-desktop">
-          <ul
-            class="socials__list list zero-edges flex flex--justification-center flex--alignment-center">
-            <li class="socials__item socials__item--facebook">
-              <a class="socials__link link" href="#!">
-                <span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span>
-                <svg class="socials__svg socials__svg--facebook" width="11"
-                  height="21">
-                  <use xlink:href="#facebook-in-site-menu"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item socials__item--vk">
-              <a class="socials__link link" href="#!">
-                <span class="visually-hidden">Ссылка на аккаунт в
-                  ВКонтакте</span>
-                <svg class="socials__svg socials__svg--vk" width="23"
-                  height="12">
-                  <use xlink:href="#vk-in-site-menu"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item socials__item--insta">
-              <a class="socials__link link" href="#!">
-                <span class="visually-hidden">Ссылка на аккаунт в
-                  Инстаграм</span>
-                <svg class="socials__svg socials__svg--insta" width="18"
-                  height="18">
-                  <use xlink:href="#insta-in-site-menu"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        class="socials socials--in-site-menu socials--tablet-left general-header__socials hidden-on-desktop">
+        <ul class="socials__list socials__list--in-site-menu list zero-edges">
+          <li class="socials__item socials__item--facebook">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в Фейсбук
+              </span>
+              <svg
+                class="socials__svg socials__svg--facebook socials__svg--in-site-menu"
+                width="11" height="21" viewBox="0 0 11 21">
+                <path class="socials__svg-path"
+                  d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"
+                  fill="#192144" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item socials__item--vk">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в ВКонтакте
+              </span>
+              <svg
+                class="socials__svg socials__svg--vk socials__svg--in-site-menu"
+                width="23" height="12" viewBox="0 0 23 12">
+                <path class="socials__svg-path"
+                  d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"
+                  fill="#192144" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item socials__item--insta">
+            <a class="socials__link socials__link--in-site-menu link" href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в Инстаграм
+              </span>
+              <svg
+                class="socials__svg socials__svg--insta socials__svg--in-site-menu"
+                width="18" height="18" viewBox="0 0 18 18">
+                <g opacity=".5" fill="#192144">
+                  <path class="socials__svg-path"
+                    d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z" />
+                  <path class="socials__svg-path"
+                    d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z" />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="general-header__lining hidden-entity"></div>
   </header>
 
-  <!-- <div class="page__lining invisible"></div> -->
-
   <main class="form-main main">
-    <h1 class="form-main__heading heading heading--level-1">Направления</h1>
+    <h1 class="form-main__heading heading heading--level-1">
+      Направления
+    </h1>
     <form class="plans-form form-main__plans-form"
       action="https://echo.htmlacademy.ru" method="POST" id="plans-making-form">
-      <h2 class="visually-hidden">Форма для планирования поездки</h2>
+      <h2 class="visually-hidden">
+        Форма для планирования поездки
+      </h2>
 
       <section class="user-basic-info plans-form__user-basic-info">
-        <div class="container container--slim user-basic-info__container">
-          <h3 class="visually-hidden">Общие сведения о пользователе</h3>
+        <div class="container user-basic-info__container">
+          <h3 class="visually-hidden">
+            Общие сведения о пользователе
+          </h3>
 
           <div
-            class="circle-bar user-basic-info__level user-basic-info--positioned-absolutely flex flex--columnar flex--alignment-center">
+            class="circle-bar user-basic-info__level user-basic-info--positioned-absolutely">
             <div class="circle-bar__box">
               <svg class="circle-bar__svg-container image">
                 <circle
                   class="circle-bar__svg-circle circle-bar__svg-circle--diomin"
-                  r="30" cx="25" cy="25"></circle>
+                  r="30" cx="25" cy="25">
+                </circle>
               </svg>
               <div class="circle-bar__text-box">
                 <p
                   class="circle-bar__level-number circle-bar__text-box--member">
-                  80</p>
+                  80
+                </p>
                 <p class="circle-bar__level-text circle-bar__text-box--member">
-                  level</p>
+                  level
+                </p>
               </div>
             </div>
           </div>
 
-          <a class="avatar user-basic-info__avatar user-basic-info--positioned-absolutely link"
+          <!-- <a class="avatar user-basic-info__avatar user-basic-info--positioned-absolutely link"
             href="#!">
             <img class="avatar__photo avatar__photo--form image"
               src="https://via.placeholder.com/270x270" width="100" height="100"
               alt="Фото Пети Демина на фоне заснеженного склона">
+          </a> -->
+
+          <a class="avatar user-basic-info__avatar link" href="#!">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="
+                    ./img/avatar/content/webp/form/demin-form-desktop.webp   1x,
+                    ./img/avatar/content/webp/form/demin-form-desktop@2x.webp 2x
+                  " />
+              <source media="(min-width: 1440px)" srcset="
+                    ./img/avatar/content/png/form/demin-form-desktop.png    1x,
+                    ./img/avatar/content/png/form/demin-form-desktop@2x.png 2x
+                  " />
+              <source type="image/webp" media="(min-width: 768px)" srcset="
+                    ./img/avatar/content/webp/form/demin-form-tablet.webp    1x,
+                    ./img/avatar/content/webp/form/demin-form-tablet@2x.webp 2x
+                  " />
+              <source media="(min-width: 768px)" srcset="
+                    ./img/avatar/content/png/form/demin-form-tablet.png    1x,
+                    ./img/avatar/content/png/form/demin-form-tablet@2x.png 2x
+                  " />
+              <source type="image/webp" srcset="
+                    ./img/avatar/content/webp/form/demin-form-mobile.webp   1x,
+                    ./img/avatar/content/webp/form/demin-form-mobile@2x.webp 2x
+                  " />
+              <img class="avatar__photo image"
+                src="./img/avatar/content/png/form/demin-form-mobile.png"
+                width="100" height="100"
+                alt="Фото Пети Демина на фоне заснеженного склона"
+                srcset="./img/avatar/content/png/form/demin-form-mobile@2x.png 2x" />
+            </picture>
           </a>
 
           <a class="button button--change-photo button--roll-and-change user-basic-info__button user-basic-info--positioned-absolutely link"
-            href="#!">Сменить фото</a>
+            href="#!">
+            Сменить фото
+          </a>
 
           <div class="user-basic-info__hashtags">
             <label
               class="user-basic-info__hashtags-label user-basic-info--text-style"
-              for="hashtags">Тэги</label>
+              for="hashtags">
+              Тэги
+            </label>
             <textarea class="user-basic-info__textarea" name="hashtags"
-              id="hashtags" cols="26"
-              rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
+              id="hashtags" cols="26" rows="2">
+              #бургер #бар #футбол #концерт #крафт
+            </textarea>
           </div>
 
-          <fieldset
-            class="user-basic-info__fieldset flex flex--justification-center flex--alignment-center">
+          <fieldset class="user-basic-info__fieldset">
             <legend class="user-basic-info__legend user-basic-info--text-style">
-              Транспорт</legend>
+              Транспорт
+            </legend>
             <div class="user-transport user-basic-info__user-transport">
               <input class="visually-hidden" type="checkbox" name="aircraft"
                 id="aircraft" checked>
@@ -534,34 +431,43 @@
       </section>
 
       <section class="user-plans plans-form__user-plans">
-        <div class="container container--slim">
+        <div class="container">
           <h3
             class="user-plans__heading heading heading--level-2 heading--level-2-form">
-            Мои планы:</h3>
+            Мои планы:
+          </h3>
 
           <ol class="user-plans__list list zero-edges zero-edges">
             <li class="user-plans__item under-layer">
-              <p class="user-plans__countries-to-visit zero-edges">Франция,
-                Италия</p>
+              <p class="user-plans__countries-to-visit zero-edges">
+                Франция, Италия
+              </p>
               <p
                 class="user-plans__companions-number user-plans--common-justification user-plans--text-style-one">
-                3 попутчика</p>
+                3 попутчика
+              </p>
               <p
                 class="user-plans__travel-period user-plans--common-justification user-plans--text-style-one">
-                26 мар — 29 мар</p>
+                26 мар — 29 мар
+              </p>
               <a class="button button--modify-plan user-plans__button link"
-                href="#!">Изменить</a>
+                href="#!">
+                Изменить
+              </a>
             </li>
 
             <li class="user-plans__item under-layer">
-              <p class="user-plans__countries-to-visit zero-edges">Тайланд,
-                Индонезия</p>
+              <p class="user-plans__countries-to-visit zero-edges">
+                Тайланд, Индонезия
+              </p>
               <p
                 class="user-plans__companions-number user-plans--common-justification user-plans--text-style-one">
-                1 попутчик</p>
+                1 попутчик
+              </p>
               <p
                 class="user-plans__travel-period user-plans--common-justification user-plans--text-style-one">
-                1 июл — 15 июл</p>
+                1 июл — 15 июл
+              </p>
               <a class="button button--modify-plan user-plans__button link"
                 href="#!">Изменить</a>
             </li>
@@ -570,60 +476,72 @@
       </section>
 
       <section class="add-plan plans-form__add-plan">
-        <div class="container container--slim">
+        <div class="container">
           <h3
             class="add-plan__heading heading heading--level-2 heading--level-2-form">
-            Добавить план:</h3>
+            Добавить план:
+          </h3>
 
           <ol
             class="step-indicator step-indicator--initial add-plan__step-indicator list zero-edges">
             <li
-              class="step-indicator__step step-indicator__step--1 step-indicator__step--active flex flex--justification-between flex--alignment-center flex flex--justification-between flex--alignment-center">
-              <span class="step-indicator__step-text">Даты</span></li>
-            <li
-              class="step-indicator__step step-indicator__step--2 flex flex--justification-between flex--alignment-center">
-              <span class="step-indicator__step-text">Маршрут</span></li>
-            <li
-              class="step-indicator__step add-plan__step--3 flex flex--justification-between flex--alignment-center">
-              <span class="step-indicator__step-text">Развлечения</span></li>
+              class="step-indicator__step step-indicator__step--1 step-indicator__step--active">
+              <span class="step-indicator__step-text">
+                Даты
+              </span>
+            </li>
+            <li class="step-indicator__step step-indicator__step--2">
+              <span class="step-indicator__step-text">
+                Маршрут
+              </span>
+            </li>
+            <li class="step-indicator__step add-plan__step--3">
+              <span class="step-indicator__step-text">
+                Развлечения
+              </span>
+            </li>
           </ol>
 
-          <!-- <div class="step-indicator add-plan__step-indicator">
-              <p class="add-plan__step add-plan__step--1 add-plan__step--active"><span class="add-plan__step-text">Даты</span></p>
-              <p class="add-plan__step add-plan__step--2 flex flex--justification-between flex--alignment-center"><span class="add-plan__step-text">Маршрут</span></p>
-              <p class="add-plan__step add-plan__step--3 flex flex--justification-between flex--alignment-center"><span class="add-plan__step-text">Развлечения</span></p>
-            </div> -->
-
-          <fieldset
-            class="add-plan__fieldset under-layer flex flex--columnar flex--alignment-center"
-            id="step-1">
-            <legend class="add-plan__legend">Шаг 1.<br>Даты пребывания</legend>
+          <fieldset class="add-plan__fieldset under-layer" id="step-1">
+            <legend class="add-plan__legend">
+              Шаг 1.<br>Даты пребывания
+            </legend>
             <div class="add-plan__box">
               <ol
                 class="step-indicator step-indicator--desktop add-plan__step-indicator list">
                 <li
-                  class="step-indicator__step step-indicator__step--1 step-indicator__step--active flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Даты</span></li>
-                <li
-                  class="step-indicator__step step-indicator__step--2 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Маршрут</span></li>
-                <li
-                  class="step-indicator__step add-plan__step--3 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Развлечения</span>
+                  class="step-indicator__step step-indicator__step--1 step-indicator__step--active">
+                  <span class="step-indicator__step-text">
+                    Даты
+                  </span>
+                </li>
+                <li class="step-indicator__step step-indicator__step--2">
+                  <span class="step-indicator__step-text">
+                    Маршрут
+                  </span>
+                </li>
+                <li class="step-indicator__step add-plan__step--3">
+                  <span class="step-indicator__step-text">
+                    Развлечения
+                  </span>
                 </li>
               </ol>
 
-              <p class="main-text add-plan__main-text">Укажите предпочтительное
-                количество попутчиков, которых вы хотели бы позвать в поездку и
-                ее предполагаемую длительность.</p>
+              <p class="main-text add-plan__main-text">
+                Укажите предпочтительное количество попутчиков, которых вы
+                хотели бы позвать в поездку и
+                ее предполагаемую длительность.
+              </p>
 
               <div
-                class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount flex">
+                class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount flex flex--justification-between flex--alignment-center"
-                  for="fellow-travelers-amount">Ищу попутчиков:</label>
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount"
+                  for="fellow-travelers-amount">
+                  Ищу попутчиков:
+                </label>
                 <p
-                  class="add-plan__main-parameters add-plan__main-parameters--companions-amount add-plan--border-with-radius flex flex--justification-between flex--alignment-center">
+                  class="add-plan__main-parameters add-plan__main-parameters--companions-amount add-plan--border-with-radius">
                   <button
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-companion"
@@ -656,12 +574,14 @@
               </div>
 
               <div
-                class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time flex">
+                class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration flex flex--justification-between flex--alignment-center"
-                  for="travel-duration">Длительность:</label>
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration"
+                  for="travel-duration">
+                  Длительность:
+                </label>
                 <p
-                  class="add-plan__main-parameters add-plan__main-parameters--travel-time add-plan--border-with-radius flex flex--justification-between flex--alignment-center">
+                  class="add-plan__main-parameters add-plan__main-parameters--travel-time add-plan--border-with-radius">
                   <button
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-day"
@@ -696,15 +616,17 @@
               <input class="visually-hidden" type="checkbox" name="children"
                 id="width-children" checked>
               <label class="add-plan__label add-plan__label--children"
-                for="width-children">Можно с детьми</label>
+                for="width-children">
+                Можно с детьми
+              </label>
 
               <div class="calendar add-plan__calendar">
-                <div
-                  class="calendar__month flex flex--justification-between flex--alignment-center">
-                  <a class="calendar__switch-month calendar__switch-month--previous link grid grid--centering"
+                <div class="calendar__month">
+                  <a class="calendar__switch-month calendar__switch-month--previous link"
                     href="">
-                    <span class="visually-hidden">Кнопка переключения на
-                      предыдущий месяц</span>
+                    <span class="visually-hidden">
+                      Кнопка переключения на предыдущий месяц
+                    </span>
                     <svg class="calendar__arrow calendar__arrow--back"
                       width="15" height="21" viewBox="0 0 15 21" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -715,108 +637,160 @@
                       </g>
                     </svg>
                   </a>
-                  <ul
-                    class="calendar__month-list list zero-edges flex flex--justification-between flex--alignment-center">
+                  <ul class="calendar__month-list list zero-edges">
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="january-2019" id="january-2019">
-                      <label class="calendar__label"
-                        for="january-2019">Январь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="january-2019">
+                        Январь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="february-2019" id="february-2019">
-                      <label class="calendar__label"
-                        for="february-2019">Февраль<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="february-2019">
+                        Февраль
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li
                       class="calendar__month-item calendar__month-item--current-month">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="march-2019" id="march-2019"
                         checked>
-                      <label class="calendar__label" for="march-2019">Март<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="march-2019">
+                        Март
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="april-2019" id="april-2019">
-                      <label class="calendar__label"
-                        for="april-2019">Апрель<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="april-2019">
+                        Апрель
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="may-2019" id="may-2019">
-                      <label class="calendar__label" for="may-2019">Май<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="may-2019">
+                        Май
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="june-2019" id="june-2019">
-                      <label class="calendar__label" for="june-2019">Июнь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="june-2019">
+                        Июнь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="july-2019" id="july-2019">
-                      <label class="calendar__label" for="july-2019">Июль<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="july-2019">
+                        Июль
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="august-2019" id="august-2019">
-                      <label class="calendar__label"
-                        for="august-2019">Август<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="august-2019">
+                        Август
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="september-2019"
                         id="september-2019">
-                      <label class="calendar__label"
-                        for="september-2019">Сентябрь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="september-2019">
+                        Сентябрь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="october-2019" id="october-2019">
-                      <label class="calendar__label"
-                        for="october-2019">Октябрь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="october-2019">
+                        Октябрь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="november-2019" id="november-2019">
-                      <label class="calendar__label"
-                        for="november-2019">Ноябрь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="november-2019">
+                        Ноябрь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                     <li class="calendar__month-item">
                       <input class="calendar__checkbox visually-hidden"
                         type="checkbox" name="december-2019" id="december-2019">
-                      <label class="calendar__label"
-                        for="december-2019">Декабрь<span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span><span
-                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>2019</label>
+                      <label class="calendar__label" for="december-2019">
+                        Декабрь
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
+                        <span
+                          class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
+                        2019
+                      </label>
                     </li>
                   </ul>
-                  <a class="calendar__switch-month calendar__switch-month--next link grid grid--centering"
+                  <a class="calendar__switch-month calendar__switch-month--next link"
                     href="">
-                    <span class="visually-hidden">Кнопка переключения на
-                      следующий месяц</span>
+                    <span class="visually-hidden">
+                      Кнопка переключения на следующий месяц
+                    </span>
                     <svg class="calendar__arrow calendar__arrow--next"
                       width="14" height="21" viewBox="0 0 14 21" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -829,343 +803,448 @@
                   </a>
                 </div>
 
-                <ul
-                  class="calendar__weekday-list list zero-edges flex flex--justification-between flex--alignment-center">
+                <ul class="calendar__weekday-list list zero-edges">
                   <li
-                    class="calendar__weekday-item calendar--common-text-style">П
+                    class="calendar__weekday-item calendar--common-text-style">
+                    П
                   </li>
                   <li
-                    class="calendar__weekday-item calendar--common-text-style">В
+                    class="calendar__weekday-item calendar--common-text-style">
+                    В
                   </li>
                   <li
-                    class="calendar__weekday-item calendar--common-text-style">С
+                    class="calendar__weekday-item calendar--common-text-style">
+                    С
                   </li>
                   <li
-                    class="calendar__weekday-item calendar--common-text-style">Ч
+                    class="calendar__weekday-item calendar--common-text-style">
+                    Ч
                   </li>
                   <li
-                    class="calendar__weekday-item calendar--common-text-style">П
+                    class="calendar__weekday-item calendar--common-text-style">
+                    П
                   </li>
                   <li
                     class="calendar__weekday-item calendar__weekday-item--weekend calendar--common-text-style">
-                    С</li>
+                    С
+                  </li>
                   <li
                     class="calendar__weekday-item calendar__weekday-item--weekend calendar--common-text-style">
-                    В</li>
+                    В
+                  </li>
                 </ul>
 
-                <ul class="calendar__days grid grid--centering list zero-edges">
+                <ul class="calendar__days list zero-edges">
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-23" id="day-23-prev" disabled>
-                    <label class="calendar__label" for="day-23-prev">23</label>
+                    <label class="calendar__label" for="day-23-prev">
+                      23
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-24" id="day-24-prev" disabled>
-                    <label class="calendar__label" for="day-24-prev">24</label>
+                    <label class="calendar__label" for="day-24-prev">
+                      24
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-25" id="day-25-prev" disabled>
-                    <label class="calendar__label" for="day-25-prev">25</label>
+                    <label class="calendar__label" for="day-25-prev">
+                      25
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-26" id="day-26-prev" disabled>
-                    <label class="calendar__label" for="day-26-prev">26</label>
+                    <label class="calendar__label" for="day-26-prev">
+                      26
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-27" id="day-27-prev" disabled>
-                    <label class="calendar__label" for="day-27-prev">27</label>
+                    <label class="calendar__label" for="day-27-prev">
+                      27
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--previous-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--previous-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-28" id="day-28-prev" disabled>
-                    <label class="calendar__label" for="day-28-prev">28</label>
+                    <label class="calendar__label" for="day-28-prev">
+                      28
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-1" id="day-1" disabled>
-                    <label class="calendar__label" for="day-1">1</label>
+                    <label class="calendar__label" for="day-1">
+                      1
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-2" id="day-2" disabled>
-                    <label class="calendar__label" for="day-2">2</label>
+                    <label class="calendar__label" for="day-2">
+                      2
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-3" id="day-3" disabled>
-                    <label class="calendar__label" for="day-3">3</label>
+                    <label class="calendar__label" for="day-3">
+                      3
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-4" id="day-4" disabled>
-                    <label class="calendar__label" for="day-4">4</label>
+                    <label class="calendar__label" for="day-4">
+                      4
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-5" id="day-5" disabled>
-                    <label class="calendar__label" for="day-5">5</label>
+                    <label class="calendar__label" for="day-5">
+                      5
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-6" id="day-6" disabled>
-                    <label class="calendar__label" for="day-6">6</label>
+                    <label class="calendar__label" for="day-6">
+                      6
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-7" id="day-7" disabled>
-                    <label class="calendar__label" for="day-7">7</label>
+                    <label class="calendar__label" for="day-7">
+                      7
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-8" id="day-8" disabled>
-                    <label class="calendar__label" for="day-8">8</label>
+                    <label class="calendar__label" for="day-8">
+                      8
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-9" id="day-9" disabled>
-                    <label class="calendar__label" for="day-9">9</label>
+                    <label class="calendar__label" for="day-9">
+                      9
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-10" id="day-10" disabled>
-                    <label class="calendar__label" for="day-10">10</label>
+                    <label class="calendar__label" for="day-10">
+                      10
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-11" id="day-11" disabled>
-                    <label class="calendar__label" for="day-11">11</label>
+                    <label class="calendar__label" for="day-11">
+                      11
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-12" id="day-12" disabled>
-                    <label class="calendar__label" for="day-12">12</label>
+                    <label class="calendar__label" for="day-12">
+                      12
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-13" id="day-13" disabled>
-                    <label class="calendar__label" for="day-13">13</label>
+                    <label class="calendar__label" for="day-13">
+                      13
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-14" id="day-14" disabled>
-                    <label class="calendar__label" for="day-14">14</label>
+                    <label class="calendar__label" for="day-14">
+                      14
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-15" id="day-15" disabled>
-                    <label class="calendar__label" for="day-15">15</label>
+                    <label class="calendar__label" for="day-15">
+                      15
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-16" id="day-16" disabled>
-                    <label class="calendar__label" for="day-16">16</label>
+                    <label class="calendar__label" for="day-16">
+                      16
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-17" id="day-17" disabled>
-                    <label class="calendar__label" for="day-17">17</label>
+                    <label class="calendar__label" for="day-17">
+                      17
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-18" id="day-18" disabled>
-                    <label class="calendar__label" for="day-18">18</label>
+                    <label class="calendar__label" for="day-18">
+                      18
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-19" id="day-19" disabled>
-                    <label class="calendar__label" for="day-19">19</label>
+                    <label class="calendar__label" for="day-19">
+                      19
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-20" id="day-20" disabled>
-                    <label class="calendar__label" for="day-20">20</label>
+                    <label class="calendar__label" for="day-20">
+                      20
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-21" id="day-21" disabled>
-                    <label class="calendar__label" for="day-21">21</label>
+                    <label class="calendar__label" for="day-21">
+                      21
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-22" id="day-22" disabled>
-                    <label class="calendar__label" for="day-22">22</label>
+                    <label class="calendar__label" for="day-22">
+                      22
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-23" id="day-23" disabled>
-                    <label class="calendar__label" for="day-23">23</label>
+                    <label class="calendar__label" for="day-23">
+                      23
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-24" id="day-24" disabled>
-                    <label class="calendar__label" for="day-24">24</label>
+                    <label class="calendar__label" for="day-24">
+                      24
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--banned calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--banned calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-25" id="day-25" disabled>
-                    <label class="calendar__label" for="day-25">25</label>
+                    <label class="calendar__label" for="day-25">
+                      25
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-26" id="day-26" checked>
-                    <label class="calendar__label" for="day-26">26</label>
+                    <label class="calendar__label" for="day-26">
+                      26
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-27" id="day-27" checked>
-                    <label class="calendar__label" for="day-27">27</label>
+                    <label class="calendar__label" for="day-27">
+                      27
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--chosen calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-28" id="day-28" checked>
-                    <label class="calendar__label" for="day-28">28</label>
+                    <label class="calendar__label" for="day-28">
+                      28
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-29" id="day-29">
-                    <label class="calendar__label" for="day-29">29</label>
+                    <label class="calendar__label" for="day-29">
+                      29
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-30" id="day-30">
-                    <label class="calendar__label" for="day-30">30</label>
+                    <label class="calendar__label" for="day-30">
+                      30
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--current-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--current-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-31" id="day-31">
-                    <label class="calendar__label" for="day-31">31</label>
+                    <label class="calendar__label" for="day-31">
+                      31
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--next-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--next-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-1" id="day-1-next">
-                    <label class="calendar__label" for="day-1-next">1</label>
+                    <label class="calendar__label" for="day-1-next">
+                      1
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--next-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--next-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-2" id="day-2-next">
-                    <label class="calendar__label" for="day-2-next">2</label>
+                    <label class="calendar__label" for="day-2-next">
+                      2
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--next-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--next-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-3" id="day-3-next">
-                    <label class="calendar__label" for="day-3-next">3</label>
+                    <label class="calendar__label" for="day-3-next">
+                      3
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--next-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--next-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-4" id="day-4-next">
-                    <label class="calendar__label" for="day-4-next">4</label>
+                    <label class="calendar__label" for="day-4-next">
+                      4
+                    </label>
                   </li>
                   <li
-                    class="calendar__day grid grid--centering calendar--common-text-style calendar__day--available calendar__day--next-month">
+                    class="calendar__day calendar--common-text-style calendar__day--available calendar__day--next-month">
                     <input class="calendar__checkbox visually-hidden"
                       type="checkbox" name="day-5" id="day-5-next">
-                    <label class="calendar__label" for="day-5-next">5</label>
+                    <label class="calendar__label" for="day-5-next">
+                      5
+                    </label>
                   </li>
                 </ul>
               </div>
 
               <a class="button button--next-step button--forward-steps button--common-text-set-one button--common-text-set-two button--with-arrow add-plan__next-step link"
-                href="#step-2">Следующий шаг</a>
+                href="#step-2">
+                Следующий шаг
+              </a>
             </div>
           </fieldset>
 
           <fieldset
-            class="add-plan__fieldset add-plan__fieldset--step-2 under-layer flex flex--columnar flex--alignment-center"
+            class="add-plan__fieldset add-plan__fieldset--step-2 under-layer"
             id="step-2">
-            <legend class="add-plan__legend">Шаг 2.<br>Маршрут</legend>
+            <legend class="add-plan__legend">
+              Шаг 2.<br>Маршрут
+            </legend>
             <div class="add-plan__box">
               <ol
                 class="step-indicator step-indicator--desktop add-plan__step-indicator list zero-edges">
+                <li class="step-indicator__step step-indicator__step--1">
+                  <span class="step-indicator__step-text">
+                    Даты
+                  </span>
+                </li>
                 <li
-                  class="step-indicator__step step-indicator__step--1 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Даты</span></li>
-                <li
-                  class="step-indicator__step step-indicator__step--2 step-indicator__step--active flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Маршрут</span></li>
-                <li
-                  class="step-indicator__step add-plan__step--3 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Развлечения</span>
+                  class="step-indicator__step step-indicator__step--2 step-indicator__step--active">
+                  <span class="step-indicator__step-text">
+                    Маршрут
+                  </span>
+                </li>
+                <li class="step-indicator__step add-plan__step--3">
+                  <span class="step-indicator__step-text">
+                    Развлечения
+                  </span>
                 </li>
               </ol>
 
-              <p class="main-text add-plan__main-text">Укажите страны, которые
-                вы хотели по посетить. Это может быть одна или сразу несколько.
+              <p class="main-text add-plan__main-text">
+                Укажите страны, которые вы хотели по посетить. Это может быть
+                одна или сразу несколько.
               </p>
 
               <ul class="add-plan__countries list">
-                <li
-                  class="add-plan__country flex flex--justification-between flex--alignment-center">
-                  <label class="visually-hidden" for="chosen-country-1">Название
-                    страны</label>
+                <li class="add-plan__country">
+                  <label class="visually-hidden" for="chosen-country-1">
+                    Название страны
+                  </label>
                   <input
                     class="add-plan__input add-plan__input--chosen-country add-plan--border-with-radius"
                     type="text" value="Босния и Герцеговина"
                     name="chosen-country-1" id="chosen-country-1">
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius grid grid--centering">
-                    <svg class="add-plan__flag-svg" role="img"
-                      aria-label="Флаг Боснии и Герцеговины" width="35"
-                      height="24" viewBox="0 0 35 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <rect width="35" height="24" fill="url(#pattern3)" />
-                      <defs>
-                        <pattern id="pattern3"
-                          patternContentUnits="objectBoundingBox" width="1"
-                          height="1">
-                          <use xlink:href="#image3"
-                            transform="translate(-0.0106383) scale(0.0145897 0.0212766)" />
-                        </pattern>
-                        <image id="image3" width="70" height="47"
-                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAAGZUlEQVRogeWbCUyTZxjH/22pLZSrcrRCZBxVQU5hm24hO3DisWE0hqnRuTmdW2Zm4hKzZFniNJtGxZBoWDLmXIw6FWQOyVS8JuI4Yj04RBQPEDmlnOWSa3leWqS01Vnar4X9ElL6vW++9/3+fO//+573eeDNXXYMw5gH4HMAswDIAPBggPVxRXhvxmNDTVZj8db5pgw9AKAOQB6AnwGc0TbwNZ9iAEcBnAawCIDcmChE8qlg3Kt2sSlhTISnudZFmmsnDewxTJhfACw1dO7wYE98MCcAPB4Q4Ctlx3r6+NiREonWjgk2fdUmQBokQyNMLICVxs6h8JVi/eooHP5pIaJf9x463tAqxu60CPQPGL2xxiqkRSxf4ykGWbkkGGtXhLO7ZaKrGMqCWp1uhQ/dcPD8tPEmDPEFCfOWsdZDabewJeEK+/12mQpL3tcXIT3XDzklcstOk3vesAPg/rxhC28/QcrJUuw/UmiwnWx978kwTPZQs59xgif/RdfR0dmjJ0qgwk3ne9dTATPjjm678SIM/4XCGGLLpmjExSrw1ZoouDqLWI8qlQR708PYHTQeeClhSIT1qyPhovkcGACaW7uH2vNKZUi7EvD/E0YimYDOrl4MDAzeFwpfV9jZ6Z7iyN9TcOP+c21rTPBSwlTVtDG/uXOvEYnJV5GSUQqpi1inD73XJP4Rgfpm+zEtjElumZisRMXjFqPtbZ1C7EiNxLZP8iAS9o1mflbDJPMdKcqq+BB4yR0hEgkw2cuJHXtQ48xiqrGKScIMRyDgsXgqaXssDifFQSgUDLVeLPDGGaXPmJRmVMI4OgiRsDkGwdPcYS+2Q3d3H8orde+mXzODUFopHe08OWdUwqg7evD15ou4kF3BXgTrGtox710/nT69fXwkHI9Ac7toLOlimvkOhx7dV2/W4K/z91Fyt8FgH1WbGLtSZ2DrqnwI+GPjFXDUHkNcynmkI4qnuwOLxodT8kiKA+cCzTEcJ5hFmJHQhtb3m6KxYLY/Pv4wZKg1I98X2cWTbFQKXcwuTOAUNyxfFISp/hOxYe2ruFFcr9OelBGK8joncw9rdswujIuTiJmylqkBuk+k7h4BdqZGor1LaJUL/q+YXZj869XYu0+J6lo1vt2WhQZVp16fmkYHJJ4It+lI3CIbKPWqDmzelY3K6jajfa6VeSAlS4Glb9+zxBRGjUXMt69vQE+UTV/OBJ/Pg8xDAkfJYHbhWNYUJpAtYhFhRjLJU4KY6FdYyPDdxjfR2TXoQbSUaEnR0rI1LC5MaJAH9vw4h2UapK5iFNyqZ3eUFjJhMmMyZVvC4sIU3X6CNRtPoaW1G1W1aiaU3FOi04ce3z9lhBg9hzXgZPe6Vf0U57LKcTCtmAWahrhc7AWFdwviZpbbhDCceAyx7/cCHVEo08AbkcSkkIFCB1vAavmOxQumsuXV3NqFBxXNyLtWjb5+HnYdn4GEz3Lg5tRlVXk4u2O02An4iH3HD69FyLFwrgLzY/yhvPks9dusFrFtCtqusCacjy6cwIe9yA6dnb3sO4UQcpmuGdPG1v7MIKsKw/lSIkHSM8vY/rCPtzMuXqmAq7MYj0e8EJ5W+kDh3YyY8Cqup8iwmsfkKqtw4vRd9PT0G+1Dm+m+sjb4y1s5nRussZS0UMgwXJTIUBnzG3pS+fm4smP00kc5cUrHcI11HW4YCj8pNqyNwqGkOMyK8hpqoMQdJfC4LlCyCWFWLwvFp8vDwOPx4Ca1h/JmjU47pXwp9cslNiHMb0eLsH1PLisSKC1TIX6h/t4wFQvkl8o4m5PNFLRcL6rD0T9LcCClmH2nnHhTy7OXPAo796SHYadHDrzd2i0+H5vxmDb10yFRiBVLpmPB7ABEBHsyYyaoMInMmAqVLA0JYzgZZEUo/x0VJmdmTNkGChm0VD5xZKVtFt4WVZEw2bYkioO9EPFxgcyEid7efj0RqBiSiiItyGWBIiS+CcBH3EtgmJ7efuReq2Y1206OIpy99BBOkgl6OfGih26Y7tMEmXRws522Sc3IRjLfs1S5+rwiaGtwvbAOZ7PKoWrUzzJAU6CUkBaB3ev+gbuzWSNx0iJTa77rAKTYkjB37jcaFUULleyTGZsxEk/VaAFaSvRJoe5x+kPRMqenJVV5mGs0S9LYJkaTWowHtc6mDkP/fXIBwDcAfmBaAPgX5AcacQjtttcAAAAASUVORK5CYII=" />
-                      </defs>
-                    </svg>
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet.webp 1x,
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet@2x.webp 2x
+                          " />
+                      <source media="(min-width: 768px)" srcset="
+                            ./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet.png  1x,
+                            ./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet@2x.png 2x
+                          " />
+                      <source type="image/webp" srcset="
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile.webp  1x,
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile@2x.webp 2x
+                          " />
+                      <img class="add-plan__flag-img image"
+                        src="./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile.png"
+                        width="35" height="24" alt="Флаг Боснии и Герцеговины"
+                        srcset="
+                            ./img/flags/contentbosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile@2x.png 2x
+                          " />
+                    </picture>
                   </div>
                   <button
                     class="button button--sign button--drop-down add-plan__country-button add-plan__country-button--drop-down"
@@ -1207,33 +1286,36 @@
                   </button>
                 </li>
 
-                <li
-                  class="add-plan__country flex flex--justification-between flex--alignment-center">
-                  <label class="visually-hidden" for="chosen-country-2">Название
-                    страны</label>
+                <li class="add-plan__country">
+                  <label class="visually-hidden" for="chosen-country-2">
+                    Название страны
+                  </label>
                   <input
                     class="add-plan__input add-plan__input--chosen-country add-plan--border-with-radius"
                     type="text" value="Чехия" name="chosen-country-2"
                     id="chosen-country-2">
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius grid grid--centering">
-                    <svg class="add-plan__flag-svg" role="img"
-                      aria-label="Флаг Чехии" width="35" height="24"
-                      viewBox="0 0 35 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <rect width="35" height="24" fill="url(#pattern4)" />
-                      <defs>
-                        <pattern id="pattern4"
-                          patternContentUnits="objectBoundingBox" width="1"
-                          height="1">
-                          <use xlink:href="#image4"
-                            transform="translate(-0.0106383) scale(0.0145897 0.0212766)" />
-                        </pattern>
-                        <image id="image4" width="70" height="47"
-                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII=" />
-                      </defs>
-                    </svg>
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="
+                            ./img/flags/content/webp/czech/czech-flag-tablet.webp    1x,
+                            ./img/flags/content/webp/czech/czech-flag-tablet@2x.webp 2x
+                          " />
+                      <source media="(min-width: 768px)" srcset="
+                            ./img/flags/content/png/czech/czech-flag-tablet.png    1x,
+                            ./img/flags/content/png/czech/czech-flag-tablet@2x.png 2x
+                          " />
+                      <source type="image/webp" srcset="
+                            ./img/flags/content/webp/czech/czech-flag-mobile.webp    1x,
+                            ./img/flags/content/webp/czech/czech-flag-mobile@2x.webp 2x
+                          " />
+                      <img class="add-plan__flag-img image"
+                        src="./img/flags/content/png/czech/czech-flag-mobile.png"
+                        width="35" height="24" alt="Флаг Чехии" srcset="
+                            ./img/flags/content/png/czech/czech-flag-mobile@2x.png 2x
+                          " />
+                    </picture>
                   </div>
                   <button
                     class="button button--sign button--drop-down add-plan__country-button add-plan__country-button--drop-down"
@@ -1277,8 +1359,9 @@
 
                 <li
                   class="add-plan__country add-plan__country--specify-country">
-                  <label class="visually-hidden" for="chosen-country-3">Название
-                    страны</label>
+                  <label class="visually-hidden" for="chosen-country-3">
+                    Название страны
+                  </label>
                   <!--
                       add-plan__input--specify-country.classlist.remove( add-plan--without-border ).remove( add-plan__input--refilled );
                     -->
@@ -1360,110 +1443,220 @@
                   <div
                     class="lands lands--form add-plan__lands lands--invisible">
                     <ul class="lands__regions list invisible zero-edges">
-                      <li class="lands__region"><a
-                          class="lands__link lands__link--region link"
-                          href="#!">Европа</a></li>
-                      <li class="lands__region"><a
-                          class="lands__link lands__link--region link"
-                          href="#!">Азия</a></li>
-                      <li class="lands__region"><a
-                          class="lands__link lands__link--region link"
-                          href="#!">Америка</a></li>
-                      <li class="lands__region"><a
-                          class="lands__link lands__link--region link"
-                          href="#!">Острова</a></li>
+                      <li class="lands__region">
+                        <a class="lands__link lands__link--region link"
+                          href="#!">
+                          Европа
+                        </a>
+
+                      </li>
+                      <li class="lands__region">
+                        <a class="lands__link lands__link--region link"
+                          href="#!">
+                          Азия
+                        </a>
+                      </li>
+                      <li class="lands__region">
+                        <a class="lands__link lands__link--region link"
+                          href="#!">
+                          Америка
+                        </a>
+                      </li>
+                      <li class="lands__region">
+                        <a class="lands__link lands__link--region link"
+                          href="#!">
+                          Острова
+                        </a>
+                      </li>
                     </ul>
 
                     <ul class="lands__letter-indexes list zero-edges">
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">А</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Б</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">В</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Г</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Д</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Е</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">З</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">И</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">К</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Л</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">М</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Н</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">О</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">П</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Р</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">С</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Т</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">У</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Ф</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Х</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Ч</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Ш</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Э</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Ю</a></li>
-                      <li class="lands__letter-index"><a
-                          class="lands__link lands__link--letter link grid grid--centering"
-                          href="#!">Я</a></li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          А
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Б
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          В
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Г
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Д
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Е
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          З
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          И
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          К
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Л
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          М
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Н
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          О
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          П
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Р
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          С
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Т
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          У
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Ф
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Х
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Ч
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Ш
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Э
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Ю
+                        </a>
+                      </li>
+                      <li class="lands__letter-index">
+                        <a class="lands__link lands__link--letter link"
+                          href="#!">
+                          Я
+                        </a>
+                      </li>
                     </ul>
 
                     <ul class="lands__data list zero-edges">
-                      <li class="lands__item">Австралия</li>
-                      <li class="lands__item">Австрия</li>
-                      <li class="lands__item">Азербайжан</li>
-                      <li class="lands__item">Албания</li>
-                      <li class="lands__item">Алжир</li>
-                      <li class="lands__item">Ангола</li>
-                      <li class="lands__item">Андорра</li>
-                      <li class="lands__item">Антигуа и Барбуда</li>
-                      <li class="lands__item">Аргентина</li>
-                      <li class="lands__item">Армения</li>
-                      <li class="lands__item">Афганистан</li>
+                      <li class="lands__item">
+                        Австралия
+                      </li>
+                      <li class="lands__item">
+                        Австрия
+                      </li>
+                      <li class="lands__item">
+                        Азербайжан
+                      </li>
+                      <li class="lands__item">
+                        Албания
+                      </li>
+                      <li class="lands__item">
+                        Алжир
+                      </li>
+                      <li class="lands__item">
+                        Ангола
+                      </li>
+                      <li class="lands__item">
+                        Андорра
+                      </li>
+                      <li class="lands__item">
+                        Антигуа и Барбуда
+                      </li>
+                      <li class="lands__item">
+                        Аргентина
+                      </li>
+                      <li class="lands__item">
+                        Армения
+                      </li>
+                      <li class="lands__item">
+                        Афганистан
+                      </li>
                     </ul>
 
                     <button
@@ -1486,104 +1679,131 @@
                 </li>
               </ul>
 
-              <button class="add-plan__add-country" type="button">Добавить
-                страну</button>
+              <button class="add-plan__add-country" type="button">
+                Добавить страну
+              </button>
               <a class="button button--next-step button--forward-steps button--common-text-set-one button--common-text-set-two button--with-arrow add-plan__next-step link"
-                href="#step-3">Следующий шаг</a>
+                href="#step-3">
+                Следующий шаг
+              </a>
               <a class="button button--previous-step button--common-text-set-one button--with-back-arrow add-plan__previous-step link"
-                href="#step-1">На шаг назад</a>
+                href="#step-1">
+                На шаг назад
+              </a>
             </div>
           </fieldset>
 
-          <fieldset
-            class="add-plan__fieldset under-layer flex flex--columnar flex--alignment-center"
-            id="step-3">
-            <legend class="add-plan__legend">Шаг 3.<br>Развлечения</legend>
+          <fieldset class="add-plan__fieldset under-layer" id="step-3">
+            <legend class="add-plan__legend">
+              Шаг 3.<br>Развлечения
+            </legend>
             <div class="add-plan__box">
               <ol
                 class="step-indicator step-indicator--desktop add-plan__step-indicator list zero-edges">
+                <li class="step-indicator__step step-indicator__step--1">
+                  <span class="step-indicator__step-text">
+                    Даты
+                  </span>
+                </li>
+                <li class="step-indicator__step step-indicator__step--2">
+                  <span class="step-indicator__step-text">
+                    Маршрут
+                  </span>
+                </li>
                 <li
-                  class="step-indicator__step step-indicator__step--1 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Даты</span></li>
-                <li
-                  class="step-indicator__step step-indicator__step--2 flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Маршрут</span></li>
-                <li
-                  class="step-indicator__step add-plan__step--3 step-indicator__step--active flex flex--justification-between flex--alignment-center">
-                  <span class="step-indicator__step-text">Развлечения</span>
+                  class="step-indicator__step add-plan__step--3 step-indicator__step--active">
+                  <span class="step-indicator__step-text">
+                    Развлечения
+                  </span>
                 </li>
               </ol>
 
               <p
                 class="main-text add-plan__main-text add-plan__main-text--step-3">
                 Наконец, расскажите о своих планах времяпровождения. Можно
-                писать в свободной форме и ставить тэги.</p>
+                писать в свободной форме и ставить тэги.
+              </p>
 
               <ul class="add-plan__jollity-list list zero-edges">
                 <li class="add-plan__jollity-item">
                   <label class="add-plan__land-name"
-                    for="bosnia-and-herzegovina-funs">Босния и
-                    Герцеговина</label>
+                    for="bosnia-and-herzegovina-funs">
+                    Босния и Герцеговина
+                  </label>
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__flag--jollity grid grid--centering">
-                    <svg class="add-plan__flag-svg" role="img"
-                      aria-label="Флаг Боснии и Герцеговины" width="35"
-                      height="24" viewBox="0 0 35 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <rect width="35" height="24" fill="url(#pattern5)" />
-                      <defs>
-                        <pattern id="pattern5"
-                          patternContentUnits="objectBoundingBox" width="1"
-                          height="1">
-                          <use xlink:href="#image5"
-                            transform="translate(-0.0106383) scale(0.0145897 0.0212766)" />
-                        </pattern>
-                        <image id="image5" width="70" height="47"
-                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAAGZUlEQVRogeWbCUyTZxjH/22pLZSrcrRCZBxVQU5hm24hO3DisWE0hqnRuTmdW2Zm4hKzZFniNJtGxZBoWDLmXIw6FWQOyVS8JuI4Yj04RBQPEDmlnOWSa3leWqS01Vnar4X9ElL6vW++9/3+fO//+573eeDNXXYMw5gH4HMAswDIAPBggPVxRXhvxmNDTVZj8db5pgw9AKAOQB6AnwGc0TbwNZ9iAEcBnAawCIDcmChE8qlg3Kt2sSlhTISnudZFmmsnDewxTJhfACw1dO7wYE98MCcAPB4Q4Ctlx3r6+NiREonWjgk2fdUmQBokQyNMLICVxs6h8JVi/eooHP5pIaJf9x463tAqxu60CPQPGL2xxiqkRSxf4ykGWbkkGGtXhLO7ZaKrGMqCWp1uhQ/dcPD8tPEmDPEFCfOWsdZDabewJeEK+/12mQpL3tcXIT3XDzklcstOk3vesAPg/rxhC28/QcrJUuw/UmiwnWx978kwTPZQs59xgif/RdfR0dmjJ0qgwk3ne9dTATPjjm678SIM/4XCGGLLpmjExSrw1ZoouDqLWI8qlQR708PYHTQeeClhSIT1qyPhovkcGACaW7uH2vNKZUi7EvD/E0YimYDOrl4MDAzeFwpfV9jZ6Z7iyN9TcOP+c21rTPBSwlTVtDG/uXOvEYnJV5GSUQqpi1inD73XJP4Rgfpm+zEtjElumZisRMXjFqPtbZ1C7EiNxLZP8iAS9o1mflbDJPMdKcqq+BB4yR0hEgkw2cuJHXtQ48xiqrGKScIMRyDgsXgqaXssDifFQSgUDLVeLPDGGaXPmJRmVMI4OgiRsDkGwdPcYS+2Q3d3H8orde+mXzODUFopHe08OWdUwqg7evD15ou4kF3BXgTrGtox710/nT69fXwkHI9Ac7toLOlimvkOhx7dV2/W4K/z91Fyt8FgH1WbGLtSZ2DrqnwI+GPjFXDUHkNcynmkI4qnuwOLxodT8kiKA+cCzTEcJ5hFmJHQhtb3m6KxYLY/Pv4wZKg1I98X2cWTbFQKXcwuTOAUNyxfFISp/hOxYe2ruFFcr9OelBGK8joncw9rdswujIuTiJmylqkBuk+k7h4BdqZGor1LaJUL/q+YXZj869XYu0+J6lo1vt2WhQZVp16fmkYHJJ4It+lI3CIbKPWqDmzelY3K6jajfa6VeSAlS4Glb9+zxBRGjUXMt69vQE+UTV/OBJ/Pg8xDAkfJYHbhWNYUJpAtYhFhRjLJU4KY6FdYyPDdxjfR2TXoQbSUaEnR0rI1LC5MaJAH9vw4h2UapK5iFNyqZ3eUFjJhMmMyZVvC4sIU3X6CNRtPoaW1G1W1aiaU3FOi04ce3z9lhBg9hzXgZPe6Vf0U57LKcTCtmAWahrhc7AWFdwviZpbbhDCceAyx7/cCHVEo08AbkcSkkIFCB1vAavmOxQumsuXV3NqFBxXNyLtWjb5+HnYdn4GEz3Lg5tRlVXk4u2O02An4iH3HD69FyLFwrgLzY/yhvPks9dusFrFtCtqusCacjy6cwIe9yA6dnb3sO4UQcpmuGdPG1v7MIKsKw/lSIkHSM8vY/rCPtzMuXqmAq7MYj0e8EJ5W+kDh3YyY8Cqup8iwmsfkKqtw4vRd9PT0G+1Dm+m+sjb4y1s5nRussZS0UMgwXJTIUBnzG3pS+fm4smP00kc5cUrHcI11HW4YCj8pNqyNwqGkOMyK8hpqoMQdJfC4LlCyCWFWLwvFp8vDwOPx4Ca1h/JmjU47pXwp9cslNiHMb0eLsH1PLisSKC1TIX6h/t4wFQvkl8o4m5PNFLRcL6rD0T9LcCClmH2nnHhTy7OXPAo796SHYadHDrzd2i0+H5vxmDb10yFRiBVLpmPB7ABEBHsyYyaoMInMmAqVLA0JYzgZZEUo/x0VJmdmTNkGChm0VD5xZKVtFt4WVZEw2bYkioO9EPFxgcyEid7efj0RqBiSiiItyGWBIiS+CcBH3EtgmJ7efuReq2Y1206OIpy99BBOkgl6OfGih26Y7tMEmXRws522Sc3IRjLfs1S5+rwiaGtwvbAOZ7PKoWrUzzJAU6CUkBaB3ev+gbuzWSNx0iJTa77rAKTYkjB37jcaFUULleyTGZsxEk/VaAFaSvRJoe5x+kPRMqenJVV5mGs0S9LYJkaTWowHtc6mDkP/fXIBwDcAfmBaAPgX5AcacQjtttcAAAAASUVORK5CYII=" />
-                      </defs>
-                    </svg>
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__flag--jollity">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet.webp 1x,
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet@2x.webp 2x
+                          " />
+                      <source media="(min-width: 768px)" srcset="
+                            ./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet.png  1x,
+                            ./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-tablet@2x.png 2x
+                          " />
+                      <source type="image/webp" srcset="
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile.webp  1x,
+                            ./img/flags/content/webp/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile@2x.webp 2x
+                          " />
+                      <img class="add-plan__flag-img image"
+                        src="./img/flags/content/png/bosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile.png"
+                        width="35" height="24" alt="Флаг Боснии и Герцеговины"
+                        srcset="
+                            ./img/flags/contentbosnia-and-herzegovina/bosnia-and-herzegovina-flag-mobile@2x.png 2x
+                          " />
+                    </picture>
                   </div>
                   <textarea class="add-plan__jollity-variants"
                     name="bosnia-and-herzegovina-funs"
                     id="bosnia-and-herzegovina-funs" cols="30" rows="10"
-                    placeholder="План действий"></textarea>
+                    placeholder="План действий">
+                  </textarea>
                 </li>
 
                 <li class="add-plan__jollity-item">
-                  <label class="add-plan__land-name"
-                    for="czech-funs">Чехия</label>
+                  <label class="add-plan__land-name" for="czech-funs">
+                    Чехия
+                  </label>
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__flag--jollity grid grid--centering">
-                    <svg class="add-plan__flag-svg" role="img"
-                      aria-label="Флаг Чехии" width="35" height="24"
-                      viewBox="0 0 35 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <rect width="35" height="24" fill="url(#pattern8)" />
-                      <defs>
-                        <pattern id="pattern8"
-                          patternContentUnits="objectBoundingBox" width="1"
-                          height="1">
-                          <use xlink:href="#image8"
-                            transform="translate(-0.0106383) scale(0.0145897 0.0212766)" />
-                        </pattern>
-                        <image id="image8" width="70" height="47"
-                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII=" />
-                      </defs>
-                    </svg>
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__flag--jollity">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="
+                            ./img/flags/content/webp/czech/czech-flag-tablet.webp    1x,
+                            ./img/flags/content/webp/czech/czech-flag-tablet@2x.webp 2x
+                          " />
+                      <source media="(min-width: 768px)" srcset="
+                            ./img/flags/content/png/czech/czech-flag-tablet.png    1x,
+                            ./img/flags/content/png/czech/czech-flag-tablet@2x.png 2x
+                          " />
+                      <source type="image/webp" srcset="
+                            ./img/flags/content/webp/czech/czech-flag-mobile.webp    1x,
+                            ./img/flags/content/webp/czech/czech-flag-mobile@2x.webp 2x
+                          " />
+                      <img class="add-plan__flag-img image"
+                        src="./img/flags/content/png/czech/czech-flag-mobile.png"
+                        width="35" height="24" alt="Флаг Чехии" srcset="
+                            ./img/flags/content/png/czech/czech-flag-mobile@2x.png 2x
+                          " />
+                    </picture>
                   </div>
                   <textarea class="add-plan__jollity-variants" name="czech-funs"
-                    id="czech-funs" cols="30"
-                    rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    id="czech-funs" cols="30" rows="10">
+                    Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                  </textarea>
                 </li>
               </ul>
 
               <button
                 class="button button--form-submit button--forward-steps button--with-arrow button--common-text-set-one button--common-text-set-two add-plan__submit"
-                type="submit" form="plans-making-form">Отправить</button>
+                type="submit" form="plans-making-form">
+                Отправить
+              </button>
               <a class="button button--previous-step button--with-back-arrow button--common-text-set-one add-plan__previous-step link"
-                href="#step-2">На шаг назад</a>
+                href="#step-2">
+                На шаг назад
+              </a>
             </div>
           </fieldset>
         </div>
@@ -1592,79 +1812,180 @@
   </main>
 
   <footer class="general-footer">
-    <div
-      class="container container--thick general-footer__container flex flex--columnar flex--justification-between flex--alignment-center">
+    <div class="general-footer__container container">
       <a class="logo general-footer__logo general-footer__element link">
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="./img/logo/content/webp/logo-footer-desktop.webp 1x, ./img/logo/content/webp/logo-footer-desktop@2x.webp 2x">
-          <source media="(min-width: 1440px)"
-            srcset="./img/logo/content/png/logo-footer-desktop.png 1x, ./img/logo/content/png/logo-footer-desktop@2x.png 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/logo/content/webp/logo-footer-tablet.webp 1x, ./img/logo/content/webp/logo-footer-tablet@2x.webp 2x">
-          <source media="(min-width: 768px)"
-            srcset="./img/logo/content/png/logo-footer-tablet.png 1x, ./img/logo/content/png/logo-footer-tablet@2x.png 2x">
-          <source type="image/webp"
-            srcset="./img/logo/content/webp/logo-footer-mobile.webp 1x, ./img/logo/content/webp/logo-footer-mobile@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
+                ./img/logo/content/webp/logo-footer-desktop.webp    1x,
+                ./img/logo/content/webp/logo-footer-desktop@2x.webp 2x
+              " />
+          <source media="(min-width: 1440px)" srcset="
+                ./img/logo/content/png/logo-footer-desktop.png    1x,
+                ./img/logo/content/png/logo-footer-desktop@2x.png 2x
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+                ./img/logo/content/webp/logo-footer-tablet.webp    1x,
+                ./img/logo/content/webp/logo-footer-tablet@2x.webp 2x
+              " />
+          <source media="(min-width: 768px)" srcset="
+                ./img/logo/content/png/logo-footer-tablet.png    1x,
+                ./img/logo/content/png/logo-footer-tablet@2x.png 2x
+              " />
+          <source type="image/webp" srcset="
+                ./img/logo/content/webp/logo-footer-mobile.webp    1x,
+                ./img/logo/content/webp/logo-footer-mobile@2x.webp 2x
+              " />
           <img class="logo__image logo__image--in-footer logo__image--primary"
             src="./img/logo/content/png/logo-footer-mobile.png" width="96"
             height="15" alt="Логотип сайта"
-            srcset="./img/logo/content/png/logo-footer-mobile@2x.png 2x">
+            srcset="./img/logo/content/png/logo-footer-mobile@2x.png 2x" />
         </picture>
       </a>
-      <div
-        class="socials general-footer__socials general-footer__element flex flex--justification-center flex--alignment-center">
-        <ul
-          class="socials__list socials__common-margin-left list zero-edges flex flex--justification-center flex--alignment-center">
-          <li
-            class="socials__item socials__common-margin-left socials__common-margin-left">
-            <a class="socials__link link" href="#!">
-              <span class="visually-hidden">Ссылка на аккаунт в Фейсбук</span>
+      <div class="socials socials--in-footer general-footer__socials">
+        <ul class="socials__list socials__list--in-footer list zero-edges">
+          <li class="socials__item socials__item--facebook">
+            <a class="socials__link socials__link--in-footer link hover-mode-bg-color"
+              href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в Фейсбук
+              </span>
               <svg
                 class="socials__svg socials__svg--facebook socials__svg--in-footer"
-                width="45" height="45">
-                <use xlink:href="#facebook-in-footer"></use>
+                width="11" height="21" viewBox="0 0 11 21">
+                <path class="socials__svg-path"
+                  d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"
+                  fill="#192144" />
               </svg>
             </a>
           </li>
-          <li class="socials__item socials__common-margin-left">
-            <a class="socials__link link" href="#!">
-              <span class="visually-hidden">Ссылка на аккаунт в ВКонтакте</span>
+          <li class="socials__item socials__item--vk">
+            <a class="socials__link socials__link--in-footer link hover-mode-bg-color"
+              href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в ВКонтакте
+              </span>
               <svg class="socials__svg socials__svg--vk socials__svg--in-footer"
-                width="45" height="45">
-                <use xlink:href="#vk-in-footer"></use>
+                width="23" height="12" viewBox="0 0 23 12">
+                <path class="socials__svg-path"
+                  d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.56 7.56 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"
+                  fill="#192144" />
               </svg>
             </a>
           </li>
-          <li class="socials__item socials__common-margin-left">
-            <a class="socials__link link" href="#!">
-              <span class="visually-hidden">Ссылка на аккаунт в Инстаграм</span>
+          <li class="socials__item socials__item--insta">
+            <a class="socials__link socials__link--in-footer link hover-mode-bg-color"
+              href="#!">
+              <span class="visually-hidden">
+                Ссылка на аккаунт в Инстаграм
+              </span>
               <svg
                 class="socials__svg socials__svg--insta socials__svg--in-footer"
-                width="45" height="45">
-                <use xlink:href="#insta-in-footer"></use>
+                width="18" height="18" viewBox="0 0 18 18">
+                <g class="socials__svg-group socials__svg-group--in-footer"
+                  opacity=".5" fill="#192144">
+                  <path class="socials__svg-path"
+                    d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z" />
+                  <path class="socials__svg-path"
+                    d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z" />
+                </g>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <div
-        class="general-footer__creators general-footer__element flex flex--justification-between flex--alignment-center">
-        <span class="general-footer__created-by">Разработано</span>
+      <div class="general-footer__creators general-footer__element">
+        <span class="general-footer__created-by">
+          Разработано
+        </span>
         <a class="general-footer__html-acad-logo link"
           href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy. Ссылка на лендинг
-            интенсива «Профессиональный HTML и CSS, уровень 2».</span>
+          <span class="visually-hidden">
+            HTML Academy. Ссылка на лендинг интенсива «Профессиональный HTML и
+            CSS, уровень 2».
+          </span>
           <svg class="general-footer__html-acad-svg image" width="27"
-            height="34" aria-label="Логотип HTML Academy">
-            <use xlink:href="#html-acad-logo"></use>
+            height="34" viewBox="0 0 27 34" aria-label="Логотип HTML Academy">
+            <path class="general-footer__html-acad-svg-path"
+              d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"
+              fill="#192144" />
           </svg>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- <script src="./js/app.js"></script> -->
+  <svg style="display: none">
+    <!-- cross-in-primary-layout-mobile: width="19" height="19" -->
+    <symbol id="cross-in-primary-layout-mobile" viewBox="0 0 19 19">
+      <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc"
+        transform="translate(-2.445 0) rotate(45 11.945 9.5)" />
+      <rect width="23.89" height="2.03" x="0" y="8.485" rx="1.5" fill="#ccc"
+        transform="translate(-2.445 0) rotate(-45 11.945 9.5)" />
+    </symbol>
+
+    <!-- cross-in-primary-layout-tablet: width="22" height="22" -->
+    <symbol id="cross-in-primary-layout-tablet" viewBox="0 0 22 22">
+      <path d="M19.75 2.25l-18 18M1.75 2.25l18 18" stroke="#CCC"
+        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <!-- for not active transport icons' mode add to <path/> opacity=".15" -->
+    <!-- plane-in-index: width="21" height="23" fill="none" -->
+    <symbol id="plane-in-index" viewBox="0 0 21 23">
+      <g clip-path="url(#clip412)">
+        <path
+          class="transport__svg-path transport__svg-path--index transport__plane-path transport__plane-path--index"
+          d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"
+          fill="#101D41" />
+      </g>
+      <defs>
+        <clipPath id="clip412">
+          <path
+            class="transport__svg-path transport__svg-path--index transport__plane-path transport__plane-path--index"
+            transform="translate(0 .96)" d="M0 0h20.83v21.12H0z" />
+        </clipPath>
+      </defs>
+    </symbol>
+
+    <!-- bus-in-index: width="18" height="21" fill="none" -->
+    <symbol id="bus-in-index" viewBox="0 0 18 21">
+      <g clip-path="url(#clip557)">
+        <path
+          class="transport__svg-path transport__svg-path--index transport__bus-path transport__bus-path--index"
+          d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.52.52 0 00-.53-.51h-7.1a.52.52 0 00-.38.14c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1a.52.52 0 00.53-.51zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"
+          fill="#1D2E5B" />
+      </g>
+      <defs>
+        <clipPath id="clip557">
+          <path
+            class="transport__svg-path transport__svg-path--index transport__bus-path transport__bus-path--index"
+            transform="translate(.08 .92)" d="M0 0h17.04v19.2H0z" />
+        </clipPath>
+      </defs>
+    </symbol>
+
+    <!-- bicycle-in-index: width="25" height="24" fill="none" -->
+    <symbol id="bicycle-in-index" viewBox="0 0 25 24">
+      <path
+        class="transport__svg-path transport__svg-path--index transport__bicycle-path transport__bicycle-path--index"
+        d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"
+        fill="#1D2E5B" />
+      <path
+        class="transport__svg-path transport__svg-path--index transport__bicycle-path transport__bicycle-path--index"
+        d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.32 146.32 0 012.82 1.72c.02.02.03.06.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.19.19 0 01.16-.06.18.18 0 01.14.1l1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"
+        fill="#1D2E5B" />
+    </symbol>
+
+    <!-- by-feet-in-index: width="21" height="24" fill="none" -->
+    <symbol id="by-feet-in-index" viewBox="0 0 21 24">
+      <path
+        class="transport__svg-path transport__svg-path--index transport__by-feet-path transport__by-feet-path--index"
+        d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"
+        fill="#1D2E5B" />
+    </symbol>
+  </svg>
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

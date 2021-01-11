@@ -1,4 +1,3 @@
-
 .step-indicator {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -35,6 +34,8 @@
 }
 
 .step-indicator__step {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   float: left;
   width: min-content;
