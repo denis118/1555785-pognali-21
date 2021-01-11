@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 137px;
+    padding-top: 134px;
     background-image: $rates-bg-mobile, $rect-in-profile-bg-tablet;
     background-repeat: no-repeat, no-repeat;
     // background-position: 583px 410px, 530px 153px;
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 167px;
+    padding-top: 170px;
     background-image: $rates-bg-desktop, $rect-in-profile-bg-desktop;
     // background-position: 1109px 287px, 750px 235px;
     background-position: right 10.7% top 56.5%, right 24.5% top 57.6%;
@@ -70,7 +70,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 136px;
+    margin-top: 130px;
   }
 }
 
@@ -184,7 +184,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   font-weight: 700;
   color: $dcg-7;
 

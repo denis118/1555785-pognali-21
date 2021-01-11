@@ -102,6 +102,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 47px;
+    padding-bottom: 43px;
   }
 
   @media (min-width: $desktop-width) {
@@ -111,8 +112,7 @@
 
   &--js {
     @media (max-width: $mobile-width-only) {
-      padding-top: 21px;
-      padding-bottom: 31px;
+      padding-top: 19px;
     }
   }
 }
@@ -128,7 +128,7 @@
   justify-self: end;
 
   @media (min-width: $tablet-width) {
-    padding-top: 20px;
+    padding-top: 10px;
     justify-self: center;
   }
 
@@ -365,6 +365,7 @@
     margin-top: 112px;
     margin-bottom: 74px;
     margin-left: 57px;
+    justify-self: start;
   }
 
   @media (min-width: $desktop-width) {

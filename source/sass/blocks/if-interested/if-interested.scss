@@ -1,5 +1,5 @@
 .if-interested {
-  padding-top: 99px;
+  padding-top: 102px;
   background-color: $dcg-4;
 
   @include overlap--bottom(995, $bottom-radii);
@@ -71,7 +71,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 67px;
+      margin-top: 70px;
     }
   }
 
