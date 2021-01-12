@@ -17,6 +17,14 @@
     min-width: 1320px;
     max-width: 1320px;
   }
+
+  &--slim {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 618px;
+      min-width: 618px;
+      max-width: 618px;
+    }
+  }
 }
 
 .zero-edges {
