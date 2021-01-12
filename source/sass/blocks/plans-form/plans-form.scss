@@ -4,6 +4,10 @@
   grid-template-rows: repeat(3, min-content);
   background-color: $lcg-2;
   padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 // .plans-form__user-basic-info {}

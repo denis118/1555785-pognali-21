@@ -34,6 +34,10 @@
     @media (min-width: $tablet-width) {
       transform: scale(0.94);
     }
+
+    @media (min-width: $desktop-width) {
+      transform: scale(0.95);
+    }
   }
 
   &--catalog {
@@ -129,6 +133,11 @@
     background-image: $text-box-bg-image-form;
     background-position: 0 61%;
     background-size: 52px 2px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 4px;
+      color: $lcg-1;
+    }
   }
 }
 
@@ -138,6 +147,10 @@
     line-height: 38px;
     font-weight: 700;
     color: $dcg-6;
+
+    @media (min-width: $desktop-width) {
+      color: inherit;
+    }
   }
 }
 
@@ -151,6 +164,10 @@
     font-size: 18px;
     line-height: 18px;
     color: $dcg-9;
+
+    @media (min-width: $desktop-width) {
+      color: inherit;
+    }
   }
 }
 

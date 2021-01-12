@@ -9,6 +9,10 @@
     // padding-bottom: 58.5px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
+
   &--text-style {
     font-weight: 700;
     color: $dcg-1;
@@ -25,6 +29,7 @@
   &--positioned-absolutely {
     @media (min-width: $desktop-width) {
       position: absolute;
+      z-index: 1;
     }
   }
 }
@@ -68,8 +73,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -140px;
+    top: -150px;
     left: 900px;
+    margin-left: -6px;
   }
 }
 
@@ -113,7 +119,8 @@
 
   @media (min-width: $desktop-width) {
     width: 732px;
-    margin: 0;
+    margin-top: 0;
+    margin-left: 64px;
   }
 }
 
@@ -147,6 +154,10 @@
     padding-top: 34.15px;
     padding-bottom: 16.5px;
     padding-left: 38.28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 39.3px;
   }
 }
 
@@ -197,4 +208,11 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+
+  &--label {
+    @media (min-width: $desktop-width) {
+      left: 28px;
+      transform: translateX(0);
+    }
+  }
 }
