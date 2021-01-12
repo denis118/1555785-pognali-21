@@ -1,7 +1,17 @@
 
-// .user-transport {}
+.user-transport {
+  &--form {
+    @include centering-flex;
+  }
+}
 
-// .user-transport__label {}
+.user-transport__label {
+  @include centering-grid;
+  width: 31.52px;
+  height: 31.52px;
+  border-radius: 50%;
+  background-color: $lcg-1;
+}
 
 // .user-transport__aircraft-icon {}
 
