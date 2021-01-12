@@ -6,7 +6,6 @@
   @media (min-width: $tablet-width) {
     margin-top: -60px;
     padding-top: 104px;
-    // padding-bottom: 58.5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,7 +45,7 @@
       "rating transport avatar"
       "button button button"
       "tags tags tags";
-    padding-bottom: 58.5px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,6 +53,7 @@
     display: flex;
     align-items: center;
     padding-top: 73px;
+    padding-bottom: 61px;
   }
 }
 

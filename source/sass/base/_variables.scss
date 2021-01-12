@@ -129,6 +129,9 @@ $map-bg-tablet-2x: url("../img/map/bg/png/map-bg-tablet@2x.png");
 $map-bg-desktop: url("../img/map/bg/png/map-bg-desktop.png");
 $map-bg-desktop-2x: url("../img/map/bg/png/map-bg-desktop@2x.png");
 
+// user-plans-bg
+$line-in-user-plans: url("../img/user-plans/bg/svg/line-form-bg.svg");
+
 //blok`s background images
 
 $pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
@@ -160,3 +163,4 @@ $icon-map-pin: url("../img/map/decor/svg/icon-map-pin.svg");
 // other
 $bottom-radii: 30px;
 $bottom-radii-tablet: 60px;
+$bottom-radii-bigger: $bottom-radii-tablet;
