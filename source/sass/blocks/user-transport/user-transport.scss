@@ -5,6 +5,20 @@
   }
 }
 
+.transport__heading {
+  &--catalog {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+      margin: 0;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $dcg-9;
+      text-transform: lowercase;
+    }
+  }
+}
+
 .user-transport__label {
   @include centering-grid;
   width: 31.52px;
