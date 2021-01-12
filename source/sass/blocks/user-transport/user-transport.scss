@@ -19,6 +19,12 @@
   }
 }
 
+.user-transport__checkbox {
+  &:checked ~ .user-transport__svg {
+    opacity: 1;
+  }
+}
+
 .user-transport__label {
   @include centering-grid;
   width: 31.52px;
@@ -27,10 +33,16 @@
   background-color: $lcg-1;
 }
 
-// .user-transport__aircraft-icon {}
+.user-transport__svg {
+  opacity: 0.15;
 
-// .user-transport__bus-icon {}
+  // &--aircraft {}
 
-// .user-transport__bycicle-icon {}
+  // &--bus {}
 
-// .user-transport__runer-icon {}
+  // &--bycicle {}
+
+  // &--runner {}
+}
+
+// .user-transport__svg-path {}

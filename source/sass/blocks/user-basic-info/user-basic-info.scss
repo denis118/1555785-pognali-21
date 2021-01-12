@@ -3,9 +3,11 @@
   line-height: 18px;
   background-color: $lcg-2;
 
-  // @media (min-width: $tablet-width) {
-  //   padding-bottom: 58.5px;
-  // }
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 60px;
+    // padding-bottom: 58.5px;
+  }
 
   &--text-style {
     font-weight: 700;
