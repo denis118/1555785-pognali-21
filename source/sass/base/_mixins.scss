@@ -52,3 +52,9 @@
   vertical-align: middle;
   width: inherit;
 }
+
+// text-style-set-1
+@mixin text-style-set-1 {
+  font-size: 20px;
+  line-height: 20px;
+}

@@ -72,6 +72,11 @@
 
   &--level-2-form {
     color: $dcg-1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &--level-2-filter {
@@ -125,6 +130,12 @@
 
 .additional-text {
   font-weight: 700;
+}
+
+.form-text-style {
+  @media (min-width: $tablet-width) {
+    @include text-style-set-1;
+  }
 }
 
 .link {

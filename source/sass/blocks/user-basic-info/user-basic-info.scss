@@ -18,12 +18,6 @@
     color: $dcg-1;
     text-transform: uppercase;
     text-align: center;
-
-    @media (min-width: $tablet-width) {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 20px;
-    }
   }
 
   &--positioned-absolutely {
@@ -130,7 +124,6 @@
 
   @media (min-width: $tablet-width) {
     top: 85px;
-    letter-spacing: 0.1em;
   }
 }
 
