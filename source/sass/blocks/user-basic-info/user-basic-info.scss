@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: -60px;
-    padding-top: 60px;
+    padding-top: 104px;
     // padding-bottom: 58.5px;
   }
 
@@ -14,6 +14,12 @@
     color: $dcg-1;
     text-transform: uppercase;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--positioned-absolutely {
@@ -35,7 +41,6 @@
   place-items: center;
 
   @media (min-width: $tablet-width) {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
@@ -57,6 +62,11 @@
   grid-area: rating;
   margin-left: -1px;
 
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+    margin-left: -3px;
+  }
+
   @media (min-width: $desktop-width) {
     top: -140px;
     left: 900px;
@@ -65,6 +75,10 @@
 
 .user-basic-info__avatar {
   grid-area: avatar;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
 
   @media (min-width: $desktop-width) {
     top: -190px;
@@ -75,6 +89,10 @@
 .user-basic-info__button {
   grid-area: button;
   margin-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 48px;
+  }
 
   @media (min-width: $desktop-width) {
     top: 0;
@@ -89,6 +107,10 @@
   width: 100%;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 51px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 732px;
     margin: 0;
@@ -97,12 +119,12 @@
 
 .user-basic-info__hashtags-label {
   width: 70px;
-  position: absolute;
   top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: $lcg-2;
-  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    top: 85px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .user-basic-info__textarea {
@@ -118,18 +140,36 @@
   color: $dcg-9;
   background-color: $lcg-2;
   opacity: 0.6;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 34.15px;
+    padding-bottom: 16.5px;
+    padding-left: 38.28px;
+  }
 }
 
 .user-basic-info__fieldset {
   width: 270px;
-  margin-top: 17.89px;
+  margin-top: 25.89px;
   margin-bottom: 34px;
+  padding-top: 15px;
   padding-bottom: 15px;
   box-sizing: border-box;
   border: 1px solid $lcg-7;
   border-radius: 10px;
+  position: relative;
 
   grid-area: transport;
+
+  @media (min-width: $tablet-width) {
+    width: 308px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0;
@@ -140,6 +180,21 @@
 
 .user-basic-info__legend {
   width: 110px;
+  top: -8px;
+
+  @media (min-width: $tablet-width) {
+    width: 152px;
+    top: 84px;
+    letter-spacing: 0.08em;
+  }
 }
 
 // .user-basic-info__user-transport {}
+
+.user-basic-info__element {
+  position: absolute;
+  background-color: $lcg-2;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}

@@ -15,7 +15,10 @@
   }
 
   &--form {
-    border-radius: 50%;
+    @media (min-width: $tablet-width) {
+      width: 94px;
+      height: 94px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 190px;
