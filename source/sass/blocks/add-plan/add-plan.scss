@@ -25,20 +25,23 @@
   }
 }
 
-.add-plan__container {
-  position: relative;
-}
+// .add-plan__container {}
 
 // .add-plan__heading {}
 
 .add-plan__step-indicator {
   position: absolute;
-  top: 9px;
-  left: 205px;
 
   @media (min-width: $tablet-width) {
     top: 66px;
     left: 619px;
+  }
+
+  &--initial {
+    @media (max-width: $mobile-width-only) {
+      top: -65px;
+      left: 205px;
+    }
   }
 }
 
