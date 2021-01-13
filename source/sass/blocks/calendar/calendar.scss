@@ -5,6 +5,10 @@
     line-height: 18px;
     text-transform: uppercase;
     color: $dcg-9;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -78,6 +82,13 @@
       font-weight: 400;
       background-color: $lcg-1;
     }
+
+    &:not(:disabled) + .calendar__day {
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
   }
 }
 
@@ -95,6 +106,11 @@
   align-items: center;
   padding-top: 22px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 39px;
+    padding-bottom: 8px;
+  }
 }
 
 .calendar__weekday-item {
@@ -103,6 +119,14 @@
 
   &--weekend {
     color: $mcg-3;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: attr(data-text);
+      display: block;
+      text-transform: none;
+    }
   }
 }
 
@@ -119,8 +143,7 @@
   background-color: $lcg-12;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(7, 76px);
-    grid-template-rows: repeat(6, 68px);
+    width: 538px;
   }
 }
 
@@ -142,7 +165,7 @@
 
   @media (min-width: $tablet-width) {
     width: 76px;
-    min-height: 68px;
+    height: 67px;
   }
 
   &:hover {
