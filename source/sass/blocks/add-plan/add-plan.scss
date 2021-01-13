@@ -1,15 +1,10 @@
-
 .add-plan {
   margin-top: - ($bottom-radii);
   padding-top: 30px;
   background-color: $lcg-5;
-  position: relative;
   z-index: 1002;
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
 
   &--border-with-radius {
     border: 1px solid $lcg-7;
@@ -24,16 +19,22 @@
   @media (min-width: $tablet-width) {
     padding-top: 53px;
   }
+
+  &--common-letter-spacing {
+    letter-spacing: 0.09em;
+  }
 }
 
-.add-plan__heading {
-  padding-bottom: 29px;
+.add-plan__container {
+  position: relative;
 }
+
+// .add-plan__heading {}
 
 .add-plan__step-indicator {
   position: absolute;
-  top: 39px;
-  left: 230px;
+  top: 9px;
+  left: 205px;
 
   @media (min-width: $tablet-width) {
     top: 66px;
@@ -46,14 +47,13 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 0;
   padding: 0;
   padding-top: 80px;
   border: none;
   position: relative;
 
-  &:not(:first-child) {
-    margin-top: 10px;
+  &:first-of-type {
+    margin-top: 29px;
   }
 
   &:last-child {
@@ -75,7 +75,7 @@
   left: 25px;
 
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 20px;
   color: $dcg-1;
   background-color: transparent;
@@ -89,6 +89,11 @@
     top: 101px;
     left: 159px;
   }
+}
+
+.add-plan__legend-span {
+  @include words-splitter;
+  width: 163px;
 }
 
 .add-plan__box {
@@ -156,7 +161,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0.09px;
   text-transform: uppercase;
   color: $dcg-1;
 
@@ -204,7 +208,11 @@
   }
 
   &--children {
+    justify-content: flex-start;
+    position: relative;
     margin-top: 20px;
+    padding-left: 40px;
+    padding-top: 8px;
     font-size: 15px;
     font-weight: 400;
     line-height: 15px;
@@ -217,7 +225,26 @@
       grid-row-start: 3;
       grid-row-end: 4;
     }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid $lcg-7;
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
+}
+
+.add-plan__check-mark {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 10px;
 }
 
 .add-plan__main-parameters {
@@ -270,6 +297,8 @@
   text-align: center;
 
   &--main-parameters {
+    padding-top: 8px;
+
     @media (min-width: $desktop-width) {
       width: 96px;
     }
@@ -278,6 +307,14 @@
   // &--companions {}
 
   // &--travel-days {}
+
+  &--for-children {
+    @include visually-hidden;
+
+    &:checked + .add-plan__check-mark {
+      display: block;
+    }
+  }
 
   &--chosen-country {
     font-size: 14px;
@@ -312,7 +349,7 @@
 }
 
 .add-plan__calendar {
-  margin-top: 24px;
+  margin-top: 26px;
 
   @media (min-width: $desktop-width) {
     grid-column-start: 1;

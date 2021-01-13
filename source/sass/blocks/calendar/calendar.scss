@@ -40,6 +40,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 3px;
 }
 
 .calendar__month-item {
@@ -67,6 +68,14 @@
 // .calendar__checkbox {}
 
 // .calendar__label {}
+
+.calendar__label-span {
+  @include words-splitter;
+
+  // &--month {}
+
+  // &--year {}
+}
 
 .calendar__weekday-list {
   display: flex;

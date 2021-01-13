@@ -458,8 +458,10 @@
                   class="user-plans__period-text user-plans__period-text--start">
                   26 мар
                 </span>
-                <span
-                  class="user-plans__period-text user-plans__period-text--dash double-em-dash"></span>
+                <svg class="user-plans__double-em-dash" width="13" height="1"
+                  viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="user-plans__svg-rect" width="13" height="1" />
+                </svg>
                 <span
                   class="user-plans__period-text user-plans__period-text--end">
                   29 мар
@@ -485,8 +487,10 @@
                   class="user-plans__period-text user-plans__period-text--shifted user-plans__period-text--start">
                   1 июл
                 </span>
-                <span
-                  class="user-plans__period-text user-plans__period-text--dash double-em-dash"></span>
+                <svg class="user-plans__double-em-dash" width="13" height="1"
+                  viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="user-plans__svg-rect" width="13" height="1" />
+                </svg>
                 <span
                   class="user-plans__period-text user-plans__period-text--end">
                   15 июл
@@ -502,14 +506,14 @@
       </section>
 
       <section class="add-plan plans-form__add-plan">
-        <div class="container">
+        <div class="container add-plan__container">
           <h3
-            class="add-plan__heading heading heading--level-2 heading--level-2-form">
+            class="add-plan__heading heading heading--level-2 heading--level-2-form zero-edges">
             Добавить план:
           </h3>
 
           <ol
-            class="step-indicator step-indicator--initial add-plan__step-indicator list zero-edges">
+            class="step-indicator add-plan__step-indicator list zero-edges hidden-on-desktop">
             <li
               class="step-indicator__step step-indicator__step--1 step-indicator__step--active">
               <span class="step-indicator__step-text">
@@ -528,26 +532,35 @@
             </li>
           </ol>
 
-          <fieldset class="add-plan__fieldset under-layer" id="step-1">
+          <fieldset class="add-plan__fieldset under-layer zero-edges"
+            id="step-1">
             <legend class="add-plan__legend">
-              Шаг 1.<br>Даты пребывания
+              <span class="add-plan__legend-span">
+                Шаг 1.
+              </span>
+              <span class="add-plan__legend-span">
+                Даты пребывания
+              </span>
             </legend>
             <div class="add-plan__box">
               <ol
-                class="step-indicator step-indicator--desktop add-plan__step-indicator list">
+                class="step-indicator add-plan__step-indicator list hidden-before-desktop">
                 <li
                   class="step-indicator__step step-indicator__step--1 step-indicator__step--active">
-                  <span class="step-indicator__step-text">
+                  <span
+                    class="step-indicator__step-text add-plan--common-letter-spacing">
                     Даты
                   </span>
                 </li>
                 <li class="step-indicator__step step-indicator__step--2">
-                  <span class="step-indicator__step-text">
+                  <span
+                    class="step-indicator__step-text add-plan--common-letter-spacing">
                     Маршрут
                   </span>
                 </li>
                 <li class="step-indicator__step add-plan__step--3">
-                  <span class="step-indicator__step-text">
+                  <span
+                    class="step-indicator__step-text add-plan--common-letter-spacing">
                     Развлечения
                   </span>
                 </li>
@@ -562,7 +575,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount add-plan--common-letter-spacing"
                   for="fellow-travelers-amount">
                   Ищу попутчиков:
                 </label>
@@ -602,7 +615,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration add-plan--common-letter-spacing"
                   for="travel-duration">
                   Длительность:
                 </label>
@@ -639,10 +652,17 @@
                 </p>
               </div>
 
-              <input class="visually-hidden" type="checkbox" name="children"
-                id="width-children" checked>
               <label class="add-plan__label add-plan__label--children"
                 for="width-children">
+                <input class="add-plan__input add-plan__input--for-children"
+                  type="checkbox" name="children" id="width-children" checked>
+                <svg class="add-plan__check-mark" width="9" height="9"
+                  viewBox="0 0 9 9" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.83484 8.46392L0.388824 5.80546V5.44435V4.72213C0.388824 4.75169 0.388824 4.69256 0.388824 4.72213C0.388824 4.56696 0.388875 4.36102 0.388875 4.36102V3.63879L2.82803 5.99046C2.91165 6.07814 3.04776 6.07712 3.13138 5.98944L8.33331 0.388794V1.88575V2.55546C8.33331 2.91657 8.33331 2.91657 8.33331 2.91657L3.86155 7.69823L3.86253 7.69925L3.13819 8.4629C3.05457 8.55058 2.91845 8.55058 2.83484 8.46392Z"
+                    fill="#161C35" />
+                </svg>
                 Можно с детьми
               </label>
 
@@ -694,12 +714,21 @@
                         type="checkbox" name="march-2019" id="march-2019"
                         checked>
                       <label class="calendar__label" for="march-2019">
-                        Март
+                        <span
+                          class="calendar__label-span calendar__label-span--month">
+                          Март
+                        </span>
+                        <span
+                          class="calendar__label-span calendar__label-span--year">
+                          2019
+                        </span>
+
+                        <!-- Март
                         <span
                           class="calendar__wrap-toggle calendar__wrap-toggle--nowrap">&nbsp;</span>
                         <span
                           class="calendar__wrap-toggle calendar__wrap-toggle--wrap"><br></span>
-                        2019
+                        2019 -->
                       </label>
                     </li>
                     <li class="calendar__month-item">
@@ -1215,7 +1244,7 @@
             </legend>
             <div class="add-plan__box">
               <ol
-                class="step-indicator step-indicator--desktop add-plan__step-indicator list zero-edges">
+                class="step-indicator add-plan__step-indicator list zero-edges hidden-before-desktop">
                 <li class="step-indicator__step step-indicator__step--1">
                   <span class="step-indicator__step-text">
                     Даты
@@ -1725,7 +1754,7 @@
             </legend>
             <div class="add-plan__box">
               <ol
-                class="step-indicator step-indicator--desktop add-plan__step-indicator list zero-edges">
+                class="step-indicator add-plan__step-indicator list zero-edges hidden-before-desktop">
                 <li class="step-indicator__step step-indicator__step--1">
                   <span class="step-indicator__step-text">
                     Даты
