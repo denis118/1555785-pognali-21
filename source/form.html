@@ -559,7 +559,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount add-plan--text-style"
                   for="fellow-travelers-amount">
                   Ищу попутчиков:
                 </label>
@@ -569,23 +569,23 @@
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-companion"
                     aria-label="Уменьшить количество попутчиков">
-                    <svg class="button__svg-minus" width="14" height="2"
-                      viewBox="0 0 14 2" fill="none"
+                    <svg class="button__svg-math button__svg-math--minus"
+                      width="14" height="2" viewBox="0 0 14 2" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <line y1="1" x2="14" y2="1" stroke="#CCCCCC"
                         stroke-width="2" />
                     </svg>
                   </button>
                   <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan--without-border"
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan--without-border add-plan--text-style"
                     type="text" name="companions" value="2"
                     id="fellow-travelers-amount">
                   <button
                     class="button button--math-sign button--sign button--plus add-plan__main-parameters-button add-plan__main-parameters-button--plus"
                     type="button" name="plus-companion"
                     aria-label="Увеличить количество попутчиков">
-                    <svg class="button__svg-plus" width="14" height="14"
-                      viewBox="0 0 14 14" fill="none"
+                    <svg class="button__svg-math button__svg-math--plus"
+                      width="14" height="14" viewBox="0 0 14 14" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <line y1="6.69995" x2="14" y2="6.69995" stroke="#CCCCCC"
                         stroke-width="2" />
@@ -599,7 +599,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration add-plan--text-style"
                   for="travel-duration">
                   Длительность:
                 </label>
@@ -609,23 +609,23 @@
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-day"
                     aria-label="Уменьшить количество дней">
-                    <svg class="button__svg-minus" width="14" height="2"
-                      viewBox="0 0 14 2" fill="none"
+                    <svg class="button__svg-math button__svg-math--minus"
+                      width="14" height="2" viewBox="0 0 14 2" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <line class="button__svg-line" y1="1" x2="14" y2="1"
                         stroke="#CCCCCC" stroke-width="2" />
                     </svg>
                   </button>
                   <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan--without-border"
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan--without-border add-plan--text-style"
                     type="text" name="travel-days" value="3"
                     id="travel-duration">
                   <button
                     class="button button--math-sign button--sign button--plus add-plan__main-parameters-button add-plan__main-parameters-button--plus"
                     type="button" name="plus-day"
                     aria-label="Увеличить количество дней">
-                    <svg class="button__svg-plus" width="14" height="14"
-                      viewBox="0 0 14 14" fill="none"
+                    <svg class="button__svg-math button__svg-math--plus"
+                      width="14" height="14" viewBox="0 0 14 14" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <line y1="6.69995" x2="14" y2="6.69995" stroke="#CCCCCC"
                         stroke-width="2" />
@@ -636,7 +636,8 @@
                 </p>
               </div>
 
-              <label class="add-plan__label add-plan__label--children"
+              <label
+                class="add-plan__label add-plan__label--children add-plan--text-style"
                 for="width-children">
                 <input class="add-plan__input add-plan__input--for-children"
                   type="checkbox" name="children" id="width-children" checked>
@@ -687,7 +688,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="february-2019" id="february-2019">
-                      <label class="calendar__label" for="february-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="february-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Февраль
@@ -704,7 +707,9 @@
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="march-2019" id="march-2019"
                         checked>
-                      <label class="calendar__label" for="march-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="march-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Март
@@ -719,7 +724,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="april-2019" id="april-2019">
-                      <label class="calendar__label" for="april-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="april-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Апрель
@@ -734,7 +741,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="may-2019" id="may-2019">
-                      <label class="calendar__label" for="may-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="may-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Май
@@ -749,7 +758,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="june-2019" id="june-2019">
-                      <label class="calendar__label" for="june-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="june-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Июнь
@@ -764,7 +775,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="july-2019" id="july-2019">
-                      <label class="calendar__label" for="july-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="july-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Июль
@@ -779,7 +792,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="august-2019" id="august-2019">
-                      <label class="calendar__label" for="august-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="august-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Август
@@ -795,7 +810,9 @@
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="september-2019"
                         id="september-2019">
-                      <label class="calendar__label" for="september-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="september-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Сентябрь
@@ -810,7 +827,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="october-2019" id="october-2019">
-                      <label class="calendar__label" for="october-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="october-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Октябрь
@@ -825,7 +844,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="november-2019" id="november-2019">
-                      <label class="calendar__label" for="november-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="november-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Ноябрь
@@ -840,7 +861,9 @@
                       <input
                         class="calendar__checkbox calendar__checkbox--month hidden-entity"
                         type="checkbox" name="december-2019" id="december-2019">
-                      <label class="calendar__label" for="december-2019">
+                      <label
+                        class="calendar__label heading heading--level-2-form"
+                        for="december-2019">
                         <span
                           class="calendar__label-span calendar__label-span--month">
                           Декабрь

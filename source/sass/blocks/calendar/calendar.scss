@@ -16,6 +16,12 @@
   border-top: 1px solid $lcg-12;
   border-bottom: 1px solid $lcg-12;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-height: 86px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .calendar__switch-month {
@@ -26,11 +32,16 @@
   // &--next {}
 }
 
-// .calendar__arrow {
-//   &--back {}
+.calendar__arrow {
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 44px;
+  }
 
-//   &--next {}
-// }
+  // &--back {}
+
+  // &--next {}
+}
 
 .calendar__month-list {
   display: flex;

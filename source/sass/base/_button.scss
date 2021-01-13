@@ -316,9 +316,23 @@
   }
 }
 
-// .button__svg-minus {}
+.button__svg-math {
+  @media (min-width: $tablet-width) {
+    width: 20px;
+  }
 
-// .button__svg-plus {}
+  &--minus {
+    @media (min-width: $tablet-width) {
+      height: 4px;
+    }
+  }
+
+  &--plus {
+    @media (min-width: $tablet-width) {
+      height: 20px;
+    }
+  }
+}
 
 .button__svg-line {
   &--white {

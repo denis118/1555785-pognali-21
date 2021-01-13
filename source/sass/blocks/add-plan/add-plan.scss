@@ -19,6 +19,16 @@
   &--without-border {
     border: none;
   }
+
+  &--text-style {
+    font-weight: 500;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.1em;
+    }
+  }
 }
 
 // .add-plan__container {}
@@ -56,10 +66,10 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 56px;
-      background-image: $line-in-add-plan, $rect-in-add-plan;
-      background-repeat: no-repeat, no-repeat;
-      background-size: auto, auto;
-      background-position: 50% 265px, 100% 538px;
+      background-image: $line-in-add-plan, $line-in-add-plan, $rect-in-add-plan;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: auto, auto, auto;
+      background-position: 50% 265px, 50% 491px, 100% 538px;
     }
   }
 
@@ -170,6 +180,10 @@
   }
 
   &--travel-time {
+    @media (min-width: $tablet-width) {
+      margin-top: 113px;
+    }
+
     @media (min-width: $desktop-width) {
       grid-row-start: 4;
       grid-row-end: 5;
@@ -182,13 +196,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
   text-transform: uppercase;
   color: $dcg-1;
-  letter-spacing: 0.09em;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+  }
 
 
   &--main-parameters {
@@ -196,9 +211,7 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 64px;
-      font-size: 20px;
       line-height: 18px;
-      letter-spacing: 0.1em;
     }
 
     @media (min-width: $desktop-width) {
@@ -227,6 +240,12 @@
 
     &::after {
       content: "Чел.";
+      letter-spacing: 0.07em;
+
+      @media (min-width: $tablet-width) {
+        letter-spacing: 0.08em;
+        margin-right: 5px;
+      }
     }
   }
 
@@ -246,11 +265,24 @@
     margin-top: 20px;
     padding-left: 40px;
     padding-top: 8px;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    text-transform: none;
     color: $dcg-1;
+
+    @media (max-width: $mobile-width-only) {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 428px;
+      left: 40px;
+      margin-top: 0;
+      padding-left: 59px;
+      padding-top: 9px;
+    }
 
     @media (min-width: $desktop-width) {
       grid-column-start: 6;
@@ -269,6 +301,11 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      @media (min-width: $tablet-width) {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
 }
@@ -278,6 +315,13 @@
   position: absolute;
   top: 8px;
   left: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 14px;
+    height: 14px;
+    top: 11px;
+    left: 12px;
+  }
 }
 
 .add-plan__main-parameters {
@@ -307,14 +351,29 @@
   padding-left: 14px;
   padding-right: 14px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
   &--minus {
     padding-top: 21px;
     padding-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &--plus {
     padding-top: 13px;
     padding-bottom: 12px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
 }
 
@@ -325,16 +384,22 @@
   padding-right: 10px;
   height: auto;
   outline: none;
-
-  font-size: 14.86px;
-  font-weight: 500;
-  line-height: 14px;
   color: $dcg-1;
-
   text-align: center;
+  letter-spacing: normal;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14.86px;
+    line-height: 14px;
+  }
 
   &--main-parameters {
     padding-top: 8px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 6px;
+      padding-left: 6px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 96px;
@@ -387,6 +452,10 @@
 
 .add-plan__calendar {
   margin-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 61px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
