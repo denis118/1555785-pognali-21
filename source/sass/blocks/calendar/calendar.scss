@@ -54,6 +54,8 @@
 }
 
 .calendar__checkbox {
+  // &--month {}
+
   &--day {
     &:checked + .calendar__day {
       color: $lcg-1;
@@ -93,7 +95,7 @@
   }
 }
 
-.calendar__days {
+.calendar__days-list {
   @include centering-margins;
   display: grid;
   width: 216px;
@@ -110,6 +112,8 @@
     grid-template-rows: repeat(6, 68px);
   }
 }
+
+// .calendar__day-item {}
 
 .calendar__day {
   @include centering-grid;
