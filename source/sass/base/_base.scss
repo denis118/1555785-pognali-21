@@ -167,6 +167,12 @@
     margin-top: 15px;
   }
 
+  &--form {
+    @media (min-width: $tablet-width) {
+      border-radius: $bottom-radii;
+    }
+  }
+
   &--radius {
     border-radius: 20px;
   }

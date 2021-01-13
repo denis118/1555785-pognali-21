@@ -328,7 +328,12 @@
 
           <a class="button button--change-photo button--roll-and-change user-basic-info__button user-basic-info--positioned-absolutely link"
             href="#!">
-            <span class="hidden-on-desktop">Сменить</span> фото
+            <span class="user-basic-info__span hidden-on-desktop">
+              Сменить
+            </span>
+            <span class="user-basic-info__span">
+              фото
+            </span>
           </a>
 
           <div class="user-basic-info__hashtags">
@@ -506,13 +511,14 @@
       </section>
 
       <section class="add-plan plans-form__add-plan">
-        <div class="container add-plan__container">
+        <div class="container container--slim add-plan__container">
           <h3
             class="add-plan__heading heading heading--level-2 heading--level-2-form zero-edges">
             Добавить план:
           </h3>
 
-          <fieldset class="add-plan__fieldset under-layer zero-edges"
+          <fieldset
+            class="add-plan__fieldset under-layer under-layer--form zero-edges"
             id="step-1">
             <legend class="add-plan__legend">
               <span class="add-plan__legend-span">
@@ -527,26 +533,24 @@
                 class="step-indicator add-plan__step-indicator add-plan__step-indicator--initial list">
                 <li
                   class="step-indicator__step step-indicator__step--1 step-indicator__step--active">
-                  <span
-                    class="step-indicator__step-text add-plan--common-letter-spacing">
+                  <span class="step-indicator__step-text">
                     Даты
                   </span>
                 </li>
                 <li class="step-indicator__step step-indicator__step--2">
-                  <span
-                    class="step-indicator__step-text add-plan--common-letter-spacing">
+                  <span class="step-indicator__step-text">
                     Маршрут
                   </span>
                 </li>
                 <li class="step-indicator__step add-plan__step--3">
-                  <span
-                    class="step-indicator__step-text add-plan--common-letter-spacing">
+                  <span class="step-indicator__step-text">
                     Развлечения
                   </span>
                 </li>
               </ol>
 
-              <p class="main-text add-plan__main-text">
+              <p
+                class="main-text add-plan__main-text add-plan__main-text--step-1">
                 Укажите предпочтительное количество попутчиков, которых вы
                 хотели бы позвать в поездку и
                 ее предполагаемую длительность.
@@ -555,7 +559,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount add-plan--common-letter-spacing"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount"
                   for="fellow-travelers-amount">
                   Ищу попутчиков:
                 </label>
@@ -595,7 +599,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration add-plan--common-letter-spacing"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration"
                   for="travel-duration">
                   Длительность:
                 </label>

@@ -6,6 +6,10 @@
   border-top-left-radius: $bottom-radii;
   border-top-right-radius: $bottom-radii;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 52px;
+  }
+
   &--border-with-radius {
     border: 1px solid $lcg-7;
     border-radius: 4px;
@@ -14,14 +18,6 @@
 
   &--without-border {
     border: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 53px;
-  }
-
-  &--common-letter-spacing {
-    letter-spacing: 0.09em;
   }
 }
 
@@ -32,15 +28,15 @@
 .add-plan__step-indicator {
   position: absolute;
 
-  @media (min-width: $tablet-width) {
-    top: 66px;
-    left: 619px;
-  }
-
   &--initial {
     @media (max-width: $mobile-width-only) {
       top: -65px;
       left: 205px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: -99px;
+      left: 543px;
     }
   }
 }
@@ -57,6 +53,14 @@
 
   &:first-of-type {
     margin-top: 29px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 56px;
+      background-image: $line-in-add-plan, $rect-in-add-plan;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, auto;
+      background-position: 50% 265px, 100% 538px;
+    }
   }
 
   &:last-child {
@@ -84,8 +88,11 @@
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
+    width: 293px;
     top: 48px;
     left: 40px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
@@ -97,6 +104,10 @@
 .add-plan__legend-span {
   @include words-splitter;
   width: 163px;
+
+  @media (min-width: $tablet-width) {
+    width: 293px;
+  }
 }
 
 .add-plan__box {
@@ -121,6 +132,17 @@
   line-height: 22px;
   color: $dcg-9;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &--step-1 {
+    @media (min-width: $tablet-width) {
+      width: 505px;
+    }
+  }
 
   &--step-3 {
     margin-bottom: 27px;
@@ -166,10 +188,18 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $dcg-1;
+  letter-spacing: 0.09em;
 
 
   &--main-parameters {
     margin-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 64px;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 0.1em;
+    }
 
     @media (min-width: $desktop-width) {
       position: relative;
@@ -256,6 +286,10 @@
   align-items: center;
   margin: 0;
   margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
 
   // &--companions-amount {}
 

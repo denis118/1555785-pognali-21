@@ -210,3 +210,13 @@
     }
   }
 }
+
+.user-basic-info__span {
+  &:first-child {
+    margin-right: 3px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 5px;
+    }
+  }
+}

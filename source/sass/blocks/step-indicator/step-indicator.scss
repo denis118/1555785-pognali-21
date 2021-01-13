@@ -32,6 +32,10 @@
   &:not(:last-child) {
     margin-right: 16px;
 
+    @media (min-width: $tablet-width) {
+      margin-right: 28px;
+    }
+
     @media (min-width: $desktop-width) {
       margin-right: 0;
       margin-bottom: 27px;
