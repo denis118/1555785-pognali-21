@@ -1,7 +1,4 @@
 .calendar {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-
   &--common-text-style {
     font-size: 14px;
     font-weight: 400;
@@ -22,8 +19,7 @@
 }
 
 .calendar__switch-month {
-  display: grid;
-  place-items: center;
+  @include centering-grid;
 
   // &--previous {}
 
@@ -57,17 +53,20 @@
   }
 }
 
-// .calendar__wrap-toggle {  // потом удалить
-//   &--wrap {
-//     display: none;
-//   }
+.calendar__checkbox {
+  &--day {
+    &:checked + .calendar__day {
+      color: $lcg-1;
+      background-color: $dcg-1;
+    }
 
-//   &--nowrap {}
-// }
-
-// .calendar__checkbox {}
-
-// .calendar__label {}
+    &:disabled + .calendar__day {
+      color: $lcg-14;
+      font-weight: 400;
+      background-color: $lcg-1;
+    }
+  }
+}
 
 .calendar__label-span {
   @include words-splitter;
@@ -95,14 +94,16 @@
 }
 
 .calendar__days {
+  @include centering-margins;
   display: grid;
-  place-items: center;
-  grid-template-columns: repeat(7, 30px);
-  grid-template-rows: repeat(6, 30px);
+  width: 216px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, min-content);
   justify-content: center;
-  outline: 1px solid $lcg-12;
+  border: 1px solid $lcg-12;
   grid-column-gap: 1px;
   grid-row-gap: 1px;
+  background-color: $lcg-12;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(7, 76px);
@@ -111,44 +112,26 @@
 }
 
 .calendar__day {
-  display: grid;
-  place-items: center;
+  @include centering-grid;
   width: 30px;
-  min-height: 30px;
-
-  &:hover {
-    color: $lcg-1;
-    background-color: $dcg-1;
-    outline: 2px solid $mcg-3;
-    outline-offset: -2px;
-    opacity: 1;
-  }
-
-  &--banned {
-    .calendar__label {
-      opacity: 0.3;
-    }
-  }
-
-  &--available {
-    font-weight: 400;
-    color: $dcg-1;
-    background-color: $lcg-2;
-  }
+  height: 30px;
+  font-weight: 500;
+  color: $dcg-1;
+  background-color: $lcg-2;
 
   // &--previous-month {}
 
   // &--current-month {}
-
-  &--chosen {
-    color: $lcg-1;
-    background-color: $dcg-1;
-  }
 
   // &--next-month {}
 
   @media (min-width: $tablet-width) {
     width: 76px;
     min-height: 68px;
+  }
+
+  &:hover {
+    outline: 2px solid $mcg-3;
+    outline-offset: -1px;
   }
 }
