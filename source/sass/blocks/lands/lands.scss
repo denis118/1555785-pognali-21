@@ -1,7 +1,4 @@
-
 .lands {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   background-color: $lcg-1;
   width: 100%;
   box-sizing: border-box;
@@ -40,6 +37,7 @@
 // .lands__container {}
 
 .lands__uppper-box {
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -119,6 +117,7 @@
   // &--region {}
 
   &--letter {
+    @include centering-grid;
     font-size: 14px;
     font-weight: 500;
     color: $dcg-1;
@@ -128,6 +127,8 @@
     background-color: $lcg-1;
   }
 
+  // &--letter-form {}
+
   &--letter-catalog {
     line-height: 14px;
   }
@@ -136,6 +137,7 @@
     line-height: 22px;
     font-weight: 400;
     text-transform: none;
+    color: $dcg-9;
   }
 }
 
@@ -231,9 +233,7 @@
   }
 }
 
-.lands__alphabetical-box {
-  color: $dcg-9;
-}
+// .lands__alphabetical-box {}
 
 .lands__alphabetical-index {
   font-size: 60px;
@@ -252,7 +252,18 @@
 //   &--a {}
 // }
 
-// .lands__subitem {}
+.lands__subitem {
+  height: 20px;
+  margin: 5px 0 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &--higher {
+    height: 21px;
+  }
+}
 
 .lands__roll-up-button {
   &--catalog {

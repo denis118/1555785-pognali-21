@@ -447,6 +447,59 @@
   }
 }
 
+.add-plan__element {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+    width: 8px;
+    height: 8px;
+    background-color: $dcg-1;
+    border-radius: 50%;
+    top: 16px;
+    left: 162px;
+  }
+
+  &::after {
+    width: 8px;
+    height: 11px;
+    background-color: transparent;
+    background-image: $down-arrow;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: cover;
+    left: 162px;
+    top: 48px;
+  }
+
+  &--empty {
+    &::before {
+      width: 7px;
+      height: 7px;
+      background-color: $lcg-1;
+      border: 1px solid $lcg-7;
+    }
+  }
+
+  &--button {
+    &::before {
+      background-color: $lcg-2;
+    }
+
+    &::after {
+      width: 14px;
+      height: 14px;
+      background-image: $big-cross-in-add-plan;
+      left: 191px;
+      top: 14px;
+    }
+  }
+}
+
 .add-plan__input {
   width: 134px;
   box-sizing: border-box;
@@ -514,6 +567,9 @@
   }
 
   &--refilled {
+    padding-left: 17px;
+    padding-top: 5px;
+    letter-spacing: 0.02em;
     background-color: $dcg-1;
     color: $lcg-1;
     border-top-left-radius: 4px;
@@ -619,6 +675,13 @@
   }
 
   // &--specify-country {}
+
+  &--refilled {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .add-plan__flag {
@@ -681,9 +744,9 @@
   }
 
   &--close-list {
-    top: 20px;
-    left: 190px;
-    transform: translate(50%, 50%);
+    padding: 10px;
+    top: 21px;
+    left: 199px;
 
     @media (min-width: $tablet-width) {
       top: 25px;
@@ -817,58 +880,5 @@
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 7;
-  }
-}
-
-.add-plan__element {
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
-
-  &::before {
-    width: 8px;
-    height: 8px;
-    background-color: $dcg-1;
-    border-radius: 50%;
-    top: 16px;
-    left: 162px;
-  }
-
-  &::after {
-    width: 8px;
-    height: 11px;
-    background-color: transparent;
-    background-image: $down-arrow;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: cover;
-    left: 162px;
-    top: 48px;
-  }
-
-  &--empty {
-    &::before {
-      width: 7px;
-      height: 7px;
-      background-color: $lcg-1;
-      border: 1px solid $lcg-7;
-    }
-  }
-
-  &--button {
-    &::before {
-      background-color: $lcg-2;
-    }
-
-    &::after {
-      width: 14px;
-      height: 14px;
-      background-image: $big-cross-in-add-plan;
-      left: 191px;
-      top: 14px;
-    }
   }
 }
