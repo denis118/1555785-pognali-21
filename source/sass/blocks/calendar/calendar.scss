@@ -9,6 +9,10 @@
     @media (min-width: $tablet-width) {
       font-size: 18px;
     }
+
+    @media (min-width: $desktop-width) {
+      text-transform: lowercase;
+    }
   }
 }
 
@@ -211,10 +215,48 @@
     padding-top: 14px;
     padding-left: 14px;
     box-sizing: border-box;
+    position: relative;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 40px;
+      left: 14px;
+      font-size: 18px;
+      text-transform: none;
+    }
+  }
+
+  &--check-in {
+    &::before {
+      @media (min-width: $desktop-width) {
+        content: "Заезд";
+      }
+    }
+  }
+
+  &--check-out {
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "Выезд";
+      }
+    }
   }
 
   &:hover {
     outline: 2px solid $mcg-3;
     outline-offset: -1px;
+  }
+}
+
+.calendar__month-designation {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 18px;
+    letter-spacing: 0.04em;
   }
 }
