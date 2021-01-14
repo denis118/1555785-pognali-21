@@ -10,6 +10,12 @@
     padding-top: 52px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    border-top-left-radius: $bottom-radii-bigger;
+    border-top-right-radius: $bottom-radii-bigger;
+  }
+
   &--border-with-radius {
     border: 1px solid $lcg-7;
     border-radius: 4px;
@@ -33,7 +39,11 @@
 
 // .add-plan__container {}
 
-// .add-plan__heading {}
+.add-plan__heading {
+  @media (min-width: $desktop-width) {
+    padding-left: 69px;
+  }
+}
 
 .add-plan__step-indicator {
   position: absolute;
@@ -48,6 +58,13 @@
       top: -99px;
       left: 543px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    margin-top: 7px;
+    margin-left: 58px;
+    margin-bottom: 0;
   }
 }
 
@@ -70,6 +87,14 @@
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-size: auto, auto, auto;
       background-position: 50% 265px, 50% 491px, 100% 538px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 54px;
+      background-image: $line-bigger-in-add-plan;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: 50% 273px;
     }
   }
 
@@ -106,17 +131,41 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: auto;
     top: 101px;
     left: 159px;
   }
 }
 
-.add-plan__legend-span {
+.add-plan__span {
   @include words-splitter;
-  width: 163px;
 
-  @media (min-width: $tablet-width) {
-    width: 293px;
+  &--legend {
+    width: 163px;
+
+    @media (min-width: $tablet-width) {
+      width: 293px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: max-content;
+    }
+
+    &:first-child {
+      @media (min-width: $desktop-width) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &--main-text {
+    display: inline;
+    width: auto;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+      width: inherit;
+    }
   }
 }
 
@@ -152,6 +201,10 @@
     @media (min-width: $tablet-width) {
       width: 505px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 581px;
+    }
   }
 
   &--step-3 {
@@ -168,12 +221,14 @@
 
 .add-plan__main-parameters-wrapper {
   @media (min-width: $desktop-width) {
+    display: flex;
     grid-column-start: 1;
     grid-column-end: 6;
   }
 
   &--companions-amount {
     @media (min-width: $desktop-width) {
+      margin-top: 83px;
       grid-row-start: 3;
       grid-row-end: 4;
     }
@@ -185,6 +240,7 @@
     }
 
     @media (min-width: $desktop-width) {
+      margin-top: 13px;
       grid-row-start: 4;
       grid-row-end: 5;
     }
@@ -218,6 +274,7 @@
       position: relative;
       width: auto;
       margin-top: 0;
+      letter-spacing: normal;
     }
 
     &::after {
@@ -251,7 +308,7 @@
 
   &--duration {
     @media (min-width: $desktop-width) {
-      margin-right: 74px;
+      margin-right: 78px;
     }
 
     &::after {
@@ -286,6 +343,13 @@
     }
 
     @media (min-width: $desktop-width) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: min-content;
+      margin-top: 100px;
+      justify-self: end;
       grid-column-start: 6;
       grid-column-end: 8;
       grid-row-start: 3;
@@ -403,7 +467,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 96px;
+      width: 50px;
     }
   }
 
@@ -412,7 +476,7 @@
   // &--travel-days {}
 
   &--for-children {
-    @include visually-hidden;
+    // @include visually-hidden;
 
     &:checked + .add-plan__check-mark {
       display: block;
@@ -459,6 +523,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 34px;
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 5;
@@ -476,6 +541,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 56px;
+    margin-bottom: 108px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;

@@ -521,10 +521,10 @@
             class="add-plan__fieldset under-layer under-layer--form zero-edges"
             id="step-1">
             <legend class="add-plan__legend">
-              <span class="add-plan__legend-span">
+              <span class="add-plan__span add-plan__span--legend">
                 Шаг 1.
               </span>
-              <span class="add-plan__legend-span">
+              <span class="add-plan__span add-plan__span--legend">
                 Даты пребывания
               </span>
             </legend>
@@ -551,9 +551,14 @@
 
               <p
                 class="main-text add-plan__main-text add-plan__main-text--step-1">
-                Укажите предпочтительное количество попутчиков, которых вы
-                хотели бы позвать в поездку и
-                ее предполагаемую длительность.
+                <span class="add-plan__span add-plan__span--main-text">
+                  Укажите предпочтительное количество попутчиков, которых
+                </span>
+                <span class="add-plan__span add-plan__span--main-text">
+                  вы хотели бы позвать в поездку и ее предполагаемую
+                  длительность.
+                </span>
+
               </p>
 
               <div
@@ -639,7 +644,8 @@
               <label
                 class="add-plan__label add-plan__label--children add-plan--text-style"
                 for="width-children">
-                <input class="add-plan__input add-plan__input--for-children"
+                <input
+                  class="add-plan__input add-plan__input--for-children hidden-entity"
                   type="checkbox" name="children" id="width-children" checked>
                 <svg class="add-plan__check-mark" width="9" height="9"
                   viewBox="0 0 9 9" fill="none"

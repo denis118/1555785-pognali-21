@@ -7,10 +7,9 @@
   color: $dcg-3;
 
   @media (min-width: $desktop-width) {
-    // float: none;
-    position: static;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     grid-column-start: 6;
     grid-column-end: 8;
@@ -38,7 +37,7 @@
 
     @media (min-width: $desktop-width) {
       margin-right: 0;
-      margin-bottom: 27px;
+      margin-bottom: 20px;
     }
   }
 
@@ -62,6 +61,7 @@
     }
 
     @media (min-width: $desktop-width) {
+      margin-top: -8px;
       margin-right: 36px;
     }
   }
