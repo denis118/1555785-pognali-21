@@ -276,6 +276,7 @@
     }
 
     @media (min-width: $tablet-width) {
+      width: 538px;
       position: absolute;
       top: 428px;
       left: 40px;
@@ -470,7 +471,7 @@
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 52px;
+    margin-top: 46px;
     margin-bottom: 56px;
   }
 
