@@ -1359,7 +1359,12 @@
             class="add-plan__fieldset add-plan__fieldset--step-2 under-layer"
             id="step-2">
             <legend class="add-plan__legend">
-              Шаг 2.<br>Маршрут
+              <span class="add-plan__span add-plan__span--legend">
+                Шаг 2.
+              </span>
+              <span class="add-plan__span add-plan__span--legend">
+                Маршрут
+              </span>
             </legend>
             <div class="add-plan__box">
               <ol
@@ -1388,7 +1393,7 @@
               </p>
 
               <ul class="add-plan__countries list">
-                <li class="add-plan__country">
+                <li class="add-plan__country add-plan__element">
                   <label class="visually-hidden" for="chosen-country-1">
                     Название страны
                   </label>
@@ -1460,7 +1465,7 @@
                   </button>
                 </li>
 
-                <li class="add-plan__country">
+                <li class="add-plan__country add-plan__element">
                   <label class="visually-hidden" for="chosen-country-2">
                     Название страны
                   </label>
@@ -1532,7 +1537,7 @@
                 </li>
 
                 <li
-                  class="add-plan__country add-plan__country--specify-country">
+                  class="add-plan__country add-plan__country--specify-country add-plan__element add-plan__element--empty">
                   <label class="visually-hidden" for="chosen-country-3">
                     Название страны
                   </label>
@@ -1540,7 +1545,7 @@
                       add-plan__input--specify-country.classlist.remove( add-plan--without-border ).remove( add-plan__input--refilled );
                     -->
                   <input
-                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country"
+                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius"
                     type="text" name="chosen-country-3" value="Выберите страну"
                     id="chosen-country-3">
                   <!--
@@ -1853,7 +1858,9 @@
                 </li>
               </ul>
 
-              <button class="add-plan__add-country" type="button">
+              <button
+                class="add-plan__add-country add-plan__element add-plan__element--empty add-plan__element--button"
+                type="button">
                 Добавить страну
               </button>
               <a class="button button--next-step button--forward-steps button--common-text-set-one button--common-text-set-two button--with-arrow add-plan__next-step link"

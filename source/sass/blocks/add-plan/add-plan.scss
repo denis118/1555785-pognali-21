@@ -78,6 +78,14 @@
   border: none;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 155px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+  }
+
   &:first-of-type {
     margin-top: 29px;
 
@@ -102,12 +110,9 @@
     margin-bottom: 43px;
   }
 
-  @media (min-width: $tablet-width) {
-    padding-top: 155px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 101px;
+  &--step-2 {
+    padding-top: 79px;
+    margin-left: 0;
   }
 }
 
@@ -487,12 +492,13 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 18px;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $dcg-1;
 
     width: 168px;
     height: 42px;
+    padding-left: 8px;
     text-align: left;
 
     @media (min-width: $tablet-width) {
@@ -548,11 +554,19 @@
     grid-row-start: 6;
     grid-row-end: 7;
   }
+
+  &:not([href="#step-2"]) {
+    margin-bottom: 0;
+  }
+
+  &[href="#step-3"] {
+    margin-top: 25px;
+  }
 }
 
 .add-plan__previous-step {
-  margin-top: 13px;
-  margin-bottom: 9px;
+  margin-top: 9px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     float: right;
@@ -581,7 +595,7 @@
 }
 
 .add-plan__countries {
-  margin-top: 22px;
+  margin-top: 20px;
 
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
@@ -598,18 +612,17 @@
   position: relative;
   margin-bottom: 22px;
 
-  // &--specify-country {}
-
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
       padding-right: 40px;
     }
   }
+
+  // &--specify-country {}
 }
 
 .add-plan__flag {
-  display: grid;
-  place-items: center;
+  @include centering-grid;
 
   &--chosen-country-flag {
     width: 53px;
@@ -653,7 +666,7 @@
 
   &--drop-down {
     top: 50%;
-    left: 115px;
+    left: 100px;
     transform: translateY(-50%);
 
     @media (min-width: $tablet-width) {
@@ -679,8 +692,10 @@
   }
 
   &--specify-country {
+    width: 46px;
+    padding-right: 15px;
     top: 1px;
-    left: 167px;
+    left: 172px;
     transform: translate(0);
 
     @media (min-width: $tablet-width) {
@@ -701,21 +716,25 @@
 .add-plan__add-country {
   width: 220px;
   height: 42px;
+  padding-left: 12px;
+  padding-top: 8px;
   border: none;
   outline: none;
   border-radius: 5px;
+  position: relative;
 
   font-size: 14.86px;
   font-weight: 500;
   line-height: 14px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: left;
   background-color: $lcg-2;
   color: $dcg-1;
 
   @media (min-width: $tablet-width) {
     width: 369px;
     height: 70px;
-    text-align: left;
   }
 
   @media (min-width: $desktop-width) {
@@ -798,5 +817,58 @@
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 7;
+  }
+}
+
+.add-plan__element {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+    width: 8px;
+    height: 8px;
+    background-color: $dcg-1;
+    border-radius: 50%;
+    top: 16px;
+    left: 162px;
+  }
+
+  &::after {
+    width: 8px;
+    height: 11px;
+    background-color: transparent;
+    background-image: $down-arrow;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: cover;
+    left: 162px;
+    top: 48px;
+  }
+
+  &--empty {
+    &::before {
+      width: 7px;
+      height: 7px;
+      background-color: $lcg-1;
+      border: 1px solid $lcg-7;
+    }
+  }
+
+  &--button {
+    &::before {
+      background-color: $lcg-2;
+    }
+
+    &::after {
+      width: 14px;
+      height: 14px;
+      background-image: $big-cross-in-add-plan;
+      left: 191px;
+      top: 14px;
+    }
   }
 }
