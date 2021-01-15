@@ -355,6 +355,11 @@
   @media (min-width: $tablet-width) {
     transform: scale(1.4);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -4px;
+    transform: scale(1.8);
+  }
 }
 
 .button__add-country-svg {
@@ -369,6 +374,11 @@
     @media (min-width: $tablet-width) {
       top: 26px;
       left: 323px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      left: 684px;
     }
   }
 }

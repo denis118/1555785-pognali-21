@@ -1358,7 +1358,7 @@
           <fieldset
             class="add-plan__fieldset add-plan__fieldset--step-2 under-layer under-layer--form"
             id="step-2">
-            <legend class="add-plan__legend add-plan__legend--srep-2">
+            <legend class="add-plan__legend add-plan__legend--step-2">
               <span class="add-plan__span add-plan__span--legend">
                 Шаг 2.
               </span>
@@ -1545,7 +1545,7 @@
                       add-plan__country--specify-country.classlist.remove( add-plan__country--refilled );
                     -->
                 <li
-                  class="add-plan__country add-plan__country--step-2 add-plan__country--specify-country add-plan__element add-plan__element--empty add-plan--text-style add-plan__country--refilled">
+                  class="add-plan__country add-plan__country--step-2 add-plan__country--specify-country add-plan__element add-plan__element--empty add-plan--text-style">
                   <label class="visually-hidden" for="chosen-country-3">
                     Название страны
                   </label>
@@ -1553,14 +1553,14 @@
                       add-plan__input--specify-country.classlist.remove( add-plan--without-border ).remove( add-plan__input--refilled );
                     -->
                   <input
-                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style add-plan--without-border add-plan__input--refilled"
+                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style"
                     type="text" name="chosen-country-3" value="Выберите страну"
                     id="chosen-country-3">
                   <!--
                       add-plan__country-button--specify-country.classlist.remove( hidden-entity );
                     -->
                   <button
-                    class="button button--sign button--drop-down add-plan__country-button add-plan__country-button--drop-down add-plan__country-button--specify-country hidden-entity"
+                    class="button button--sign button--drop-down add-plan__country-button add-plan__country-button--drop-down add-plan__country-button--specify-country"
                     type="button" name="drop-down"
                     aria-label="Развернуть список стран">
                     <svg class="button__drop-down-svg" width="12" height="16"
@@ -1581,8 +1581,7 @@
                     <!--
                       button__close-svg--round.classlist.remove( hidden-entity )
                       -->
-                    <svg
-                      class="button__close-svg button__close-svg--round hidden-entity"
+                    <svg class="button__close-svg button__close-svg--round"
                       width="21" height="21" viewBox="0 0 21 21" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <circle cx="10.5" cy="10.5" r="10.5" fill="#EDEFF6" />
@@ -1608,7 +1607,7 @@
                       add-plan__country-button--replaced.classlist.add( hidden-entity );
                     -->
                   <button
-                    class="button button--close button--sign add-plan__country-button add-plan__country-button--close-list add-plan__country-button--replaced"
+                    class="button button--close button--sign add-plan__country-button add-plan__country-button--close-list add-plan__country-button--replaced hidden-entity"
                     type="button" name="delete-country"
                     aria-label="Удалить выбранную страну">
                     <svg class="button__close-svg button__close-svg--white"
@@ -1632,7 +1631,8 @@
                   <!--
                       lands.classlist.add( hidden-entity );
                     -->
-                  <section class="lands lands--form add-plan__lands">
+                  <section
+                    class="lands lands--form add-plan__lands hidden-entity">
                     <div class="lands__uppper-box hidden-entity">
                       <h2
                         class="lands__heading lands--common-text-style heading heading--level-2">

@@ -84,6 +84,10 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 101px;
+    background-image: $line-bigger-in-add-plan;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 273px;
   }
 
   &:first-of-type {
@@ -91,6 +95,9 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 56px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       background-image: $line-in-add-plan, $line-in-add-plan, $rect-in-add-plan;
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-size: auto, auto, auto;
@@ -99,10 +106,6 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 54px;
-      background-image: $line-bigger-in-add-plan;
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: 50% 273px;
     }
   }
 
@@ -119,10 +122,18 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 39px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       background-image: $line-in-add-plan;
       background-repeat: no-repeat;
       background-size: 532px 1px;
       background-position: 50% 235px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 42px;
+      background-position: 50% 272px;
     }
   }
 }
@@ -152,9 +163,9 @@
     left: 159px;
   }
 
-  &--srep-2 {
+  &--step-2 {
     @media (min-width: $tablet-width) {
-      left: 43px;
+      top: 99px;
     }
   }
 }
@@ -202,11 +213,12 @@
     width: 1000px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, min-content);
+    // grid-template-rows: repeat(6, min-content);
+    grid-auto-rows: min-content;
   }
 
   &:not(.add-plan__box--step-1) {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       display: grid;
       grid-template-columns: 1fr 1fr max-content;
       grid-auto-rows: min-content;
@@ -214,7 +226,7 @@
   }
 
   &--step-2 {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       width: 532px;
 
       grid-template-areas:
@@ -252,6 +264,9 @@
   &--step-2 {
     @media (min-width: $tablet-width) {
       width: 440px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       grid-area: wording;
     }
   }
@@ -513,6 +528,11 @@
       left: 388px;
       z-index: 1;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      left: 768px;
+    }
   }
 
   &::after {
@@ -534,12 +554,23 @@
       top: -47px;
       left: 395px;
     }
+
+    @media (min-width: $desktop-width) {
+      height: 78px;
+      top: -52px;
+      left: 774px;
+    }
   }
 
   &:first-child {
     &::after {
       @media (min-width: $tablet-width) {
         top: -42px;
+      }
+
+      @media (min-width: $desktop-width) {
+        height: 88px;
+        top: -64px;
       }
     }
   }
@@ -641,6 +672,10 @@
       height: 70px;
       padding-left: 24px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+    }
   }
 
   &--specify-country {
@@ -716,7 +751,15 @@
     @media (min-width: $tablet-width) {
       margin-top: 50px;
       margin-bottom: 54px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       grid-area: next-step;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 57px;
+      margin-bottom: 105px;
     }
   }
 }
@@ -746,7 +789,15 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 72px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       grid-area: prev-step;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 76px;
+      justify-content: flex-end;
     }
 
     &::before {
@@ -772,7 +823,14 @@
     @media (min-width: $tablet-width) {
       margin-top: 74px;
       margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       grid-area: select;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 117px;
     }
   }
 }
@@ -787,6 +845,10 @@
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
       padding-right: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 115px;
     }
   }
 
@@ -832,6 +894,10 @@
       height: min-content;
       border: none;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -2px;
+    }
   }
 
   &--jollity {
@@ -875,6 +941,11 @@
     @media (min-width: $tablet-width) {
       left: 303px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      left: 662px;
+    }
   }
 
   &--close {
@@ -882,6 +953,12 @@
       top: 50%;
       left: 509px;
       transform: translate(0, -50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 20px;
+      left: 969px;
+      transform: translate(0, 0);
     }
   }
 
@@ -898,12 +975,6 @@
   }
 
   &--specify-country {
-    // width: 46px;
-    // padding-right: 15px;
-    // top: 1px;
-    // left: 172px;
-    // transform: translate(0);
-
     @media (max-width: $mobile-width-only) {
       width: 46px;
       padding-right: 15px;
@@ -911,12 +982,6 @@
       left: 172px;
       transform: translate(0);
     }
-
-    // @media (min-width: $tablet-width) {
-    //   top: 50%;
-    //   left: 330px;
-    //   transform: translateY(-50%);
-    // }
   }
 }
 
@@ -953,10 +1018,15 @@
     height: 70px;
     padding-left: 25px;
     letter-spacing: 0.09em;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     grid-area: add-country;
   }
 
   @media (min-width: $desktop-width) {
+    width: 730px;
+    padding-top: 3px;
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 5;
