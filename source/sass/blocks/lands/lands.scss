@@ -151,6 +151,15 @@
     }
   }
 
+  &--letter-form-active {
+    background-color: $lcg-2;
+
+    @media (min-width: $tablet-width) {
+      color: $lcg-1;
+      background-color: $dcg-1;
+    }
+  }
+
   &--letter-catalog {
     line-height: 14px;
   }
