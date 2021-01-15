@@ -170,7 +170,8 @@
 
   &--drop-down {
     width: 57px;
-    height: 36px;
+    // height: 36px;
+    height: 90%;
     justify-content: flex-end;
     padding-left: 0;
     padding-right: 5px;
@@ -180,9 +181,12 @@
     background-size: cover;
 
     @media (min-width: $tablet-width) {
-      width: 20px;
-      height: 17px;
-      background-image: none;
+      // width: 20px;
+      // height: 17px;
+      // background-image: none;
+      // border: 1px dashed red;
+      width: 65px;
+      justify-content: center;
     }
   }
 
@@ -343,5 +347,11 @@
 .button__svg-line {
   &--white {
     stroke: $lcg-1;
+  }
+}
+
+.button__drop-down-svg {
+  @media (min-width: $tablet-width) {
+    transform: scale(1.4);
   }
 }
