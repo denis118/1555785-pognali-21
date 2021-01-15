@@ -656,11 +656,19 @@
   &--refilled {
     padding-left: 17px;
     padding-top: 5px;
-    letter-spacing: 0.02em;
     background-color: $dcg-1;
     color: $lcg-1;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+
+    @media (max-width: $mobile-width-only) {
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: -2px;
+      padding-left: 25px;
+    }
   }
 }
 
