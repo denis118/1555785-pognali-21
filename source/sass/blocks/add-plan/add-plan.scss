@@ -809,6 +809,13 @@
     &::after {
       display: none;
     }
+
+    @media (min-width: $tablet-width) {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
   }
 }
 
@@ -884,8 +891,9 @@
     left: 199px;
 
     @media (min-width: $tablet-width) {
-      top: 25px;
-      left: 320px;
+      top: 15px;
+      left: 311px;
+      transform: translate(0, 0);
     }
   }
 
