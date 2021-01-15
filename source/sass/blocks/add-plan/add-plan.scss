@@ -119,6 +119,10 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 39px;
+      background-image: $line-in-add-plan;
+      background-repeat: no-repeat;
+      background-size: 532px 1px;
+      background-position: 50% 235px;
     }
   }
 }
@@ -201,9 +205,23 @@
     grid-template-rows: repeat(6, min-content);
   }
 
+  &:not(.add-plan__box--step-1) {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr max-content;
+      grid-auto-rows: min-content;
+    }
+  }
+
   &--step-2 {
     @media (min-width: $tablet-width) {
-      margin-left: 5px;
+      width: 532px;
+
+      grid-template-areas:
+        "wording wording wording"
+        "select select select"
+        "add-country add-country ."
+        "next-step next-step prev-step";
     }
   }
 }
@@ -234,6 +252,7 @@
   &--step-2 {
     @media (min-width: $tablet-width) {
       width: 440px;
+      grid-area: wording;
     }
   }
 
@@ -646,19 +665,12 @@
     @media (min-width: $tablet-width) {
       margin-top: 50px;
       margin-bottom: 54px;
+      grid-area: next-step;
     }
   }
 }
 
 .add-plan__previous-step {
-  margin-top: 9px;
-  margin-bottom: 3px;
-
-  @media (min-width: $tablet-width) {
-    float: right;
-    width: auto;
-  }
-
   @media (min-width: $desktop-width) {
     grid-column-start: 6;
     grid-column-end: 8;
@@ -679,8 +691,8 @@
 
   &[href="#step-1"] {
     @media (min-width: $tablet-width) {
-      margin-top: -112px;
-      margin-right: 4px;
+      margin-top: 72px;
+      grid-area: prev-step;
     }
 
     &::before {
@@ -705,7 +717,8 @@
   &--step-2 {
     @media (min-width: $tablet-width) {
       margin-top: 74px;
-      margin-bottom: 8px;
+      margin-bottom: 0;
+      grid-area: select;
     }
   }
 }
@@ -857,6 +870,7 @@
   @media (min-width: $tablet-width) {
     width: 369px;
     height: 70px;
+    grid-area: add-country;
   }
 
   @media (min-width: $desktop-width) {
