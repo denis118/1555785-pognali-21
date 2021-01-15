@@ -23,6 +23,10 @@
       border: none;
       box-shadow: 0 8px 16px $shadow-1;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+    }
   }
 
   &--catalog {
@@ -138,6 +142,13 @@
     @media (min-width: $tablet-width) {
       line-height: 20px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 58px;
+      height: 68px;
+      border: 1px solid $lcg-7;
+      border-radius: 4px;
+    }
   }
 
   &--letter-catalog {
@@ -189,15 +200,32 @@
 
   @media (min-width: $tablet-width) {
     width: 262px;
-    height: 346px;
     grid-template-rows: repeat(5, 1fr);
     margin: 35px 0 33px 27px;
     border: 1px solid $lcg-7;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    height: 346px;
+  }
+
   &--form {
     @media (min-width: $tablet-width) {
       margin-right: 78px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 361px;
+      margin-left: 26px;
+      margin-right: 102px;
+      margin-top: 36px;
+
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, min-content);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+      background-color: $lcg-1;
+      border: none;
     }
   }
 
@@ -281,6 +309,10 @@
 
     @media (min-width: $tablet-width) {
       max-width: 165px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-height: 405px;
     }
   }
 }

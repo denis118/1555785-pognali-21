@@ -704,6 +704,10 @@
       margin-top: -2px;
       padding-left: 25px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -4px;
+    }
   }
 }
 
@@ -971,6 +975,11 @@
       top: 15px;
       left: 311px;
       transform: translate(0, 0);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 11px;
+      left: 672px;
     }
   }
 
