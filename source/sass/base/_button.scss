@@ -355,3 +355,19 @@
     transform: scale(1.4);
   }
 }
+
+.button__add-country-svg {
+  position: absolute;
+
+  &--mobile {
+    top: 14px;
+    left: 192px;
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) {
+      top: 26px;
+      left: 323px;
+    }
+  }
+}

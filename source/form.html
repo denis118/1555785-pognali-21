@@ -1553,7 +1553,7 @@
                       add-plan__input--specify-country.classlist.remove( add-plan--without-border ).remove( add-plan__input--refilled );
                     -->
                   <input
-                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius"
+                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style"
                     type="text" name="chosen-country-3" value="Выберите страну"
                     id="chosen-country-3">
                   <!--
@@ -2068,6 +2068,23 @@
                 class="add-plan__add-country add-plan__element add-plan__element--empty add-plan__element--button add-plan--text-style"
                 type="button">
                 Добавить страну
+                <svg
+                  class="button__add-country-svg button__add-country-svg--mobile hidden-after-mobile"
+                  width="14" height="14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="#C2C4C9" stroke-width="2" d="M7 0v14M0 7h14" />
+                </svg>
+                <svg
+                  class="button__add-country-svg button__add-country-svg--tablet hidden-on-mobile"
+                  width="22" height="21" viewBox="0 0 22 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.3">
+                    <line x1="0.0706787" y1="10" x2="20.0707" y2="10"
+                      stroke="black" stroke-width="2" />
+                    <line x1="10.0707" y1="20" x2="10.0707" stroke="black"
+                      stroke-width="2" />
+                  </g>
+                </svg>
               </button>
               <a class="button button--next-step button--forward-steps button--common-text-set-one button--common-text-set-two button--with-arrow add-plan__next-step link"
                 href="#step-3">

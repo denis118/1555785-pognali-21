@@ -564,11 +564,18 @@
     }
 
     &::after {
-      width: 14px;
-      height: 14px;
-      background-image: $big-cross-in-add-plan;
-      left: 191px;
-      top: 14px;
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        display: block;
+        height: 160px;
+        background-image: $gradient-for-pseudo;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+      }
     }
   }
 }
@@ -726,6 +733,9 @@
   }
 
   &[href="#step-1"] {
+    margin-top: 8px;
+    margin-bottom: 4px;
+
     @media (min-width: $tablet-width) {
       margin-top: 72px;
       grid-area: prev-step;
@@ -778,7 +788,9 @@
     }
 
     &:last-child {
-      margin-bottom: 12px;
+      @media (min-width: $tablet-width) {
+        margin-bottom: 12px;
+      }
     }
   }
 
