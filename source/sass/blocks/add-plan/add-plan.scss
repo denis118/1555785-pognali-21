@@ -115,6 +115,10 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 63px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 72px;
+    }
   }
 
   &:not(:first-of-type) {
@@ -135,13 +139,6 @@
       margin-top: 39px;
     }
 
-    // @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    //   background-image: $line-in-add-plan;
-    //   background-repeat: no-repeat;
-    //   background-size: 532px 1px;
-    //   background-position: 50% 235px;
-    // }
-
     @media (min-width: $desktop-width) {
       margin-top: 42px;
       background-position: 50% 272px;
@@ -151,6 +148,10 @@
   &--step-3 {
     @media (min-width: $tablet-width) {
       margin-top: 51px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 41px;
     }
   }
 }
@@ -273,6 +274,13 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
   &--step-1 {
     @media (min-width: $tablet-width) {
       width: 505px;
@@ -303,13 +311,11 @@
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       grid-area: description;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    @media (min-width: $desktop-width) {
+      width: 474px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -800,12 +806,11 @@
 
 .add-plan__previous-step {
   @media (min-width: $desktop-width) {
+    justify-content: flex-end;
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 6;
     grid-row-end: 7;
-    float: none;
-    margin-top: 40px;
   }
 
   &::before {
@@ -831,7 +836,6 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 76px;
-      justify-content: flex-end;
     }
 
     &::before {
@@ -854,9 +858,18 @@
       grid-area: prev-step-btn;
     }
 
+    @media (min-width: $desktop-width) {
+      margin-top: 83px;
+    }
+
     &::before {
       @media (min-width: $tablet-width) {
         margin-right: 22px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 26px;
+        margin-top: -7px;
       }
     }
   }
@@ -981,13 +994,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      position: static;
-      transform: translateX(0);
-
-      grid-column-start: 6;
-      grid-column-end: 8;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      padding-right: 115px;
+      margin-top: -5px;
     }
   }
 
@@ -1127,6 +1135,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 134px;
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 3;
@@ -1139,11 +1148,7 @@
   grid-template-columns: 1fr min-content;
   grid-auto-rows: min-content;
 
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, min-content);
-  }
+  // @media (min-width: $desktop-width) {}
 
   &:not(:last-child) {
     margin-bottom: 27px;
@@ -1176,6 +1181,11 @@
         left: 521px;
         z-index: 2;
         background-image: $line-for-jollity-psedo-two;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -251px;
+        left: 767px;
       }
     }
   }
@@ -1249,11 +1259,9 @@
   @media (min-width: $desktop-width) {
     width: 730px;
     height: 142px;
-
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-left: 22px;
   }
 
   &::placeholder {
@@ -1285,6 +1293,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 60px;
+    margin-bottom: 104px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
