@@ -59,6 +59,12 @@
     margin-top: 1px;
     margin-left: -47px;
   }
+
+  &--form {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 41px;
+    }
+  }
 }
 
 .general-footer__creators {
