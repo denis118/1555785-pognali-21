@@ -128,6 +128,10 @@
       background-size: 532px 1px;
       background-position: 50% 235px;
     }
+
+    @media (min-width: $desktop-width) {
+      background-position: 50% 272px;
+    }
   }
 
   &--step-2 {
@@ -141,7 +145,6 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 42px;
-      background-position: 50% 272px;
     }
   }
 
@@ -949,6 +952,8 @@
 
 .add-plan__flag {
   @include centering-grid;
+  position: relative;
+  z-index: auto;
 
   &--chosen-country-flag {
     width: 53px;
@@ -976,8 +981,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
-    z-index: 1;
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -994,8 +997,9 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding-right: 115px;
       margin-top: -5px;
+      margin-right: 115px;
+      padding-right: 0;
     }
   }
 
