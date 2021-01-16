@@ -29,18 +29,18 @@ const menuStateIndicator = {
 }
 
 jsMode();
-window.addEventListener('resize', jsMode);
-window.addEventListener('resize', scrollMode);
-window.addEventListener('scroll', scrollMode);
+window.addEventListener("resize", jsMode);
+window.addEventListener("resize", scrollMode);
+window.addEventListener("scroll", scrollMode);
 
-burger.addEventListener('click', openSiteMenu);
+burger.addEventListener("click", openSiteMenu);
 crosses.forEach((item) => {
-  item.addEventListener('click', closeSiteMenu);
+  item.addEventListener("click", closeSiteMenu);
 });
 
-submitButton.addEventListener('click', showErrorMessage);
-email.addEventListener('click', hideErrorMessage);
-email.addEventListener('blur', showPlaceholder);
+submitButton.addEventListener("click", showErrorMessage);
+email.addEventListener("click", hideErrorMessage);
+email.addEventListener("blur", showPlaceholder);
 
 businesTariffsOpenningButton.addEventListener("click", openBusinesTariffs);
 businesTariffsClosingButton.addEventListener("click", closeBusinesTariffs);
@@ -76,10 +76,6 @@ function jsMode() {
       if (!logoLink.classList.contains("general-header__logo--js")) {
         logoLink.classList.add("general-header__logo--js");
       }
-
-      // if (!toggle.classList.contains("general-header__toggle--js")) {
-      //   toggle.classList.add("general-header__toggle--js");
-      // }
     }
 
     const hiddenElements = [

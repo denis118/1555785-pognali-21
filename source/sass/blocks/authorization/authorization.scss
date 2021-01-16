@@ -17,6 +17,10 @@
     line-height: 20px;
   }
 
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+  }
+
   &--modified {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       font-weight: 400;
