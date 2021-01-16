@@ -66,6 +66,9 @@ function jsMode() {
 
     logoAux.classList.remove("hidden-before-desktop");
     toggle.classList.remove("hidden-entity");
+    if (!toggle.classList.contains("general-header__toggle--js")) {
+      toggle.classList.add("general-header__toggle--js");
+    }
 
     if (screenWidth < 768) {
       authorization.classList.add("hidden-entity");
@@ -74,9 +77,9 @@ function jsMode() {
         logoLink.classList.add("general-header__logo--js");
       }
 
-      if (!toggle.classList.contains("general-header__toggle--js")) {
-        toggle.classList.add("general-header__toggle--js");
-      }
+      // if (!toggle.classList.contains("general-header__toggle--js")) {
+      //   toggle.classList.add("general-header__toggle--js");
+      // }
     }
 
     const hiddenElements = [

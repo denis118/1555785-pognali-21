@@ -137,6 +137,10 @@
       padding-top: 22px;
       padding-bottom: 33px;
     }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
   }
 }
 
@@ -166,7 +170,7 @@
   grid-area: navigation;
 
   @media (min-width: $tablet-width) {
-    margin-top: 66px;
+    margin-top: 54px;
   }
 
   @media (min-width: $desktop-width) {
