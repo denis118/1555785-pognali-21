@@ -78,14 +78,6 @@ function jsMode() {
       }
     }
 
-    if (screenWidth > 767) {
-      if (authorization.classList.contains("hidden-entity")) {
-        authorization.classList.remove("hidden-entity");
-      }
-
-      authorization.classList.remove("authorization--modified");
-    }
-
     const hiddenElements = [
       logoPrime,
       navigation,
@@ -96,6 +88,14 @@ function jsMode() {
     hiddenElements.forEach((item) => {
       item.classList.add("hidden-entity");
     });
+  }
+
+  if (screenWidth > 767) {
+    if (authorization.classList.contains("hidden-entity")) {
+      authorization.classList.remove("hidden-entity");
+    }
+
+    authorization.classList.remove("authorization--modified");
   }
 
   if (screenWidth > 1439) {
@@ -343,7 +343,6 @@ function closeSiteMenu() {
     }
 
     if (screenWidth > 767) {
-      console.log("ok");
       if (authorization.classList.contains("authorization--modified")) {
         authorization.classList.remove("authorization--modified");
       }
