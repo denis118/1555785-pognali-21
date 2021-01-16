@@ -30,6 +30,7 @@ const menuStateIndicator = {
 
 jsMode();
 window.addEventListener('resize', jsMode);
+window.addEventListener('resize', scrollMode);
 window.addEventListener('scroll', scrollMode);
 
 burger.addEventListener('click', openSiteMenu);
@@ -186,6 +187,7 @@ function scrollMode() {
     menuStateIndicator.isScrolled = false;
 
     if (!menuStateIndicator.isOpen) {
+      generalHeader.classList.remove("general-header--scrolled");
       generalHeader.classList.add("general-header--bg-js");
 
       if (generalHeader.classList.contains("general-header--index")) {
@@ -194,7 +196,7 @@ function scrollMode() {
     }
 
     if (screenWidth > 1439) {
-      generalHeader.classList.remove("general-header--scrolled");
+      // generalHeader.classList.remove("general-header--scrolled");
 
       if (generalHeader.classList.contains("general-header--index")) {
         generalHeader.classList.remove("general-header--bg-js");
@@ -305,6 +307,10 @@ function closeSiteMenu() {
     menuStateIndicator.isOpen = false;
 
     if (!menuStateIndicator.isScrolled) {
+      if (generalHeader.classList.contains("general-header--scrolled")) {
+        generalHeader.classList.remove("general-header--scrolled")
+      }
+
       generalHeader.classList.add("general-header--bg-js");
 
       if (generalHeader.classList.contains("general-header--index")) {
