@@ -332,11 +332,16 @@
   }
 
   &--white {
+    stroke: $lcg-1;
+
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.8);
+    }
+
     @media (min-width: $tablet-width) {
       width: 22px;
       height: 21px;
       opacity: 0.3;
-      transform: scale(1.2);
     }
   }
 }

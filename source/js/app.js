@@ -52,8 +52,8 @@ if (generalHeader.classList.contains("general-header--index")) {
 if (pageBody.classList.contains("page__body--form")) {
   formSubmit.addEventListener("click", validateJollityPlans);
   jollityVariants.forEach((item) => {
-    item.addEventListener("click", errorVisibility);
-    item.addEventListener("blur", errorInvisibility);
+    item.addEventListener("click", errorInvisibility);
+    item.addEventListener("blur", errorVisibility);
   });
 }
 
@@ -433,16 +433,26 @@ function validateJollityPlans(evt) {
   });
 }
 
-function errorVisibility() {
+function errorInvisibility() {
   jollityVariants.forEach((item) => {
     item.classList.remove("add-plan__jollity-variants--invalid");
   });
 }
 
-function errorInvisibility() {
+function errorVisibility() {
   jollityVariants.forEach((item) => {
     if (!item.checkValidity()) {
       item.classList.add("add-plan__jollity-variants--invalid");
+
+      if (item.classList.contains("hover-mode-border-color")) {
+        item.classList.remove("hover-mode-border-color");
+      }
+    }
+
+    if (item.checkValidity()) {
+      if (!item.classList.contains("hover-mode-border-color")) {
+        item.classList.add("hover-mode-border-color");
+      }
     }
   });
 }

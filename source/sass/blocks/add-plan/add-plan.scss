@@ -872,7 +872,7 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 57px;
-      margin-bottom: 105px;
+      margin-bottom: 110px;
     }
   }
 }
@@ -908,7 +908,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 76px;
+      margin-top: 82px;
     }
 
     &::before {
@@ -1150,6 +1150,19 @@
       top: 1px;
       left: 172px;
       transform: translate(0);
+    }
+  }
+
+  &--replaced {
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
     }
   }
 }

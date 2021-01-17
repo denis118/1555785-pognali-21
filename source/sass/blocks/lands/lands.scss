@@ -136,6 +136,33 @@
     @media (max-width: $mobile-width-only) {
       font-size: 14px;
     }
+
+    @media (max-width: $desktop-width - 1) {
+      &:hover {
+        outline: 1px solid $lcg-25;
+        outline-offset: -1px;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $dcg-1;
+        color: $lcg-1;
+        outline: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        border: 1px solid $lcg-25;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $dcg-1;
+        color: $lcg-1;
+        border-color: transparent;
+      }
+    }
   }
 
   &--letter-form {
@@ -172,6 +199,17 @@
 
     @media (min-width: $tablet-width) {
       letter-spacing: normal;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dcg-1;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
     }
   }
 }
