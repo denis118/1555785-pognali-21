@@ -479,6 +479,19 @@
         height: 35px;
       }
     }
+
+    &:hover {
+      &::before {
+        border-color: $lcg-25;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: transparent;
+        background-color: $lcg-30;
+      }
+    }
   }
 }
 
@@ -487,6 +500,7 @@
   position: absolute;
   top: 8px;
   left: 10px;
+  fill: $dcg-6;
 
   @media (min-width: $tablet-width) {
     width: 14px;
@@ -724,9 +738,27 @@
   // &--travel-days {}
 
   &--for-children {
-    &:checked + .add-plan__check-mark {
-      display: block;
+    &:checked + .add-plan__label {
+      &--children {
+        .add-plan__check-mark {
+          display: block;
+        }
+      }
+
+      &--children:active {
+        .add-plan__check-mark {
+          fill: $lcg-35;
+        }
+      }
     }
+
+    // &:checked + .add-plan__label {
+    //   &--children:active {
+    //     .add-plan__check-mark {
+    //       fill: $lcg-35;
+    //     }
+    //   }
+    // }
   }
 
   &--chosen-country {
@@ -1144,10 +1176,17 @@
   text-align: left;
   background-color: $lcg-2;
   color: $dcg-1;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
     font-size: 14.86px;
     line-height: 14px;
+
+    &:hover {
+      &::before {
+        background-color: transparent;
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -1168,6 +1207,20 @@
     grid-column-end: 8;
     grid-row-start: 5;
     grid-row-end: 6;
+  }
+
+  &:hover {
+    background-color: $lcg-4;
+
+    .button__add-country-svg {
+      stroke: $lcg-37;
+    }
+  }
+
+  &:active {
+    .button__add-country-svg {
+      stroke: $lcg-39;
+    }
   }
 }
 
@@ -1312,6 +1365,13 @@
 
     @media (min-width: $tablet-width) {
       line-height: 20px;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 1;
     }
   }
 }

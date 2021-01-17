@@ -212,6 +212,9 @@
 
   &--common-text-set-two {
     line-height: 30px;
+  }
+
+  &--step {
     color: $dcg-1;
   }
 
@@ -312,8 +315,19 @@
   }
 
   &--casual {
+    fill: $dcg-3;
+    opacity: 0.1;
+
     @media (max-width: $mobile-width-only) {
       display: none;
+    }
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
     }
   }
 
@@ -364,6 +378,7 @@
 
 .button__add-country-svg {
   position: absolute;
+  stroke: $lcg-38;
 
   &--mobile {
     top: 14px;
