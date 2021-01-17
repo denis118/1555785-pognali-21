@@ -38,12 +38,14 @@ crosses.forEach((item) => {
   item.addEventListener("click", closeSiteMenu);
 });
 
-submitButton.addEventListener("click", showErrorMessage);
-email.addEventListener("click", hideErrorMessage);
-email.addEventListener("blur", showPlaceholder);
+if (generalHeader.classList.contains("general-header--index")) {
+  submitButton.addEventListener("click", showErrorMessage);
+  email.addEventListener("click", hideErrorMessage);
+  email.addEventListener("blur", showPlaceholder);
 
-businesTariffsOpenningButton.addEventListener("click", openBusinesTariffs);
-businesTariffsClosingButton.addEventListener("click", closeBusinesTariffs);
+  businesTariffsOpenningButton.addEventListener("click", openBusinesTariffs);
+  businesTariffsClosingButton.addEventListener("click", closeBusinesTariffs);
+}
 
 function jsMode() {
   screenWidth = document.documentElement.clientWidth;

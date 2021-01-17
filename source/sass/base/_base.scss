@@ -346,6 +346,12 @@
   }
 }
 
+.hover-mode-border-color {
+  &:hover {
+    border-color: $lcg-25;
+  }
+}
+
 .active-mode-opacity {
   &--external {
     &:active {
@@ -354,12 +360,26 @@
   }
 
   &--internal {
-    // for text in buttons, text must be placed in <span> without class
+    // for text in buttons, text must be placed in <span> with or without class
     &:active {
       & > * {
         opacity: 0.3;
       }
     }
+  }
+}
+
+.active-mode-fill {
+  &:active {
+    fill: $lcg-24;
+  }
+}
+
+.active-mode-border-color {
+  &:focus,
+  &:active {
+    border-color: $dcg-6;
+    opacity: 1;
   }
 }
 

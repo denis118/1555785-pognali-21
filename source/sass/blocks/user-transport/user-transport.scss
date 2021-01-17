@@ -20,8 +20,28 @@
 }
 
 .user-transport__checkbox {
-  &:checked ~ .user-transport__svg {
-    opacity: 1;
+  &:checked {
+    & + .user-transport__label {
+      .user-transport__svg {
+        fill: $dcg-1;
+
+        &--aircraft {
+          fill: $dcg-14;
+        }
+      }
+    }
+
+    & + .user-transport__label:hover {
+      .user-transport__svg {
+        fill: $lcg-28;
+      }
+    }
+
+    & + .user-transport__label:active {
+      .user-transport__svg {
+        fill: $lcg-29;
+      }
+    }
   }
 }
 
@@ -37,10 +57,26 @@
     width: 43px;
     height: 43px;
   }
+
+  &:hover {
+    filter: drop-shadow(0 2px 6px $dcg-17);
+
+    .user-transport__svg {
+      fill: $lcg-31;
+    }
+  }
+
+  &:active {
+    background-color: $lcg-30;
+  }
+
+  .user-transport__svg {
+    fill: $lcg-33;
+  }
 }
 
 .user-transport__svg {
-  opacity: 0.15;
+  fill: $lcg-32;
 
   // &--aircraft {}
 

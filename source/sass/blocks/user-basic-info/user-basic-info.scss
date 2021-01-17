@@ -99,6 +99,10 @@
     left: 1035px;
     margin-top: 0;
   }
+
+  &:hover {
+    background-color: $lcg-27;
+  }
 }
 
 .user-basic-info__hashtags {
@@ -152,6 +156,10 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 39.3px;
+  }
+
+  &:hover {
+    border-color: $lcg-26;
   }
 }
 

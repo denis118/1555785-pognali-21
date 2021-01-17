@@ -218,6 +218,14 @@
   @media (min-width: $desktop-width) {
     margin-right: 0;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .user-plans__element {
