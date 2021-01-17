@@ -552,8 +552,8 @@
                   вы хотели бы позвать в поездку и ее предполагаемую
                   длительность.
                 </span>
-
               </p>
+
 
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
@@ -563,7 +563,12 @@
                   Ищу попутчиков:
                 </label>
                 <p
-                  class="add-plan__main-parameters add-plan__main-parameters--companions-amount add-plan--border-with-radius">
+                  class="add-plan__main-parameters add-plan__main-parameters--companions-amount ">
+                  <input
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan--text-style add-plan--border-with-radius hover-mode-border-color active-mode-border-color"
+                    type="text" name="companions" value="2"
+                    id="fellow-travelers-amount">
+
                   <button
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-companion"
@@ -575,10 +580,7 @@
                         stroke-width="2" />
                     </svg>
                   </button>
-                  <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan--without-border add-plan--text-style"
-                    type="text" name="companions" value="2"
-                    id="fellow-travelers-amount">
+
                   <button
                     class="button button--math-sign button--sign button--plus add-plan__main-parameters-button add-plan__main-parameters-button--plus"
                     type="button" name="plus-companion"
@@ -603,7 +605,13 @@
                   Длительность:
                 </label>
                 <p
-                  class="add-plan__main-parameters add-plan__main-parameters--travel-time add-plan--border-with-radius">
+                  class="add-plan__main-parameters add-plan__main-parameters--travel-time">
+
+                  <input
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan--text-style add-plan--border-with-radius hover-mode-border-color active-mode-border-color"
+                    type="text" name="travel-days" value="3"
+                    id="travel-duration">
+
                   <button
                     class="button button--math-sign button--sign button--minus add-plan__main-parameters-button add-plan__main-parameters-button--minus"
                     type="button" name="minus-day"
@@ -615,10 +623,7 @@
                         stroke="#CCCCCC" stroke-width="2" />
                     </svg>
                   </button>
-                  <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan--without-border add-plan--text-style"
-                    type="text" name="travel-days" value="3"
-                    id="travel-duration">
+
                   <button
                     class="button button--math-sign button--sign button--plus add-plan__main-parameters-button add-plan__main-parameters-button--plus"
                     type="button" name="plus-day"
