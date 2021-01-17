@@ -260,7 +260,8 @@
     </div>
 
     <form class="plans-form form-main__plans-form"
-      action="https://echo.htmlacademy.ru" method="POST" id="plans-making-form">
+      action="https://echo.htmlacademy.ru" method="POST" id="plans-making-form"
+      novalidate>
       <h2 class="visually-hidden">
         Форма для планирования поездки
       </h2>
@@ -2166,11 +2167,17 @@
                           " />
                     </picture>
                   </div>
-                  <textarea
-                    class="add-plan__jollity-variants add-plan--text-style hover-mode-border-color active-mode-border-color"
-                    name="bosnia-and-herzegovina-funs"
-                    id="bosnia-and-herzegovina-funs" cols="30" rows="9"
-                    placeholder="План действий"></textarea>
+                  <div class="add-plan__jollity-variants-box">
+                    <textarea
+                      class="add-plan__jollity-variants add-plan--text-style hover-mode-border-color active-mode-border-color"
+                      name="bosnia-and-herzegovina-funs"
+                      id="bosnia-and-herzegovina-funs" cols="30" rows="9"
+                      placeholder="План действий" required></textarea>
+                    <span
+                      class="add-plan__jollity-error-message add-plan--text-style">
+                      Это поле должно быть заполнено
+                    </span>
+                  </div>
                 </li>
 
                 <li class="add-plan__jollity-item">
@@ -2202,17 +2209,23 @@
                           " />
                     </picture>
                   </div>
-                  <textarea
-                    class="add-plan__jollity-variants add-plan__jollity-variants--czech add-plan--text-style hover-mode-border-color active-mode-border-color"
-                    name="czech-funs" id="czech-funs" cols="30" rows="9"
-                    placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                  <div class="add-plan__jollity-variants-box">
+                    <textarea
+                      class="add-plan__jollity-variants add-plan__jollity-variants--czech add-plan--text-style hover-mode-border-color active-mode-border-color"
+                      name="czech-funs" id="czech-funs" cols="30" rows="9"
+                      placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                   </textarea>
+                    <span
+                      class="add-plan__jollity-error-message add-plan--text-style">
+                      Это поле должно быть заполнено
+                    </span>
+                  </div>
                 </li>
               </ul>
 
               <button
                 class="button button--step button--form-submit button--forward-steps button--with-arrow button--common-text-set-one button--common-text-set-two add-plan__submit hover-mode-bg-color active-mode-opacity active-mode-opacity--internal"
-                type="submit" form="plans-making-form">
+                type="submit" form="plans-making-form" id="form-submit">
                 <span>
                   Отправить
                 </span>

@@ -22,6 +22,8 @@ const submitButton = document.querySelector("#submit");
 const businesTariffsOpenningButton = document.querySelector(".profile__busines-tariffs");
 const businesTariffsClosingButton = document.querySelector(".busines-tariffs__close");
 const businesTariffs = document.querySelector(".busines-tariffs");
+const formSubmit = document.querySelector(".add-plan__submit");
+const jollityVariants = document.querySelectorAll(".add-plan__jollity-variants");
 
 const menuStateIndicator = {
   isOpen: false,
@@ -45,6 +47,14 @@ if (generalHeader.classList.contains("general-header--index")) {
 
   businesTariffsOpenningButton.addEventListener("click", openBusinesTariffs);
   businesTariffsClosingButton.addEventListener("click", closeBusinesTariffs);
+}
+
+if (pageBody.classList.contains("page__body--form")) {
+  formSubmit.addEventListener("click", validateJollityPlans);
+  jollityVariants.forEach((item) => {
+    item.addEventListener("click", errorVisibility);
+    item.addEventListener("blur", errorInvisibility);
+  });
 }
 
 function jsMode() {
@@ -401,4 +411,38 @@ function closeBusinesTariffs(evt) {
   if (!businesTariffs.classList.contains("hidden-entity")) {
     businesTariffs.classList.add("hidden-entity");
   }
+}
+
+function validateJollityPlans(evt) {
+  jollityVariants.forEach((item) => {
+    if (!item.checkValidity()) {
+      evt.preventDefault();
+      item.classList.add("add-plan__jollity-variants--invalid");
+      item.classList.remove("hover-mode-border-color");
+    }
+
+    if (item.checkValidity()) {
+      if (item.classList.contains("add-plan__jollity-variants--invalid")) {
+        item.classList.remove("add-plan__jollity-variants--invalid");
+      }
+
+      if (!item.classList.contains("hover-mode-border-color")) {
+        item.classList.add("hover-mode-border-color");
+      }
+    }
+  });
+}
+
+function errorVisibility() {
+  jollityVariants.forEach((item) => {
+    item.classList.remove("add-plan__jollity-variants--invalid");
+  });
+}
+
+function errorInvisibility() {
+  jollityVariants.forEach((item) => {
+    if (!item.checkValidity()) {
+      item.classList.add("add-plan__jollity-variants--invalid");
+    }
+  });
 }

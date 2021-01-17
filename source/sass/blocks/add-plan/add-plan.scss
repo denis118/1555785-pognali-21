@@ -1313,23 +1313,10 @@
   }
 }
 
-.add-plan__jollity-variants {
+.add-plan__jollity-variants-box {
   margin-top: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 11px;
-  padding-right: 11px;
-  border: 1px solid $lcg-7;
-  border-radius: 5px;
-  resize: none;
-  font-weight: 400;
-  color: $dcg-9;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
+  height: 220px;
+  position: relative;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -1338,8 +1325,59 @@
   @media (min-width: $tablet-width) {
     width: 500px;
     height: 142px;
-    margin-left: 2px;
     margin-top: 30px;
+    margin-left: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    height: 142px;
+    margin-top: 25px;
+  }
+}
+
+.add-plan__jollity-error-message {
+  display: none;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 11px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-100%);
+  color: $mcg-11;
+  background-color: $mcg-12;
+  border: 1px solid $mcg-13;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.add-plan__jollity-variants {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border: 1px solid $lcg-7;
+  border-radius: 4px;
+  resize: none;
+  font-weight: 400;
+  color: $dcg-9;
+  outline: none;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
     padding-top: 17px;
     padding-bottom: 17px;
     padding-left: 18px;
@@ -1350,9 +1388,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 730px;
-    height: 142px;
-    margin-top: 25px;
     padding-top: 25px;
     padding-left: 22px;
   }
@@ -1372,6 +1407,14 @@
   &:active {
     &::placeholder {
       opacity: 1;
+    }
+  }
+
+  &--invalid {
+    border-color: $mcg-13;
+
+    & + .add-plan__jollity-error-message {
+      display: flex;
     }
   }
 }
