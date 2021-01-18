@@ -1,4 +1,3 @@
-
 .button {
   border: none;
   outline: none;
@@ -18,11 +17,8 @@
   // }
 
   &--more {
-    height: 62px;
-    justify-content: space-between;
     padding-left: 23px;
     padding-right: 23px;
-    border-radius: 10px;
 
     @media (min-width: $desktop-width) {
       width: 275px;
@@ -30,12 +26,9 @@
   }
 
   &--route {
-    height: 62px;
-    justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
     border: 3px solid $dcg-4;
-    border-radius: 10px;
 
     &:hover {
       color: $lcg-1;
@@ -54,8 +47,11 @@
   }
 
   &--more-and-route {
+    height: 62px;
+    justify-content: space-between;
     font-weight: 700;
     color: $dcg-1;
+    border-radius: 10px;
 
     @media (max-width: $mobile-width-only) {
       font-size: 18px;
@@ -116,6 +112,12 @@
     }
   }
 
+  // &--wide {
+  //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  //     width: 618px;
+  //   }
+  // }
+
   &--roll-and-change {
     width: 270px;
     font-size: 20px;
@@ -132,7 +134,7 @@
       width: 618px;
       height: 60px;
       border-radius: 10px;
-      letter-spacing: 0.09px;
+      letter-spacing: 0.09em;
       color: $dcg-1;
     }
 
@@ -141,6 +143,7 @@
       height: 47px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      letter-spacing: normal;
     }
   }
 
@@ -159,20 +162,6 @@
     }
   }
 
-  &--modify-plan {
-    height: auto;
-    justify-content: flex-start;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 14px;
-    color: $dcg-6;
-    background-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 0.03px;
-    border-radius: 0;
-    opacity: 0.3;
-  }
-
   &--sign {
     width: auto;
     height: auto;
@@ -180,8 +169,9 @@
   }
 
   &--drop-down {
-    width: 52px;
-    height: 36px;
+    width: 57px;
+    // height: 36px;
+    height: 90%;
     justify-content: flex-end;
     padding-left: 0;
     padding-right: 5px;
@@ -191,9 +181,12 @@
     background-size: cover;
 
     @media (min-width: $tablet-width) {
-      width: 20px;
-      height: 17px;
-      background-image: none;
+      // width: 20px;
+      // height: 17px;
+      // background-image: none;
+      // border: 1px dashed red;
+      width: 65px;
+      justify-content: center;
     }
   }
 
@@ -209,10 +202,19 @@
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+    }
   }
 
   &--common-text-set-two {
     line-height: 30px;
+  }
+
+  &--step {
     color: $dcg-1;
   }
 
@@ -313,12 +315,29 @@
   }
 
   &--casual {
+    fill: $dcg-3;
+    opacity: 0.1;
+
     @media (max-width: $mobile-width-only) {
       display: none;
+    }
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
     }
   }
 
   &--white {
+    stroke: $lcg-1;
+
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.8);
+    }
+
     @media (min-width: $tablet-width) {
       width: 22px;
       height: 21px;
@@ -327,12 +346,59 @@
   }
 }
 
-// .button__svg-minus {}
+.button__svg-math {
+  @media (min-width: $tablet-width) {
+    width: 20px;
+  }
 
-// .button__svg-plus {}
+  &--minus {
+    @media (min-width: $tablet-width) {
+      height: 4px;
+    }
+  }
+
+  &--plus {
+    @media (min-width: $tablet-width) {
+      height: 20px;
+    }
+  }
+}
 
 .button__svg-line {
   &--white {
     stroke: $lcg-1;
+  }
+}
+
+.button__drop-down-svg {
+  @media (min-width: $tablet-width) {
+    transform: scale(1.4);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -4px;
+    transform: scale(1.8);
+  }
+}
+
+.button__add-country-svg {
+  position: absolute;
+  stroke: $lcg-38;
+
+  &--mobile {
+    top: 14px;
+    left: 192px;
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) {
+      top: 26px;
+      left: 323px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      left: 684px;
+    }
   }
 }

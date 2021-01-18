@@ -3,8 +3,11 @@
   @include grid-for-mains;
   grid-template-rows: repeat(3, min-content);
   background-color: $lcg-2;
-  margin-top: -20px;
   padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 // .plans-form__user-basic-info {}

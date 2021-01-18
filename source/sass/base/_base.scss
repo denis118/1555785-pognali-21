@@ -1,42 +1,28 @@
-
 .container {
-  width: 320px;
-  min-width: 320px;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 270px;
+  min-width: 270px;
+  max-width: 270px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 768px;
-    min-width: 768px;
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    min-width: 688px;
+    max-width: 688px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    min-width: 1440px;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  &--thick {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+    width: 1320px;
+    min-width: 1320px;
+    max-width: 1320px;
   }
 
   &--slim {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
-  }
-
-  &--auto-width {
-    @media (min-width: $desktop-width) {
-      width: auto;
+      width: 618px;
+      min-width: 618px;
+      max-width: 618px;
     }
   }
 }
@@ -86,6 +72,11 @@
 
   &--level-2-form {
     color: $dcg-1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &--level-2-filter {
@@ -141,6 +132,12 @@
   font-weight: 700;
 }
 
+.form-text-style {
+  @media (min-width: $tablet-width) {
+    @include text-style-set-1;
+  }
+}
+
 .link {
   text-decoration: none;
   color: $lcg-1;
@@ -148,6 +145,7 @@
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .image {
@@ -169,10 +167,24 @@
 
 .under-layer {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-right: 20px;
   background-color: $lcg-1;
   border-radius: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      border-radius: $bottom-radii;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: $bottom-radii-bigger;
+    }
+  }
 
   &--radius {
     border-radius: 20px;
@@ -237,10 +249,12 @@
   }
 
   &--modified {
-    @media (min-width: $tablet-width) {
-      margin-left: 0;
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 35px;
     }
+  }
 
+  &--changed {
     @media (min-width: $desktop-width) {
       margin-left: 70px;
     }
@@ -250,6 +264,12 @@
     @media (min-width: $desktop-width) {
       margin-left: 114px;
     }
+  }
+}
+
+.centering-margins {
+  @media (max-width: $desktop-width - 1) {
+    @include centering-margins;
   }
 }
 
@@ -326,6 +346,12 @@
   }
 }
 
+.hover-mode-border-color {
+  &:hover {
+    border-color: $lcg-25;
+  }
+}
+
 .active-mode-opacity {
   &--external {
     &:active {
@@ -333,12 +359,27 @@
     }
   }
 
-  &--internal { // for text in buttons, text must be placed in <span> without class
+  &--internal {
+    // for text in buttons, text must be placed in <span> with or without class
     &:active {
       & > * {
         opacity: 0.3;
       }
     }
+  }
+}
+
+.active-mode-fill {
+  &:active {
+    fill: $lcg-24;
+  }
+}
+
+.active-mode-border-color {
+  &:focus,
+  &:active {
+    border-color: $dcg-6;
+    opacity: 1;
   }
 }
 
@@ -392,8 +433,6 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1011;
-    opacity: 0;
     transition: all 200ms linear 2s;
   }
 
@@ -407,7 +446,23 @@
     &::before,
     &::after {
       display: block;
-      opacity: 1;
+      z-index: 1010;
+    }
+  }
+}
+
+.main {
+  &--js {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 73px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: 132px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 109px;
     }
   }
 }

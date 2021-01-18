@@ -1,9 +1,10 @@
+.circle-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-// .circle-bar {}
-
-.circle-bar__heading {
-  display: none;
-
+.circle-bar__heading {     // контроль!!!!!!!!!!!!
   &--catalog {
     @media (max-width: $mobile-width-only) {
       display: block;
@@ -24,6 +25,20 @@
   overflow: hidden;
   position: relative;
   text-align: center;
+
+  &--form {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      transform: scale(0.94);
+    }
+
+    @media (min-width: $desktop-width) {
+      transform: scale(0.95);
+    }
+  }
 
   &--catalog {
     width: 45px;
@@ -47,8 +62,16 @@
   transform: translate(5px, -5px) rotate(-90deg);
   transition: stroke-dashoffset 0.5s ease;
 
+  &--form {
+    stroke-linecap: butt;
+  }
+
   &--traveler {
     stroke-dasharray: 188.4 188.4;
+  }
+
+  &--traveler-form-mobile {
+    stroke-dasharray: 314 314;
   }
 
   &--firsova {
@@ -57,6 +80,11 @@
 
   &--diomin {
     stroke-dashoffset: 37.68;
+  }
+
+  &--diomin-form-mobile {
+    // stroke-dashoffset: 62.8; // по расчёту
+    stroke-dashoffset: 54; // по макету
   }
 
   &--smolov {
@@ -98,14 +126,31 @@
   background-repeat: no-repeat;
   background-position: 0 60%;
   background-size: auto;
+
+  &--form {
+    width: 52px;
+    top: 50%;
+    background-image: $text-box-bg-image-form;
+    background-position: 0 61%;
+    background-size: 52px 2px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 4px;
+      color: $lcg-1;
+    }
+  }
 }
 
 .circle-bar__level-number {
   &--form {
     font-size: 38px;
-    // font-weight: 700;
     line-height: 38px;
+    font-weight: 700;
     color: $dcg-6;
+
+    @media (min-width: $desktop-width) {
+      color: inherit;
+    }
   }
 }
 
@@ -115,10 +160,14 @@
   line-height: 14px;
 
   &--form {
+    margin-top: 5px;
     font-size: 18px;
-    font-weight: 400;
     line-height: 18px;
     color: $dcg-9;
+
+    @media (min-width: $desktop-width) {
+      color: inherit;
+    }
   }
 }
 

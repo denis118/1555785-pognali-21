@@ -1,7 +1,4 @@
-
 .lands {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   background-color: $lcg-1;
   width: 100%;
   box-sizing: border-box;
@@ -26,6 +23,10 @@
       border: none;
       box-shadow: 0 8px 16px $shadow-1;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+    }
   }
 
   &--catalog {
@@ -40,6 +41,7 @@
 // .lands__container {}
 
 .lands__uppper-box {
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -112,20 +114,77 @@
 }
 
 .lands__link {
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
+  line-height: 18px;
+  white-space: nowrap;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+  }
 
   // &--region {}
 
   &--letter {
-    font-size: 14px;
+    @include centering-grid;
     font-weight: 500;
     color: $dcg-1;
 
     width: 100%;
     height: 100%;
     background-color: $lcg-1;
+
+    @media (max-width: $mobile-width-only) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $desktop-width - 1) {
+      &:hover {
+        outline: 1px solid $lcg-25;
+        outline-offset: -1px;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $dcg-1;
+        color: $lcg-1;
+        outline: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        border: 1px solid $lcg-25;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $dcg-1;
+        color: $lcg-1;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &--letter-form {
+    @media (min-width: $tablet-width) {
+      line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 58px;
+      height: 68px;
+      border: 1px solid $lcg-7;
+      border-radius: 4px;
+    }
+  }
+
+  &--letter-form-active {
+    background-color: $lcg-2;
+
+    @media (min-width: $tablet-width) {
+      color: $lcg-1;
+      background-color: $dcg-1;
+    }
   }
 
   &--letter-catalog {
@@ -136,10 +195,33 @@
     line-height: 22px;
     font-weight: 400;
     text-transform: none;
+    color: $dcg-9;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: normal;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dcg-1;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
 .lands__down-box {
+  &--form {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &--catalog {
     @media (min-width: $tablet-width) {
       display: grid;
@@ -165,10 +247,33 @@
 
   @media (min-width: $tablet-width) {
     width: 262px;
-    height: 346px;
     grid-template-rows: repeat(5, 1fr);
     margin: 35px 0 33px 27px;
     border: 1px solid $lcg-7;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    height: 346px;
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      margin-right: 78px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 361px;
+      margin-left: 26px;
+      margin-right: 102px;
+      margin-top: 36px;
+
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, min-content);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+      background-color: $lcg-1;
+      border: none;
+    }
   }
 
   &--catalog {
@@ -194,6 +299,18 @@
   @media (min-width: $tablet-width) {
     margin: 37.46px auto 56.71px 105px;
     padding: 0;
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      padding-bottom: 33px;
+      padding-top: 36px;
+      padding-left: 24px;
+      height: 100%;
+      border-left: 1px solid $lcg-23;
+      box-sizing: border-box;
+    }
   }
 
   &--catalog {
@@ -232,7 +349,19 @@
 }
 
 .lands__alphabetical-box {
-  color: $dcg-9;
+  &--form {
+    max-width: 180px;
+    max-height: 345px;
+    overflow: auto;
+
+    @media (min-width: $tablet-width) {
+      max-width: 165px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-height: 405px;
+    }
+  }
 }
 
 .lands__alphabetical-index {
@@ -252,7 +381,25 @@
 //   &--a {}
 // }
 
-// .lands__subitem {}
+.lands__subitem {
+  &--form {
+    height: 20px;
+    margin: 5px 0 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--higher {
+      height: 21px;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 21px;
+      margin-top: 9px;
+    }
+  }
+}
 
 .lands__roll-up-button {
   &--catalog {

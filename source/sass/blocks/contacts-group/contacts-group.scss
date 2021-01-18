@@ -1,11 +1,21 @@
+.contacts-group {
+  &--in-intro {
+    display: inline-flex;
+  }
 
-// .contacts-group {
-//   &--inline {}
-
-//   &--initial {}
-// }
+  &--if-interested {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 
 .contacts-group__contact {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   line-height: 18px;
   color: $dcg-4;
@@ -15,30 +25,28 @@
     line-height: 28px;
   }
 
-  // &--inline {}
+  &:hover {
+    color: $mcg-6;
 
-  &--initial {
-    &:hover {
-      color: $mcg-6;
-
-      & .contacts-group__svg-path {
-        &--initial {
-          fill: $mcg-6;
-        }
+    & .contacts-group__svg-path {
+      &--initial {
+        fill: $mcg-6;
       }
     }
+  }
 
-    &:active {
-      & .contacts-group__span {
-        opacity: 0.3;
-      }
-
-      & .contacts-group__svg-path {
-        &--initial {
-          opacity: 0.3;
-        }
-      }
+  &:active {
+    & .contacts-group__span {
+      opacity: 0.3;
     }
+
+    & .contacts-group__svg-path {
+      opacity: 0.3;
+    }
+  }
+
+  &--in-intro {
+    width: min-content;
   }
 }
 
@@ -47,11 +55,7 @@
 
   // &--initial {}
 
-  &--in-site-menu {
-    margin-top: 51px;
-  }
-
-  &--for-interested {
+  &--if-interested {
     @media (min-width: $desktop-width) {
       margin-right: 110px;
     }
@@ -59,15 +63,24 @@
 }
 
 .contacts-group__email {
+  text-transform: uppercase;
+
   // &--inline {}
 
-  &--initial {
-    text-transform: uppercase;
-  }
+  // &--initial {}
+
+  // &--in-menu {}
+
+  // &--if-interested {}
 }
 
 .contacts-group__svg {
-  // &--inline {}
+  &--inline {
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
 
   &--inline-telephone {
     &:hover {
@@ -105,9 +118,20 @@
 
   // &--initial-mail {}
 
-  &:active {
-    & .contacts-group__svg-path {
-      opacity: 0.3;
+  // &:active {
+  //   & .contacts-group__svg-path {
+  //     opacity: 0.3;
+  //   }
+  // }
+
+  &--js {
+    // top: 457px;
+    top: 384px;
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop-width) {
+      top: 5px;
     }
   }
 }
@@ -145,23 +169,15 @@
 
   // &--email {}
 
-  &--inverse {
+  // &--inline {}
+
+  // &--in-site-menu {}
+
+  &--if-interested {
     color: $mcg-1;
 
     &:hover {
       color: $mcg-6;
     }
-  }
-
-  &--inline {
-    display: none;
-  }
-}
-
-.contacts-group__authorization {
-  order: -1;
-
-  &--inline {
-    order: 0;
   }
 }

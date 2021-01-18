@@ -1,4 +1,3 @@
-
 // viewports
 $mobile-width: 320px;
 $tablet-width: 768px;
@@ -21,6 +20,7 @@ $dcg-13: rgba(29, 46, 91, 0.2);
 $dcg-14: #101d41;
 $dcg-15: rgba(29, 46, 91, 0.14);
 $dcg-16: rgba(29, 46, 91, 0.18);
+$dcg-17: rgba(22, 28, 53, 0.17);
 
 // middle color`s group ( mcg )
 $mcg-1: #ffd74b;
@@ -34,6 +34,8 @@ $mcg-8: #f97676;
 $mcg-9: #ffbd30;
 $mcg-10: #f26926;
 $mcg-11: #ff0000;
+$mcg-12: #ffefef;
+$mcg-13: #f47e7e;
 
 // lighten color`s group ( lcg )
 $lcg-1: #ffffff;
@@ -57,6 +59,24 @@ $lcg-18: #babcc7;
 $lcg-19: #8f8f8f;
 $lcg-20: #5b6889;
 $lcg-21: #afb5c8;
+$lcg-22: #e1e3e9;
+$lcg-23: #ebecf3;
+$lcg-24: #e5e5e5;
+$lcg-25: #959bb2;
+$lcg-26: #aeb4cb;
+$lcg-27: #d1d7e9;
+$lcg-28: #616d8c;
+$lcg-29: #a7aec4;
+$lcg-30: #e2e5f1;
+$lcg-31: #b2b2b2;
+$lcg-32: #d9d9d9;
+$lcg-33: #ced3e2;
+$lcg-34: #999999;
+$lcg-35: #a5a9b9;
+$lcg-36: #808080;
+$lcg-37: #9c9fa8;
+$lcg-38: #bebfc5;
+$lcg-39: #c9ccd8;
 
 // shadows
 $shadow-1: rgba(54, 80, 148, 0.18);
@@ -107,6 +127,7 @@ $smolov-bg-2x: url("../img/fellow-travelers/bg/png/smolov-bg@2x.png");
 
 // circle-bar-bg
 $text-box-bg-image: url("../img/circle-bar/bg/line.svg");
+$text-box-bg-image-form: url("../img/circle-bar/bg/form/line-form-bg.svg");
 
 // profile-bg
 $rates-bg-mobile: url("../img/profile/bg/png/rates-bg-mobile.png");
@@ -128,10 +149,24 @@ $map-bg-tablet-2x: url("../img/map/bg/png/map-bg-tablet@2x.png");
 $map-bg-desktop: url("../img/map/bg/png/map-bg-desktop.png");
 $map-bg-desktop-2x: url("../img/map/bg/png/map-bg-desktop@2x.png");
 
+// user-plans-bg
+$line-in-user-plans: url("../img/user-plans/bg/svg/line-form-bg.svg");
+
+// add-plan-bg
+$line-in-add-plan: url("../img/add-plan/bg/svg/add-plan-line-bg.svg");
+$line-bigger-in-add-plan: url("../img/add-plan/bg/svg/add-plan-line-bigger-bg.svg");
+$rect-in-add-plan: url("../img/add-plan/bg/svg/add-plan-rect-bg.svg");
+$gradient-for-pseudo: url("../img/add-plan/bg/svg/add-plan-line-bg-for-pseudo.svg");
+$gradient-for-flag: url("../img/add-plan/bg/png/add-plan-fade-jollity-bg-mobile.png");
+$gradient-for-flag-2x: url("../img/add-plan/bg/png/add-plan-fade-jollity-bg-mobile@2x.png");
+
+// add-plan-decor
+$down-arrow: url("../img/add-plan/decor/svg/add-plan-arrow.svg");
+$line-for-jollity-psedo: url("../img/add-plan/decor/svg/add-plan-line-jollity-mobile.svg");
+$line-for-jollity-psedo-two: url("../img/add-plan/decor/svg/add-plan-line-jollity-tablet.svg");
+
 //blok`s background images
-
 $pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
-
 $drop-down-button-bg: url("../img/button/drop-down/bg/drop-down-gradient.svg");
 
 // icons
@@ -159,3 +194,4 @@ $icon-map-pin: url("../img/map/decor/svg/icon-map-pin.svg");
 // other
 $bottom-radii: 30px;
 $bottom-radii-tablet: 60px;
+$bottom-radii-bigger: $bottom-radii-tablet;

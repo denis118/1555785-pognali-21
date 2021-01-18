@@ -1,37 +1,99 @@
-
 .calendar {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-
   &--common-text-style {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
     color: $dcg-9;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-transform: lowercase;
+    }
   }
 }
 
 .calendar__month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-height: 43px;
   border-top: 1px solid $lcg-12;
   border-bottom: 1px solid $lcg-12;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-height: 86px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-// .calendar__switch-month {
-//   &--previous {}
+.calendar__switch-month {
+  @include centering-grid;
 
-//   &--next {}
-// }
+  &:hover,
+  &:active {
+    .calendar__arrow {
+      opacity: 1;
+    }
+  }
 
-// .calendar__arrow {
-//   &--back {}
+  &:hover {
+    .calendar__arrow {
+      fill: $lcg-36;
+    }
+  }
 
-//   &--next {}
-// }
+  &:active {
+    .calendar__arrow {
+      fill: $lcg-24;
+    }
+  }
 
-// .calendar__month-list {}
+  // &--previous {}
+
+  // &--next {}
+}
+
+.calendar__arrow {
+  fill: $dcg-3;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 44px;
+  }
+
+  &--back {
+    @media (min-width: $desktop-width) {
+      width: 25px;
+      height: 37px;
+    }
+  }
+
+  &--next {
+    @media (min-width: $desktop-width) {
+      width: 22px;
+      height: 34px;
+    }
+  }
+}
+
+.calendar__month-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3px;
+}
 
 .calendar__month-item {
   font-size: 20px;
@@ -47,83 +109,176 @@
   }
 }
 
-.calendar__wrap-toggle {
-  &--wrap {
-    display: none;
+.calendar__checkbox {
+  // &--month {}
+
+  &--day {
+    &:checked + .calendar__day {
+      color: $lcg-1;
+      background-color: $dcg-1;
+    }
+
+    &:disabled + .calendar__day {
+      color: $lcg-14;
+      font-weight: 400;
+      background-color: $lcg-1;
+    }
+
+    &:not(:disabled) + .calendar__day {
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
   }
-
-  // &--nowrap {}
 }
-
-// .calendar__checkbox {}
 
 // .calendar__label {}
 
+.calendar__label-span {
+  @include words-splitter;
+
+  // &--month {}
+
+  // &--year {}
+}
+
 .calendar__weekday-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 22px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 39px;
+    padding-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: min-content;
+    justify-items: start;
+    align-items: start;
+    padding-top: 17px;
+    padding-bottom: 20px;
+  }
 }
 
 .calendar__weekday-item {
   flex-grow: 1;
   text-align: center;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 17px;
+  }
+
   &--weekend {
     color: $mcg-3;
   }
-}
 
-.calendar__days {
-  grid-template-columns: repeat(7, 30px);
-  grid-template-rows: repeat(6, 30px);
-  justify-content: center;
-  outline: 1px solid $lcg-12;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(7, 76px);
-    grid-template-rows: repeat(6, 68px);
-  }
-}
-
-.calendar__day {
-  width: 30px;
-  min-height: 30px;
-
-  &:hover {
-    color: $lcg-1;
-    background-color: $dcg-1;
-    outline: 2px solid $mcg-3;
-    outline-offset: -2px;
-    opacity: 1;
-  }
-
-  &--banned {
-    .calendar__label {
-      opacity: 0.3;
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: attr(data-text);
+      display: block;
+      text-transform: none;
     }
   }
+}
 
-  &--available {
-    font-weight: 400;
-    color: $dcg-1;
-    background-color: $lcg-2;
+.calendar__days-list {
+  @include centering-margins;
+  display: grid;
+  width: 216px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, min-content);
+  justify-content: center;
+  border: 1px solid $lcg-12;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  background-color: $lcg-12;
+
+  @media (min-width: $tablet-width) {
+    width: 538px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 993px;
+  }
+}
+
+// .calendar__day-item {}
+
+.calendar__day {
+  @include centering-grid;
+  width: 30px;
+  height: 30px;
+  font-weight: 500;
+  color: $dcg-1;
+  background-color: $lcg-2;
 
   // &--previous-month {}
 
   // &--current-month {}
 
-  &--chosen {
-    color: $lcg-1;
-    background-color: $dcg-1;
-  }
-
   // &--next-month {}
 
   @media (min-width: $tablet-width) {
     width: 76px;
-    min-height: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 141px;
+    height: 70px;
+    justify-items: start;
+    align-items: start;
+    padding-top: 14px;
+    padding-left: 14px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 40px;
+      left: 14px;
+      font-size: 18px;
+      text-transform: none;
+    }
+  }
+
+  &--check-in {
+    &::before {
+      @media (min-width: $desktop-width) {
+        content: "Заезд";
+      }
+    }
+  }
+
+  &--check-out {
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "Выезд";
+      }
+    }
+  }
+
+  &:hover {
+    outline: 2px solid $mcg-3;
+    outline-offset: -1px;
+  }
+}
+
+.calendar__month-designation {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 18px;
+    letter-spacing: 0.04em;
   }
 }

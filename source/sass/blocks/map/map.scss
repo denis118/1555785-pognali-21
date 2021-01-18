@@ -1,10 +1,13 @@
-
 .map {
   position: relative;
   z-index: 994;
 }
 
 .map__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
@@ -14,7 +17,7 @@
 .map__wrapper {
   background-color: $mcg-1;
   padding-top: 33px + $bottom-radii;
-  margin-top: - ($bottom-radii);
+  margin-top: -($bottom-radii);
   border-bottom-left-radius: $bottom-radii;
   border-bottom-right-radius: $bottom-radii;
   position: relative;
@@ -22,7 +25,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 67px + $bottom-radii-tablet;
-    margin-top: - ($bottom-radii-tablet);
+    margin-top: -($bottom-radii-tablet);
     border-bottom-left-radius: $bottom-radii-tablet;
     border-bottom-right-radius: $bottom-radii-tablet;
   }
@@ -77,9 +80,12 @@
 }
 
 .map__route {
-  width: 100%;
   margin-top: 32px;
   margin-bottom: 35px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 60px;

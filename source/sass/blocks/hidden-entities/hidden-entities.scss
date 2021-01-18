@@ -1,4 +1,3 @@
-
 .hidden-entity {
   display: none;
 }
@@ -17,6 +16,24 @@
 
 .hidden-on-desktop {
   @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.hidden-after-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.hidden-except-tablet {
+  @media (max-width: $tablet-width - 1), (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.hidden-before-desktop {
+  @media (max-width: $desktop-width - 1) {
     display: none;
   }
 }

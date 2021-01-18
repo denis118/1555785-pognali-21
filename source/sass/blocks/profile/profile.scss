@@ -1,56 +1,53 @@
-
 .profile {
-  line-height: 16px;
-  color: $dcg-9;
+  padding-top: 83px;
   background-color: $lcg-3;
-
-  @include overlap--bottom(996, $bottom-radii);
-
-  @media (min-width: $tablet-width) {
-    line-height: 28px;
-
-    @include overlap--bottom(996, $bottom-radii-tablet);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include overlap--bottom(996, $bottom-radii-tablet);
-  }
-}
-
-.profile__container {
-  padding-top: 53px;
   background-image: $rates-bg-mobile;
   background-repeat: no-repeat;
-  background-position: 195px 37px;
+  // background-position: 195px 37px;
+  background-position: right 10.8% top 17.5%;
   background-size: 100px 100px;
+  line-height: 16px;
+  color: $dcg-9;
+
+  @include overlap--bottom(996, $bottom-radii);
 
   @media (min-resolution: 2dppx) {
     background-image: $rates-bg-mobile-2x;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 77px;
+    padding-top: 134px;
     background-image: $rates-bg-mobile, $rect-in-profile-bg-tablet;
     background-repeat: no-repeat, no-repeat;
-    background-position: 583px 410px, 530px 153px;
+    // background-position: 583px 410px, 530px 153px;
+    background-position: right 12.7% top 91.1%, right 7% top 63.5%;
     background-size: 100px 100px, 198px 285px;
+    line-height: 28px;
+
+    @include overlap--bottom(996, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 107px;
+    padding-top: 170px;
     background-image: $rates-bg-desktop, $rect-in-profile-bg-desktop;
-    background-position: 1109px 287px, 750px 235px;
+    // background-position: 1109px 287px, 750px 235px;
+    background-position: right 10.7% top 56.5%, right 24.5% top 57.6%;
     background-size: 198px 198px, 446px 300px;
 
     @media (min-resolution: 2dppx) {
-      background-image: $rates-bg-desktop-2x;
+      background-image: $rates-bg-desktop-2x, $rect-in-profile-bg-desktop;
     }
   }
 }
 
+.profile__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__heading {
   width: 72px;
-  margin-top: -2px;
+  // margin-top: -4px;
 
   @media (min-width: $tablet-width) {
     grid-area: heading;
@@ -73,7 +70,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 136px;
+    margin-top: 130px;
   }
 }
 
@@ -182,9 +179,12 @@
   grid-area: definition;
 }
 
-.profile__busines-tariff {
+.profile__busines-tariffs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   font-weight: 700;
   color: $dcg-7;
 

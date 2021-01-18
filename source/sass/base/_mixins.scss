@@ -1,10 +1,22 @@
+// visually-hidden
+@mixin visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 // overlap
 @mixin overlap--bottom($i, $border-radius) {
   position: relative;
   z-index: $i;
-  padding-top: $border-radius;
-  margin-top: - ($border-radius);
+  margin-top: -($border-radius);
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 }
@@ -12,9 +24,23 @@
 // outline
 @mixin outline($width, $type, $color) {
   outline: $width $type $color;
-  outline-offset: - $width;
+  outline-offset: -$width;
 }
 
+// centering-margins
+@mixin centering-margins {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// centering-flex
+@mixin centering-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// centering-grid
 @mixin centering-grid {
   display: grid;
   place-items: center;
@@ -32,4 +58,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 60px;
+}
+
+// words-splitter
+@mixin words-splitter {
+  display: inline-block;
+  vertical-align: middle;
+  width: inherit;
+}
+
+// text-style-set-1
+@mixin text-style-set-1 {
+  font-size: 20px;
+  line-height: 20px;
 }

@@ -1,43 +1,41 @@
-
 .fellow-travelers {
+  padding-top: 98px;
   background-color: $dcg-4;
-
-  @include overlap--bottom(997, $bottom-radii);
-
-  @media (min-width: $tablet-width) {
-    @include overlap--bottom(997, $bottom-radii-tablet);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include overlap--bottom(997, $bottom-radii-tablet);
-  }
-}
-
-.fellow-travelers__container {
-  padding-top: 68px;
   background-image: $rogovaya-bg-mobile, $smolov-bg, $rect-bg-mobile;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 307px, 152px 35px, 0 34px;
+  // background-position: 0 307px, 152px 35px, 0 34px;
+  background-position: 0 26.45%, right 14% top 5.4%, 0 5.3%;
   background-size: 62px 71px, 143px 143px, 113px 132px;
+
+  @include overlap--bottom(997, $bottom-radii);
 
   @media (min-resolution: 2dppx) {
     background-image: $rogovaya-bg-mobile-2x, $smolov-bg-2x, $rect-bg-mobile;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 141px;
+    padding-top: 201px;
     background-image: $rogovaya-bg-tablet, $smolov-bg, $quadrate-bg-desktop;
-    background-position: 409px 80px, 40px 426px, 40px 71px;
+    // background-position: 409px 80px, 40px 426px, 40px 71px;
+    background-position: right 15.3% top 13.6%, 6.4% 42%, 7.1% 12%;
     background-size: 285px 285px, 143px 143px, 212px 212px;
 
     @media (min-resolution: 2dppx) {
       background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x, $quadrate-bg-desktop;
     }
+
+    @include overlap--bottom(997, $bottom-radii-tablet);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 130px;
+    padding-top: 191px;
+    // background-position: 190px 386px, 547px 134px, 60px 70px;
+    background-position: 16.5% 84.9%, right 57.8% top 29%, 5% 21.5%;
+  }
+}
 
+.fellow-travelers__container {
+  @media (min-width: $desktop-width) {
     @include grid-for-desktop;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
@@ -45,8 +43,6 @@
       "main-text main-text ls ls"
       "add-text add-text ls ls"
       "button button ls ls";
-
-    background-position: 190px 386px, 547px 134px, 60px 70px;
   }
 }
 
@@ -68,12 +64,12 @@
 
   @media (min-width: $desktop-width) {
     grid-area: main-text;
-    width: 427px;
     line-height: 33px;
   }
 }
 
 .fellow-travelers__additional-text {
+  width: 197px;
   margin-top: 20px;
 
   @media (min-width: $tablet-width) {
@@ -84,7 +80,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 42px;
+    margin-top: 38px;
     grid-area: add-text;
   }
 }
@@ -94,6 +90,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
+    width: 618px;
     margin-top: 59px;
     grid-template-columns: 285px 285px;
     grid-auto-rows: min-content;
@@ -126,6 +123,10 @@
 }
 
 .fellow-travelers__companion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
     width: 285px;
   }
@@ -135,12 +136,8 @@
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 78px;
+    margin-top: 81px;
     margin-bottom: 87px;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,5 +145,11 @@
     margin-top: 85px;
     margin-bottom: 134px;
     grid-area: button;
+  }
+}
+
+.fellow-travelers__span {
+  @media (min-width: $tablet-width) {
+    @include words-splitter;
   }
 }

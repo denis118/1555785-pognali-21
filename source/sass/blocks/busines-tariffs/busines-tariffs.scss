@@ -1,5 +1,8 @@
 
 .busines-tariffs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 270px;
   max-width: 100%;
   height: 444px;
@@ -55,6 +58,9 @@
 }
 
 .busines-tariffs__list {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     font-size: 22px;
     line-height: 28px;

@@ -1,15 +1,28 @@
-
 .directions {
+  padding-top: 100px;
   background-color: $lcg-2;
 
   @include overlap--bottom(998, $bottom-radii);
 
   @media (min-width: $tablet-width) {
+    padding-top: 133px;
+    background-image: $flags-bg, $rect-bg;
+    background-repeat: no-repeat, no-repeat;
+    // background-position: 440px 80px, 40px 406px;
+    background-position: right 8.3% top 24.2%, 6.4% 46%;
+    background-size: 287px 575px, 140px 140px;
+
     @include overlap--bottom(998, $bottom-radii-tablet);
+
+    @media (min-resolution: 2dppx) {
+      background-image: $flags-bg-2x, $rect-bg;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include overlap--bottom(998, $bottom-radii-tablet);
+    padding-top: 221px;
+    // background-position: 1093px 88px, 60px 89px;
+    background-position: right 5.2% top 63%, 4.6% 22.5%;
   }
 
   &--absent-bottom {
@@ -27,31 +40,13 @@
 }
 
 .directions__container {
-  padding-top: 71px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 73px;
-    background-image: $flags-bg, $rect-bg;
-    background-repeat: no-repeat, no-repeat;
-    background-position: 440px 80px, 40px 406px;
-    background-size: 287px 575px, 140px 140px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: $flags-bg-2x, $rect-bg;
-    }
-  }
-
   @media (min-width: $desktop-width) {
-    padding-top: 161px;
-
     @include grid-for-desktop;
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
       "ls ls heading heading"
       "ls ls text text"
       "ls ls button button";
-
-    background-position: 1093px 88px, 60px 89px;
   }
 }
 
@@ -63,6 +58,7 @@
 }
 
 .directions__main-text {
+  width: 216px;
   margin-top: 19px;
   color: $dcg-9;
 
@@ -77,15 +73,21 @@
 }
 
 .directions__list {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 62px;
+  width: 270px;
   height: min-content;
 
   @media (min-width: $tablet-width) {
-    margin-top: 104px;
+    width: 618px;
+    margin-top: 101px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 559px;
     margin-top: 0;
+    margin-right: 0;
     justify-self: end;
     grid-area: ls;
     position: relative;
@@ -117,6 +119,9 @@
 }
 
 .directions__item {
+  display: flex;
+  flex-direction: column;
+
   &:not(:first-child) {
     margin-top: 10px;
   }
@@ -195,12 +200,26 @@
     line-height: 20px;
   }
 
-  &--unusual {
-    height: 30px;
+  &--czech {
+    @media (max-width: $mobile-width-only) {
+      width: 178px;
+      height: 30px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 150px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 220px;
+    }
   }
 }
 
 .directions__applicants-amount {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: 28px;
   line-height: 20px;
   color: $lcg-10;
@@ -220,9 +239,13 @@
     margin-left: 10px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 15px;
+      margin-top: 5px;
       margin-left: 0;
       margin-bottom: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 29px;
     }
   }
 
@@ -284,32 +307,15 @@
 }
 
 .directions__country-flag {
-  // position: absolute;
-  // top: 0;
-  // left: 25px;
-  // transform: translateY(-50%);
-
   @media (min-width: $tablet-width) {
     width: 70px;
     height: 47px;
-    // top: 17px;
-    // left: 398px;
-    // transform: translateY(0);
   }
-
-  // @media (min-width: $desktop-width) {
-  //   top: 23px;
-  //   left: 337px;
-  // }
 }
 
 .directions__more {
   margin-top: 28px;
   margin-bottom: 34px;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    margin-left: 0;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 47px;
@@ -317,8 +323,30 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 98px;
-    margin-bottom: 139px;
+    margin-top: 96px;
+    margin-bottom: 137px;
     grid-area: button;
+  }
+}
+
+.directions__span {
+  @include words-splitter;
+
+  &--czech {
+    display: inline;
+  }
+
+  &--czech-1 {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      display: block;
+    }
+  }
+
+  // &--czech-2 {}
+
+  &--czech-3 {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+    }
   }
 }
