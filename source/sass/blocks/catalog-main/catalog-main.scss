@@ -1,69 +1,16 @@
-
 .catalog-main {
   background-color: $lcg-2;
-  font-family: "Blogger Sans", "Arial", sans-serif;
 
   @media (min-width: $tablet-width) {
     position: relative;
   }
+
+  // &--left-alignment {
+  //   text-align: left;
+  // }
 }
 
-.catalog-main__left-alignment {
-  text-align: left;
-}
-
-.catalog-main__heading {
-  padding-left: 25px;
-  padding-bottom: 12px;
-  position: relative;
-  background-color: $dcg-10;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
-
-  @media (min-width: $tablet-width) {
-    padding-top: 110px;
-    padding-bottom: 88px;
-    padding-left: 74px;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 172px;
-    height: 5px;
-    position: absolute;
-    top: 100%;
-    left: 25px;
-    background-color: $mcg-2;
-    border-radius: 2.5px;
-    transform: translateY(-50%);
-
-    @media (min-width: $tablet-width) {
-      width: 288px;
-      left: 74px;
-    }
-  }
-}
-
-.catalog-main__return-to-index {
-  position: absolute;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    top: 110px;
-    left: 67.45%;
-  }
-}
-
-.catalog-main__return-svg {
-  @media (min-width: $tablet-width) {
-    margin-left: 28px;
-  }
-}
+// .catalog-main__general-heading {}
 
 .catalog-main__land-filter {
   background-color: $lcg-8;

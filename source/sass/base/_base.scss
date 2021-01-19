@@ -25,6 +25,14 @@
       max-width: 618px;
     }
   }
+
+  &--ultra-slim {
+    @media (min-width: $desktop-width) {
+      width: 192px;
+      min-width: 192px;
+      max-width: 192px;
+    }
+  }
 }
 
 .zero-edges {
@@ -192,6 +200,11 @@
 
   &--companions-selection {
     background-color: $mcg-1;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 48px;
+      padding-right: 45px;
+    }
   }
 
   &--selection-results {
