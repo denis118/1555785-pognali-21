@@ -1,41 +1,24 @@
 .catalog-main {
   background-color: $lcg-2;
-
-  @media (min-width: $tablet-width) {
-    position: relative;
-  }
-
-  // &--left-alignment {
-  //   text-align: left;
-  // }
+  position: relative;
 }
 
-// .catalog-main__general-heading {}
+.catalog-main__general-heading {
+  position: relative;
+  z-index: 2;
+}
 
 .catalog-main__land-filter {
   margin-top: -20px;
+  position: absolute;
+  z-index: 1;
 }
 
-.catalog-main__upper-button {
-  border: none;
-  outline: none;
-  margin-left: 23px;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-// .catalog-main__ellipsis-svg {}
-
-// .catalog-main__cross-svg {}
-
-// .catalog-main__lands {}
-
-.catalog-main__holder {
+.catalog-main__container {
   @media (min-width: $desktop-width) {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 151px;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-auto-rows: min-content;
   }
 }
 
