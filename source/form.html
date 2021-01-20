@@ -1631,30 +1631,39 @@
                         </h2>
 
                         <button
-                          class="lands__roll-down-button lands--common-text-style button"
+                          class="lands__filter-toggle lands--common-text-style button hidden-on-desktop"
                           type="button">
-                          <span class="lands__show-all">
+                          <span
+                            class="lands__toggle-span lands__toggle-span--show hidden-except-tablet hidden-entity">
                             Показать все
                           </span>
-                          <svg class="lands__ellipsis" width="17" height="3"
-                            viewBox="0 0 17 3" fill="none"
+                          <svg
+                            class="lands__toggle-svg lands__toggle-svg--ellipsis hidden-entity"
+                            width="30" height="6"
                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.5" cy="1.5" r="1.5" fill="#192144" />
-                            <circle cx="8.5" cy="1.5" r="1.5" fill="#192144" />
-                            <circle cx="15.5" cy="1.5" r="1.5" fill="#192144" />
+                            <circle cx="3" cy="3" r="3" />
+                            <circle cx="15" cy="3" r="3" />
+                            <circle cx="27" cy="3" r="3" />
                           </svg>
-                          <span class="lands__roll-up">
+                          <span
+                            class="lands__toggle-span lands__toggle-span--hide hidden-except-tablet">
                             Свернуть
                           </span>
-                          <svg class="lands__cross" width="14" height="14"
-                            viewBox="0 0 14 14" fill="none"
+                          <svg
+                            class="lands__toggle-svg lands__toggle-svg--cross"
+                            width="24" height="23"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.25 1.75L1.75 12.25" stroke="#192144"
-                              stroke-width="1.4" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                            <path d="M1.75 1.75L12.25 12.25" stroke="#192144"
-                              stroke-width="1.4" stroke-linecap="round"
-                              stroke-linejoin="round" />
+                            <g clip-path="url(#clip162)" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M21 2.916L3 19.343M3 2.916l18 16.427" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip162">
+                                <path fill="#fff"
+                                  transform="rotate(-90 11.04 11.04)"
+                                  d="M0 0h21.903v24H0z" />
+                              </clipPath>
+                            </defs>
                           </svg>
                         </button>
 
@@ -2044,7 +2053,7 @@
                         </ul>
 
                         <button
-                          class="button button--roll-up button--roll-and-change button--roll-up-form lands__roll-up-button lands__roll-up-button--form hidden-entity"
+                          class="button button--roll-and-change lands__roll-up-button hidden-entity"
                           type="button" name="close"
                           aria-label="Закрыть список доступных стран">
                           <svg class="button__roll-up-svg" width="14"

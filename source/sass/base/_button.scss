@@ -147,21 +147,6 @@
     }
   }
 
-  &--roll-up {
-    line-height: 20px;
-    background-color: $lcg-9;
-    color: $dcg-4;
-  }
-
-  &--roll-up-catalog {
-    @media (min-width: $tablet-width) {
-      width: 615px;
-      height: 100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
   &--sign {
     width: auto;
     height: auto;
@@ -335,7 +320,7 @@
     stroke: $lcg-1;
 
     @media (max-width: $mobile-width-only) {
-      transform: scale(0.8);
+      transform: scale(0.4);
     }
 
     @media (min-width: $tablet-width) {

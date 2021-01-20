@@ -6,6 +6,8 @@
   border-top: none;
 
   &--common-text-style {
+    font-size: 16px;
+    line-height: 18px;
     color: $dcg-4;
     font-weight: 700;
     text-transform: uppercase;
@@ -41,8 +43,8 @@
 
   &--catalog {
     background-color: $lcg-8;
-    padding-top: 9px + 20px;
-    padding-bottom: 28px;
+    padding-top: 22px + 20px;
+    padding-bottom: 15px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: none;
@@ -137,16 +139,17 @@
 .lands__toggle-svg {
   &--ellipsis {
     fill: $dcg-4;
+    transform: scale(0.6) translate(4px, -2px);
   }
 
   &--cross {
     stroke: $dcg-4;
-    transform: scale(0.7) translateY(-3px);
+    transform: scale(0.7) translateY(-6px);
   }
 }
 
 .lands__regions {
-  margin-top: 17px;
+  margin-top: 26px;
   padding-left: 25px;
 
   @media (max-width: $mobile-width-only) {
@@ -190,13 +193,7 @@
 }
 
 .lands__link {
-  text-transform: uppercase;
-  line-height: 18px;
   white-space: nowrap;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-  }
 
   // &--region {}
 
@@ -242,8 +239,10 @@
   }
 
   &--letter-form {
-    @media (min-width: $tablet-width) {
-      line-height: 20px;
+    letter-spacing: normal;
+
+    @media (max-width: $mobile-width-only) {
+      line-height: 18px;
     }
 
     @media (min-width: $desktop-width) {
@@ -299,6 +298,8 @@
   }
 
   &--catalog {
+    margin-top: 19px;
+
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -357,11 +358,13 @@
   }
 
   &--catalog {
-    margin-top: 26px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    @include centering-margins;
+    width: 220px;
+    border: 1px solid $lcg-7;
+    // grid-column-start: 1;
+    // grid-column-end: 3;
+    // grid-row-start: 1;
+    // grid-row-end: 2;
 
     @media (min-width: $desktop-width) {
       display: none;
@@ -393,6 +396,10 @@
   }
 
   &--catalog {
+    padding-left: 25px;
+    margin-top: 14px;
+    margin-bottom: 27px;
+
     @media (min-width: $tablet-width) {
       grid-column-start: 3;
       grid-column-end: 4;
@@ -413,7 +420,6 @@
   @media (min-width: $desktop-width) {
     display: block;
     flex-basis: 210px;
-    // flex-grow: 1;
   }
 
   &:not(:nth-child(5n+1)) {
@@ -481,12 +487,20 @@
 }
 
 .lands__roll-up-button {
-  &--catalog {
-    @media (min-width: $tablet-width) {
-      grid-column-start: 1;
-      grid-column-end: -1;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  background-color: $lcg-9;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 615px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }
