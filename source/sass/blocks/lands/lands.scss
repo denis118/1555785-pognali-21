@@ -146,7 +146,12 @@
 }
 
 .lands__toggle-span {
-  // &--show {}
+  &--show {
+    @media (min-width: $tablet-width) {
+      margin-right: 25px;
+      margin-top: 3px;
+    }
+  }
 
   &--hide {
     @media (min-width: $tablet-width) {
@@ -157,18 +162,24 @@
 }
 
 .lands__toggle-svg {
+  @media (min-width: $tablet-width) {
+    transform: scale(1) translateY(0);
+    margin-right: 32px;
+  }
+
   &--ellipsis {
     fill: $dcg-4;
-    transform: scale(0.6) translate(4px, -2px);
+
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.6) translate(4px, -2px);
+    }
   }
 
   &--cross {
     stroke: $dcg-4;
-    transform: scale(0.7) translateY(-6px);
 
-    @media (min-width: $tablet-width) {
-      transform: scale(1) translateY(0);
-      margin-right: 32px;
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.7) translateY(-6px);
     }
   }
 }
