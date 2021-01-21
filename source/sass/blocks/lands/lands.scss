@@ -677,46 +677,6 @@
       max-height: 405px;
     }
   }
-
-  // &--catalog {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 37px;
-  //   }
-  // }
-
-  // &--column-1 {
-
-  // }
-
-  // &--1 {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 35px;
-  //   }
-  // }
-
-  // &--2 {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 28px;
-  //   }
-  // }
-
-  // &--3 {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 28px;
-  //   }
-  // }
-
-  // &--4 {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 29px;
-  //   }
-  // }
-
-  // &--5 {
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 29px;
-  //   }
-  // }
 }
 
 .lands__alphabetical-index {
@@ -732,6 +692,24 @@
   &--row-2 {
     @media (min-width: $desktop-width) {
       margin-top: 48px;
+    }
+  }
+
+  &--row-3 {
+    @media (min-width: $desktop-width) {
+      margin-top: 47px;
+    }
+  }
+
+  &--row-4 {
+    @media (min-width: $desktop-width) {
+      margin-top: 88px;
+    }
+  }
+
+  &--row-5 {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 34px;
     }
   }
 }
@@ -771,6 +749,73 @@
     @media (min-width: $desktop-width) {
       padding-top: 2px;
       padding-left: 3px;
+    }
+  }
+
+  &--11 {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+    }
+  }
+
+  // &--12 {
+  //   @media (min-width: $desktop-width) {}
+  // }
+
+  &--13 {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+      padding-left: 3px;
+    }
+  }
+
+  &--14 {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+      padding-left: 5px;
+    }
+  }
+
+  &--15 {
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
+    }
+  }
+
+  &--18 {
+    @media (min-width: $desktop-width) {
+      padding-left: 2px;
+    }
+  }
+
+  &--19 {
+    @media (min-width: $desktop-width) {
+      padding-left: 6px;
+    }
+  }
+
+  &--20 {
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
+    }
+  }
+
+  &--23 {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+      padding-left: 5px;
+    }
+  }
+
+  &--24 {
+    @media (min-width: $desktop-width) {
+      padding-left: 6px;
+    }
+  }
+
+  &--25 {
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
     }
   }
 }
@@ -828,5 +873,12 @@
     grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+    height: 100px;
+    margin-top: 59px;
+    padding-left: 600px;
   }
 }
