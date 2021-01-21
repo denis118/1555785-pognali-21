@@ -290,6 +290,13 @@
 
 .button__roll-up-svg {
   margin-right: 12px;
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
+    transform: scale(2);
+    margin-right: 25px;
+  }
 }
 
 .button__close-svg {
