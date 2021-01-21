@@ -57,6 +57,13 @@
       border-bottom-left-radius: $bottom-radii-tablet;
       border-bottom-right-radius: $bottom-radii-tablet;
     }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: $lcg-2;
+      // padding-top: 120px;
+    }
   }
 }
 
@@ -90,6 +97,11 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
 }
 
 .lands__heading {
@@ -109,6 +121,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    padding-left: 45px;
   }
 
   &::before {
@@ -210,20 +223,47 @@
 }
 
 .lands__region {
-  margin-top: 5px;
-  opacity: 0.3;
+  &--catalog {
+    margin-top: 5px;
+    opacity: 0.3;
 
-  &:first-child {
-    margin-top: 0;
-  }
+    &:first-child {
+      margin-top: 0;
+    }
 
-  &:not(:first-child) {
-    @media (min-width: $tablet-width) {
-      margin-left: 28px;
+    &:not(:first-child) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        margin-left: 28px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
     }
   }
 
-  &--active {
+
+  // &--europe {}
+
+  &--asia {
+    @media (min-width: $desktop-width) {
+      margin-left: 30px;
+    }
+  }
+
+  &--america {
+    @media (min-width: $desktop-width) {
+      margin-left: 32px;
+    }
+  }
+
+  &--islands {
+    @media (min-width: $desktop-width) {
+      margin-left: 33px;
+    }
+  }
+
+  &--catalog-active {
     opacity: 1;
   }
 }
@@ -595,8 +635,10 @@
     }
 
     @media (min-width: $desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(5, 250px);
+      grid-auto-rows: min-content;
+      padding-left: 37px;
     }
   }
 }
@@ -604,14 +646,15 @@
 .lands__item {
   display: none;
 
-  @media (min-width: $desktop-width) {
-    display: block;
-    flex-basis: 210px;
-  }
+  // &:not(:nth-child(5n+1)) {
+  //   @media (min-width: $desktop-width) {
+  //     margin-left: 40px;
+  //   }
+  // }
 
-  &:not(:nth-child(5n+1)) {
+  &--catalog {
     @media (min-width: $desktop-width) {
-      margin-left: 40px;
+      display: block;
     }
   }
 
@@ -634,6 +677,46 @@
       max-height: 405px;
     }
   }
+
+  // &--catalog {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 37px;
+  //   }
+  // }
+
+  // &--column-1 {
+
+  // }
+
+  // &--1 {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 35px;
+  //   }
+  // }
+
+  // &--2 {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 28px;
+  //   }
+  // }
+
+  // &--3 {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 28px;
+  //   }
+  // }
+
+  // &--4 {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 29px;
+  //   }
+  // }
+
+  // &--5 {
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 29px;
+  //   }
+  // }
 }
 
 .lands__alphabetical-index {
@@ -642,12 +725,55 @@
   @media (min-width: $desktop-width) {
     display: block;
     opacity: 1;
+    margin-top: 41px;
+    margin-bottom: 28px;
+  }
+
+  &--row-2 {
+    @media (min-width: $desktop-width) {
+      margin-top: 48px;
+    }
   }
 }
 
-// .lands__sublist {
-//   &--a {}
-// }
+.lands__sublist {
+  &--3 {
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
+    }
+  }
+
+  &--4 {
+    @media (min-width: $desktop-width) {
+      padding-left: 7px;
+    }
+  }
+
+  &--7 {
+    @media (min-width: $desktop-width) {
+      padding-left: 2px;
+    }
+  }
+
+  &--8 {
+    @media (min-width: $desktop-width) {
+      padding-left: 3px;
+    }
+  }
+
+  &--9 {
+    @media (min-width: $desktop-width) {
+      padding-left: 4px;
+    }
+  }
+
+  &--10 {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+      padding-left: 3px;
+    }
+  }
+}
 
 .lands__subitem {
   &--form {
@@ -683,6 +809,10 @@
   letter-spacing: 0.05em;
   background-color: $lcg-9;
   margin-bottom: 13px;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 615px;

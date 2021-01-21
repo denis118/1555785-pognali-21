@@ -9,9 +9,13 @@
 }
 
 .catalog-main__land-filter {
-  margin-top: -60px;
+  margin-top: -20px;
   position: absolute;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+  }
 
   @media (min-width: $desktop-width) {
     position: static;
