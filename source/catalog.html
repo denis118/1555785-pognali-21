@@ -1858,10 +1858,10 @@
           class="companions-selection__fieldset companions-selection__fieldset--hobby zero-edges">
 
           <!--
-            companions-selection__legend--hobby.classlist.add("companions-selection__legend--collapsed");
+            companions-selection__legend--hobby.classlist.add("companions-selection__legend--collapsed-hobby");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--hobby companions-selection__legend--collapsed"
+            class="companions-selection__legend companions-selection__legend--hobby companions-selection__legend--collapsed-hobby"
             data-content="Хобби:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Хобби
@@ -1869,10 +1869,10 @@
           </legend>
 
           <!--
-            companions-selection__wrapper--hobby.classlist.add("hidden-entity");
+            companions-selection__wrapper--hobby.classlist.add("hidden-except-tablet");
           -->
           <div
-            class="companions-selection__wrapper companions-selection__wrapper--hobby hidden-entity">
+            class="companions-selection__wrapper companions-selection__wrapper--hobby hidden-except-tablet">
             <input class="companions-selection__input hidden-entity"
               type="checkbox" name="gym" id="hobby-gym">
             <label class="companions-selection__item-label" for="hobby-gym">
@@ -1924,7 +1924,7 @@
           </legend>
 
           <!--
-            companions-selection__wrapper--music.classlist.add("hidden-entity");
+            companions-selection__wrapper--music.classlist.add("hidden-except-tablet");
           -->
           <div
             class="companions-selection__wrapper companions-selection__wrapper--music">
@@ -1971,10 +1971,10 @@
           class="companions-selection__fieldset companions-selection__fieldset--food zero-edges">
 
           <!--
-            companions-selection__legend--food.classlist.add("companions-selection__legend--collapsed");
+            companions-selection__legend--food.classlist.add("companions-selection__legend--collapsed-food");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--food companions-selection__legend--collapsed"
+            class="companions-selection__legend companions-selection__legend--food companions-selection__legend--collapsed-food"
             data-content="Еда:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Еда
@@ -1982,10 +1982,10 @@
           </legend>
 
           <!--
-            companions-selection__wrapper--food.classlist.add("hidden-entity");
+            companions-selection__wrapper--food.classlist.add("hidden-except-tablet");
           -->
           <div
-            class="companions-selection__wrapper companions-selection__wrapper--food hidden-entity">
+            class="companions-selection__wrapper companions-selection__wrapper--food hidden-except-tablet">
             <input class="companions-selection__input hidden-entity"
               type="checkbox" name="meat-eater" id="food-meat-eater">
             <label class="companions-selection__item-label"
@@ -2040,7 +2040,7 @@
           </legend>
 
           <!--
-            companions-selection__user-transport.classlist.add("hidden-entity");
+            companions-selection__user-transport.classlist.add("hidden-except-tablet");
           -->
           <section
             class="user-transport user-transport--catalog companions-selection__user-transport">
@@ -2050,8 +2050,10 @@
 
             <input class="user-transport__checkbox visually-hidden"
               type="checkbox" name="aircraft" id="aircraft" checked>
-            <label class="user-transport__label" for="aircraft">
-              <svg class="user-transport__svg user-transport__svg--aircraft"
+            <label class="user-transport__label user-transport__label--catalog"
+              for="aircraft">
+              <svg
+                class="user-transport__svg user-transport__svg--aircraft user-transport__svg--catalog user-transport__svg--aircraft-catalog"
                 role="img" aria-label="Иконка самолёта" width="21" height="23"
                 viewBox="0 0 21 23" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -2071,8 +2073,10 @@
 
             <input class="user-transport__checkbox visually-hidden"
               type="checkbox" name="bus" id="bus" checked>
-            <label class="user-transport__label" for="bus">
-              <svg class="user-transport__svg user-transport__svg--bus"
+            <label class="user-transport__label user-transport__label--catalog"
+              for="bus">
+              <svg
+                class="user-transport__svg user-transport__svg--bus user-transport__svg--catalog user-transport__svg--bus-catalog"
                 role="img" aria-label="Иконка автобуса" width="18" height="21"
                 viewBox="0 0 18 21" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -2091,8 +2095,10 @@
 
             <input class="user-transport__checkbox visually-hidden"
               type="checkbox" name="bycicle" id="bycicle">
-            <label class="user-transport__label" for="bycicle">
-              <svg class="user-transport__svg user-transport__svg--bycicle"
+            <label class="user-transport__label user-transport__label--catalog"
+              for="bycicle">
+              <svg
+                class="user-transport__svg user-transport__svg--bycicle user-transport__svg--catalog user-transport__svg--bycicle-catalog"
                 role="img" aria-label="Иконка велосипедиста" width="26"
                 height="25" viewBox="0 0 26 25" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -2109,8 +2115,10 @@
 
             <input class="user-transport__checkbox visually-hidden"
               type="checkbox" name="feet" id="feet" checked>
-            <label class="user-transport__label" for="feet">
-              <svg class="user-transport__svg user-transport__svg--runner"
+            <label class="user-transport__label user-transport__label--catalog"
+              for="feet">
+              <svg
+                class="user-transport__svg user-transport__svg--runner user-transport__svg--catalog user-transport__svg--runner-catalog"
                 role="img" aria-label="Иконка бегущего человека" width="21"
                 height="24" viewBox="0 0 21 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -2138,7 +2146,7 @@
           </legend>
 
           <!--
-            companions-selection__wrapper--level.classlist.add("hidden-entity");
+            companions-selection__wrapper--level.classlist.add("hidden-except-tablet");
           -->
           <div
             class="companions-selection__wrapper companions-selection__wrapper--level">
@@ -2146,12 +2154,16 @@
               class="customized-bar customized-bar--catalog companions-selection__customized-bar">
               <div
                 class="customized-bar__level-wrapper flex flex--alignment-center">
-                <!-- <label class="visually-hidden" for="initial-level"></label> -->
+                <label class="visually-hidden" for="initial-level">
+                  Регулятор минимально допустимого уровня пользовтеля
+                </label>
                 <input
                   class="customized-bar__level-input customized-bar__level-input--initial"
                   type="text" name="initial-level" id="initial-level"
                   value="30">
-                <!-- <label class="visually-hidden" for="final-level"></label> -->
+                <label class="visually-hidden" for="final-level">
+                  Регулятор максимально допустимого уровня пользовтеля
+                </label>
                 <input
                   class="customized-bar__level-input customized-bar__level-input--final"
                   type="text" name="final-level" id="final-level" value="100">

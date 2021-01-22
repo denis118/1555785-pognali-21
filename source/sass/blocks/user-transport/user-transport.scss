@@ -6,7 +6,12 @@
   //   @include centering-flex;
   // }
 
-  // &--catalog {}
+  &--catalog {
+    justify-content: flex-start;
+    margin-top: 4px;
+    margin-left: -1px;
+    margin-bottom: 19px;
+  }
 }
 
 .transport__heading {
@@ -62,6 +67,15 @@
     height: 43px;
   }
 
+  &--catalog {
+    width: 31.27px;
+    height: 31.27px;
+
+    &:not(:first-child) {
+      margin-left: 1.73px;
+    }
+  }
+
   &:hover {
     filter: drop-shadow(0 2px 6px $dcg-17);
 
@@ -72,10 +86,10 @@
 
   &:active {
     background-color: $lcg-30;
-  }
 
-  .user-transport__svg {
-    fill: $lcg-33;
+    .user-transport__svg {
+      fill: $lcg-33;
+    }
   }
 }
 
@@ -89,6 +103,24 @@
   // &--bycicle {}
 
   // &--runner {}
+
+  // &--catalog {}
+
+  &--aircraft-catalog {
+    transform: scale(0.8);
+  }
+
+  &--bus-catalog {
+    transform: scale(0.95);
+  }
+
+  &--bycicle-catalog {
+    transform: scale(0.6);
+  }
+
+  &--runner-catalog {
+    transform: scale(0.75);
+  }
 }
 
 // .user-transport__svg-path {}
