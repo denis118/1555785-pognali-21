@@ -1,6 +1,7 @@
 
 .companions-selection {
   padding-top: 26px;
+  color: $dcg-1;
 
   @media (min-width: $desktop-width) {
     width: 285px;
@@ -8,15 +9,11 @@
   }
 }
 
-// .companions-selection__container {}
-
 .companions-selection__heading {
   margin: 0;
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
-  font-style: normal;
-  color: $dcg-1;
   text-align: left;
   letter-spacing: 0.02em;
 }
@@ -26,44 +23,31 @@
 }
 
 .companions-selection__fieldset {
+  padding: 39px 0 0 0;
   border: none;
   border-top: 1px solid $mcg-4;
   outline: none;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  position: relative;
 
   &--hobby {
-    margin-top: 23px;
+    margin-top: 21px;
   }
 }
 
-// .companions-selection__legend {
-//   &--hobby {}
-
-//   &--music {}
-
-//   &--food {}
-
-//   &--transport {}
-
-//   &--level {}
-// }
-
-// .companions-selection__legend-span {}
-
-.companions-selection__label {
-  padding-top: 12px;
-  padding-bottom: 14px;
-
+.companions-selection__legend {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  font-style: normal;
-  color: $dcg-1;
-  text-align: left;
   text-transform: uppercase;
   cursor: pointer;
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  // @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  //   flex-basis: 126px;
+  // }
 
   &::after {
     content: "";
@@ -74,21 +58,51 @@
     border-right-color: transparent;
     border-left-color: transparent;
     border-bottom-width: 0;
-    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 210px;
+    transform: rotate(180deg) scale(0.75);
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       display: none;
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    flex-basis: 126px;
+  &--hobby {
+    top: 12px;
+  }
+
+  &--music {
+    &::after {
+      top: 5px;
+    }
+  }
+
+  // &--food {}
+
+  &--transport {
+    &::after {
+      top: 4px;
+    }
+  }
+
+  // &--level {}
+
+  &--collapsed {
+    &::after {
+      transform: rotate(0deg) scale(0.75) translateY(8px);
+    }
   }
 }
+
+// .companions-selection__legend-span {}
 
 .companions-selection__wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 6px;
+  margin-bottom: 20px;
 
   // &--hobby {}
 
@@ -98,21 +112,21 @@
 
   // &--level {}
 
-  &--for-inputs {
-    padding-top: 2px;
-    padding-bottom: 21px;
+  // &--for-inputs {
+  //   padding-top: 2px;
+  //   padding-bottom: 21px;
 
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 400;
-    font-style: normal;
-    color: $dcg-3;
+  //   font-size: 15px;
+  //   line-height: 20px;
+  //   font-weight: 400;
+  //   font-style: normal;
+  //   color: $dcg-3;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding: 0;
-      flex-grow: 1;
-    }
-  }
+  //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  //     padding: 0;
+  //     flex-grow: 1;
+  //   }
+  // }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     flex-direction: row;
@@ -121,6 +135,14 @@
 }
 
 .companions-selection__item-label {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dcg-3;
+  padding-left: 27px;
+  position: relative;
+  height: 18px;
+
   &:not(:last-child) {
     padding-bottom: 12px;
 
@@ -129,9 +151,38 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    flex-basis: 115px;
-    flex-grow: 1;
+  // @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  //   flex-basis: 115px;
+  //   flex-grow: 1;
+  // }
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $lcg-1;
+    border-radius: 4px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+}
+
+.companions-selection__label-check-mark {
+  display: none;
+}
+
+.companions-selection__input {
+  &:checked {
+    & + .companions-selection__item-label {
+      .companions-selection__label-check-mark {
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        transform: scale(0.8);
+      }
+    }
   }
 }
 

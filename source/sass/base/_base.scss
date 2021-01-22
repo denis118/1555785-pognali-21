@@ -193,6 +193,7 @@
 
   &--companions-selection {
     background-color: $mcg-1;
+    padding-right: 25px;
 
     @media (min-width: $desktop-width) {
       padding-left: 48px;
