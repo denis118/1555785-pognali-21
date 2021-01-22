@@ -11,6 +11,10 @@
     margin-top: 4px;
     margin-left: -1px;
     margin-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -68,11 +72,17 @@
   }
 
   &--catalog {
-    width: 31.27px;
-    height: 31.27px;
+    @media (max-width: $mobile-width-only) {
+      width: 31.27px;
+      height: 31.27px;
+    }
 
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-left: 1.73px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 2px;
+      }
     }
   }
 
@@ -104,22 +114,42 @@
 
   // &--runner {}
 
-  // &--catalog {}
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      transform: scale(1);
+    }
+  }
 
   &--aircraft-catalog {
-    transform: scale(0.8);
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.8);
+    }
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.1);
+    }
   }
 
   &--bus-catalog {
-    transform: scale(0.95);
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.95);
+    }
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.25);
+    }
   }
 
   &--bycicle-catalog {
-    transform: scale(0.6);
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.6);
+    }
   }
 
   &--runner-catalog {
-    transform: scale(0.75);
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.75);
+    }
   }
 }
 

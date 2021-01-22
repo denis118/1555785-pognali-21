@@ -166,10 +166,6 @@
     background-size: cover;
 
     @media (min-width: $tablet-width) {
-      // width: 20px;
-      // height: 17px;
-      // background-image: none;
-      // border: 1px dashed red;
       width: 65px;
       justify-content: center;
     }
@@ -246,12 +242,6 @@
 
   &--show {
     background-color: $lcg-1;
-  }
-
-  &--show-catalog {
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
   }
 
   &--invite {

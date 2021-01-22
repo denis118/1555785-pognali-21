@@ -195,6 +195,11 @@
     background-color: $mcg-1;
     padding-right: 25px;
 
+    @media (min-width: $tablet-width) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
     @media (min-width: $desktop-width) {
       padding-left: 48px;
       padding-right: 45px;
