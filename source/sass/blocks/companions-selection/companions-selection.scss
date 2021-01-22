@@ -1,6 +1,6 @@
 
 .companions-selection {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  padding-top: 26px;
 
   @media (min-width: $desktop-width) {
     width: 285px;
@@ -12,14 +12,17 @@
 
 .companions-selection__heading {
   margin: 0;
-  margin-top: 26px;
-
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
   font-style: normal;
   color: $dcg-1;
   text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.companions-selection__heading-span {
+  @include words-splitter;
 }
 
 .companions-selection__fieldset {
@@ -34,6 +37,20 @@
     margin-top: 23px;
   }
 }
+
+// .companions-selection__legend {
+//   &--hobby {}
+
+//   &--music {}
+
+//   &--food {}
+
+//   &--transport {}
+
+//   &--level {}
+// }
+
+// .companions-selection__legend-span {}
 
 .companions-selection__label {
   padding-top: 12px;
@@ -70,6 +87,17 @@
 }
 
 .companions-selection__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  // &--hobby {}
+
+  // &--music {}
+
+  // &--food {}
+
+  // &--level {}
+
   &--for-inputs {
     padding-top: 2px;
     padding-bottom: 21px;
@@ -106,6 +134,8 @@
     flex-grow: 1;
   }
 }
+
+// .companions-selection__user-transport {}
 
 // .companions-selection__customized-bar {}
 

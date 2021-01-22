@@ -1,8 +1,12 @@
 
 .user-transport {
-  &--form {
-    @include centering-flex;
-  }
+  @include centering-flex;
+
+  // &--form {
+  //   @include centering-flex;
+  // }
+
+  // &--catalog {}
 }
 
 .transport__heading {
