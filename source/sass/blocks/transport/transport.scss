@@ -22,6 +22,10 @@
       flex-direction: row;
     }
   }
+
+  &--petia-diomin-catalog {
+    margin-top: 17px;
+  }
 }
 
 .transport__kind {
@@ -39,6 +43,8 @@
     &:not(:first-child) {
       margin-left: 1px;
     }
+
+    z-index: 1;
   }
 }
 

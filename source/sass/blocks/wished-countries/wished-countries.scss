@@ -59,6 +59,10 @@
     display: flex;
     align-items: center;
   }
+
+  &--czech-catalog {
+    margin-top: 2px;
+  }
 }
 
 .wished-countries__flag {
@@ -69,6 +73,10 @@
       width: 35px;
       height: 24px;
     }
+  }
+
+  &--petia-diomin-catalog {
+    margin-top: -6px;
   }
 }
 
