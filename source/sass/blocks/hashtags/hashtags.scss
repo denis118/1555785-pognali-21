@@ -35,6 +35,10 @@
   &:not(:first-child) {
     margin-left: 5px;
   }
+
+  &--shifted {
+    transform: translateX(-5px);
+  }
 }
 
 // .hashtags__link {}

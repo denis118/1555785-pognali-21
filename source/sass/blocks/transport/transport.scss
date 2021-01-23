@@ -11,6 +11,8 @@
 
   &--catalog {
     justify-content: flex-start;
+    margin-top: 14px;
+    margin-left: -4px;
 
     @media (min-width: $tablet-width) {
       flex-direction: column;
@@ -32,17 +34,33 @@
   &:not(:first-child) {
     margin-left: 10px;
   }
+
+  &--catalog {
+    &:not(:first-child) {
+      margin-left: 1px;
+    }
+  }
 }
 
-// .transport__link {}
+.transport__link {
+  &--catalog {
+    @include centering-grid;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $lcg-2;
+  }
+}
 
-// .transport__icon-svg {
-//   &--index {}
+.transport__icon-svg {
+  // &--index {}
 
-//   &--form {}
+  // &--form {}
 
-//   &--catalog {}
-// }
+  &--catalog {
+    transform: scale(0.7);
+  }
+}
 
 // .transport__plane {
 //   &--index {}
