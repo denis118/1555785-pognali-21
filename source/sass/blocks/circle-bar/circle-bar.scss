@@ -48,9 +48,13 @@
     background-color: transparent;
   }
 
-  &--mark-smolov-catalog {
+  &--common-margin-catalog {
     margin-top: 6px;
   }
+
+  // &--mark-smolov-catalog {}
+
+  // &--larisa-rogovaya-catalog {}
 }
 
 .circle-bar__svg-container {
@@ -106,9 +110,9 @@
     stroke-dashoffset: 105.975;
   }
 
-  // &--rogovaya-catalog {
-  //   stroke-dashoffset: 70.65;
-  // }
+  &--rogovaya-catalog {
+    stroke-dashoffset: 70.65;
+  }
 }
 
 .circle-bar__text-box {

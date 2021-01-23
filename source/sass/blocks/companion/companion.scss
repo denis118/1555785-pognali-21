@@ -129,6 +129,12 @@
   // &--petia-diomin-catalog {}
 
   // &--mark-smolov-catalog {}
+
+  &--larisa-rogovaya-catalog {
+    &::before {
+      background-color: $mcg-7;
+    }
+  }
 }
 
 .companion__head-link {
@@ -224,6 +230,10 @@
   &--mark-smolov-catalog {
     margin-top: 16px;
   }
+
+  &--larisa-rogovaya-catalog {
+    margin-top: 20px;
+  }
 }
 
 .companion__wished-countries {
@@ -258,6 +268,10 @@
   &--petia-diomin-catalog {
     margin-top: 15px;
   }
+
+  &--larisa-rogovaya-catalog {
+    margin-top: 14px;
+  }
 }
 
 .companion__transport {
@@ -282,6 +296,10 @@
   &--mark-smolov-catalog {
     margin-top: 15px;
   }
+
+  &--larisa-rogovaya-catalog {
+    margin-top: 19px;
+  }
 }
 
 .companion__invite-button {
@@ -297,5 +315,10 @@
 
   &--petia-diomin-catalog {
     margin-top: 12px;
+  }
+
+  &--larisa-rogovaya-catalog {
+    margin-top: 16px;
+    margin-left: 1px;
   }
 }
