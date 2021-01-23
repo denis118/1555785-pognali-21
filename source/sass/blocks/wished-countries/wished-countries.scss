@@ -64,6 +64,11 @@
 .wished-countries__flag {
   &--catalog {
     margin-right: 14px;
+
+    @media (min-width: $tablet-width) {
+      width: 35px;
+      height: 24px;
+    }
   }
 }
 

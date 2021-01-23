@@ -2205,7 +2205,7 @@
           <li
             class="selection-results__item under-layer under-layer--selection-results under-layer--radius">
             <section
-              class="companion companion--catalog selection-results__companion flex flex--columnar flex--alignment-center">
+              class="companion companion--catalog selection-results__companion">
               <h3
                 class="companion__name companion__name--tania-firsova companion__name--catalog heading heading--level-3 heading--level-3-catalog">
                 <a class="companion__head-link link" href="#!">
@@ -2213,24 +2213,51 @@
                 </a>
               </h3>
 
-              <!-- <span class="companion__likes companion__likes--active">1,5 M</span> -->
               <a class="companion__likes companion__likes--catalog companion__likes--active link"
                 href="#!">
-                <span class="visually-hidden">Колличество лайков</span>
+                <span class="visually-hidden">
+                  Колличество лайков
+                </span>
                 1,5 M
               </a>
 
               <a class="avatar companion__avatar companion__avatar--catalog link"
                 href="#!">
-                <img class="avatar__photo avatar__photo--catalog image"
-                  src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Фото Тани Фирсовой во время плавания в бассейне">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/webp/catalog/firsova-catalog-desktop.webp    1x,
+                        ./img/avatar/content/webp/catalog/firsova-catalog-desktop@2x.webp 2x
+                      " />
+                  <source media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/png/catalog/firsova-catalog-desktop.png    1x,
+                        ./img/avatar/content/png/catalog/firsova-catalog-desktop@2x.png 2x
+                      " />
+                  <source type="image/webp" media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/webp/catalog/firsova-catalog-tablet.webp    1x,
+                        ./img/avatar/content/webp/catalog/firsova-catalog-tablet@2x.webp 2x
+                      " />
+                  <source media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/png/catalog/firsova-catalog-tablet.png    1x,
+                        ./img/avatar/content/png/catalog/firsova-catalog-tablet@2x.png 2x
+                      " />
+                  <source type="image/webp" srcset="
+                        ./img/avatar/content/webp/catalog/firsova-catalog-mobile.webp    1x,
+                        ./img/avatar/content/webp/catalog/firsova-catalog-mobile@2x.webp 2x
+                      " />
+                  <img class="avatar__photo avatar__photo--catalog image"
+                    src="./img/avatar/content/png/catalog/firsova-catalog-mobile.png"
+                    width="70" height="70"
+                    alt="Фото Тани Фирсовой во время плавания в бассейне"
+                    srcset="./img/avatar/content/png/catalog/firsova-catalog-mobile@2x.png 2x" />
+                </picture>
               </a>
 
               <section
                 class="circle-bar companion__level companion__level--catalog flex flex--columnar flex--alignment-center">
                 <h4 class="circle-bar__heading circle-bar__heading--catalog">
-                  Левел:</h4>
+                  Левел:
+                </h4>
+
                 <div class="circle-bar__box circle-bar__box--catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
@@ -2240,10 +2267,12 @@
                   <div class="circle-bar__text-box">
                     <p
                       class="circle-bar__level-number circle-bar__text-box--member">
-                      99</p>
+                      99
+                    </p>
                     <p
                       class="circle-bar__level-text circle-bar__text-box--member">
-                      level</p>
+                      level
+                    </p>
                   </div>
                 </div>
               </section>
@@ -2252,85 +2281,97 @@
                 class="wished-countries companion__wished-countries companion__wished-countries--catalog">
                 <h4
                   class="wished-countries__heading wished-countries__appearance wished-countries__appearance--catalog zero-edges">
-                  Хочет посетить:</h4>
+                  Хочет посетить:
+                </h4>
                 <ul
-                  class="wished-countries__list wished-countries__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
+                  class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Шри&#8209;Ланка">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <svg
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        role="img" aria-label="Шри-Ланка" width="35" height="25"
-                        viewBox="0 0 35 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="35" height="25" fill="url(#pattern8)" />
-                        <defs>
-                          <pattern id="pattern8"
-                            patternContentUnits="objectBoundingBox" width="1"
-                            height="1">
-                            <use xlink:href="#image8"
-                              transform="translate(-0.0208333) scale(0.0297619 0.0416667)" />
-                          </pattern>
-                          <image id="image8" width="35" height="24"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAB8UlEQVRIie2XPW8TQRCGn93bO8fW2VhJ5ABCCJCSGok0EX+DH0CdJhSUlHShIA209PwNWlIiBBISUiRiCSTHsR18HztovEYhxaWwJeTiXumKXc3MPjPTvGfk+AnAc2Af2OT/6yfwBnjlgAPEHOI8xB78HEY8uGb4pAx3kYWLKYwy6Ap0BIol4PX1oWkzjA5xkutk+kTS+zKK+Th2tCOZxZ3bhEeTPjvjU7BJSM5y2NqAe+sUnyD7GmObsjCLvzAk2zluO4eJ6Stbl7jkw3mLF99THjTDFL41bvDy5DM7J8fQSEP2YASPH8LeFtP3luG7FHerXBim+BHReTrC7f6GiesqTIaYpBMJ99dK7iShuMQ5naaDdhOSVsgWgSSGTLAtj7tZEm0uDoMwq0Nh9JTbcLUSErsiIDPVMFWqYapUw1SphqlSDVOlGqZKCmNWhMWon0kUJxPDWWnoloHtzFuywkOWqdUI4dMcSg+RQXKDH1ts6q9/4hppvtaZ7ydRmAGeXtt67jY8t5NQXFxBe81Bml6aq78pmce2DK5XYNcXh3FSzM3V7DhQD3wAvNaSpVzuTDBEeKy6uyvD1E7MzLirZ19mx1rZ6FSCxXumkznSfq1h31rZuBKqkSb6xwwqhHaifxK6ZFnKJ2pfFOYXBW8xHP0BFHqo+F7daYMAAAAASUVORK5CYII=" />
-                        </defs>
-                      </svg>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/sri-lanka/sri-lanka-flag-index.webp    1x,
+                              ./img/flags/content/webp/sri-lanka/sri-lanka-flag-index@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/sri-lanka/sri-lanka-flag-index.png    1x,
+                              ./img/flags/content/png/sri-lanka/sri-lanka-flag-index@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/sri-lanka/sri-lanka-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/sri-lanka/sri-lanka-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/sri-lanka/sri-lanka-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Шри-Ланки" />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Шри-Ланка</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Шри-Ланка
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Таиланд">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <svg
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        role="img" aria-label="Таиланд" width="35" height="25"
-                        viewBox="0 0 35 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="35" height="25" fill="url(#pattern9)" />
-                        <defs>
-                          <pattern id="pattern9"
-                            patternContentUnits="objectBoundingBox" width="1"
-                            height="1">
-                            <use xlink:href="#image9"
-                              transform="translate(-0.0208333) scale(0.0297619 0.0416667)" />
-                          </pattern>
-                          <image id="image9" width="35" height="24"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAA3UlEQVRIie3XPw4BQRSA8W94kSgkNkQibuIMWkeg0Gg0HEBDo6HSOoOo3ECjV0kQRPwp7BYjY5dotPYVvgvML3mZzDxzqNYAWkADyPP79sAQ6AvQBHoxIF5lovODBNCJEfJZW6wfZJVgsmIk6QMpBZjA2OPxHM0t7i6C5ylwhEm9NdXgeCaL5VYBI0xyXlqD41lCgeHdH/OtP+ZbqjCy3lwVMMLMbL5S8zYZa62eh/I2nhgFEJcxu3LlruQ/40uyVDwBBQWYk7vaXQUQV9dtB4NoTG5VycWAOAAjYPAAHvQuukMrBg0AAAAASUVORK5CYII=" />
-                        </defs>
-                      </svg>
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/thailand/thailand-flag-mobile.png    1x,
+                              ./img/flags/content/png/thailand/thailand-flag-mobile@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/thailand/thailand-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/thailand/thailand-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/thailand/thailand-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Тайланда" srcset="
+                          ./img/flags/content/png/thailand/thailand-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Таиланд</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Таиланд
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Сейшелы">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <svg
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        role="img" aria-label="Сейшелы" width="35" height="25"
-                        viewBox="0 0 35 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="35" height="25" fill="url(#pattern10)" />
-                        <defs>
-                          <pattern id="pattern10"
-                            patternContentUnits="objectBoundingBox" width="1"
-                            height="1">
-                            <use xlink:href="#image10"
-                              transform="translate(-0.0208333) scale(0.0297619 0.0416667)" />
-                          </pattern>
-                          <image id="image10" width="35" height="24"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAFbElEQVRIibWW228c5RnGf983szOzM7O7PiSkNOLcxCXhUFPOSTDOAcdpIwi9IEIiIOCKG7igF63EP0C56E1bUFWEBBInIVArUBBcgHrBRUUrWkzj2I6dg2OvE3t3dtbrnd2db9DMsDS213USte/VSPN+8/zm+Z73mxFDh98GeB54BthAh1KR4GzJ5aVHPmf/7q+g7ELUqRGwI8hGLL6eY+kLC+koEJ2e+n2dB34PvKQDzwK/WatTCDjn2dx1wwxDd45CNdsZJPoOxFYsvpGj9lkWrSdcDySu3Hf6TQn8+r91hqGgGUqe2DmCKNSgoXcGsSJwFLU3c9Q+sdEKIch1QS6sX8XtXWvdFSJizrfZsXWaXbeNQ8UGscKWNoirqL3jsnjURvYoyNDZwbWrK4ZprHW7FWooJXhy59dg1yHIrAYxI8gplt5zWfzQQXYrRCa6VBDa29RxWeJKxWbgx6e5q38CKs5yV+JLI4K8ov6+Q/XPDrKgEMZlgSRPXHNX45zE4Y2zgtVcnpVYLH77gqL+Fwf/AzcFMS8bhGip3jliiSuew+CNJ/nprZPgXZCVNki3ov6Rjf+ei8xdJogQRH4VNXsO2dtNh9GAZksjo6nUFaMJfjaFicX0FCT42MZ/N4d0FcK6BBCRvpAqV4iCAP2aq7AeG8QcHlwN087K0C2T3Hrz1H9caYP0KIJPbSpvuUj7EkDiPVcKteDFk4G+9XrMBwawhgYROSdpWQXTaOmYepi6oreglU1vaKQgn2Xx33SRVoTIXgRIDBGGqIVycp3Z3oe5fxBzzy6EaSxr1Veui1052D/O9u0n0wlqg/SGNP5q4b+RSyZG2OuASAGNZgqRyZC54ydYw7sxB+5JhTrUMpigqZE1Wjy+YwQ0BS0NZJSCfGFReT2H0NcBkZKoHqAWSkg7i3n/vZgH9mDc2b+OhRfAtF05dPtx+radTrMSg2wIaf7NpPJaDiFBOGuASEFUq6PKHjKXw/rZXqyD+8hs61sXYhVMvanhWs00K0ncJWwMaX5pUnk1nwJ3AonHs7qIqvjI3h6yDx/A+vk+9B9dd9EQy2DiCSp6NofvPsYNfWfSUd4Y0vrKpPKnPFEokHmV/iK0bYyi9Izwq2g//AH2wX1Yw3vRrtl8SQAzfpHJ0km+mRtNYZYaOl12I3UlzlZPRGvEwPtjnqgpktM1AWmPZ3xG1Gro111N9vBDWPsHkZs2XrT4+PwJ/n3ueAIxWTpFue7RCJvoiSsVhyP3fsPVW6fBsFKQVwpEdYHsUhDFECGq5BEFDfRtWzAfuB9r3wCykFtTOIoiZqpFjp0bY2x+gvH5KU6WT1EJfIJWQEbL4BouBTOPEAK9FmTodeocib/MPYowDuvLBaJFgeyJoBGi5ksQKjL92zGH92Du3rnqjIirpUJmq8XE8on5ScYWJjlVPoMf+NRbAZZu4hoOeTOPtFaPtz7n2eKpgX+x+Z7TqC+78V4uoBY1pLNEeLaMkBLjjn6ch4bRdty+bHFs7axfZGTuGBMLU4ydn+BM5Sx+o5qI2xkbJ5OlYOXpFuv+aQn9ivyS8fihf8K4ife7HlpzDUQ0i8ShsHc32qGDcNO1SXdAxHTpFCPFY0yWphg9P8FMZTYRD1oNXNMhq1t0WQXk+uIry9AffXCkvFE7f0XthU3oEx7dfb1w334Y2kGwdTNTeHw9/gkniuOMzo8z688ltjdVi5zhJtZ3Z7suR3xllcXxt59+dsvRpd+G01fiHbie2V03cnyTZKI6zejY3ymWZ/CCShLGnOliagaa1P4X4ivrOVEfeop/XGX88sNfbHpmrkvvLXqzlGbOIFphIm5oGXSpJ2n/P9U88AfgxW8B+kRbocFhKhIAAAAASUVORK5CYII=" />
-                        </defs>
-                      </svg>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/seychelles/seychelles-flag-index.webp    1x,
+                              ./img/flags/content/webp/seychelles/seychelles-flag-index@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/seychelles/seychelles-flag-index.png    1x,
+                              ./img/flags/content/png/seychelles/seychelles-flag-index@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/seychelles/seychelles-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/seychelles/seychelles-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/seychelles/seychelles-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Сейшел" srcset="
+                          ./img/flags/content/png/seychelles/seychelles-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Сейшелы</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Сейшелы
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -2338,48 +2379,68 @@
 
               <section
                 class="hashtags hashtags--tania-firsova companion__hashtags companion__hashtags--catalog">
-                <h4 class="visually-hidden">Хэштеги:</h4>
+                <h4 class="visually-hidden">
+                  Хэштеги
+                  :</h4>
                 <ul
                   class="hashtags__list hashtags__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег ЗОЖ</span>
-                      <p class="hashtags__text hashtags__text--catalog">#ЗОЖ
-                      </p>
-                    </a>
-                  </li>
-                  <li class="hashtags__item">
-                    <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег ПП</span>
-                      <p class="hashtags__text hashtags__text--catalog">#ПП
-                      </p>
-                    </a>
-                  </li>
-                  <li class="hashtags__item">
-                    <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег Фитнес</span>
+                      <span class="visually-hidden">
+                        Хэштег ЗОЖ
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #Фитнес</p>
-                    </a>
-                  </li>
-                  <li class="hashtags__item">
-                    <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег пляж</span>
-                      <p class="hashtags__text hashtags__text--catalog">#пляж
+                        #ЗОЖ
                       </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег авокадо</span>
+                      <span class="visually-hidden">
+                        Хэштег ПП
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #авокадо</p>
+                        #ПП
+                      </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег смузи</span>
-                      <p class="hashtags__text hashtags__text--catalog">#смузи
+                      <span class="visually-hidden">
+                        Хэштег Фитнес
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #Фитнес
+                      </p>
+                    </a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a class="hashtags__link link" href="#!">
+                      <span class="visually-hidden">
+                        Хэштег пляж
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #пляж
+                      </p>
+                    </a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a class="hashtags__link link" href="#!">
+                      <span class="visually-hidden">
+                        Хэштег авокадо
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #авокадо
+                      </p>
+                    </a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a class="hashtags__link link" href="#!">
+                      <span class="visually-hidden">
+                        Хэштег смузи
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #смузи
                       </p>
                     </a>
                   </li>
@@ -2389,9 +2450,10 @@
               <section
                 class="transport companion__transport companion__transport--catalog">
                 <h4 class="transport__heading transport__heading--catalog">
-                  Транспорт:</h4>
+                  Транспорт:
+                </h4>
                 <ul
-                  class="transport__list transport__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
+                  class="transport__list transport__list--catalog list zero-edges">
                   <li
                     class="transport__kind transport__kind--aircraft transport__kind--chosen"
                     data-tooltip="Авиаперелёт">
@@ -2480,37 +2542,67 @@
               </section>
 
               <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog link"
-                href="#!">Позвать!</a>
+                href="#!">
+                Позвать!
+              </a>
             </section>
           </li>
 
           <li
             class="selection-results__item under-layer under-layer--selection-results under-layer--radius">
             <section
-              class="companion companion--catalog selection-results__companion flex flex--columnar flex--alignment-center">
+              class="companion companion--catalog selection-results__companion">
               <h3
                 class="companion__name companion__name--petia-diomin companion__name--catalog heading heading--level-3 heading--level-3-catalog">
-                <a class="companion__head-link link" href="#!">Петя Демин</a>
+                <a class="companion__head-link link" href="#!">
+                  Петя Демин
+                </a>
               </h3>
 
-              <!-- <span class="companion__likes">1500</span> -->
               <a class="companion__likes companion__likes--catalog link"
                 href="#!">
-                <span class="visually-hidden">Колличество лайков</span>
+                <span class="visually-hidden">
+                  Колличество лайков
+                </span>
                 1500
               </a>
 
               <a class="avatar companion__avatar companion__avatar--catalog link"
                 href="#!">
-                <img class="avatar__photo avatar__photo--catalog image"
-                  src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Фото Пети Демина на фоне заснеженного склона">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/webp/catalog/demin-catalog-desktop.webp    1x,
+                        ./img/avatar/content/webp/catalog/demin-catalog-desktop@2x.webp 2x
+                      " />
+                  <source media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/png/catalog/demin-catalog-desktop.png    1x,
+                        ./img/avatar/content/png/catalog/demin-catalog-desktop@2x.png 2x
+                      " />
+                  <source type="image/webp" media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/webp/catalog/demin-catalog-tablet.webp    1x,
+                        ./img/avatar/content/webp/catalog/demin-catalog-tablet@2x.webp 2x
+                      " />
+                  <source media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/png/catalog/demin-catalog-tablet.png    1x,
+                        ./img/avatar/content/png/catalog/demin-catalog-tablet@2x.png 2x
+                      " />
+                  <source type="image/webp" srcset="
+                        ./img/avatar/content/webp/catalog/demin-catalog-mobile.webp    1x,
+                        ./img/avatar/content/webp/catalog/demin-catalog-mobile@2x.webp 2x
+                      " />
+                  <img class="avatar__photo avatar__photo--catalog image"
+                    src="./img/avatar/content/png/catalog/demin-catalog-mobile.png"
+                    width="70" height="70"
+                    alt="Фото Пети Демина на фоне заснеженного склона"
+                    srcset="./img/avatar/content/png/catalog/demin-catalog-mobile@2x.png 2x" />
+                </picture>
               </a>
 
               <section
                 class="circle-bar companion__level companion__level--catalog flex flex--columnar flex--alignment-center">
                 <h4 class="circle-bar__heading circle-bar__heading--catalog">
-                  Левел:</h4>
+                  Левел:
+                </h4>
                 <div class="circle-bar__box circle-bar__box--catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
@@ -2520,10 +2612,12 @@
                   <div class="circle-bar__text-box">
                     <p
                       class="circle-bar__level-number circle-bar__text-box--member">
-                      80</p>
+                      80
+                    </p>
                     <p
                       class="circle-bar__level-text circle-bar__text-box--member">
-                      level</p>
+                      level
+                    </p>
                   </div>
                 </div>
               </section>
@@ -2532,59 +2626,72 @@
                 class="wished-countries companion__wished-countries companion__wished-countries--catalog">
                 <h4
                   class="wished-countries__heading wished-countries__appearance wished-countries__appearance--catalog zero-edges">
-                  Хочет посетить:</h4>
+                  Хочет посетить:
+                </h4>
                 <ul
-                  class="wished-countries__list wished-countries__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
+                  class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Бельгия">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <svg
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        role="img" aria-label="Бельгия" width="35" height="24"
-                        viewBox="0 0 35 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="35" height="24" fill="url(#pattern11)" />
-                        <defs>
-                          <pattern id="pattern11"
-                            patternContentUnits="objectBoundingBox" width="1"
-                            height="1">
-                            <use xlink:href="#image11"
-                              transform="scale(0.0285714 0.0416667)" />
-                          </pattern>
-                          <image id="image11" width="35" height="24"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAAvElEQVRIie3XoQrCUBSA4f8OHSvCQN/IZjYvGC0Wy3yAlVlW9PlsCwpjZaCwyRlTLGdNdsL9y+XCgfvBTcetN1uAI7AHVijdypY0idglEU3ZamN9LoKuhiaf96fcR7oDF+A8Aw5APjr+3xbD+68AOE0I+S0VTGwEEwvmaQDC55s6AxCpCwwgvnmMlsdoeYyWx2h5jJbHaAnGGbE4wYQGIFIomMoARKoEkxmASJlsB8XwVbKqLCdAPIArULwBnSIekSkprtAAAAAASUVORK5CYII=" />
-                        </defs>
-                      </svg>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/belgium/belgium-flag-index.webp    1x,
+                              ./img/flags/content/webp/belgium/belgium-flag-index@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/belgium/belgium-flag-index.png    1x,
+                              ./img/flags/content/png/belgium/belgium-flag-index@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/belgium/belgium-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/belgium/belgium-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/belgium/belgium-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Бельгии" srcset="
+                          ./img/flags/content/png/belgium/belgium-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Бельгия</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Бельгия
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Чехия">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <svg
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        role="img" aria-label="Чехия" width="35" height="25"
-                        viewBox="0 0 35 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="35" height="25" fill="url(#pattern12)" />
-                        <defs>
-                          <pattern id="pattern12"
-                            patternContentUnits="objectBoundingBox" width="1"
-                            height="1">
-                            <use xlink:href="#image12"
-                              transform="translate(-0.0319149) scale(0.0151976 0.0212766)" />
-                          </pattern>
-                          <image id="image12" width="70" height="47"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII=" />
-                        </defs>
-                      </svg>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/czech/czech-flag-mobile.webp    1x,
+                              ./img/flags/content/webp/czech/czech-flag-mobile@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/czech/czech-flag-mobile.png    1x,
+                              ./img/flags/content/png/czech/czech-flag-mobile@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/czech/czech-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/czech/czech-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/czech/czech-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Чехии" srcset="
+                          ./img/flags/content/png/czech/czech-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Чехия</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Чехия
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -2734,24 +2841,51 @@
           <li
             class="selection-results__item under-layer under-layer--selection-results under-layer--radius">
             <section
-              class="companion companion--catalog selection-results__companion flex flex--columnar flex--alignment-center">
+              class="companion companion--catalog selection-results__companion">
               <h3
                 class="companion__name companion__name--mark-smolov companion__name--catalog heading heading--level-3 heading--level-3-catalog">
-                <a class="companion__head-link link" href="#!">Марк Смолов</a>
+                <a class="companion__head-link link" href="#!">
+                  Марк Смолов
+                </a>
               </h3>
 
-              <!-- <span class="companion__likes">170</span> -->
               <a class="companion__likes companion__likes--catalog link"
                 href="#!">
-                <span class="visually-hidden">Колличество лайков</span>
+                <span class="visually-hidden">
+                  Колличество лайков
+                </span>
                 170
               </a>
 
               <a class="avatar companion__avatar companion__avatar--catalog link"
                 href="#!">
-                <img class="avatar__photo avatar__photo--catalog image"
-                  src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Фото Марка Смолова, сидящего на крыше автомобиля">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/webp/catalog/smolov-catalog-desktop.webp    1x,
+                        ./img/avatar/content/webp/catalog/smolov-catalog-desktop@2x.webp 2x
+                      " />
+                  <source media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/png/catalog/smolov-catalog-desktop.png    1x,
+                        ./img/avatar/content/png/catalog/smolov-catalog-desktop@2x.png 2x
+                      " />
+                  <source type="image/webp" media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/webp/catalog/smolov-catalog-tablet.webp    1x,
+                        ./img/avatar/content/webp/catalog/smolov-catalog-tablet@2x.webp 2x
+                      " />
+                  <source media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/png/catalog/smolov-catalog-tablet.png    1x,
+                        ./img/avatar/content/png/catalog/smolov-catalog-tablet@2x.png 2x
+                      " />
+                  <source type="image/webp" srcset="
+                        ./img/avatar/content/webp/catalog/smolov-catalog-mobile.webp    1x,
+                        ./img/avatar/content/webp/catalog/smolov-catalog-mobile@2x.webp 2x
+                      " />
+                  <img class="avatar__photo avatar__photo--catalog image"
+                    src="./img/avatar/content/png/catalog/smolov-catalog-mobile.png"
+                    width="70" height="70"
+                    alt="Фото Марка Смолова, сидящего на крыше автомобиля"
+                    srcset="./img/avatar/content/png/catalog/smolov-catalog-mobile@2x.png 2x" />
+                </picture>
               </a>
 
               <section
@@ -2779,43 +2913,104 @@
                 class="wished-countries companion__wished-countries companion__wished-countries--catalog">
                 <h4
                   class="wished-countries__heading wished-countries__appearance wished-countries__appearance--catalog zero-edges">
-                  Хочет посетить:</h4>
+                  Хочет посетить:
+                </h4>
                 <ul
-                  class="wished-countries__list wished-countries__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
+                  class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="США">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <img
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        src="https://via.placeholder.com/26x18" width="26"
-                        height="18" alt="Флаг США">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/usa/usa-flag-catalog-tablet.webp    1x,
+                              ./img/flags/content/webp/usa/usa-flag-catalog-tablet@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/usa/usa-flag-catalog-tablet.png    1x,
+                              ./img/flags/content/png/usa/usa-flag-catalog-tablet@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/usa/usa-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/usa/usa-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/usa/usa-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг США" srcset="
+                          ./img/flags/content/png/usa/usa-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">США</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        США
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Австралия">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <img
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        src="https://via.placeholder.com/26x18" width="26"
-                        height="18" alt="Флаг Австралии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/australia/australia-flag-catalog-tablet.webp    1x,
+                              ./img/flags/content/webp/australia/australia-flag-catalog-tablet@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/australia/australia-flag-catalog-tablet.png    1x,
+                              ./img/flags/content/png/australia/australia-flag-catalog-tablet@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/australia/australia-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/australia/australia-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/australia/australia-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Австралии" srcset="
+                          ./img/flags/content/png/australia/australia-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Австралия</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Австралия
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Доминика">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <img
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        src="https://via.placeholder.com/26x18" width="26"
-                        height="18" alt="Флаг Доминики">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/dominica/dominica-flag-catalog-tablet.webp    1x,
+                              ./img/flags/content/webp/dominica/dominica-flag-catalog-tablet@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/dominica/dominica-flag-catalog-tablet.png    1x,
+                              ./img/flags/content/png/dominica/dominica-flag-catalog-tablet@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/dominica/dominica-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/dominica/dominica-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/dominica/dominica-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Доминики" srcset="
+                          ./img/flags/content/png/dominica/dominica-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Доминика</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Доминика
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -2823,42 +3018,59 @@
 
               <section
                 class="hashtags hashtags--mark-smolov companion__hashtags companion__hashtags--catalog">
-                <h4 class="visually-hidden">Хэштеги:</h4>
+                <h4 class="visually-hidden">
+                  Хэштеги:
+                </h4>
                 <ul
                   class="hashtags__list hashtags__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег рэп</span>
-                      <p class="hashtags__text hashtags__text--catalog">#рэп
+                      <span class="visually-hidden">
+                        Хэштег рэп
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #рэп
                       </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег тату</span>
-                      <p class="hashtags__text hashtags__text--catalog">#тату
+                      <span class="visually-hidden">
+                        Хэштег тату
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #тату
                       </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег хайпбист</span>
+                      <span class="visually-hidden">
+                        Хэштег хайпбист
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #хайпбист</p>
+                        #хайпбист
+                      </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег кроссовки</span>
+                      <span class="visually-hidden">
+                        Хэштег кроссовки
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #кроссовки</p>
+                        #кроссовки
+                      </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег суприм</span>
+                      <span class="visually-hidden">
+                        Хэштег суприм
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #суприм</p>
+                        #суприм
+                      </p>
                     </a>
                   </li>
                 </ul>
@@ -2867,7 +3079,8 @@
               <section
                 class="transport companion__transport companion__transport--catalog">
                 <h4 class="transport__heading transport__heading--catalog">
-                  Транспорт:</h4>
+                  Транспорт:
+                </h4>
                 <ul
                   class="transport__list transport__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
                   <li
@@ -2958,32 +3171,60 @@
               </section>
 
               <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog link"
-                href="#!">Позвать!</a>
+                href="#!">
+                Позвать!
+              </a>
             </section>
           </li>
 
           <li
             class="selection-results__item under-layer under-layer--selection-results under-layer--radius">
             <section
-              class="companion companion--catalog selection-results__companion flex flex--columnar flex--alignment-center">
+              class="companion companion--catalog selection-results__companion">
               <h3
                 class="companion__name companion__name--larisa-rogovaya companion__name--catalog heading heading--level-3 heading--level-3-catalog">
-                <a class="companion__head-link link" href="#!">Лариса
-                  Роговая</a>
+                <a class="companion__head-link link" href="#!">
+                  Лариса Роговая
+                </a>
               </h3>
 
-              <!-- <span class="companion__likes">23</span> -->
               <a class="companion__likes companion__likes--catalog companion__likes--active link"
                 href="#!">
-                <span class="visually-hidden">Колличество лайков</span>
+                <span class="visually-hidden">
+                  Колличество лайков
+                </span>
                 23
               </a>
 
               <a class="avatar companion__avatar companion__avatar--catalog link"
                 href="#!">
-                <img class="avatar__photo avatar__photo--catalog image"
-                  src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Фото Ларисы Роговой в деловом стиле">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-desktop.webp    1x,
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-desktop@2x.webp 2x
+                      " />
+                  <source media="(min-width: 1440px)" srcset="
+                        ./img/avatar/content/png/catalog/rogovaya-catalog-desktop.png    1x,
+                        ./img/avatar/content/png/catalog/rogovaya-catalog-desktop@2x.png 2x
+                      " />
+                  <source type="image/webp" media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-tablet.webp    1x,
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-tablet@2x.webp 2x
+                      " />
+                  <source media="(min-width: 768px)" srcset="
+                        ./img/avatar/content/png/catalog/rogovaya-catalog-tablet.png    1x,
+                        ./img/avatar/content/png/catalog/rogovaya-catalog-tablet@2x.png 2x
+                      " />
+                  <source type="image/webp" srcset="
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-mobile.webp    1x,
+                        ./img/avatar/content/webp/catalog/rogovaya-catalog-mobile@2x.webp 2x
+                      " />
+                  <img class="avatar__photo avatar__photo--catalog image"
+                    src="./img/avatar/content/png/catalog/rogovaya-catalog-mobile.png"
+                    width="70" height="70"
+                    alt="Фото Ларисы Роговой в деловом стиле"
+                    srcset="./img/avatar/content/png/catalog/rogovaya-catalog-mobile@2x.png 2x" />
+                </picture>
               </a>
 
               <section
@@ -3011,31 +3252,73 @@
                 class="wished-countries companion__wished-countries companion__wished-countries--catalog">
                 <h4
                   class="wished-countries__heading wished-countries__appearance wished-countries__appearance--catalog zero-edges">
-                  Хочет посетить:</h4>
+                  Хочет посетить:
+                </h4>
                 <ul
-                  class="wished-countries__list wished-countries__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
+                  class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Великобритания">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <img
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        src="https://via.placeholder.com/26x18" width="26"
-                        height="18" alt="Флаг Великобритании">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/uk/uk-flag-catalog-tablet.webp    1x,
+                              ./img/flags/content/webp/uk/uk-flag-catalog-tablet@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/uk/uk-flag-catalog-tablet.png    1x,
+                              ./img/flags/content/png/uk/uk-flag-catalog-tablet@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/uk/uk-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/uk/uk-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/uk/uk-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Великобритании"
+                          srcset="
+                          ./img/flags/content/png/uk/uk-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Великобритания</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Великобритания
+                      </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog">
+                    class="wished-countries__item wished-countries__item--catalog tooltip"
+                    data-tooltip="Германия">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
-                      <img
-                        class="wished-countries__flag wished-countries__flag--catalog image"
-                        src="https://via.placeholder.com/26x18" width="26"
-                        height="18" alt="Флаг Германии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="
+                              ./img/flags/content/webp/germany/germany-flag-catalog-tablet.webp    1x,
+                              ./img/flags/content/webp/germany/germany-flag-catalog-tablet@2x.webp 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                              ./img/flags/content/png/germany/germany-flag-catalog-tablet.png    1x,
+                              ./img/flags/content/png/germany/germany-flag-catalog-tablet@2x.png 2x
+                            " />
+                        <source type="image/webp" srcset="
+                              ./img/flags/content/webp/germany/germany-flag-catalog-mobile.webp    1x,
+                              ./img/flags/content/webp/germany/germany-flag-catalog-mobile@2x.webp 2x
+                            " />
+                        <img
+                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          src="./img/flags/content/png/germany/germany-flag-catalog-mobile.png"
+                          width="26" height="18" alt="Флаг Германии" srcset="
+                          ./img/flags/content/png/germany/germany-flag-catalog-mobile@2x.png 2x
+                        " />
+                      </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">Германия</span>
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        Германия
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -3043,35 +3326,49 @@
 
               <section
                 class="hashtags hashtags--larisa-rogovaya companion__hashtags companion__hashtags--catalog">
-                <h4 class="visually-hidden">Хэштеги:</h4>
+                <h4 class="visually-hidden">
+                  Хэштеги:
+                </h4>
                 <ul
                   class="hashtags__list hashtags__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег образование</span>
+                      <span class="visually-hidden">
+                        Хэштег образование
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #образование</p>
-                    </a>
-                  </li>
-                  <li class="hashtags__item">
-                    <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег карьера</span>
-                      <p class="hashtags__text hashtags__text--catalog">
-                        #карьера</p>
-                    </a>
-                  </li>
-                  <li class="hashtags__item">
-                    <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег учёба</span>
-                      <p class="hashtags__text hashtags__text--catalog">#учёба
+                        #образование
                       </p>
                     </a>
                   </li>
                   <li class="hashtags__item">
                     <a class="hashtags__link link" href="#!">
-                      <span class="visually-hidden">Хэштег линкедин</span>
+                      <span class="visually-hidden">
+                        Хэштег карьера
+                      </span>
                       <p class="hashtags__text hashtags__text--catalog">
-                        #линкедин</p>
+                        #карьера
+                      </p>
+                    </a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a class="hashtags__link link" href="#!">
+                      <span class="visually-hidden">
+                        Хэштег учёба
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #учёба
+                      </p>
+                    </a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a class="hashtags__link link" href="#!">
+                      <span class="visually-hidden">
+                        Хэштег линкедин
+                      </span>
+                      <p class="hashtags__text hashtags__text--catalog">
+                        #линкедин
+                      </p>
                     </a>
                   </li>
                 </ul>
@@ -3080,7 +3377,8 @@
               <section
                 class="transport companion__transport companion__transport--catalog">
                 <h4 class="transport__heading transport__heading--catalog">
-                  Транспорт:</h4>
+                  Транспорт:
+                </h4>
                 <ul
                   class="transport__list transport__list--catalog list zero-edges flex flex--justification-center flex--alignment-center">
                   <li
