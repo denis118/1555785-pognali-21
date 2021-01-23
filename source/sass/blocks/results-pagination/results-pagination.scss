@@ -1,5 +1,5 @@
-
 .results-pagination {
+  display: flex;
   width: 270px;
   height: 51px;
   margin-left: auto;
@@ -18,11 +18,13 @@
 // .results-pagination__page {}
 
 .results-pagination__buttons {
+  display: flex;
   flex-grow: 1;
   background: $pagination-arrows-spliter center no-repeat;
 }
 
 .results-pagination__button {
+  @include centering-flex;
   flex-grow: 1;
 
   &::before {
