@@ -105,8 +105,15 @@
 
   &--catalog {
     grid-area: name;
-    margin-top: 14.86px;
     margin-bottom: 0;
+    margin-top: 14px;
+    padding-left: 8px;
+
+    &::before {
+      top: 8px;
+      left: 146px;
+      background-color: $mcg-8;
+    }
   }
 
   &--tania-firsova-catalog {
@@ -119,15 +126,9 @@
     }
   }
 
-  &--petia-diomin-catalog {
-    margin-top: 14px;
-    padding-left: 8px;
+  // &--petia-diomin-catalog {}
 
-    &::before {
-      top: 8px;
-      left: 146px;
-    }
-  }
+  // &--mark-smolov-catalog {}
 }
 
 .companion__head-link {
@@ -147,6 +148,7 @@
 
   &--catalog {
     display: block;
+    padding-left: 9px;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -159,15 +161,17 @@
     padding-left: 15px;
   }
 
-  &--diomin-catalog {
-    padding-left: 9px;
-  }
+  // &--diomin-catalog {}
+
+  // &--smolov-catalog {}
 }
 
 .companion__likes-heart {
   position: absolute;
 
   @media (max-width: $mobile-width-only) {
+    top: -19px;
+    left: -40px;
     transform: scale(0.6);
   }
 
@@ -182,12 +186,9 @@
     }
   }
 
-  &--diomin {
-    @media (max-width: $mobile-width-only) {
-      top: -19px;
-      left: -40px;
-    }
-  }
+  // &--diomin {}
+
+  // &--smolov {}
 }
 
 .companion__avatar {
@@ -218,6 +219,10 @@
 
   &--petia-diomin-catalog {
     margin-top: 18px;
+  }
+
+  &--mark-smolov-catalog {
+    margin-top: 16px;
   }
 }
 
@@ -272,6 +277,10 @@
 
   &--petia-diomin-catalog {
     margin-top: 17px;
+  }
+
+  &--mark-smolov-catalog {
+    margin-top: 15px;
   }
 }
 

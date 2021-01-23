@@ -46,11 +46,25 @@
   &--catalog {
     &:not(:first-child) {
       margin-left: 0;
-
-      @media (max-width: $mobile-width-only) {
-        margin-top: 10px;
-      }
     }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-top: 10px;
+    }
+  }
+
+  // &--usa-catalog {}
+
+  &--australia-catalog {
+    margin-top: 13px;
+  }
+
+  &--dominica-catalog {
+    margin-top: 11px;
   }
 }
 
@@ -77,6 +91,20 @@
 
   &--petia-diomin-catalog {
     margin-top: -6px;
+  }
+
+  // &--mark-smolov-catalog {}
+
+  &--usa-catalog {
+    margin-top: -4px;
+  }
+
+  &--australia-catalog {
+    margin-top: -5px;
+  }
+
+  &--dominica-catalog {
+    margin-top: -3px;
   }
 }
 

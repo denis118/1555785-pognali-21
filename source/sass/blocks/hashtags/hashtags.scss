@@ -36,6 +36,10 @@
     margin-left: 5px;
   }
 
+  &--expanded {
+    margin-right: 20px;
+  }
+
   &--shifted {
     transform: translateX(-5px);
   }

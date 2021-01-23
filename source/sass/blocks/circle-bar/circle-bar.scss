@@ -47,6 +47,10 @@
     margin-right: 3px;
     background-color: transparent;
   }
+
+  &--mark-smolov-catalog {
+    margin-top: 6px;
+  }
 }
 
 .circle-bar__svg-container {
@@ -90,29 +94,17 @@
     stroke-dashoffset: 54; // по макету
   }
 
-  &--smolov {
-    stroke-dashoffset: 141.3;
-  }
-
-  &--rogovaya {
-    stroke-dashoffset: 94.2;
-  }
-
   &--traveler-catalog {
     stroke-dasharray: 141.3 141.3;
   }
 
-  // &--firsova-catalog {
-  //   stroke-dashoffset: 1.413;
-  // }
+  &--diomin-catalog {
+    stroke-dashoffset: 28.26;
+  }
 
-  // &--diomin-catalog {
-  //   stroke-dashoffset: 28.26;
-  // }
-
-  // &--smolov-catalog {
-  //   stroke-dashoffset: 105.975;
-  // }
+  &--smolov-catalog {
+    stroke-dashoffset: 105.975;
+  }
 
   // &--rogovaya-catalog {
   //   stroke-dashoffset: 70.65;
