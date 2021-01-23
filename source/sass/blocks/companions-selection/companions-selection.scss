@@ -11,7 +11,10 @@
 
   @media (min-width: $desktop-width) {
     width: 285px;
-    margin-left: 86px;
+    height: min-content;
+    padding-top: 46px;
+    padding-bottom: 49px;
+    box-sizing: border-box;
   }
 
   &--common-text-style {
@@ -49,6 +52,10 @@
   box-sizing: border-box;
   position: relative;
 
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
+  }
+
   &--without-border {
     @media (min-width: $tablet-width) {
       border-top: none;
@@ -56,31 +63,60 @@
   }
 
   &--common-padding {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       padding-top: 32px;
     }
   }
 
   &--hobby {
-    margin-top: 21px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 21px;
+    }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-top: none;
+      margin-top: 33px;
+    }
+  }
+
+  &--music {
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+  }
+
+  &--food {
+    @media (min-width: $desktop-width) {
+      margin-top: 32px;
     }
   }
 
   &--transport {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       padding-top: 24px;
       padding-left: 122px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      margin-top: 20px;
     }
   }
 
   &--level {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       border-bottom: 1px solid $mcg-4;
+      margin-top: 17px;
       padding-top: 0;
       padding-bottom: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 36px;
     }
   }
 }
@@ -90,18 +126,20 @@
   text-transform: uppercase;
   cursor: pointer;
   position: absolute;
-  top: 11px;
   left: 0;
 
   @media (max-width: $mobile-width-only) {
     font-size: 16px;
     line-height: 18px;
+    top: 11px;
   }
 
   @media (min-width: $tablet-width) {
-    // font-size: 20px;
-    // line-height: 20px;
     font-weight: 500;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
   }
 
   &::after {
@@ -122,10 +160,14 @@
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       display: none;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 181px;
+    }
   }
 
   &::before {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       content: attr(data-content);
       position: absolute;
       top: 0;
@@ -134,15 +176,17 @@
   }
 
   &--hobby {
-    top: 12px;
+    @media (max-width: $mobile-width-only) {
+      top: 12px;
+    }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       top: 39px;
     }
   }
 
   &--music {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       top: 31px;
     }
 
@@ -152,13 +196,13 @@
   }
 
   &--food {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       top: 31px;
     }
   }
 
   &--transport {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       top: 40px;
     }
 
@@ -168,9 +212,9 @@
   }
 
   &--level {
-    // @media (min-width: $tablet-width) {
-    //   top: 26px;
-    // }
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      top: 13px;
+    }
 
     &::after {
       top: 5px;
@@ -204,6 +248,18 @@
   margin-top: 6px;
   margin-bottom: 20px;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-left: 126px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 26px;
+    margin-bottom: 0;
+  }
+
   // &--hobby {}
 
   // &--music {}
@@ -213,29 +269,10 @@
   &--level {
     margin-top: 2px;
     margin-bottom: 0;
-  }
 
-  // &--for-inputs {
-  //   padding-top: 2px;
-  //   padding-bottom: 21px;
-
-  //   font-size: 15px;
-  //   line-height: 20px;
-  //   font-weight: 400;
-  //   font-style: normal;
-  //   color: $dcg-3;
-
-  //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-  //     padding: 0;
-  //     flex-grow: 1;
-  //   }
-  // }
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    padding-left: 126px;
+    @media (min-width: $desktop-width) {
+      margin-top: 17px;
+    }
   }
 }
 
@@ -259,12 +296,20 @@
   }
 
   &:not(:last-child) {
-    padding-bottom: 12px;
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 12px;
+    }
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       padding-bottom: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      height: 22px;
+      margin-bottom: 19px;
+    }
   }
+
 
   &::before {
     content: "";
@@ -300,12 +345,6 @@
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       flex-basis: 100px;
     }
-
-    // &::before {
-    //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    //     left: 7px;
-    //   }
-    // }
   }
 }
 
@@ -319,9 +358,12 @@
       .companions-selection__label-check-mark {
         display: block;
         position: absolute;
-        top: 1px;
-        left: 4px;
-        transform: scale(0.8);
+
+        @media (max-width: $mobile-width-only) {
+          top: 1px;
+          left: 4px;
+          transform: scale(0.8);
+        }
 
         @media (min-width: $tablet-width) {
           top: 2px;
@@ -330,7 +372,7 @@
         }
 
         &--column-2 {
-          @media (min-width: $tablet-width) {
+          @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
             left: 9px;
           }
         }
@@ -347,14 +389,26 @@
   margin-top: 17px;
   margin-left: -5px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-top: 9px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 617px;
     height: 50px;
-    margin-left: 0;
+    padding-top: 7px;
   }
 
   @media (min-width: $tablet-width) {
     text-transform: uppercase;
     margin-top: 35px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 192px;
+    height: 49px;
+    padding-top: 10px;
+    padding-left: 10px;
   }
 }

@@ -38,6 +38,11 @@
   @media (min-width: $tablet-width) {
     margin-top: 182px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 86px;
+    margin-top: 72px;
+  }
 }
 
 // .catalog-main__selection-results {}

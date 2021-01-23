@@ -8,6 +8,8 @@
 }
 
 .customized-bar__level-wrapper {
+  display: flex;
+  align-items: center;
   width: 220px;
   height: 35px;
   box-sizing: border-box;
@@ -21,9 +23,18 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 148px;
-    height: 46px;
     margin-top: -4px;
     background-size: 21px 46px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 192px;
+    height: 46px;
+    background-size: 20px 46px;
   }
 }
 
@@ -37,8 +48,11 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.04em;
     width: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.04em;
   }
 
   &--initial {
@@ -47,6 +61,10 @@
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 15px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 21px;
+    }
   }
 
   &--final {
@@ -54,6 +72,10 @@
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 27px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 37px;
     }
   }
 }
@@ -73,6 +95,11 @@
       margin-right: 68px;
       margin-top: 17px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 189px;
+      margin-top: 35px;
+    }
   }
 }
 
@@ -83,14 +110,14 @@
   height: 2px;
   background-color: $dcg-13;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media (min-width: $tablet-width) {
     height: 3px;
   }
 }
 
 .customized-bar__bar-fill {
   width: 68%;
-  height: 2px;
+  height: 3px;
   background-color: $dcg-1;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -108,7 +135,7 @@
   border-radius: 50%;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media (min-width: $tablet-width) {
     border-width: 6px;
     background-color: $dcg-1;
     top: -5px;
@@ -120,6 +147,10 @@
     @media (min-width: $tablet-width) {
       left: 37%;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 31%;
+    }
   }
 
   &--final {
@@ -127,6 +158,10 @@
 
     @media (min-width: $tablet-width) {
       left: 98%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 95%;
     }
   }
 }

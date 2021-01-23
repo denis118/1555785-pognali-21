@@ -2,18 +2,27 @@
 .user-transport {
   @include centering-flex;
 
-  // &--form {
-  //   @include centering-flex;
-  // }
-
   &--catalog {
     justify-content: flex-start;
     margin-top: 4px;
-    margin-left: -1px;
-    margin-bottom: 19px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 1px;
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: -1px;
+    }
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 16px;
+      margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }
@@ -82,6 +91,10 @@
 
       @media (min-width: $tablet-width) {
         margin-left: 2px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 1px;
       }
     }
   }
