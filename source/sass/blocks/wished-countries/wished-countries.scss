@@ -41,6 +41,11 @@
       justify-content: flex-start;
       margin-top: 21px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding-left: 10px;
+    }
   }
 }
 
@@ -50,6 +55,15 @@
   }
 
   &--catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 20px;
+      margin-top: 17px;
+    }
+
     &:not(:first-child) {
       margin-left: 0;
     }
@@ -58,18 +72,14 @@
       margin-top: 0;
     }
 
-    @media (max-width: $mobile-width-only) {
-      margin-top: 10px;
-    }
-
     &:nth-child(2) {
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         margin-left: 21px;
       }
     }
 
     &:nth-child(3) {
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         margin-left: 28px;
       }
     }
@@ -87,12 +97,16 @@
     @media (max-width: $mobile-width-only) {
       margin-top: 11px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 15px;
+    }
   }
 
   // &--uk-catalog {}
 
   &--germany-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: 2px;
     }
   }
@@ -117,10 +131,15 @@
       width: 35px;
       height: 24px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 19px;
+      margin-top: -3px;
+    }
   }
 
   &--tania-firsova-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: -3px;
     }
   }
@@ -128,14 +147,14 @@
   // &--sri-lanka-catalog {}
 
   &--thailand-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 4px;
       margin-right: 10px;
     }
   }
 
   &--seychelles-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 2px;
       margin-right: 10px;
     }
@@ -146,13 +165,17 @@
   }
 
   &--belgium-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: -5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -3px;
     }
   }
 
   &--czech-catalog {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 8px;
       margin-right: 11px;
     }
@@ -167,7 +190,7 @@
   &--australia-catalog {
     margin-top: -5px;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-left: 2px;
       margin-right: 11px;
     }
@@ -176,19 +199,23 @@
   &--dominica-catalog {
     margin-top: -3px;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-right: 11px;
     }
   }
 
   &--uk-catalog {
-    margin-top: -2px;
+    @media (max-width: $desktop-width - 1) {
+      margin-top: -2px;
+    }
   }
 
   &--germany-catalog {
-    margin-top: -1px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: -1px;
+    }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: -5px;
       margin-left: 3px;
       margin-right: 11px;

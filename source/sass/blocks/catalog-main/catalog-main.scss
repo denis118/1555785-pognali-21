@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-auto-rows: min-content;
+    padding-top: 72px;
   }
 }
 
@@ -39,7 +40,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 86px;
-    margin-top: 72px;
+    margin-top: 0;
   }
 }
 
@@ -50,7 +51,12 @@
   margin-bottom: 46px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 52px;
+    margin-top: 50px;
     margin-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 72px;
+    margin-bottom: 78px;
   }
 }

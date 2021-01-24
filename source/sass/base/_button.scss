@@ -387,4 +387,9 @@
     transform: scale(1.4);
     margin-right: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -69px;
+    margin-bottom: 0;
+  }
 }

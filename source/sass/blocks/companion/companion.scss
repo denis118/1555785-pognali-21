@@ -41,7 +41,8 @@
 
     @media (min-width: $desktop-width) {
       grid-template-columns: 285px 54px 150px 106px 69px 182px 60px 43px;
-      grid-template-rows: repeat(3, min-content);
+      grid-template-rows: 86px 87px 112px;
+      // grid-template-rows: repeat(3, min-content);
       grid-template-areas:
         "avatar . name name . countries . ."
         "avatar . hashtags hashtags . countries . ."
@@ -116,11 +117,18 @@
     margin-top: 14px;
     padding-left: 8px;
 
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding-left: 0;
+    }
+
     @media (min-width: $tablet-width) {
       font-size: 30px;
       line-height: 30px;
       margin-top: 32px;
-      padding-left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 46px;
     }
 
     &::before {
@@ -130,6 +138,11 @@
 
       @media (min-width: $tablet-width) {
         top: 12px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 11px;
+        left: -18px;
       }
     }
   }
@@ -146,7 +159,7 @@
         left: 153px;
       }
 
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         left: 210px;
       }
     }
@@ -158,7 +171,7 @@
     }
 
     &::before {
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         left: 186px;
       }
     }
@@ -166,7 +179,7 @@
 
   &--mark-smolov-catalog {
     &::before {
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         left: 210px;
       }
     }
@@ -176,7 +189,7 @@
     &::before {
       background-color: $mcg-7;
 
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         left: 247px;
       }
     }
@@ -215,6 +228,10 @@
       padding-left: 53px;
       padding-top: 31px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 56px;
+    }
   }
 
   &--firsova-catalog {
@@ -240,6 +257,10 @@
   @media (min-width: $tablet-width) {
     top: 14px;
     left: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 0;
   }
 
   // &--filled {}
@@ -268,6 +289,10 @@
     @media (min-width: $tablet-width) {
       margin-top: 35px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -292,7 +317,14 @@
       margin-top: 8px;
       margin-right: 2px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 11px;
+      margin-right: 0;
+    }
   }
+
+  // &--tania-firsova-catalog {}
 
   &--petia-diomin-catalog {
     @media (max-width: $mobile-width-only) {
@@ -327,6 +359,10 @@
     position: static;
     margin-top: 15.85px;
     transform: translateY(0);
+
+    @media (min-width: $desktop-width) {
+      margin-top: 53px;
+    }
   }
 }
 
@@ -344,6 +380,11 @@
     @media (min-width: $tablet-width) {
       margin-top: 7px;
       margin-left: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 11px;
+      margin-left: 10px;
     }
   }
 
@@ -379,6 +420,13 @@
       margin-top: 18px;
       margin-right: 15px;
     }
+
+    @media (min-width: $desktop-width) {
+      justify-self: start;
+      margin-right: 0;
+      margin-left: 6px;
+      margin-top: 10px;
+    }
   }
 
   &--petia-diomin-catalog {
@@ -386,8 +434,13 @@
       margin-top: 17px;
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-top: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 5px;
+      margin-top: 7px;
     }
   }
 
@@ -418,6 +471,10 @@
       text-transform: uppercase;
       margin-top: 14px;
       margin-left: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
     }
   }
 
