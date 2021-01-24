@@ -291,14 +291,15 @@
               lands__toggle-span--show.classlist.remove("hidden-entity");
             -->
             <span
-              class="lands__toggle-span lands__toggle-span--show hidden-except-tablet">
+              class="lands__toggle-span lands__toggle-span--show hidden-except-tablet hidden-entity">
               Показать все
             </span>
 
             <!--
               lands__toggle-svg--ellipsis.classlist.remove("hidden-entity");
             -->
-            <svg class="lands__toggle-svg lands__toggle-svg--ellipsis"
+            <svg
+              class="lands__toggle-svg lands__toggle-svg--ellipsis hidden-entity"
               width="30" height="6" xmlns="http://www.w3.org/2000/svg">
               <circle cx="3" cy="3" r="3" />
               <circle cx="15" cy="3" r="3" />
@@ -309,16 +310,15 @@
               lands__toggle-span--hide.classlist.add("hidden-entity");
             -->
             <span
-              class="lands__toggle-span lands__toggle-span--hide hidden-except-tablet hidden-entity">
+              class="lands__toggle-span lands__toggle-span--hide hidden-except-tablet">
               Свернуть
             </span>
 
             <!--
               lands__toggle-svg--cross.classlist.add("hidden-entity");
             -->
-            <svg
-              class="lands__toggle-svg lands__toggle-svg--cross hidden-entity"
-              width="24" height="23" xmlns="http://www.w3.org/2000/svg">
+            <svg class="lands__toggle-svg lands__toggle-svg--cross" width="24"
+              height="23" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip162)" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 2.916L3 19.343M3 2.916l18 16.427" />
@@ -335,7 +335,7 @@
           <!--
             lands__regions.classlist.add("hidden-on-mobile");
           -->
-          <ul class="lands__regions list zero-edges hidden-on-mobile">
+          <ul class="lands__regions list zero-edges">
             <li
               class="lands__region lands__region--catalog lands__region--europe lands__region--catalog-active hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--full">
               <a class="lands__link lands__link--region lands--common-text-style lands--common-text-style-two link"
@@ -370,8 +370,7 @@
         <!--
           lands__down-box--catalog.classlist.add("hidden-before-desktop");
         -->
-        <div
-          class="lands__down-box lands__down-box--catalog hidden-before-desktop">
+        <div class="lands__down-box lands__down-box--catalog">
           <ul
             class="lands__letter-indexes lands__letter-indexes--catalog list zero-edges">
             <li class="lands__letter-index lands__letter-index--1">
@@ -1858,7 +1857,7 @@
             companions-selection__legend--hobby.classlist.add("companions-selection__legend--collapsed-hobby");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--hobby companions-selection__legend--collapsed-hobby hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal"
+            class="companions-selection__legend companions-selection__legend--hobby hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal companions-selection__legend--collapsed-hobby"
             data-content="Хобби:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Хобби
@@ -1922,7 +1921,7 @@
             companions-selection__legend--music.classlist.add("companions-selection__legend--collapsed");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--music hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal"
+            class="companions-selection__legend companions-selection__legend--music hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal companions-selection__legend--collapsed"
             data-content="Музыка:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Музыка
@@ -1933,7 +1932,7 @@
             companions-selection__wrapper--music.classlist.add("hidden-except-tablet");
           -->
           <div
-            class="companions-selection__wrapper companions-selection__wrapper--music">
+            class="companions-selection__wrapper companions-selection__wrapper--music hidden-except-tablet">
             <input class="companions-selection__input hidden-entity"
               type="checkbox" name="hard-rock" id="music-hard-rock" checked>
             <label class="companions-selection__item-label"
@@ -1987,7 +1986,7 @@
             companions-selection__legend--food.classlist.add("companions-selection__legend--collapsed-food");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--food companions-selection__legend--collapsed-food hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal"
+            class="companions-selection__legend companions-selection__legend--food hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal companions-selection__legend--collapsed-food"
             data-content="Еда:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Еда
@@ -2053,7 +2052,7 @@
             companions-selection__legend--transport.classlist.add("companions-selection__legend--collapsed");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--transport hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal"
+            class="companions-selection__legend companions-selection__legend--transport hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal companions-selection__legend--collapsed"
             data-content="Транспорт:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Транспорт
@@ -2064,7 +2063,7 @@
             companions-selection__user-transport.classlist.add("hidden-except-tablet");
           -->
           <section
-            class="user-transport user-transport--catalog companions-selection__user-transport">
+            class="user-transport user-transport--catalog companions-selection__user-transport hidden-except-tablet">
             <h4 class="user-transport__heading visually-hidden">
               Tранспорт:
             </h4>
@@ -2159,7 +2158,7 @@
             companions-selection__legend--level.classlist.add("companions-selection__legend--collapsed");
           -->
           <legend
-            class="companions-selection__legend companions-selection__legend--level hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal"
+            class="companions-selection__legend companions-selection__legend--level hover-mode-opacity hover-mode-opacity--more-transparent active-mode-opacity active-mode-opacity--internal companions-selection__legend--collapsed"
             data-content="Левел:">
             <span class="companions-selection__legend-span hidden-on-tablet">
               Левел
@@ -2170,7 +2169,7 @@
             companions-selection__wrapper--level.classlist.add("hidden-except-tablet");
           -->
           <div
-            class="companions-selection__wrapper companions-selection__wrapper--level">
+            class="companions-selection__wrapper companions-selection__wrapper--level hidden-except-tablet">
             <div
               class="customized-bar customized-bar--catalog companions-selection__customized-bar">
               <div class="customized-bar__level-wrapper">
