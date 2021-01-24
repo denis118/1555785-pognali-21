@@ -13,18 +13,34 @@
   width: 220px;
   height: 35px;
   box-sizing: border-box;
-  border: 1px solid $lcg-7;
   border-radius: 4px;
   background-color: $lcg-1;
-  background-image: $customized-bar-lines-bg;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 102px;
+    width: 16px;
+    height: 11px;
+    background-color: inherit;
+    background-image: $customized-bar-lines-bg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 148px;
     margin-top: -4px;
-    background-size: 21px 46px;
+
+    &::before {
+      top: 15px;
+      left: 64px;
+      width: 21px;
+      height: 15px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -33,16 +49,23 @@
 
   @media (min-width: $desktop-width) {
     width: 192px;
-    height: 46px;
-    background-size: 20px 46px;
+
+    &::before {
+      top: 14px;
+      left: 85px;
+      width: 20px;
+      height: 14px;
+    }
   }
 }
 
 .customized-bar__level-input {
-  border: none;
+  border: 1px solid $lcg-7;
   outline: none;
-  width: 50px;
-  margin-top: 4px;
+  height: 100%;
+  margin: 0;
+  padding-top: 8px;
+  box-sizing: border-box;
   text-align: center;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -53,30 +76,48 @@
 
   @media (min-width: $tablet-width) {
     letter-spacing: 0.04em;
+    padding-top: 5px;
   }
 
   &--initial {
-    margin-left: 27px;
+    width: 109px;
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      margin-left: 15px;
+      width: 73px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-left: 21px;
+      width: 95px;
+    }
+
+    &:hover {
+      border-right: 1px solid $lcg-7;
     }
   }
 
   &--final {
-    margin-left: 54px;
+    width: 111px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      margin-left: 27px;
+      width: 75px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-left: 37px;
+      width: 97px;
     }
+  }
+
+  &:hover {
+    border-color: $lcg-25;
+  }
+
+  &:active {
+    border-color: $dcg-6;
   }
 }
 
@@ -163,5 +204,15 @@
     @media (min-width: $desktop-width) {
       left: 95%;
     }
+  }
+
+  &:hover {
+    transform: scale(1.46);
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+    outline: none;
   }
 }

@@ -275,9 +275,46 @@
     left: 0;
   }
 
-  // &--filled {}
+  &--filled {
+    &:hover {
+      ellipse {
+        fill: $mcg-14;
+      }
+    }
 
-  // &--empty {}
+    &:active {
+      path {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--empty {
+    ellipse {
+      fill: none;
+    }
+
+    path {
+      fill: $lcg-41;
+    }
+
+    &:hover {
+      ellipse {
+        fill: $lcg-8;
+      }
+
+      path {
+        fill: $dcg-4;
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      path {
+        opacity: 0.1;
+      }
+    }
+  }
 
   &--firsova {
     @media (max-width: $mobile-width-only) {

@@ -369,6 +369,14 @@
   }
 }
 
+.hover-mode-inner-opacity {
+  &:hover {
+    & > * {
+      opacity: 0.6;
+    }
+  }
+}
+
 .hover-mode-border-color {
   &:hover {
     border-color: $lcg-25;

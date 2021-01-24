@@ -50,6 +50,11 @@
       background-color: $mcg-1;
     }
   }
+
+  &:active {
+    background-color: $mcg-1;
+    opacity: 1;
+  }
 }
 
 .results-pagination__buttons {
@@ -90,6 +95,18 @@
   &--next {
     &::before {
       border-right-width: 0;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
     }
   }
 }

@@ -94,4 +94,16 @@
   @media (min-width: $desktop-width) {
     margin-top: 66px;
   }
+
+  &:hover {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
 }
