@@ -2213,7 +2213,7 @@
                 </a>
               </h3>
 
-              <a class="companion__likes companion__likes--catalog companion__likes--firsova-catalog companion__likes--active link"
+              <a class="companion__likes companion__likes--catalog companion__likes--firsova-catalog companion__likes--active link companion--common-text-style"
                 href="#!">
                 <span class="visually-hidden">
                   Колличество лайков
@@ -2294,11 +2294,30 @@
               <section
                 class="circle-bar companion__level companion__level--catalog">
                 <h4
-                  class="circle-bar__heading circle-bar__heading--catalog zero-edges">
+                  class="circle-bar__heading circle-bar__heading--catalog zero-edges hidden-after-mobile">
                   Левел:
                 </h4>
 
                 <div class="circle-bar__box circle-bar__box--catalog">
+                  <svg class="circle-bar__svg-container image">
+                    <circle
+                      class="circle-bar__svg-circle circle-bar__svg-circle--firsova circle-bar__svg-circle--traveler"
+                      r="30" cx="25" cy="25"></circle>
+                  </svg>
+                  <div
+                    class="circle-bar__text-box circle-bar__text-box--catalog">
+                    <p
+                      class="circle-bar__level-number circle-bar__level-number--catalog zero-edges ">
+                      99
+                    </p>
+                    <p
+                      class="circle-bar__level-text circle-bar__level-text--catalog zero-edges hidden-on-mobile">
+                      level
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="circle-bar__box circle-bar__box--catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
                       class="circle-bar__svg-circle circle-bar__svg-circle--firsova circle-bar__svg-circle--traveler circle-bar__svg-circle--traveler-catalog"
@@ -2315,20 +2334,19 @@
                       level
                     </p>
                   </div>
-                </div>
+                </div> -->
               </section>
 
               <section
                 class="wished-countries companion__wished-countries companion__wished-countries--catalog companion--common-margin-left">
                 <h4
-                  class="wished-countries__heading wished-countries__appearance wished-countries__appearance--catalog zero-edges">
+                  class="wished-countries__heading wished-countries__heading--catalog wished-countries__appearance wished-countries__appearance--catalog zero-edges">
                   Хочет посетить:
                 </h4>
                 <ul
                   class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog tooltip"
-                    data-tooltip="Шри&#8209;Ланка">
+                    class="wished-countries__item wished-countries__item--catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -2346,19 +2364,18 @@
                               ./img/flags/content/webp/sri-lanka/sri-lanka-flag-catalog-mobile@2x.webp 2x
                             " />
                         <img
-                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          class="wished-countries__flag wished-countries__flag--catalog wished-countries__flag--tania-firsova-catalog wished-countries__flag--sri-lanka-catalog image"
                           src="./img/flags/content/png/sri-lanka/sri-lanka-flag-catalog-mobile.png"
                           width="26" height="18" alt="Флаг Шри-Ланки" />
                       </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog companion--common-text-style">
                         Шри-Ланка
                       </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog tooltip"
-                    data-tooltip="Таиланд">
+                    class="wished-countries__item wished-countries__item--catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -2371,21 +2388,20 @@
                               ./img/flags/content/webp/thailand/thailand-flag-catalog-mobile@2x.webp 2x
                             " />
                         <img
-                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          class="wished-countries__flag wished-countries__flag--catalog wished-countries__flag--tania-firsova-catalog wished-countries__flag--thailand-catalog image"
                           src="./img/flags/content/png/thailand/thailand-flag-catalog-mobile.png"
                           width="26" height="18" alt="Флаг Тайланда" srcset="
                           ./img/flags/content/png/thailand/thailand-flag-catalog-mobile@2x.png 2x
                         " />
                       </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog companion--common-text-style">
                         Таиланд
                       </span>
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog tooltip"
-                    data-tooltip="Сейшелы">
+                    class="wished-countries__item wished-countries__item--catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -2403,14 +2419,14 @@
                               ./img/flags/content/webp/seychelles/seychelles-flag-catalog-mobile@2x.webp 2x
                             " />
                         <img
-                          class="wished-countries__flag wished-countries__flag--catalog image"
+                          class="wished-countries__flag wished-countries__flag--catalog wished-countries__flag--tania-firsova-catalog wished-countries__flag--seychelles-catalog image"
                           src="./img/flags/content/png/seychelles/seychelles-flag-catalog-mobile.png"
                           width="26" height="18" alt="Флаг Сейшел" srcset="
                           ./img/flags/content/png/seychelles/seychelles-flag-catalog-mobile@2x.png 2x
                         " />
                       </picture>
                       <span
-                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog">
+                        class="wished-countries__country-name wished-countries__appearance wished-countries__appearance--catalog companion--common-text-style">
                         Сейшелы
                       </span>
                     </a>
@@ -2496,7 +2512,8 @@
 
               <section
                 class="transport companion__transport companion__transport--catalog companion--common-margin-left">
-                <h4 class="transport__heading transport__heading--catalog">
+                <h4
+                  class="transport__heading transport__heading--catalog hidden-after-mobile">
                   Транспорт:
                 </h4>
                 <ul
@@ -2556,7 +2573,7 @@
                 </ul>
               </section>
 
-              <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog link"
+              <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog link companion--common-text-style"
                 href="#!">
                 Позвать!
               </a>
@@ -2662,6 +2679,25 @@
                 <div class="circle-bar__box circle-bar__box--catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
+                      class="circle-bar__svg-circle circle-bar__svg-circle--diomin circle-bar__svg-circle--traveler"
+                      r="30" cx="25" cy="25"></circle>
+                  </svg>
+                  <div
+                    class="circle-bar__text-box circle-bar__text-box--catalog">
+                    <p
+                      class="circle-bar__level-number circle-bar__level-number--catalog zero-edges">
+                      80
+                    </p>
+                    <p
+                      class="circle-bar__level-text heading heading--level-2 zero-edges hidden-on-mobile">
+                      level
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="circle-bar__box circle-bar__box--catalog">
+                  <svg class="circle-bar__svg-container image">
+                    <circle
                       class="circle-bar__svg-circle circle-bar__svg-circle--diomin-catalog circle-bar__svg-circle--traveler circle-bar__svg-circle--traveler-catalog"
                       r="22.5" cx="17.5" cy="17.5"></circle>
                   </svg>
@@ -2676,7 +2712,7 @@
                       level
                     </p>
                   </div>
-                </div>
+                </div> -->
               </section>
 
               <section
@@ -2688,8 +2724,7 @@
                 <ul
                   class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog tooltip"
-                    data-tooltip="Бельгия">
+                    class="wished-countries__item wished-countries__item--catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -2720,8 +2755,7 @@
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog tooltip"
-                    data-tooltip="Чехия">
+                    class="wished-countries__item wished-countries__item--catalog">
                     <a class="wished-countries__link wished-countries__link--catalog wished-countries__link--czech-catalog link"
                       href="#!">
                       <picture>
@@ -2984,7 +3018,26 @@
                   Левел:
                 </h4>
 
-                <div
+                <div class="circle-bar__box circle-bar__box--catalog">
+                  <svg class="circle-bar__svg-container image">
+                    <circle
+                      class="circle-bar__svg-circle circle-bar__svg-circle--smolov circle-bar__svg-circle--traveler"
+                      r="30" cx="25" cy="25"></circle>
+                  </svg>
+                  <div
+                    class="circle-bar__text-box circle-bar__text-box--catalog">
+                    <p
+                      class="circle-bar__level-number circle-bar__level-number--catalog zero-edges">
+                      25
+                    </p>
+                    <p
+                      class="circle-bar__level-text heading heading--level-2 zero-edges hidden-on-mobile">
+                      level
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div
                   class="circle-bar__box circle-bar__box--catalog circle-bar__box--mark-smolov-catalog circle-bar__box--common-margin-catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
@@ -3002,7 +3055,7 @@
                       level
                     </p>
                   </div>
-                </div>
+                </div> -->
               </section>
 
               <section
@@ -3014,8 +3067,7 @@
                 <ul
                   class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--usa-catalog tooltip"
-                    data-tooltip="США">
+                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--usa-catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -3046,8 +3098,7 @@
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--australia-catalog tooltip"
-                    data-tooltip="Австралия">
+                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--australia-catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -3078,8 +3129,7 @@
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--dominica-catalog tooltip"
-                    data-tooltip="Доминика">
+                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--dominica-catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -3239,7 +3289,7 @@
                 </ul>
               </section>
 
-              <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog link"
+              <a class="button button--invite button--invite-show button--common-text-set-one companion__invite-button companion__invite-button--catalog companion__invite-button--mark-smolov-catalog link"
                 href="#!">
                 Позвать!
               </a>
@@ -3247,7 +3297,7 @@
           </li>
 
           <li
-            class="selection-results__item under-layer under-layer--selection-results under-layer--radius">
+            class="selection-results__item selection-results__item--larisa-rogovaya-catalog under-layer under-layer--selection-results under-layer--radius">
             <section
               class="companion companion--catalog selection-results__companion">
               <h3
@@ -3342,7 +3392,26 @@
                   Левел:
                 </h4>
 
-                <div
+                <div class="circle-bar__box circle-bar__box--catalog">
+                  <svg class="circle-bar__svg-container image">
+                    <circle
+                      class="circle-bar__svg-circle circle-bar__svg-circle--rogovaya circle-bar__svg-circle--traveler"
+                      r="30" cx="25" cy="25"></circle>
+                  </svg>
+                  <div
+                    class="circle-bar__text-box circle-bar__text-box--catalog">
+                    <p
+                      class="circle-bar__level-number circle-bar__level-number--catalog zero-edges">
+                      50
+                    </p>
+                    <p
+                      class="circle-bar__level-text heading heading--level-2 zero-edges hidden-on-mobile">
+                      level
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div
                   class="circle-bar__box circle-bar__box--catalog circle-bar__box--larisa-rogovaya-catalog circle-bar__box--common-margin-catalog">
                   <svg class="circle-bar__svg-container image">
                     <circle
@@ -3360,7 +3429,7 @@
                       level
                     </p>
                   </div>
-                </div>
+                </div> -->
               </section>
 
               <section
@@ -3372,8 +3441,7 @@
                 <ul
                   class="wished-countries__list wished-countries__list--catalog list zero-edges">
                   <li
-                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--uk-catalog tooltip"
-                    data-tooltip="Великобритания">
+                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--uk-catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>
@@ -3405,8 +3473,7 @@
                     </a>
                   </li>
                   <li
-                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--germany-catalog tooltip"
-                    data-tooltip="Германия">
+                    class="wished-countries__item wished-countries__item--catalog wished-countries__item--germany-catalog">
                     <a class="wished-countries__link wished-countries__link--catalog link"
                       href="#!">
                       <picture>

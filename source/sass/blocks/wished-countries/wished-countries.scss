@@ -1,7 +1,5 @@
 
 .wished-countries {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   font-size: 15px;
   line-height: 16px;
 }
@@ -18,6 +16,13 @@
   font-weight: 400;
   color: $dcg-9;
   text-transform: lowercase;
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 49px;
+      margin-top: 4px;
+    }
+  }
 }
 
 .wished-countries__list {
@@ -34,6 +39,7 @@
     @media (min-width: $tablet-width) {
       flex-direction: row;
       justify-content: flex-start;
+      margin-top: 21px;
     }
   }
 }
@@ -54,6 +60,18 @@
 
     @media (max-width: $mobile-width-only) {
       margin-top: 10px;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $tablet-width) {
+        margin-left: 21px;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $tablet-width) {
+        margin-left: 28px;
+      }
     }
   }
 
@@ -88,6 +106,28 @@
     @media (min-width: $tablet-width) {
       width: 35px;
       height: 24px;
+    }
+  }
+
+  &--tania-firsova-catalog {
+    @media (min-width: $tablet-width) {
+      margin-top: -3px;
+    }
+  }
+
+  // &--sri-lanka-catalog {}
+
+  &--thailand-catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 4px;
+      margin-right: 10px;
+    }
+  }
+
+  &--seychelles-catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 2px;
+      margin-right: 10px;
     }
   }
 

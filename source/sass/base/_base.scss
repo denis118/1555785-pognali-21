@@ -210,6 +210,11 @@
     padding-left: 18px;
     padding-right: 18px;
 
+    @media (min-width: $tablet-width) {
+      padding-left: 35px;
+      padding-right: 25px;
+    }
+
     @media (min-width: $desktop-width) {
       margin-top: 0;
       padding: 0;

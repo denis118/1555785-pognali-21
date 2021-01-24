@@ -16,6 +16,7 @@
 
     @media (min-width: $tablet-width) {
       flex-direction: column;
+      margin-left: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -57,6 +58,10 @@
     height: 32px;
     border-radius: 50%;
     background-color: $lcg-2;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
   }
 }
 
@@ -67,6 +72,10 @@
 
   &--catalog {
     transform: scale(0.7);
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.05);
+    }
   }
 }
 

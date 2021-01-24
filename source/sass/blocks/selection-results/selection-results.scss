@@ -12,14 +12,25 @@
 .selection-results__item {
   margin-top: 10px;
   padding-bottom: 23px;
-
   background-image: $dashed-line-1-mobile-bg, $dashed-line-2-mobile-bg;
   background-repeat: no-repeat, no-repeat;
   background-position: center 155px, center 277px;
   background-size: contain, contain;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 26px;
+    background-image: $dashed-line-1-tablet-bg;
+    background-repeat: no-repeat;
+    background-position: center 255px;
+    background-size: contain;
+  }
+
   &:first-child {
     margin-top: 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 41px;
+    }
 
     @media (min-width: $desktop-width) {
       margin-top: 0;
@@ -32,6 +43,10 @@
 
   &--mark-smolov-catalog {
     background-position: center 155px, center 280px;
+  }
+
+  &--larisa-rogovaya-catalog {
+    background-position: center 156px, center 256px;
   }
 }
 
