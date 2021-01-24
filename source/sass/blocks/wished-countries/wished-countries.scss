@@ -78,11 +78,15 @@
   // &--usa-catalog {}
 
   &--australia-catalog {
-    margin-top: 13px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 13px;
+    }
   }
 
   &--dominica-catalog {
-    margin-top: 11px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 11px;
+    }
   }
 
   // &--uk-catalog {}
@@ -156,10 +160,19 @@
 
   &--australia-catalog {
     margin-top: -5px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 2px;
+      margin-right: 11px;
+    }
   }
 
   &--dominica-catalog {
     margin-top: -3px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 11px;
+    }
   }
 
   &--uk-catalog {

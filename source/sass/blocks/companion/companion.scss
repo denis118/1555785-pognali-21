@@ -164,7 +164,13 @@
     }
   }
 
-  // &--mark-smolov-catalog {}
+  &--mark-smolov-catalog {
+    &::before {
+      @media (min-width: $tablet-width) {
+        left: 210px;
+      }
+    }
+  }
 
   &--larisa-rogovaya-catalog {
     &::before {
@@ -418,11 +424,15 @@
   }
 
   &--mark-smolov-catalog {
-    margin-top: 4px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 4px;
+    }
   }
 
   &--larisa-rogovaya-catalog {
-    margin-top: 7px;
-    margin-left: 1px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 7px;
+      margin-left: 1px;
+    }
   }
 }
