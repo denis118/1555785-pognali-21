@@ -7,13 +7,6 @@
     border-radius: 20px;
   }
 
-  &--index {
-    &:hover {
-      transform: scale(1.01);
-      z-index: 1000;
-    }
-  }
-
   &--catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -60,6 +53,24 @@
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 20px;
+    }
+  }
+
+  &:hover {
+    // filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+
+    .avatar {
+      overflow: hidden;
+    }
+
+    .avatar__photo {
+      transform: scale(1.01);
+    }
+  }
+
+  &--index {
+    &:hover {
+      z-index: 1000;
     }
   }
 }
@@ -247,6 +258,7 @@
 
 .companion__likes-heart {
   position: absolute;
+  z-index: 1;
 
   @media (max-width: $mobile-width-only) {
     top: -19px;

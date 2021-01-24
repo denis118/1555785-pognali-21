@@ -361,6 +361,12 @@
   &:hover {
     opacity: 0.7;
   }
+
+  &--more-transparent {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 .hover-mode-border-color {
@@ -382,6 +388,12 @@
       & > * {
         opacity: 0.3;
       }
+    }
+  }
+
+  &--full {
+    &:active {
+      opacity: 1;
     }
   }
 }
