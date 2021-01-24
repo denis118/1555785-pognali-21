@@ -256,13 +256,7 @@
   &--show-more {
     width: max-content;
     height: min-content;
-    margin: 20px auto 0;
     background-color: transparent;
-
-    svg {
-      margin-bottom: 5px;
-      margin-right: 15px;
-    }
   }
 
   // &--counter-directional-pointers {
@@ -382,5 +376,15 @@
       top: 24px;
       left: 684px;
     }
+  }
+}
+
+.button__show-more-svg {
+  margin-bottom: 5px;
+  margin-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    transform: scale(1.4);
+    margin-right: 30px;
   }
 }

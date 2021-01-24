@@ -67,4 +67,12 @@
 
 // .selection-results__companion {}
 
-// .selection-results__show-more {}
+.selection-results__show-more {
+  @include centering-margins;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+}
