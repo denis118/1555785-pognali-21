@@ -469,6 +469,25 @@ function errorVisibility() {
   });
 }
 
+function accordeon() {
+  hobby.classList.add("companions-selection__legend--collapsed-hobby");
+  hobbyContent.classList.add("hidden-except-tablet");
+
+  music.classList.add("companions-selection__legend--collapsed");
+  musicContent.classList.add("hidden-except-tablet");
+
+  food.classList.add("companions-selection__legend--collapsed-food");
+  foodContent.classList.add("hidden-except-tablet");
+
+  transport.classList.add("companions-selection__legend--collapsed");
+  transportContent.classList.add("hidden-except-tablet");
+
+  level.classList.add("companions-selection__legend--collapsed");
+  levelContent.classList.add("hidden-except-tablet");
+}
+
+accordeon();
+
 hobby.addEventListener("click", function () {
   this.classList.toggle("companions-selection__legend--collapsed-hobby");
   hobbyContent.classList.toggle("hidden-except-tablet");
