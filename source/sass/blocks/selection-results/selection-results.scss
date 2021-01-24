@@ -18,6 +18,7 @@
   background-size: contain, contain;
 
   @media (min-width: $tablet-width) {
+    margin-top: 40px;
     padding-bottom: 26px;
     background-image: $dashed-line-1-tablet-bg;
     background-repeat: no-repeat;
@@ -38,15 +39,25 @@
   }
 
   &--petia-diomin-catalog {
-    background-position: center 156px, center 255px;
+    @media (max-width: $mobile-width-only) {
+      background-position: center 156px, center 255px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 24px;
+    }
   }
 
   &--mark-smolov-catalog {
-    background-position: center 155px, center 280px;
+    @media (max-width: $mobile-width-only) {
+      background-position: center 155px, center 280px;
+    }
   }
 
   &--larisa-rogovaya-catalog {
-    background-position: center 156px, center 256px;
+    @media (max-width: $mobile-width-only) {
+      background-position: center 156px, center 256px;
+    }
   }
 }
 

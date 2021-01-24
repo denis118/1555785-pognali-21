@@ -119,36 +119,50 @@
     @media (min-width: $tablet-width) {
       font-size: 30px;
       line-height: 30px;
+      margin-top: 32px;
+      padding-left: 0;
     }
 
     &::before {
       top: 8px;
       left: 146px;
       background-color: $mcg-8;
+
+      @media (min-width: $tablet-width) {
+        top: 12px;
+      }
     }
   }
 
   &--tania-firsova-catalog {
-    margin-top: 16px;
-    padding-left: 15px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 32px;
-      padding-left: 0;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 16px;
+      padding-left: 15px;
     }
 
     &::before {
-      top: 7px;
-      left: 153px;
+      @media (max-width: $mobile-width-only) {
+        top: 7px;
+        left: 153px;
+      }
 
       @media (min-width: $tablet-width) {
-        top: 12px;
         left: 210px;
       }
     }
   }
 
-  // &--petia-diomin-catalog {}
+  &--petia-diomin-catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        left: 186px;
+      }
+    }
+  }
 
   // &--mark-smolov-catalog {}
 
@@ -271,15 +285,21 @@
   }
 
   &--petia-diomin-catalog {
-    margin-top: 18px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 18px;
+    }
   }
 
   &--mark-smolov-catalog {
-    margin-top: 16px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 16px;
+    }
   }
 
   &--larisa-rogovaya-catalog {
-    margin-top: 20px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -318,11 +338,15 @@
   }
 
   &--petia-diomin-catalog {
-    margin-top: 15px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 15px;
+    }
   }
 
   &--larisa-rogovaya-catalog {
-    margin-top: 14px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 14px;
+    }
   }
 }
 
@@ -348,15 +372,25 @@
   }
 
   &--petia-diomin-catalog {
-    margin-top: 17px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 17px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 16px;
+    }
   }
 
   &--mark-smolov-catalog {
-    margin-top: 15px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 15px;
+    }
   }
 
   &--larisa-rogovaya-catalog {
-    margin-top: 19px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 19px;
+    }
   }
 }
 
@@ -378,7 +412,9 @@
   }
 
   &--petia-diomin-catalog {
-    margin-top: 6px;
+    @media (max-width: $mobile-width-only) {
+      margin-top: 6px;
+    }
   }
 
   &--mark-smolov-catalog {
