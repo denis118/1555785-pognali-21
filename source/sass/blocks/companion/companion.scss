@@ -175,6 +175,10 @@
   &--larisa-rogovaya-catalog {
     &::before {
       background-color: $mcg-7;
+
+      @media (min-width: $tablet-width) {
+        left: 247px;
+      }
     }
   }
 }

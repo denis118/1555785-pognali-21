@@ -90,6 +90,12 @@
   }
 
   // &--uk-catalog {}
+
+  &--germany-catalog {
+    @media (min-width: $tablet-width) {
+      margin-top: 2px;
+    }
+  }
 }
 
 .wished-countries__link {
@@ -181,6 +187,12 @@
 
   &--germany-catalog {
     margin-top: -1px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -5px;
+      margin-left: 3px;
+      margin-right: 11px;
+    }
   }
 }
 

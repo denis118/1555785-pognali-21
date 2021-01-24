@@ -58,6 +58,10 @@
     @media (max-width: $mobile-width-only) {
       background-position: center 156px, center 256px;
     }
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 25px;
+    }
   }
 }
 
