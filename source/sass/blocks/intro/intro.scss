@@ -46,6 +46,10 @@
     background-position: right 37% top 104%, center;
     background-size: 200px 263px, cover;
 
+    @media (min-resolution: 2dppx) {
+      background-image: $traveller-bg-mobile-2x, $globe-bg-mobile;
+    }
+
     @media (min-width: $tablet-width) {
       background-color: transparent;
       background-image: none;
