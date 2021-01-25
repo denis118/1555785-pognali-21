@@ -1,59 +1,170 @@
-
 .customized-bar {
   &--catalog {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 }
 
 .customized-bar__level-wrapper {
+  display: flex;
+  align-items: center;
   width: 220px;
   height: 35px;
-  background-color: $lcg-1;
   box-sizing: border-box;
-  border: 1px solid $lcg-7;
   border-radius: 4px;
+  background-color: $lcg-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 102px;
+    width: 16px;
+    height: 11px;
+    background-color: inherit;
+    background-image: $customized-bar-lines-bg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 148px;
+    margin-top: -4px;
+
+    &::before {
+      top: 15px;
+      left: 64px;
+      width: 21px;
+      height: 15px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 192px;
+
+    &::before {
+      top: 14px;
+      left: 85px;
+      width: 20px;
+      height: 14px;
+    }
+  }
 }
 
 .customized-bar__level-input {
-  border: none;
+  border: 1px solid $lcg-7;
   outline: none;
-  width: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
+  height: 100%;
+  margin: 0;
+  padding-top: 8px;
+  box-sizing: border-box;
   text-align: center;
 
-  // &--initial {}
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 40px;
+  }
 
-  // &--final {}
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.04em;
+    padding-top: 5px;
+  }
+
+  &--initial {
+    width: 109px;
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 73px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 95px;
+    }
+
+    &:hover {
+      border-right: 1px solid $lcg-7;
+    }
+  }
+
+  &--final {
+    width: 111px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 97px;
+    }
+  }
+
+  &:hover {
+    border-color: $lcg-25;
+  }
+
+  &:active {
+    border-color: $dcg-6;
+  }
 }
 
 .customized-bar__controls-wrapper {
   width: 220px;
   height: 10px;
-  margin-top: 20px;
+  margin-top: 24px;
   position: relative;
 
   &--catalog {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 275px;
+      height: 13px;
+      border-radius: 2px;
       order: -1;
-      margin-right: 69px;
+      margin-right: 68px;
+      margin-top: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 189px;
+      margin-top: 35px;
     }
   }
 }
 
 .customized-bar__bar-shell {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   height: 2px;
   background-color: $dcg-13;
+
+  @media (min-width: $tablet-width) {
+    height: 3px;
+  }
 }
 
 .customized-bar__bar-fill {
-  width: 62%;
-  height: 2px;
+  width: 68%;
+  height: 3px;
   background-color: $dcg-1;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 60%;
+    height: 100%;
+  }
 }
 
 .customized-bar__bar-handle {
@@ -65,11 +176,43 @@
   border-radius: 50%;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    border-width: 6px;
+    background-color: $dcg-1;
+    top: -5px;
+  }
+
   &--initial {
-    left: 38%;
+    left: 31%;
+
+    @media (min-width: $tablet-width) {
+      left: 37%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 31%;
+    }
   }
 
   &--final {
-    left: 210px;
+    left: 96%;
+
+    @media (min-width: $tablet-width) {
+      left: 98%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 95%;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.46);
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+    outline: none;
   }
 }

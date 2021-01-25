@@ -36,6 +36,7 @@ $mcg-10: #f26926;
 $mcg-11: #ff0000;
 $mcg-12: #ffefef;
 $mcg-13: #f47e7e;
+$mcg-14: #f9d8d8;
 
 // lighten color`s group ( lcg )
 $lcg-1: #ffffff;
@@ -77,6 +78,8 @@ $lcg-36: #808080;
 $lcg-37: #9c9fa8;
 $lcg-38: #bebfc5;
 $lcg-39: #c9ccd8;
+$lcg-40: #c8cee8;
+$lcg-41: #adb1c1;
 
 // shadows
 $shadow-1: rgba(54, 80, 148, 0.18);
@@ -128,6 +131,7 @@ $smolov-bg-2x: url("../img/fellow-travelers/bg/png/smolov-bg@2x.png");
 // circle-bar-bg
 $text-box-bg-image: url("../img/circle-bar/bg/line.svg");
 $text-box-bg-image-form: url("../img/circle-bar/bg/form/line-form-bg.svg");
+$text-box-bg-image-catalog: url("../img/circle-bar/bg/catalog/line-catalog-bg.svg");
 
 // profile-bg
 $rates-bg-mobile: url("../img/profile/bg/png/rates-bg-mobile.png");
@@ -165,8 +169,22 @@ $down-arrow: url("../img/add-plan/decor/svg/add-plan-arrow.svg");
 $line-for-jollity-psedo: url("../img/add-plan/decor/svg/add-plan-line-jollity-mobile.svg");
 $line-for-jollity-psedo-two: url("../img/add-plan/decor/svg/add-plan-line-jollity-tablet.svg");
 
+// lands-bg
+$lands-line-bg-form: url("../img/lands/bg/svg/lands-line-bg-form.svg");
+
+// customized-bar-bg
+$customized-bar-lines-bg: url("../img/customized-bar/bg/svg/customized-bar-lines-bg.svg");
+
+// selection-results-bg
+$dashed-line-1-mobile-bg: url("../img/selection-results/bg/svg/dashed-line-1-mobile-bg.svg");
+$dashed-line-1-tablet-bg: url("../img/selection-results/bg/svg/dashed-line-1-tablet-bg.svg");
+$dashed-line-2-mobile-bg: url("../img/selection-results/bg/svg/dashed-line-2-mobile-bg.svg");
+
+// pagination-bg
+$pagination-arrows-spliter: url("../img/pagination/bg/svg/pagination-spliter-bg.svg");
+
 //blok`s background images
-$pagination-arrows-spliter: url("../img/pagination/bg-spliter.svg");
+
 $drop-down-button-bg: url("../img/button/drop-down/bg/drop-down-gradient.svg");
 
 // icons
@@ -190,6 +208,8 @@ $icon-man-tablet: url("../img/directions/decor/png/icon-man-tablet.png");
 $icon-man-tablet-2x: url("../img/directions/decor/png/icon-man-tablet@2x.png");
 
 $icon-map-pin: url("../img/map/decor/svg/icon-map-pin.svg");
+
+$icon-lands-filter: url("../img/lands/decor/svg/icon-lands-filter.svg");
 
 // other
 $bottom-radii: 30px;

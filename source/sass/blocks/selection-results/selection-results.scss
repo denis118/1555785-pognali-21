@@ -1,9 +1,8 @@
-
 .selection-results {
   @media (min-width: $desktop-width) {
     width: min-content;
     padding: 0;
-    margin-left: 60px;
+    // margin-left: 60px;
     order: -1;
   }
 }
@@ -12,17 +11,99 @@
 
 .selection-results__item {
   margin-top: 10px;
-  padding-bottom: 23px;
+  background-image: $dashed-line-1-mobile-bg, $dashed-line-2-mobile-bg;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 155px, center 277px;
+  background-size: contain, contain;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding-bottom: 26px;
+    background-image: $dashed-line-1-tablet-bg;
+    background-repeat: no-repeat;
+    background-position: center 255px;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+    margin-top: 31px;
+  }
 
   &:first-child {
     margin-top: 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 41px;
+    }
 
     @media (min-width: $desktop-width) {
       margin-top: 0;
     }
   }
+
+  &--petia-diomin-catalog {
+    @media (max-width: $mobile-width-only) {
+      background-position: center 156px, center 255px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding-bottom: 24px;
+    }
+  }
+
+  &--mark-smolov-catalog {
+    @media (max-width: $mobile-width-only) {
+      background-position: center 155px, center 280px;
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    @media (max-width: $mobile-width-only) {
+      background-position: center 156px, center 256px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding-bottom: 25px;
+    }
+  }
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+  }
 }
 
 // .selection-results__companion {}
 
-// .selection-results__show-more {}
+.selection-results__show-more {
+  @include centering-margins;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 66px;
+  }
+
+  &:hover {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}

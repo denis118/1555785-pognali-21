@@ -1,0 +1,15 @@
+.return-to-index {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.return-to-index__svg {
+  @media (min-width: $tablet-width) {
+    margin-left: 28px;
+  }
+}

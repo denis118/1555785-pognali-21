@@ -7,11 +7,6 @@
     border-radius: 20px;
   }
 
-  &:hover {
-    transform: scale(1.01);
-    z-index: 1000;
-  }
-
   &--catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -24,9 +19,10 @@
       "countries countries countries"
       "transport transport lvl"
       "button button button";
+    background-color: transparent;
 
     @media (min-width: $tablet-width) {
-      grid-template-columns: 254px 150px 106px 178px;
+      grid-template-columns: 223px 150px 106px 151px;
       grid-template-rows: repeat(5, min-content);
       grid-template-areas:
         "avatar name name transport"
@@ -38,11 +34,43 @@
 
     @media (min-width: $desktop-width) {
       grid-template-columns: 285px 54px 150px 106px 69px 182px 60px 43px;
-      grid-template-rows: repeat(3, min-content);
+      grid-template-rows: 86px 87px 112px;
+      // grid-template-rows: repeat(3, min-content);
       grid-template-areas:
         "avatar . name name . countries . ."
         "avatar . hashtags hashtags . countries . ."
         "avatar . button likes . transport lvl .";
+    }
+  }
+
+  &--common-margin-left {
+    @media (max-width: $mobile-width-only) {
+      margin-left: 7px;
+    }
+  }
+
+  &--common-text-style {
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &:hover {
+    // filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+
+    .avatar {
+      overflow: hidden;
+    }
+
+    .avatar__photo {
+      transform: scale(1.01);
+    }
+  }
+
+  &--index {
+    &:hover {
+      z-index: 1000;
     }
   }
 }
@@ -96,11 +124,85 @@
 
   &--catalog {
     grid-area: name;
-    margin-top: 14.86px;
+    margin-bottom: 0;
+    margin-top: 14px;
+    padding-left: 8px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding-left: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 30px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 46px;
+    }
 
     &::before {
-      top: 5px;
-      left: 145px;
+      top: 8px;
+      left: 146px;
+      background-color: $mcg-8;
+
+      @media (min-width: $tablet-width) {
+        top: 12px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 11px;
+        left: -18px;
+      }
+    }
+  }
+
+  &--tania-firsova-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 16px;
+      padding-left: 15px;
+    }
+
+    &::before {
+      @media (max-width: $mobile-width-only) {
+        top: 7px;
+        left: 153px;
+      }
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        left: 210px;
+      }
+    }
+  }
+
+  &--petia-diomin-catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+
+    &::before {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        left: 186px;
+      }
+    }
+  }
+
+  &--mark-smolov-catalog {
+    &::before {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        left: 210px;
+      }
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    &::before {
+      background-color: $mcg-7;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        left: 247px;
+      }
     }
   }
 }
@@ -122,14 +224,108 @@
 
   &--catalog {
     display: block;
-    font-size: 14px;
+    padding-left: 9px;
     font-weight: 700;
-    line-height: 16px;
     color: $dcg-6;
-
+    position: relative;
     grid-area: likes;
-    margin-top: 8.29px;
+
+    @media (max-width: $mobile-width-only) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 53px;
+      padding-top: 31px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 56px;
+    }
   }
+
+  &--firsova-catalog {
+    @media (max-width: $mobile-width-only) {
+      padding-left: 15px;
+    }
+  }
+
+  // &--diomin-catalog {}
+
+  // &--smolov-catalog {}
+}
+
+.companion__likes-heart {
+  position: absolute;
+  z-index: 1;
+
+  @media (max-width: $mobile-width-only) {
+    top: -19px;
+    left: -40px;
+    transform: scale(0.6);
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+    left: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 0;
+  }
+
+  &--filled {
+    &:hover {
+      ellipse {
+        fill: $mcg-14;
+      }
+    }
+
+    &:active {
+      path {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--empty {
+    ellipse {
+      fill: $lcg-2;
+    }
+
+    path {
+      fill: $lcg-41;
+    }
+
+    &:hover {
+      ellipse {
+        fill: $lcg-8;
+      }
+
+      path {
+        fill: $dcg-4;
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      path {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &--firsova {
+    @media (max-width: $mobile-width-only) {
+      top: -19px;
+      left: -31px;
+    }
+  }
+
+  // &--diomin {}
+
+  // &--smolov {}
 }
 
 .companion__avatar {
@@ -138,6 +334,14 @@
   &--catalog {
     grid-area: avatar;
     margin-top: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -155,6 +359,38 @@
     grid-area: lvl;
     position: static;
     margin-top: 12px;
+    margin-right: -5px;
+    justify-self: end;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 8px;
+      margin-right: 2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 11px;
+      margin-right: 0;
+    }
+  }
+
+  // &--tania-firsova-catalog {}
+
+  &--petia-diomin-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 18px;
+    }
+  }
+
+  &--mark-smolov-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 16px;
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -172,6 +408,10 @@
     position: static;
     margin-top: 15.85px;
     transform: translateY(0);
+
+    @media (min-width: $desktop-width) {
+      margin-top: 53px;
+    }
   }
 }
 
@@ -185,6 +425,28 @@
   &--catalog {
     grid-area: hashtags;
     margin-top: 13.07px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 7px;
+      margin-left: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 11px;
+      margin-left: 10px;
+    }
+  }
+
+  &--petia-diomin-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 15px;
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 14px;
+    }
   }
 }
 
@@ -201,6 +463,46 @@
     grid-area: transport;
     margin-top: 12px;
     margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      justify-self: end;
+      margin-top: 18px;
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      justify-self: start;
+      margin-right: 0;
+      margin-left: 6px;
+      margin-top: 10px;
+    }
+  }
+
+  &--petia-diomin-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 17px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 5px;
+      margin-top: 7px;
+    }
+  }
+
+  &--mark-smolov-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 15px;
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 19px;
+    }
   }
 }
 
@@ -210,6 +512,37 @@
   &--catalog {
     display: flex;
     grid-area: button;
-    margin-top: 14px;
+    margin-top: 7px;
+    margin-left: 2px;
+    padding-top: 5px;
+
+    @media (min-width: $tablet-width) {
+      text-transform: uppercase;
+      margin-top: 14px;
+      margin-left: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+    }
+  }
+
+  &--petia-diomin-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 6px;
+    }
+  }
+
+  &--mark-smolov-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 4px;
+    }
+  }
+
+  &--larisa-rogovaya-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 7px;
+      margin-left: 1px;
+    }
   }
 }

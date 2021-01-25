@@ -11,15 +11,24 @@
 
   &--catalog {
     justify-content: flex-start;
+    margin-top: 14px;
+    margin-left: -4px;
 
     @media (min-width: $tablet-width) {
       flex-direction: column;
+      margin-left: 0;
     }
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
     }
   }
+
+  &--petia-diomin-catalog {
+    margin-top: 17px;
+  }
+
+  // &--mark-smolov-catalog {}
 }
 
 .transport__kind {
@@ -32,17 +41,43 @@
   &:not(:first-child) {
     margin-left: 10px;
   }
+
+  &--catalog {
+    &:not(:first-child) {
+      margin-left: 1px;
+    }
+
+    z-index: auto;
+  }
 }
 
-// .transport__link {}
+.transport__link {
+  &--catalog {
+    @include centering-grid;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $lcg-2;
 
-// .transport__icon-svg {
-//   &--index {}
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
+  }
+}
 
-//   &--form {}
+.transport__icon-svg {
+  // &--index {}
 
-//   &--catalog {}
-// }
+  // &--form {}
+
+  &--catalog {
+    transform: scale(0.7);
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.05);
+    }
+  }
+}
 
 // .transport__plane {
 //   &--index {}

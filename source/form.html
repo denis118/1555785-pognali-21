@@ -251,9 +251,11 @@
   </header>
 
   <main class="form-main main">
-    <div class="form-main__wrapper">
-      <div class="container container--slim form-main__container">
-        <h1 class="form-main__heading heading heading--level-1 zero-edges">
+    <div
+      class="general-heading general-heading--form form-main__general-heading">
+      <div class="container container--slim general-heading__container">
+        <h1
+          class="general-heading__heading-one general-heading__heading-one--form heading heading--level-1 zero-edges">
           Направления
         </h1>
       </div>
@@ -1538,23 +1540,23 @@
                 </li>
 
                 <!--
-                      add-plan__country--specify-country.classlist.remove( "add-plan__country--refilled" );
-                    -->
+                  add-plan__country--specify-country.classlist.remove("add-plan__country--refilled");
+                -->
                 <li
                   class="add-plan__country add-plan__country--step-2 add-plan__country--specify-country add-plan__element add-plan__element--empty add-plan--text-style add-plan__country--refilled">
                   <label class="visually-hidden" for="chosen-country-3">
                     Название страны
                   </label>
                   <!--
-                      add-plan__input--specify-country.classlist.remove( "add-plan--without-border" ).remove( "add-plan__input--refilled" );
-                    -->
+                    add-plan__input--specify-country.classlist.remove("add-plan--without-border").remove(add-plan__input--refilled");
+                  -->
                   <input
                     class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style hover-mode-border-color add-plan--without-border add-plan__input--refilled"
                     type="text" name="chosen-country-3" value="Выберите страну"
                     id="chosen-country-3">
                   <!--
-                      add-plan__country-button--specify-country.classlist.remove( "hidden-entity" );
-                    -->
+                    add-plan__country-button--specify-country.classlist.remove("hidden-entity");
+                  -->
                   <button
                     class="button button--sign button--drop-down add-plan__country-button add-plan__country-button--drop-down add-plan__country-button--specify-country hidden-entity"
                     type="button" name="drop-down"
@@ -1575,8 +1577,8 @@
                     type="button" name="delete-country"
                     aria-label="Удалить выбранную страну">
                     <!--
-                      button__close-svg--round.classlist.remove( "hidden-entity" )
-                      -->
+                      button__close-svg--round.classlist.remove("hidden-entity")
+                    -->
                     <svg
                       class="button__close-svg button__close-svg--round hidden-entity"
                       width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -1599,8 +1601,8 @@
                   </button>
 
                   <!--
-                      add-plan__country-button--replaced.classlist.add( "hidden-entity" );
-                    -->
+                    add-plan__country-button--replaced.classlist.add("hidden-entity");
+                  -->
                   <button
                     class="button button--close button--sign add-plan__country-button add-plan__country-button--close-list add-plan__country-button--replaced"
                     type="button" name="delete-country"
@@ -1617,441 +1619,456 @@
                   </button>
 
                   <!--
-                      lands.classlist.add( "hidden-entity" );
-                    -->
+                    lands.classlist.add("hidden-entity");
+                  -->
                   <section class="lands lands--form add-plan__lands">
-                    <div class="lands__uppper-box hidden-entity">
-                      <h2
-                        class="lands__heading lands--common-text-style heading heading--level-2">
-                        Фильтрация по странам:
-                      </h2>
+                    <div
+                      class="container lands__container lands__container--form">
+                      <div class="lands__uppper-box hidden-entity">
+                        <h2
+                          class="lands__heading lands--common-text-style heading heading--level-2 heading--level-2-filter">
+                          Фильтрация по странам:
+                        </h2>
 
-                      <button
-                        class="lands__roll-down-button lands--common-text-style button"
-                        type="button">
-                        <span class="lands__show-all">
-                          Показать все
-                        </span>
-                        <svg class="lands__ellipsis" width="17" height="3"
-                          viewBox="0 0 17 3" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="1.5" cy="1.5" r="1.5" fill="#192144" />
-                          <circle cx="8.5" cy="1.5" r="1.5" fill="#192144" />
-                          <circle cx="15.5" cy="1.5" r="1.5" fill="#192144" />
-                        </svg>
-                        <span class="lands__roll-up">
-                          Свернуть
-                        </span>
-                        <svg class="lands__cross" width="14" height="14"
-                          viewBox="0 0 14 14" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12.25 1.75L1.75 12.25" stroke="#192144"
-                            stroke-width="1.4" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path d="M1.75 1.75L12.25 12.25" stroke="#192144"
-                            stroke-width="1.4" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </button>
+                        <button
+                          class="lands__filter-toggle lands--common-text-style button hidden-on-desktop"
+                          type="button">
+                          <span
+                            class="lands__toggle-span lands__toggle-span--show hidden-except-tablet hidden-entity">
+                            Показать все
+                          </span>
+                          <svg
+                            class="lands__toggle-svg lands__toggle-svg--ellipsis hidden-entity"
+                            width="30" height="6"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="3" />
+                            <circle cx="15" cy="3" r="3" />
+                            <circle cx="27" cy="3" r="3" />
+                          </svg>
+                          <span
+                            class="lands__toggle-span lands__toggle-span--hide hidden-except-tablet">
+                            Свернуть
+                          </span>
+                          <svg
+                            class="lands__toggle-svg lands__toggle-svg--cross"
+                            width="24" height="23"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip162)" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M21 2.916L3 19.343M3 2.916l18 16.427" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip162">
+                                <path fill="#fff"
+                                  transform="rotate(-90 11.04 11.04)"
+                                  d="M0 0h21.903v24H0z" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
 
-                      <ul class="lands__regions list zero-edges">
-                        <li class="lands__region lands__region--active">
-                          <a class="lands__link lands__link--region lands--common-text-style link"
-                            href="#!">
-                            Европа
-                          </a>
-                        </li>
-                        <li class="lands__region">
-                          <a class="lands__link lands__link--region lands--common-text-style link"
-                            href="#!">
-                            Азия
-                          </a>
-                        </li>
-                        <li class="lands__region">
-                          <a class="lands__link lands__link--region lands--common-text-style link"
-                            href="#!">
-                            Америка
-                          </a>
-                        </li>
-                        <li class="lands__region">
-                          <a class="lands__link lands__link--region lands--common-text-style link"
-                            href="#!">
-                            Острова
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                        <ul class="lands__regions list zero-edges">
+                          <li class="lands__region lands__region--active">
+                            <a class="lands__link lands__link--region lands--common-text-style link"
+                              href="#!">
+                              Европа
+                            </a>
+                          </li>
+                          <li class="lands__region">
+                            <a class="lands__link lands__link--region lands--common-text-style link"
+                              href="#!">
+                              Азия
+                            </a>
+                          </li>
+                          <li class="lands__region">
+                            <a class="lands__link lands__link--region lands--common-text-style link"
+                              href="#!">
+                              Америка
+                            </a>
+                          </li>
+                          <li class="lands__region">
+                            <a class="lands__link lands__link--region lands--common-text-style link"
+                              href="#!">
+                              Острова
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
 
-                    <div class="lands__down-box lands__down-box--form">
-                      <ul
-                        class="lands__letter-indexes lands__letter-indexes--form list zero-edges">
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form lands__link--letter-form-active link add-plan--text-style"
-                            href="#!">
-                            А
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Б
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            В
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Г
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Д
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Е
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            З
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            И
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            К
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Л
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            М
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Н
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            О
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            П
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Р
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            С
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Т
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            У
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Ф
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Х
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Ч
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Ш
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Э
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Ю
-                          </a>
-                        </li>
-                        <li class="lands__letter-index">
-                          <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
-                            href="#!">
-                            Я
-                          </a>
-                        </li>
-                      </ul>
-
-                      <ul class="lands__data lands__data--form list zero-edges">
-                        <li class="lands__item lands__item--active">
-                          <section
-                            class="lands__alphabetical-box lands__alphabetical-box--form">
-                            <h3 class="lands__alphabetical-index hidden-entity">
+                      <div class="lands__down-box lands__down-box--form">
+                        <ul
+                          class="lands__letter-indexes lands__letter-indexes--form list zero-edges">
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form lands__link--letter-active link add-plan--text-style"
+                              href="#!">
                               А
-                            </h3>
-                            <ul
-                              class="lands__sublist lands__sublist--a list zero-edges">
-                              <li
-                                class="lands__subitem lands__subitem--form lands__subitem--higher">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/australia/australia">
-                                  Австралия
-                                </a>
-                              </li>
-                              <li
-                                class="lands__subitem lands__subitem--form lands__subitem--higher">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/europe/austria">
-                                  Австрия
-                                </a>
-                              </li>
-                              <li
-                                class="lands__subitem lands__subitem--form lands__subitem--higher">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/asia/azerbaijan">
-                                  Азербайджан
-                                </a>
-                              </li>
-                              <li
-                                class="lands__subitem lands__subitem--form lands__subitem--higher">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/europe/albania">
-                                  Албания
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/africa/algeria">
-                                  Алжир
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/africa/angola">
-                                  Ангола
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/europe/andorra">
-                                  Андорра
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/central-america/antigua-and-barbuda">
-                                  Антигуа
-                                  и Барбуда
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/south-america/argentina">
-                                  Аргентина
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/asia/armenia">
-                                  Армения
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!/asia/afghanistan">
-                                  Афганистан
-                                </a>
-                              </li>
-                            </ul>
-                          </section>
-                        </li>
-
-                        <li class="lands__item hidden-entity">
-                          <section
-                            class="lands__alphabetical-box lands__alphabetical-box--form">
-                            <h3 class="lands__alphabetical-index hidden-entity">
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
                               Б
-                            </h3>
-                            <ul
-                              class="lands__sublist lands__sublist--a list zero-edges">
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Багамские Острова
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бангладеш
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Барбадос
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бахрейн
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Белоруссия
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Белиз
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бельгия
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бенин
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Болгария
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Боливия
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Босния и Герцеговина
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Ботсвана
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бразилия
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бруней
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Буркина-Фасо
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бурунди
-                                </a>
-                              </li>
-                              <li class="lands__subitem lands__subitem--form">
-                                <a class="lands__link lands__link--country link"
-                                  href="#!">
-                                  Бутан
-                                </a>
-                              </li>
-                            </ul>
-                          </section>
-                        </li>
-                      </ul>
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              В
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Г
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Д
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Е
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              З
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              И
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              К
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Л
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              М
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Н
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              О
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              П
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Р
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              С
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Т
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              У
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Ф
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Х
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Ч
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Ш
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Э
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Ю
+                            </a>
+                          </li>
+                          <li class="lands__letter-index">
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                              href="#!">
+                              Я
+                            </a>
+                          </li>
+                        </ul>
 
-                      <button
-                        class="button button--roll-up button--roll-and-change button--roll-up-form lands__roll-up-button lands__roll-up-button--form hidden-entity"
-                        type="button" name="close"
-                        aria-label="Закрыть список доступных стран">
-                        <svg class="button__roll-up-svg" width="14" height="14"
-                          viewBox="0 0 14 14" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12.25 1.75L1.75 12.25" stroke="#192144"
-                            stroke-width="1.4" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path d="M1.75 1.75L12.25 12.25" stroke="#192144"
-                            stroke-width="1.4" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        Свернуть
-                      </button>
+                        <ul
+                          class="lands__data lands__data--form list zero-edges">
+                          <li class="lands__item lands__item--active">
+                            <section
+                              class="lands__alphabetical-box lands__alphabetical-box--form">
+                              <h3
+                                class="lands__alphabetical-index hidden-entity">
+                                А
+                              </h3>
+                              <ul
+                                class="lands__sublist lands__sublist--a list zero-edges">
+                                <li
+                                  class="lands__subitem lands__subitem--form lands__subitem--higher">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/australia/australia">
+                                    Австралия
+                                  </a>
+                                </li>
+                                <li
+                                  class="lands__subitem lands__subitem--form lands__subitem--higher">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/europe/austria">
+                                    Австрия
+                                  </a>
+                                </li>
+                                <li
+                                  class="lands__subitem lands__subitem--form lands__subitem--higher">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/asia/azerbaijan">
+                                    Азербайджан
+                                  </a>
+                                </li>
+                                <li
+                                  class="lands__subitem lands__subitem--form lands__subitem--higher">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/europe/albania">
+                                    Албания
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/africa/algeria">
+                                    Алжир
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/africa/angola">
+                                    Ангола
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/europe/andorra">
+                                    Андорра
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/central-america/antigua-and-barbuda">
+                                    Антигуа
+                                    и Барбуда
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/south-america/argentina">
+                                    Аргентина
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/asia/armenia">
+                                    Армения
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!/asia/afghanistan">
+                                    Афганистан
+                                  </a>
+                                </li>
+                              </ul>
+                            </section>
+                          </li>
+
+                          <li class="lands__item hidden-entity">
+                            <section
+                              class="lands__alphabetical-box lands__alphabetical-box--form">
+                              <h3
+                                class="lands__alphabetical-index hidden-entity">
+                                Б
+                              </h3>
+                              <ul
+                                class="lands__sublist lands__sublist--a list zero-edges">
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Багамские Острова
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бангладеш
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Барбадос
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бахрейн
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Белоруссия
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Белиз
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бельгия
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бенин
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Болгария
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Боливия
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Босния и Герцеговина
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Ботсвана
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бразилия
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бруней
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Буркина-Фасо
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бурунди
+                                  </a>
+                                </li>
+                                <li class="lands__subitem lands__subitem--form">
+                                  <a class="lands__link lands__link--country link"
+                                    href="#!">
+                                    Бутан
+                                  </a>
+                                </li>
+                              </ul>
+                            </section>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="button button--roll-and-change lands__roll-up-button hidden-entity"
+                          type="button" name="close"
+                          aria-label="Закрыть список доступных стран">
+                          <svg class="button__roll-up-svg" width="14"
+                            height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.25 1.75L1.75 12.25" stroke="#192144"
+                              stroke-width="1.4" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M1.75 1.75L12.25 12.25" stroke="#192144"
+                              stroke-width="1.4" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          Свернуть
+                        </button>
+                      </div>
                     </div>
                   </section>
                 </li>

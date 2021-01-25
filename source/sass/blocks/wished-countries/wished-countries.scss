@@ -1,7 +1,5 @@
 
 .wished-countries {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   font-size: 15px;
   line-height: 16px;
 }
@@ -18,6 +16,13 @@
   font-weight: 400;
   color: $dcg-9;
   text-transform: lowercase;
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      margin-left: 49px;
+      margin-top: 4px;
+    }
+  }
 }
 
 .wished-countries__list {
@@ -34,6 +39,12 @@
     @media (min-width: $tablet-width) {
       flex-direction: row;
       justify-content: flex-start;
+      margin-top: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding-left: 10px;
     }
   }
 }
@@ -44,12 +55,59 @@
   }
 
   &--catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 20px;
+      margin-top: 17px;
+    }
+
     &:not(:first-child) {
       margin-left: 0;
+    }
 
-      @media (max-width: $mobile-width-only) {
-        margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        margin-left: 21px;
       }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+        margin-left: 28px;
+      }
+    }
+  }
+
+  // &--usa-catalog {}
+
+  &--australia-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 13px;
+    }
+  }
+
+  &--dominica-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 15px;
+    }
+  }
+
+  // &--uk-catalog {}
+
+  &--germany-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: 2px;
     }
   }
 }
@@ -59,11 +117,109 @@
     display: flex;
     align-items: center;
   }
+
+  &--czech-catalog {
+    margin-top: 2px;
+  }
 }
 
 .wished-countries__flag {
   &--catalog {
     margin-right: 14px;
+
+    @media (min-width: $tablet-width) {
+      width: 35px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 19px;
+      margin-top: -3px;
+    }
+  }
+
+  &--tania-firsova-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: -3px;
+    }
+  }
+
+  // &--sri-lanka-catalog {}
+
+  &--thailand-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 4px;
+      margin-right: 10px;
+    }
+  }
+
+  &--seychelles-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 2px;
+      margin-right: 10px;
+    }
+  }
+
+  &--petia-diomin-catalog {
+    margin-top: -6px;
+  }
+
+  &--belgium-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: -5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -3px;
+    }
+  }
+
+  &--czech-catalog {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 8px;
+      margin-right: 11px;
+    }
+  }
+
+  // &--mark-smolov-catalog {}
+
+  &--usa-catalog {
+    margin-top: -4px;
+  }
+
+  &--australia-catalog {
+    margin-top: -5px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: 2px;
+      margin-right: 11px;
+    }
+  }
+
+  &--dominica-catalog {
+    margin-top: -3px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-right: 11px;
+    }
+  }
+
+  &--uk-catalog {
+    @media (max-width: $desktop-width - 1) {
+      margin-top: -2px;
+    }
+  }
+
+  &--germany-catalog {
+    @media (max-width: $mobile-width-only) {
+      margin-top: -1px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: -5px;
+      margin-left: 3px;
+      margin-right: 11px;
+    }
   }
 }
 

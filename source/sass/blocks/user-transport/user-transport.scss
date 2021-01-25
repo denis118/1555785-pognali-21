@@ -1,7 +1,29 @@
 
 .user-transport {
-  &--form {
-    @include centering-flex;
+  @include centering-flex;
+
+  &--catalog {
+    justify-content: flex-start;
+    margin-top: 4px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 1px;
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: -1px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 16px;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
   }
 }
 
@@ -58,6 +80,25 @@
     height: 43px;
   }
 
+  &--catalog {
+    @media (max-width: $mobile-width-only) {
+      width: 31.27px;
+      height: 31.27px;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 1.73px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 2px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 1px;
+      }
+    }
+  }
+
   &:hover {
     filter: drop-shadow(0 2px 6px $dcg-17);
 
@@ -68,10 +109,10 @@
 
   &:active {
     background-color: $lcg-30;
-  }
 
-  .user-transport__svg {
-    fill: $lcg-33;
+    .user-transport__svg {
+      fill: $lcg-33;
+    }
   }
 }
 
@@ -85,6 +126,44 @@
   // &--bycicle {}
 
   // &--runner {}
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      transform: scale(1);
+    }
+  }
+
+  &--aircraft-catalog {
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.8);
+    }
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.1);
+    }
+  }
+
+  &--bus-catalog {
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.95);
+    }
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.25);
+    }
+  }
+
+  &--bycicle-catalog {
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.6);
+    }
+  }
+
+  &--runner-catalog {
+    @media (max-width: $mobile-width-only) {
+      transform: scale(0.75);
+    }
+  }
 }
 
 // .user-transport__svg-path {}

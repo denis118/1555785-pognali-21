@@ -25,6 +25,14 @@
       max-width: 618px;
     }
   }
+
+  &--ultra-slim {
+    @media (min-width: $desktop-width) {
+      width: 192px;
+      min-width: 192px;
+      max-width: 192px;
+    }
+  }
 }
 
 .zero-edges {
@@ -77,13 +85,6 @@
       font-size: 36px;
       line-height: 36px;
     }
-  }
-
-  &--level-2-filter {
-    font-size: 16px;
-    line-height: 18px;
-    color: $dcg-4;
-    text-transform: uppercase;
   }
 
   &--level-3 {
@@ -192,11 +193,27 @@
 
   &--companions-selection {
     background-color: $mcg-1;
+    padding-right: 25px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 48px;
+      padding-right: 45px;
+    }
   }
 
   &--selection-results {
     padding-left: 18px;
     padding-right: 18px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 35px;
+      padding-right: 25px;
+    }
 
     @media (min-width: $desktop-width) {
       margin-top: 0;
@@ -344,6 +361,20 @@
   &:hover {
     opacity: 0.7;
   }
+
+  &--more-transparent {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.hover-mode-inner-opacity {
+  &:hover {
+    & > * {
+      opacity: 0.6;
+    }
+  }
 }
 
 .hover-mode-border-color {
@@ -365,6 +396,12 @@
       & > * {
         opacity: 0.3;
       }
+    }
+  }
+
+  &--full {
+    &:active {
+      opacity: 1;
     }
   }
 }

@@ -35,6 +35,14 @@
   &:not(:first-child) {
     margin-left: 5px;
   }
+
+  &--expanded {
+    margin-right: 50px;
+  }
+
+  &--shifted {
+    transform: translateX(-5px);
+  }
 }
 
 // .hashtags__link {}
@@ -50,6 +58,8 @@
   }
 
   &--catalog {
-    font-size: 15px;
+    @media (max-width: $mobile-width-only) {
+      font-size: 15px;
+    }
   }
 }

@@ -22,8 +22,20 @@ const submitButton = document.querySelector("#submit");
 const businesTariffsOpenningButton = document.querySelector(".profile__busines-tariffs");
 const businesTariffsClosingButton = document.querySelector(".busines-tariffs__close");
 const businesTariffs = document.querySelector(".busines-tariffs");
+// form
 const formSubmit = document.querySelector(".add-plan__submit");
 const jollityVariants = document.querySelectorAll(".add-plan__jollity-variants");
+// catalog
+const hobby = document.querySelector(".companions-selection__legend--hobby");
+const music = document.querySelector(".companions-selection__legend--music");
+const food = document.querySelector(".companions-selection__legend--food");
+const transport = document.querySelector(".companions-selection__legend--transport");
+const level = document.querySelector(".companions-selection__legend--level");
+const hobbyContent = document.querySelector(".companions-selection__wrapper--hobby");
+const musicContent = document.querySelector(".companions-selection__wrapper--music");
+const foodContent = document.querySelector(".companions-selection__wrapper--food");
+const transportContent = document.querySelector(".companions-selection__user-transport");
+const levelContent = document.querySelector(".companions-selection__wrapper--level");
 
 const menuStateIndicator = {
   isOpen: false,
@@ -456,3 +468,47 @@ function errorVisibility() {
     }
   });
 }
+
+function accordeon() {
+  hobby.classList.add("companions-selection__legend--collapsed-hobby");
+  hobbyContent.classList.add("hidden-except-tablet");
+
+  music.classList.add("companions-selection__legend--collapsed");
+  musicContent.classList.add("hidden-except-tablet");
+
+  food.classList.add("companions-selection__legend--collapsed-food");
+  foodContent.classList.add("hidden-except-tablet");
+
+  transport.classList.add("companions-selection__legend--collapsed");
+  transportContent.classList.add("hidden-except-tablet");
+
+  level.classList.add("companions-selection__legend--collapsed");
+  levelContent.classList.add("hidden-except-tablet");
+}
+
+accordeon();
+
+hobby.addEventListener("click", function () {
+  this.classList.toggle("companions-selection__legend--collapsed-hobby");
+  hobbyContent.classList.toggle("hidden-except-tablet");
+});
+
+music.addEventListener("click", function () {
+  this.classList.toggle("companions-selection__legend--collapsed");
+  musicContent.classList.toggle("hidden-except-tablet");
+});
+
+food.addEventListener("click", function () {
+  this.classList.toggle("companions-selection__legend--collapsed-food");
+  foodContent.classList.toggle("hidden-except-tablet");
+});
+
+transport.addEventListener("click", function () {
+  this.classList.toggle("companions-selection__legend--collapsed");
+  transportContent.classList.toggle("hidden-except-tablet");
+});
+
+level.addEventListener("click", function () {
+  this.classList.toggle("companions-selection__legend--collapsed");
+  levelContent.classList.toggle("hidden-except-tablet");
+});
