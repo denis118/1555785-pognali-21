@@ -86,11 +86,10 @@ $shadow-1: rgba(54, 80, 148, 0.18);
 
 // intro-bg
 $globe-bg-mobile: url("../img/intro-globe-bg-mobile.svg");
-$globe-bg-mobile-2x: url("../img/intro-globe-bg-mobile.svg");
 $globe-bg-tablet: url("../img/intro-globe-bg-tablet.jpg");
 $globe-bg-tablet-2x: url("../img/intro-globe-bg-tablet@2x.jpg");
 $globe-bg-desktop: url("../img/intro-globe-bg-desktop.png");
-$globe-bg-desktop-2x: url("../img/intro-globe-bg-desktop.svg");
+$globe-bg-desktop-2x: url("../img/intro-globe-bg-desktop@2x.png");
 
 $traveller-bg-mobile: url("../img/intro-traveller-bg-mobile.png");
 $traveller-bg-mobile-2x: url("../img/intro-traveller-bg-mobile@2x.png");
@@ -157,17 +156,17 @@ $map-bg-desktop-2x: url("../img/map-bg-desktop@2x.png");
 $line-in-user-plans: url("../img/user-plans-line-form-bg.svg");
 
 // add-plan-bg
-$line-in-add-plan: url("../img/add-plan/bg/svg/add-plan-line-bg.svg");
-$line-bigger-in-add-plan: url("../img/add-plan/bg/svg/add-plan-line-bigger-bg.svg");
-$rect-in-add-plan: url("../img/add-plan/bg/svg/add-plan-rect-bg.svg");
-$gradient-for-pseudo: url("../img/add-plan/bg/svg/add-plan-line-bg-for-pseudo.svg");
-$gradient-for-flag: url("../img/add-plan/bg/png/add-plan-fade-jollity-bg-mobile.png");
-$gradient-for-flag-2x: url("../img/add-plan/bg/png/add-plan-fade-jollity-bg-mobile@2x.png");
+$line-in-add-plan: url("../img/add-plan-line-bg.svg");
+$line-bigger-in-add-plan: url("../img/add-plan-line-bigger-bg.svg");
+$rect-in-add-plan: url("../img/add-plan-rect-bg.svg");
+$gradient-for-pseudo: url("../img/add-plan-line-bg-for-pseudo.svg");
+$gradient-for-flag: url("../img/add-plan-fade-jollity-bg-mobile.png");
+$gradient-for-flag-2x: url("../img/add-plan-fade-jollity-bg-mobile@2x.png");
 
 // add-plan-decor
-$down-arrow: url("../img/add-plan/decor/svg/add-plan-arrow.svg");
-$line-for-jollity-psedo: url("../img/add-plan/decor/svg/add-plan-line-jollity-mobile.svg");
-$line-for-jollity-psedo-two: url("../img/add-plan/decor/svg/add-plan-line-jollity-tablet.svg");
+$down-arrow: url("../img/add-plan-arrow.svg");
+$line-for-jollity-psedo: url("../img/add-plan-line-jollity-mobile.svg");
+$line-for-jollity-psedo-two: url("../img/add-plan-line-jollity-tablet.svg");
 
 // lands-bg
 $lands-line-bg-form: url("../img/lands-line-bg-form.svg");
