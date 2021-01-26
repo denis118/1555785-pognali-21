@@ -23,8 +23,7 @@
     "node-sass-tilde-importer": "^1.0.2",
     "postcss": "8.1.7",
     "stylelint": "13.7.2",
-    "stylelint-config-htmlacademy": "0.1.4",
-    "uglify-es": "^3.3.9"
+    "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
