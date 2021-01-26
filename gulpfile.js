@@ -58,6 +58,12 @@ const createAvatarWebp = () => {
     .pipe(gulp.dest("build/img/avatar/content/webp"));
 }
 
+const createDirectionsWebp = () => {
+  return gulp.src("source/img/directions/content/png/**/*.png")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img/directions/content/webp"));
+}
+
 const createFlagsWebp = () => {
   return gulp.src("source/img/flags/content/png/**/*.png")
     .pipe(webp({ quality: 90 }))
@@ -70,14 +76,8 @@ const createLogoWebp = () => {
     .pipe(gulp.dest("build/img/logo/content/webp"));
 }
 
-// const createDirectionsWebp = () => {
-//   return gulp.src("source/img/logo/content/png/**/*.png")
-//     .pipe(webp({ quality: 90 }))
-//     .pipe(gulp.dest("build/img/logo/content/webp"));
-// }
-
 exports.createWebp = gulp.parallel(
-  createAvatarWebp, createFlagsWebp, createLogoWebp
+  createAvatarWebp, createDirectionsWebp, createFlagsWebp, createLogoWebp
 );
 
 // Sprite
@@ -156,9 +156,14 @@ exports.server = server;
 
 // Watcher
 
+// const watcher = () => {
+//   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+//   gulp.watch("source/*.html").on("change", sync.reload);
+// }
+
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, sync.reload));
 }
 
 // Build
@@ -172,6 +177,7 @@ const build = gulp.series(
     sprite,
     images,
     createAvatarWebp,
+    createDirectionsWebp,
     createFlagsWebp,
     createLogoWebp
   )
@@ -187,6 +193,7 @@ exports.default = gulp.series(
     html,
     sprite,
     createAvatarWebp,
+    createDirectionsWebp,
     createFlagsWebp,
     createLogoWebp
   ),
