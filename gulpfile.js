@@ -77,7 +77,10 @@ const createLogoWebp = () => {
 }
 
 exports.createWebp = gulp.parallel(
-  createAvatarWebp, createDirectionsWebp, createFlagsWebp, createLogoWebp
+  createAvatarWebp,
+  createDirectionsWebp,
+  createFlagsWebp,
+  createLogoWebp
 );
 
 // Sprite
@@ -101,24 +104,13 @@ const html = () => {
 
 exports.html = html;
 
-// Script
-
-// const script = () => {
-//   return gulp.src("source/js/app.js")
-//     // .pipe(uglify())
-//     .pipe(rename("app.min.js"))
-//     .pipe(gulp.dest("build/js"))
-//     .pipe(sync.stream());
-// }
-
-// exports.script = script;
-
 // Copy
 
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/img/**/*.{jpg,png,svg}",
+    "source/css/style.css",
     "source/js/app.js"
   ],
     {
@@ -143,7 +135,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -156,14 +148,9 @@ exports.server = server;
 
 // Watcher
 
-// const watcher = () => {
-//   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-//   gulp.watch("source/*.html").on("change", sync.reload);
-// }
-
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html").on("change", gulp.series(html, sync.reload));
 }
 
 // Build
