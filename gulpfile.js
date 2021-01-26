@@ -6,7 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
-const minify = require("uglify-es");
+const minify = require("gulp-minify");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -108,8 +108,11 @@ exports.html = html;
 
 const jsmin = () => {
   return gulp.src("source/js/app.js")
-    .pipe(minify())
-    .pipe(rename("app.min.js"))
+    .pipe(minify({
+      ext: {
+        min: '.min.js'
+      }
+    }))
     .pipe(gulp.dest("build/js"));
 }
 
@@ -172,6 +175,7 @@ const build = gulp.series(
     copy,
     styles,
     html,
+    jsmin,
     sprite,
     images,
     createAvatarWebp,
@@ -189,6 +193,7 @@ exports.default = gulp.series(
     copy,
     styles,
     html,
+    jsmin,
     sprite,
     createAvatarWebp,
     createDirectionsWebp,
