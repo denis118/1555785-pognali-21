@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
   <title>HTML Academy: Погнали</title>
 </head>
 
@@ -103,7 +103,7 @@
           <li class="general-header__nav-item">
             <a class="general-header__nav-link link" href="./form.html"
               data-nav-link="Направления">
-              Направления
+              Направлени
             </a>
           </li>
           <li class="general-header__nav-item">
@@ -422,21 +422,22 @@
           <li class="directions__item">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="
-                    ./img/directions-thailand-tablet.webp    1x,
-                    ./img/directions-thailand-tablet@2x.webp 2x
+                    ./img/directions/content/webp/thailand-tablet.webp    1x,
+                    ./img/directions/content/webp/thailand-tablet@2x.webp 2x
                   " />
               <source media="(min-width: 768px)" srcset="
-                    ./img/directions-thailand-tablet.png    1x,
-                    ./img/directions-thailand-tablet@2x.png 2x
+                    ./img/directions/content/png/thailand-tablet.png    1x,
+                    ./img/directions/content/png/thailand-tablet@2x.png 2x
                   " />
               <source type="image/webp" srcset="
-                    ./img/directions-thailand-mobile.webp    1x,
-                    ./img/directions-thailand-mobile@2x.webp 2x
+                    ./img/directions/content/webp/thailand-mobile.webp    1x,
+                    ./img/directions/content/webp/thailand-mobile@2x.webp 2x
                   " />
               <img class="directions__country-view image"
-                src="./img/directions-thailand-mobile.png" width="270"
-                height="110" alt="Вид одного из пляжей Таиланда" srcset="
-                    ./img/directions-thailand-mobile@2x.png 2x
+                src="./img/directions/content/png/thailand-mobile.png"
+                width="270" height="110" alt="Вид одного из пляжей Таиланда"
+                srcset="
+                    ./img/directions/content/png/thailand-mobile@2x.png 2x
                   " />
             </picture>
             <div
@@ -474,21 +475,21 @@
           <li class="directions__item">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="
-                    ./img/directions-france-tablet.webp    1x,
-                    ./img/directions-france-tablet@2x.webp 2x
+                    ./img/directions/content/webp/france-tablet.webp    1x,
+                    ./img/directions/content/webp/france-tablet@2x.webp 2x
                   " />
               <source media="(min-width: 768px)" srcset="
-                    ./img/directions-france-tablet.png    1x,
-                    ./img/directions-france-tablet@2x.png 2x
+                    ./img/directions/content/png/france-tablet.png    1x,
+                    ./img/directions/content/png/france-tablet@2x.png 2x
                   " />
               <source type="image/webp" srcset="
-                    ./img/directions-france-mobile.webp    1x,
-                    ./img/directions-france-mobile@2x.webp 2x
+                    ./img/directions/content/webp/france-mobile.webp    1x,
+                    ./img/directions/content/webp/france-mobile@2x.webp 2x
                   " />
               <img class="directions__country-view image"
-                src="./img/directions-france-mobile.png" width="270"
+                src="./img/directions/content/png/france-mobile.png" width="270"
                 height="110" alt="Вид одного из городов Франции"
-                srcset="./img/directions-france-mobile@2x.png 2x" />
+                srcset="./img/directions/content/png/france-mobile@2x.png 2x" />
             </picture>
             <div
               class="directions__wrapper joint-border-radius joint-border-radius--ten joint-border-radius--twenty">
@@ -530,21 +531,21 @@
           <li class="directions__item">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="
-                    ./img/directions-czech-tablet.webp    1x,
-                    ./img/directions-czech-tablet@2x.webp 2x
+                    ./img/directions/content/webp/czech-tablet.webp    1x,
+                    ./img/directions/content/webp/czech-tablet@2x.webp 2x
                   " />
               <source media="(min-width: 768px)" srcset="
-                    ./img/directions-czech-tablet.png    1x,
-                    ./img/directions-czech-tablet@2x.png 2x
+                    ./img/directions/content/png/czech-tablet.png    1x,
+                    ./img/directions/content/png/czech-tablet@2x.png 2x
                   " />
               <source type="image/webp" srcset="
-                    ./img/directions-czech-mobile.webp    1x,
-                    ./img/directions-czech-mobile@2x.webp 2x
+                    ./img/directions/content/webp/czech-mobile.webp    1x,
+                    ./img/directions/content/webp/czech-mobile@2x.webp 2x
                   " />
               <img class="directions__country-view image"
-                src="./img/directions-czech-mobile.png" width="270" height="110"
-                alt="Вид одного из городов Чехии"
-                srcset="./img/directions-czech-mobile@2x.png 2x" />
+                src="./img/directions/content/png/czech-mobile.png" width="270"
+                height="110" alt="Вид одного из городов Чехии"
+                srcset="./img/directions/content/png/czech-mobile@2x.png 2x" />
             </picture>
             <div
               class="directions__wrapper joint-border-radius joint-border-radius--ten joint-border-radius--twenty">
@@ -1188,23 +1189,6 @@
         <h2 class="if-interested__heading heading heading--level-2 zero-edges">
           Заинтересовались?
         </h2>
-        <!-- <p
-              class="if-interested__main-text if-interested__main-text--1 if-interested__main-text--if-interested__main-text--element if-interested__main-text--element-1 zero-edges maimain-text--shifted-sentence">
-              Зарегистрируйтесь,
-              <span class="main-text main-text--shifted-phrase">
-                это быстро и бесплатно!
-              </span>
-            </p>
-            <p
-              class="if-interested__main-text if-interested__main-text--2 if-interested__main-text--if-interested__main-text--element if-interested__main-text--element-2 zero-edges maimain-text--moved-sentence">
-              Уже зарегистрированы? Тогда скорее
-              <a
-                class="if-interested__user-authorization active-mode-opacity active-mode-opacity--external"
-                href="#!">
-                авторизуйтесь
-              </a>
-              .
-            </p> -->
         <p class="if-interested__main-text if-interested__main-text--1">
           <span class="if-interested__span if-interested__span--1">
             Зарегистрируйтесь,
