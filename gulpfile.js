@@ -6,7 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify-es");
+const minify = require("uglify-es");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -103,6 +103,17 @@ const html = () => {
 }
 
 exports.html = html;
+
+// JS
+
+const jsmin = () => {
+  return gulp.src("source/js/app.js")
+    .pipe(minify())
+    .pipe(rename("app.min.js"))
+    .pipe(gulp.dest("build/js"));
+}
+
+exports.jsmin = jsmin;
 
 // Copy
 
