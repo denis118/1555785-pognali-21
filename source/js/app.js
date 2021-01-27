@@ -394,21 +394,21 @@ function closeSiteMenu() {
 function showErrorMessage(evt) {
   if (!email.checkValidity()) {
     evt.preventDefault();
-    email.placeholder = '';
-    email.value = '';
-    errorMessage.classList.remove('hidden-entity');
+    email.placeholder = "";
+    email.value = "";
+    errorMessage.classList.remove("hidden-entity");
   }
 }
 
 function hideErrorMessage(evt) {
   evt.preventDefault();
-  if (!errorMessage.classList.contains('hidden-entity')) {
-    errorMessage.classList.add('hidden-entity');
+  if (!errorMessage.classList.contains("hidden-entity")) {
+    errorMessage.classList.add("hidden-entity");
   }
 }
 
 function showPlaceholder() {
-  email.placeholder = 'E-mail';
+  email.placeholder = "E-mail";
 }
 
 function openBusinesTariffs(evt) {

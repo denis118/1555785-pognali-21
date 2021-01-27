@@ -24,18 +24,18 @@
     // background-position: 1093px 88px, 60px 89px;
     background-position: right 5.2% top 63%, 4.6% 22.5%;
   }
+}
 
-  &--absent-bottom {
-    margin-bottom: 0;
-  }
+.directions__element {
+  margin-bottom: 0;
+}
 
-  &--common-text-style {
-    font-size: 16px;
-    font-weight: 500;
+.directions__part {
+  font-size: 16px;
+  font-weight: 500;
 
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
   }
 }
 

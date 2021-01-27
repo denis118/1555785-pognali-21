@@ -5,21 +5,6 @@
   border: 1px solid $lcg-7;
   border-top: none;
 
-  &--common-text-style {
-    font-size: 16px;
-    line-height: 18px;
-    color: $dcg-4;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  &--common-text-style-two {
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 20px;
-    }
-  }
-
   &--form {
     @media (max-width: $mobile-width-only) {
       border-bottom-left-radius: 4px;
@@ -64,6 +49,21 @@
       background-color: $lcg-2;
       // padding-top: 120px;
     }
+  }
+}
+
+.lands__part {
+  font-size: 16px;
+  line-height: 18px;
+  color: $dcg-4;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lands__piece {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 

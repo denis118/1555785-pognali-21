@@ -23,16 +23,16 @@
       background-image: $traveller-bg-desktop-2x, $globe-bg-desktop-2x;
     }
   }
+}
 
-  &--common-margin {
-    margin: 0 auto 0;
-  }
+.intro__element {
+  margin: 0 auto 0;
+}
 
-  &--common-position {
-    position: absolute;
-    top: 384px;
-    z-index: 1;
-  }
+.intro__part {
+  position: absolute;
+  top: 384px;
+  z-index: 1;
 }
 
 .intro__box {

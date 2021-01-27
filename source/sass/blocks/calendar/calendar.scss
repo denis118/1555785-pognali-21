@@ -138,7 +138,17 @@
 .calendar__label-span {
   @include words-splitter;
 
-  // &--month {}
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+  }
+
+  &--month {
+    margin-right: 5px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 10px;
+    }
+  }
 
   // &--year {}
 }

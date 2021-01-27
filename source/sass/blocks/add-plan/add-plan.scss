@@ -15,25 +15,25 @@
     border-top-left-radius: $bottom-radii-bigger;
     border-top-right-radius: $bottom-radii-bigger;
   }
+}
 
-  &--border-with-radius {
-    border: 1px solid $lcg-7;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+.add-plan__piece {
+  border: 1px solid $lcg-7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-  &--without-border {
-    border: none;
-  }
+.add-plan__unit {
+  border: none;
+}
 
-  &--text-style {
-    font-weight: 500;
+.add-plan__part {
+  font-weight: 500;
 
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 20px;
-      letter-spacing: 0.1em;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
   }
 }
 

@@ -91,8 +91,7 @@
           <use xlink:href="#cross-in-primary-layout-tablet"></use>
         </svg>
       </button>
-      <nav
-        class="general-header__site-navigation general-header--common-margin-left">
+      <nav class="general-header__site-navigation general-header__part">
         <ul class="general-header__nav-list list zero-edges">
           <li class="general-header__nav-item">
             <a class="general-header__nav-link link" href="#!"
@@ -121,7 +120,7 @@
         </span>
       </a>
       <div
-        class="contacts-group general-header__contacts-group general-header--common-margin-left zero-edges">
+        class="contacts-group general-header__contacts-group general-header__part zero-edges">
         <a class="contacts-group__telephone contacts-group__contact link zero-edges"
           href="tel:88005558628">
           <svg
@@ -451,11 +450,11 @@
                 Франция, Италия
               </p>
               <p
-                class="user-plans__companions-number user-plans--common-justification user-plans--text-style-one form-text-style user-plans__element zero-edges">
+                class="user-plans__companions-number user-plans__part form-text-style user-plans__element zero-edges">
                 3 попутчика
               </p>
               <p
-                class="user-plans__travel-period user-plans--common-justification user-plans--text-style-one form-text-style user-plans__element zero-edges">
+                class="user-plans__travel-period user-plans__part form-text-style user-plans__element zero-edges">
                 <span
                   class="user-plans__period-text user-plans__period-text--start">
                   26 мар
@@ -469,7 +468,7 @@
                   29 мар
                 </span>
               </p>
-              <a class="user-plans__button user-plans--text-style-one form-text-style user-plans__element link"
+              <a class="user-plans__button user-plans__part form-text-style user-plans__element link"
                 href="#!">
                 Изменить
               </a>
@@ -477,14 +476,14 @@
 
             <li class="user-plans__item under-layer">
               <p class="user-plans__countries-to-visit zero-edges">
-                Тайланд, Индонезия
+                Таиланд, Индонезия
               </p>
               <p
-                class="user-plans__companions-number user-plans--common-justification user-plans--text-style-one form-text-style user-plans__element zero-edges">
+                class="user-plans__companions-number user-plans__part form-text-style user-plans__element zero-edges">
                 1 попутчик
               </p>
               <p
-                class="user-plans__travel-period user-plans--common-justification user-plans--text-style-one form-text-style user-plans__element zero-edges">
+                class="user-plans__travel-period user-plans__part form-text-style user-plans__element zero-edges">
                 <span
                   class="user-plans__period-text user-plans__period-text--shifted user-plans__period-text--start">
                   1 июл
@@ -498,7 +497,7 @@
                   15 июл
                 </span>
               </p>
-              <a class="user-plans__button user-plans--text-style-one form-text-style user-plans__element link"
+              <a class="user-plans__button user-plans__part form-text-style user-plans__element link"
                 href="#!">
                 Изменить
               </a>
@@ -561,14 +560,14 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--companions-amount">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount add-plan--text-style"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--amount add-plan__part"
                   for="fellow-travelers-amount">
                   Ищу попутчиков:
                 </label>
                 <p
                   class="add-plan__main-parameters add-plan__main-parameters--companions-amount ">
                   <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan--text-style add-plan--border-with-radius hover-mode-border-color active-mode-border-color"
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--companions add-plan__part add-plan__piece hover-mode-border-color active-mode-border-color"
                     type="text" name="companions" value="2"
                     id="fellow-travelers-amount">
 
@@ -603,7 +602,7 @@
               <div
                 class="add-plan__main-parameters-wrapper add-plan__main-parameters-wrapper--travel-time">
                 <label
-                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration add-plan--text-style"
+                  class="add-plan__label add-plan__label--main-parameters add-plan__label--duration add-plan__part"
                   for="travel-duration">
                   Длительность:
                 </label>
@@ -611,7 +610,7 @@
                   class="add-plan__main-parameters add-plan__main-parameters--travel-time">
 
                   <input
-                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan--text-style add-plan--border-with-radius hover-mode-border-color active-mode-border-color"
+                    class="add-plan__input add-plan__input--main-parameters add-plan__input--travel-days add-plan__part add-plan__piece hover-mode-border-color active-mode-border-color"
                     type="text" name="travel-days" value="3"
                     id="travel-duration">
 
@@ -647,7 +646,7 @@
                 class="add-plan__input add-plan__input--for-children hidden-entity"
                 type="checkbox" name="children" id="width-children" checked>
               <label
-                class="add-plan__label add-plan__label--children add-plan--text-style"
+                class="add-plan__label add-plan__label--children add-plan__part"
                 for="width-children">
                 <svg class="add-plan__check-mark" width="9" height="9"
                   viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -897,45 +896,50 @@
                 </div>
 
                 <ul class="calendar__weekday-list list zero-edges">
-                  <li class="calendar__weekday-item calendar--common-text-style"
+                  <li
+                    class="calendar__weekday-item calendar calendar--common-text-style"
                     data-text="Пн">
                     <span class="hidden-after-mobile">
                       П
                     </span>
                   </li>
-                  <li class="calendar__weekday-item calendar--common-text-style"
+                  <li
+                    class="calendar__weekday-item calendar calendar--common-text-style"
                     data-text="Вт">
                     <span class="hidden-after-mobile">
                       В
                     </span>
                   </li>
-                  <li class="calendar__weekday-item calendar--common-text-style"
+                  <li
+                    class="calendar__weekday-item calendar calendar--common-text-style"
                     data-text="Ср">
                     <span class="hidden-after-mobile">
                       С
                     </span>
                   </li>
-                  <li class="calendar__weekday-item calendar--common-text-style"
+                  <li
+                    class="calendar__weekday-item calendar calendar--common-text-style"
                     data-text="Чт">
                     <span class="hidden-after-mobile">
                       Ч
                     </span>
                   </li>
-                  <li class="calendar__weekday-item calendar--common-text-style"
+                  <li
+                    class="calendar__weekday-item calendar calendar--common-text-style"
                     data-text="Пт">
                     <span class="hidden-after-mobile">
                       П
                     </span>
                   </li>
                   <li
-                    class="calendar__weekday-item calendar__weekday-item--weekend calendar--common-text-style"
+                    class="calendar__weekday-item calendar__weekday-item--weekend calendar calendar--common-text-style"
                     data-text="Сб">
                     <span class="hidden-after-mobile">
                       С
                     </span>
                   </li>
                   <li
-                    class="calendar__weekday-item calendar__weekday-item--weekend calendar--common-text-style"
+                    class="calendar__weekday-item calendar__weekday-item--weekend calendar calendar--common-text-style"
                     data-text="Вс">
                     <span class="hidden-after-mobile">
                       В
@@ -949,7 +953,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-23"
                       id="previous-month-day-23" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-23">
                       23
                     </label>
@@ -959,7 +964,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-24"
                       id="previous-month-day-24" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-24">
                       24
                     </label>
@@ -969,7 +975,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-25"
                       id="previous-month-day-25" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-25">
                       25
                     </label>
@@ -979,7 +986,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-26"
                       id="previous-month-day-26" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-26">
                       26
                     </label>
@@ -989,7 +997,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-27"
                       id="previous-month-day-27" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-27">
                       27
                     </label>
@@ -999,7 +1008,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="previous-month-day-28"
                       id="previous-month-day-28" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="previous-month-day-28">
                       28
                     </label>
@@ -1008,7 +1018,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-1" id="day-1" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-1">
                       1
                       <span
@@ -1021,7 +1032,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-2" id="day-2" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-2">
                       2
                     </label>
@@ -1030,7 +1042,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-3" id="day-3" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-3">
                       3
                     </label>
@@ -1039,7 +1052,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-4" id="day-4" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-4">
                       4
                     </label>
@@ -1048,7 +1062,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-5" id="day-5" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-5">
                       5
                     </label>
@@ -1057,7 +1072,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-6" id="day-6" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-6">
                       6
                     </label>
@@ -1066,7 +1082,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-7" id="day-7" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-7">
                       7
                     </label>
@@ -1075,7 +1092,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-8" id="day-8" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-8">
                       8
                     </label>
@@ -1084,7 +1102,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-9" id="day-9" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-9">
                       9
                     </label>
@@ -1093,7 +1112,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-10" id="day-10" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-10">
                       10
                     </label>
@@ -1102,7 +1122,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-11" id="day-11" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-11">
                       11
                     </label>
@@ -1111,7 +1132,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-12" id="day-12" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-12">
                       12
                     </label>
@@ -1120,7 +1142,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-13" id="day-13" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-13">
                       13
                     </label>
@@ -1129,7 +1152,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-14" id="day-14" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-14">
                       14
                     </label>
@@ -1138,7 +1162,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-15" id="day-15" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-15">
                       15
                     </label>
@@ -1147,7 +1172,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-16" id="day-16" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-16">
                       16
                     </label>
@@ -1156,7 +1182,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-17" id="day-17" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-17">
                       17
                     </label>
@@ -1165,7 +1192,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-18" id="day-18" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-18">
                       18
                     </label>
@@ -1174,7 +1202,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-19" id="day-19" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-19">
                       19
                     </label>
@@ -1183,7 +1212,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-20" id="day-20" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-20">
                       20
                     </label>
@@ -1192,7 +1222,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-21" id="day-21" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-21">
                       21
                     </label>
@@ -1201,7 +1232,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-22" id="day-22" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-22">
                       22
                     </label>
@@ -1210,7 +1242,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-23" id="day-23" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-23">
                       23
                     </label>
@@ -1219,7 +1252,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-24" id="day-24" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-24">
                       24
                     </label>
@@ -1228,7 +1262,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-25" id="day-25" disabled>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-25">
                       25
                     </label>
@@ -1238,7 +1273,7 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-26" id="day-26" checked>
                     <label
-                      class="calendar__day calendar__day--check-in calendar--common-text-style"
+                      class="calendar__day calendar__day--check-in calendar calendar--common-text-style"
                       for="day-26">
                       26
                     </label>
@@ -1247,7 +1282,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-27" id="day-27" checked>
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-27">
                       27
                     </label>
@@ -1257,7 +1293,7 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-28" id="day-28" checked>
                     <label
-                      class="calendar__day calendar__day--check-out calendar--common-text-style"
+                      class="calendar__day calendar__day--check-out calendar calendar--common-text-style"
                       for="day-28">
                       28
                     </label>
@@ -1266,7 +1302,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-29" id="day-29">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-29">
                       29
                     </label>
@@ -1275,7 +1312,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-30" id="day-30">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-30">
                       30
                     </label>
@@ -1284,7 +1322,8 @@
                     <input
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="day-31" id="day-31">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="day-31">
                       31
                     </label>
@@ -1294,7 +1333,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="next-month-day-1"
                       id="next-month-day-1">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="next-month-day-1">
                       1
                       <span
@@ -1308,7 +1348,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="next-month-day-2"
                       id="next-month-day-2">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="next-month-day-2">
                       2
                     </label>
@@ -1318,7 +1359,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="next-month-day-3"
                       id="next-month-day-3">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="next-month-day-3">
                       3
                     </label>
@@ -1328,7 +1370,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="next-month-day-4"
                       id="next-month-day-4">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="next-month-day-4">
                       4
                     </label>
@@ -1338,7 +1381,8 @@
                       class="calendar__checkbox calendar__checkbox--day hidden-entity"
                       type="checkbox" name="next-month-day-5"
                       id="next-month-day-5">
-                    <label class="calendar__day calendar--common-text-style"
+                    <label
+                      class="calendar__day calendar calendar--common-text-style"
                       for="next-month-day-5">
                       5
                     </label>
@@ -1400,11 +1444,11 @@
                     Название страны
                   </label>
                   <input
-                    class="add-plan__input add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style hover-mode-border-color"
+                    class="add-plan__input add-plan__input--chosen-country add-plan__piece add-plan__part hover-mode-border-color"
                     type="text" value="Босния и Герцеговина"
                     name="chosen-country-1" id="chosen-country-1">
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius tooltip tooltip--altered"
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__piece tooltip tooltip--altered"
                     data-tooltip="Босния и Герцеговина">
                     <picture>
                       <source type="image/webp" media="(min-width: 768px)"
@@ -1473,11 +1517,11 @@
                     Название страны
                   </label>
                   <input
-                    class="add-plan__input add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style hover-mode-border-color"
+                    class="add-plan__input add-plan__input--chosen-country add-plan__piece add-plan__part hover-mode-border-color"
                     type="text" value="Чехия" name="chosen-country-2"
                     id="chosen-country-2">
                   <div
-                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan--border-with-radius tooltip tooltip--altered"
+                    class="add-plan__flag add-plan__flag--chosen-country-flag add-plan__piece tooltip tooltip--altered"
                     data-tooltip="Чехия">
                     <picture>
                       <source type="image/webp" media="(min-width: 768px)"
@@ -1543,15 +1587,15 @@
                   add-plan__country--specify-country.classlist.remove("add-plan__country--refilled");
                 -->
                 <li
-                  class="add-plan__country add-plan__country--step-2 add-plan__country--specify-country add-plan__element add-plan__element--empty add-plan--text-style add-plan__country--refilled">
+                  class="add-plan__country add-plan__country--step-2 add-plan__country--specify-country add-plan__element add-plan__element--empty add-plan__part add-plan__country--refilled">
                   <label class="visually-hidden" for="chosen-country-3">
                     Название страны
                   </label>
                   <!--
-                    add-plan__input--specify-country.classlist.remove("add-plan--without-border").remove(add-plan__input--refilled");
+                    add-plan__input--specify-country.classlist.remove("add-plan__unit").remove(add-plan__input--refilled");
                   -->
                   <input
-                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan--border-with-radius add-plan--text-style hover-mode-border-color add-plan--without-border add-plan__input--refilled"
+                    class="add-plan__input add-plan__input--specify-country add-plan__input--chosen-country add-plan__piece add-plan__part hover-mode-border-color add-plan__unit add-plan__input--refilled"
                     type="text" name="chosen-country-3" value="Выберите страну"
                     id="chosen-country-3">
                   <!--
@@ -1626,12 +1670,12 @@
                       class="container lands__container lands__container--form">
                       <div class="lands__uppper-box hidden-entity">
                         <h2
-                          class="lands__heading lands--common-text-style heading heading--level-2 heading--level-2-filter">
+                          class="lands__heading lands__part heading heading--level-2 heading--level-2-filter">
                           Фильтрация по странам:
                         </h2>
 
                         <button
-                          class="lands__filter-toggle lands--common-text-style button hidden-on-desktop"
+                          class="lands__filter-toggle lands__part button hidden-on-desktop"
                           type="button">
                           <span
                             class="lands__toggle-span lands__toggle-span--show hidden-except-tablet hidden-entity">
@@ -1669,25 +1713,25 @@
 
                         <ul class="lands__regions list zero-edges">
                           <li class="lands__region lands__region--active">
-                            <a class="lands__link lands__link--region lands--common-text-style link"
+                            <a class="lands__link lands__link--region lands__part link"
                               href="#!">
                               Европа
                             </a>
                           </li>
                           <li class="lands__region">
-                            <a class="lands__link lands__link--region lands--common-text-style link"
+                            <a class="lands__link lands__link--region lands__part link"
                               href="#!">
                               Азия
                             </a>
                           </li>
                           <li class="lands__region">
-                            <a class="lands__link lands__link--region lands--common-text-style link"
+                            <a class="lands__link lands__link--region lands__part link"
                               href="#!">
                               Америка
                             </a>
                           </li>
                           <li class="lands__region">
-                            <a class="lands__link lands__link--region lands--common-text-style link"
+                            <a class="lands__link lands__link--region lands__part link"
                               href="#!">
                               Острова
                             </a>
@@ -1699,151 +1743,151 @@
                         <ul
                           class="lands__letter-indexes lands__letter-indexes--form list zero-edges">
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form lands__link--letter-active link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form lands__link--letter-active link add-plan__part"
                               href="#!">
                               А
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Б
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               В
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Г
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Д
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Е
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               З
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               И
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               К
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Л
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               М
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Н
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               О
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               П
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Р
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               С
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Т
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               У
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Ф
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Х
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Ч
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Ш
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Э
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Ю
                             </a>
                           </li>
                           <li class="lands__letter-index">
-                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan--text-style"
+                            <a class="lands__link lands__link--letter lands__link--letter-form link add-plan__part"
                               href="#!">
                               Я
                             </a>
@@ -2075,7 +2119,7 @@
               </ul>
 
               <button
-                class="add-plan__add-country add-plan__element add-plan__element--empty add-plan__element--button add-plan--text-style"
+                class="add-plan__add-country add-plan__element add-plan__element--empty add-plan__element--button add-plan__part"
                 type="button">
                 Добавить страну
                 <svg
@@ -2179,12 +2223,12 @@
                   </div>
                   <div class="add-plan__jollity-variants-box">
                     <textarea
-                      class="add-plan__jollity-variants add-plan--text-style hover-mode-border-color active-mode-border-color"
+                      class="add-plan__jollity-variants add-plan__part hover-mode-border-color active-mode-border-color"
                       name="bosnia-and-herzegovina-funs"
                       id="bosnia-and-herzegovina-funs" cols="30" rows="9"
                       placeholder="План действий" required></textarea>
                     <span
-                      class="add-plan__jollity-error-message add-plan--text-style">
+                      class="add-plan__jollity-error-message add-plan__part">
                       Это поле должно быть заполнено
                     </span>
                   </div>
@@ -2221,12 +2265,12 @@
                   </div>
                   <div class="add-plan__jollity-variants-box">
                     <textarea
-                      class="add-plan__jollity-variants add-plan__jollity-variants--czech add-plan--text-style hover-mode-border-color active-mode-border-color"
+                      class="add-plan__jollity-variants add-plan__jollity-variants--czech add-plan__part hover-mode-border-color active-mode-border-color"
                       name="czech-funs" id="czech-funs" cols="30" rows="9"
                       placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                   </textarea>
                     <span
-                      class="add-plan__jollity-error-message add-plan--text-style">
+                      class="add-plan__jollity-error-message add-plan__part">
                       Это поле должно быть заполнено
                     </span>
                   </div>
