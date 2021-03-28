@@ -1,5 +1,5 @@
 .add-plan {
-  margin-top: - ($bottom-radii);
+  margin-top: -($bottom-radii);
   padding-top: 30px;
   background-color: $lcg-5;
   z-index: 1002;
@@ -362,7 +362,6 @@
     line-height: 16px;
     letter-spacing: 0.09em;
   }
-
 
   &--main-parameters {
     margin-top: 20px;
@@ -751,14 +750,6 @@
         }
       }
     }
-
-    // &:checked + .add-plan__label {
-    //   &--children:active {
-    //     .add-plan__check-mark {
-    //       fill: $lcg-35;
-    //     }
-    //   }
-    // }
   }
 
   &--chosen-country {

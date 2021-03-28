@@ -237,8 +237,7 @@
 
   // &:hover {
   //   & .general-header__nav-link {
-  //     transform: translateY(-100%);
-  //     transition: transform 300ms;
+  //     animation: revolution 500ms linear;
   //   }
   // }
 }
@@ -277,7 +276,6 @@
   &:hover {
     @media (min-width: $desktop-width) {
       color: $mcg-1;
-      // animation: revolution 300ms linear;
     }
   }
 

@@ -8,7 +8,6 @@
     padding-top: 133px;
     background-image: $flags-bg, $rect-bg;
     background-repeat: no-repeat, no-repeat;
-    // background-position: 440px 80px, 40px 406px;
     background-position: right 8.3% top 24.2%, 6.4% 46%;
     background-size: 287px 575px, 140px 140px;
 
@@ -21,7 +20,6 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 221px;
-    // background-position: 1093px 88px, 60px 89px;
     background-position: right 5.2% top 63%, 4.6% 22.5%;
   }
 }

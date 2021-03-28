@@ -12,10 +12,6 @@
   border-radius: 20px;
   cursor: pointer;
 
-  // &--triangular-pointer {
-  //   &::after {}
-  // }
-
   &--more {
     padding-left: 23px;
     padding-right: 23px;
@@ -111,12 +107,6 @@
       }
     }
   }
-
-  // &--wide {
-  //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-  //     width: 618px;
-  //   }
-  // }
 
   &--roll-and-change {
     width: 270px;

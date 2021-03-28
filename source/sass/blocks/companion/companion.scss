@@ -35,7 +35,6 @@
     @media (min-width: $desktop-width) {
       grid-template-columns: 285px 54px 150px 106px 69px 182px 60px 43px;
       grid-template-rows: 86px 87px 112px;
-      // grid-template-rows: repeat(3, min-content);
       grid-template-areas:
         "avatar . name name . countries . ."
         "avatar . hashtags hashtags . countries . ."
@@ -44,8 +43,6 @@
   }
 
   &:hover {
-    // filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
-
     .avatar {
       overflow: hidden;
     }
