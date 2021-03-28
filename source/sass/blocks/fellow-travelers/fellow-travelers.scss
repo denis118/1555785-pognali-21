@@ -19,8 +19,7 @@
     background-size: 285px 285px, 143px 143px, 212px 212px;
 
     @media (min-resolution: 2dppx) {
-      background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x,
-        $quadrate-bg-desktop;
+      background-image: $rogovaya-bg-tablet-2x, $smolov-bg-2x, $quadrate-bg-desktop;
     }
 
     @include overlap--bottom(997, $bottom-radii-tablet);
